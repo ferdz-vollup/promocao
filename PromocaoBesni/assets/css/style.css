@@ -1,0 +1,191 @@
+html, body {
+	height: 100%
+}
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+	color: #231f20
+}
+h1, h2, h3, h4, h5, h6 {
+	margin: 0px;
+}
+img {
+	max-width: 100%
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border: 0px;
+}
+a.navbar-brand {
+    background-image: url(../imagens/logo-besni.png);
+    width: 232px;
+    height: 42px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+nav.navbar.navbar-default {
+    box-shadow: none;
+    background-color: transparent;
+    border: 0px;
+	box-shadow: none;
+    background-color: transparent;
+    border: 0px;
+    padding: 30px 0px;
+	margin-bottom: 0px;
+}
+.navbar-default .navbar-nav>li>a {
+	color: #231f20;
+	font-weight: 400;
+	padding: 15px 25px;
+}
+section#menu {
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    background-color: white;
+	top: 0;
+}
+#banner {
+	width: 100%;
+	height: 100%;
+	margin-top: 110px;
+    position: relative;
+}
+#banner .banner{
+	width: 100%;
+	height: 100%;
+	background-image: url(../imagens/banner-promocao.jpg);
+	position: absolute;
+	background-size: cover;
+}
+#banner #imagem-carro img{
+	width: 63.5%;
+    top: 57%;
+    left: 19.5%;
+    position: absolute;
+}
+@font-face {
+    font-family: 'baseninemedium';
+    src: url('../fonts/baseninesmallcaps-webfont.woff2') format('woff2'),
+         url('../fonts/baseninesmallcaps-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'baseninebold';
+    src: url('../fonts/basenine_bold-webfont.woff2') format('woff2'),
+         url('../fonts/basenine_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.basenine {font-family: 'baseninemedium';font-weight: 600}
+.basenine-bold {font-family: 'baseninebold';}
+.vermelho {color: #a8272d}
+.vinho {color: #97092a}
+
+#home {	margin-top: 100px;}
+#home h2 {letter-spacing: 3px;}
+.btn-home-cadastre {
+	border: 1px solid #363636;
+	background-color: transparent;
+	color: #363636;
+	font-family: 'baseninebold';
+	text-transform: uppercase;
+	-webkit-appearance: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+.traco-vermelho {
+	width: 50px;
+    height: 5px;
+    background-color: #a8272d;
+    margin: 30px 0px;
+    border-radius: 50px;
+}
+.saiba-concorra {
+	font-size: 14px;
+    line-height: 30px;
+    padding-right: 40px;
+    display: block;
+}
+#fique-ligado {
+	background-image: url(../imagens/bg-fique-ligado.jpg);
+}
+#besni-proxima {
+	background-image: url(../imagens/bg-besni-proxima.jpg);
+}
+#fique-ligado, #besni-proxima {
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	margin: 80px 0px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: white;
+	padding: 80px 0px;
+}
+#fique-ligado span, #besni-proxima span {
+	font-family: 'baseninemedium';
+	font-size: 35px;
+}
+.btn-confira-ganhadores {
+	font-family: 'baseninebold';
+	border: 1px solid #fff;
+	background-color: transparent;
+	color: #fff;
+	text-transform: uppercase;
+	-webkit-appearance: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 40px;
+}
+div#premios {
+	margin-bottom: 180px;
+}
+div#premios div[class*='col'] {
+	margin-top: 80px;
+}
+div#premios div[class*='col'] > div {
+    background-color: #f6f6f6;
+    margin: 0px 12%;
+    padding: 50px 50px 115px;
+}
+div#premios div[class*='col'] > img {
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+}
+#galeria-instagram {
+	margin: 50px 0px;;
+}
+.redes {
+	font-family: 'baseninemedium';
+	font-size: 25px;
+	margin-top: -5px;
+}
+.redes *{
+	display: inline-block;
+	vertical-align: middle
+}
+.redes p{
+	padding-top: 10px;
+}
+#rodape {
+	margin-bottom: 30px;
+}
+#rodape .container > div{
+	margin: 0px 50px
+}
+#rodape span {
+	font-size: 12px;
+    line-height: 25px;
+    padding-right: 60px;
+    display: block;
+}
+#rodape div[class*='col'] {
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+}
