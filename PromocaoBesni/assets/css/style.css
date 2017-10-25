@@ -1,22 +1,28 @@
 html, body {
-	height: 100%
+    height: 100%
 }
+
 body {
-	font-family: 'Open Sans', sans-serif;
-	margin: 0px;
-	padding: 0px;
-	overflow-x: hidden;
-	color: #231f20
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    color: #231f20
 }
+
 h1, h2, h3, h4, h5, h6 {
-	margin: 0px;
+    margin: 0px;
 }
+
 img {
-	max-width: 100%
+    max-width: 100%
 }
+
+/* MENU */
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-	border: 0px;
+    border: 0px;
 }
+
 a.navbar-brand {
     background-image: url(../imagens/logo-besni.png);
     width: 232px;
@@ -24,168 +30,350 @@ a.navbar-brand {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 nav.navbar.navbar-default {
     box-shadow: none;
     background-color: transparent;
     border: 0px;
-	box-shadow: none;
+    box-shadow: none;
     background-color: transparent;
     border: 0px;
     padding: 30px 0px;
-	margin-bottom: 0px;
+    margin-bottom: 0px;
 }
-.navbar-default .navbar-nav>li>a {
-	color: #231f20;
-	font-weight: 400;
-	padding: 15px 25px;
+
+.navbar-default .navbar-nav > li > a {
+    color: #231f20;
+    font-weight: 400;
+    padding: 15px 25px;
 }
+
 section#menu {
     position: fixed;
     z-index: 9;
     width: 100%;
     background-color: white;
-	top: 0;
+    top: 0;
 }
+
+/* BANNERS */
+.banner img {
+    display: none;
+}
+
 #banner {
-	width: 100%;
-	height: 100%;
-	margin-top: 110px;
+    width: 100%;
+    height: 100%;
+    margin-top: 110px;
     position: relative;
 }
-#banner .banner{
-	width: 100%;
-	height: 100%;
-	background-image: url(../imagens/banner-promocao.jpg);
-	position: absolute;
-	background-size: cover;
+
+    #banner .banner {
+        width: 100%;
+        height: 100%;
+        background-image: url(../imagens/banner-promocao.jpg);
+        position: absolute;
+        background-size: cover;
+        background-position: center center
+    }
+
+    #banner #imagem-carro img {
+        width: 63.5%;
+        top: 57%;
+        left: 19.5%;
+        position: absolute;
+    }
+
+#banner-escrita-imagem {
+    width: 100%;
+    height: 40%;
+    margin-top: 110px;
+    position: relative;
+    max-height: 264px;
 }
-#banner #imagem-carro img{
-	width: 63.5%;
-    top: 57%;
-    left: 19.5%;
-    position: absolute;
+
+    #banner-escrita-imagem .centraliza {
+        width: 1170px;
+        position: relative;
+        margin: 0px auto;
+        height: 100%;
+    }
+
+    #banner-escrita-imagem .banner {
+        width: 100%;
+        height: 100%;
+        background-image: url(../imagens/banner-fundo-amarelo.jpg);
+        position: absolute;
+        background-size: cover;
+        background-position: center center
+    }
+
+    #banner-escrita-imagem #imagem-carro img {
+        top: 45%;
+        height: 100%;
+        right: 7%;
+        position: absolute;
+    }
+
+    #banner-escrita-imagem #imagem-escrita img {
+        top: 5%;
+        height: 90%;
+        left: 0%;
+        position: absolute;
+    }
+
+#banner-escrita {
+    width: 100%;
+    height: 70%;
+    margin-top: 110px;
+    position: relative;
 }
+
+    #banner-escrita .banner {
+        width: 100%;
+        height: 100%;
+        background-image: url(../imagens/banner-fundo-amarelo.jpg);
+        position: absolute;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    #banner-escrita #imagem-carro img {
+        width: 45%;
+        top: 50%;
+        left: 50%;
+        margin-left: -22.5%;
+        position: absolute;
+    }
+
+#banner-premios {
+    width: 100%;
+    height: 40%;
+    margin-top: 110px;
+    position: relative;
+}
+
+    #banner-premios .banner {
+        width: 100%;
+        height: 100%;
+        background-image: url(../imagens/bg-besni-proxima.jpg);
+        position: absolute;
+        background-size: cover;
+    }
+
+    #banner-premios #imagem-carro img {
+        width: 70%;
+        top: 30%;
+        left: 50%;
+        margin-left: -35%;
+        position: absolute;
+    }
+
+/* ESTILOS FONTES */
 @font-face {
     font-family: 'baseninemedium';
-    src: url('../fonts/baseninesmallcaps-webfont.woff2') format('woff2'),
-         url('../fonts/baseninesmallcaps-webfont.woff') format('woff');
+    src: url('../fonts/baseninesmallcaps-webfont.woff2') format('woff2'), url('../fonts/baseninesmallcaps-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'baseninebold';
-    src: url('../fonts/basenine_bold-webfont.woff2') format('woff2'),
-         url('../fonts/basenine_bold-webfont.woff') format('woff');
+    src: url('../fonts/basenine_bold-webfont.woff2') format('woff2'), url('../fonts/basenine_bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-.basenine {font-family: 'baseninemedium';font-weight: 600}
-.basenine-bold {font-family: 'baseninebold';}
-.vermelho {color: #a8272d}
-.vinho {color: #97092a}
 
-#home {	margin-top: 100px;}
-#home h2 {letter-spacing: 3px;}
+.basenine {
+    font-family: 'baseninemedium';
+    font-weight: 600
+}
+
+.basenine-bold {
+    font-family: 'baseninebold';
+}
+
+.vermelho {
+    color: #a8272d
+}
+
+.vinho {
+    color: #97092a
+}
+
+.azul-claro {
+    color: #0989b2
+}
+
+
+/* HOME */
+#home {
+    margin-top: 100px;
+}
+
+    #home h2 {
+        letter-spacing: 3px;
+    }
+
 .btn-home-cadastre {
-	border: 1px solid #363636;
-	background-color: transparent;
-	color: #363636;
-	font-family: 'baseninebold';
-	text-transform: uppercase;
-	-webkit-appearance: none;
+    border: 1px solid #363636;
+    background-color: transparent;
+    color: #363636;
+    font-family: 'baseninebold';
+    text-transform: uppercase;
+    -webkit-appearance: none;
     padding: 10px 20px;
     font-size: 18px;
     margin-top: 30px;
 }
+
 .traco-vermelho {
-	width: 50px;
+    width: 50px;
     height: 5px;
     background-color: #a8272d;
     margin: 30px 0px;
     border-radius: 50px;
 }
+
 .saiba-concorra {
-	font-size: 14px;
+    font-size: 14px;
     line-height: 30px;
     padding-right: 40px;
     display: block;
 }
+
 #fique-ligado {
-	background-image: url(../imagens/bg-fique-ligado.jpg);
+    background-image: url(../imagens/bg-fique-ligado.jpg);
 }
-#besni-proxima {
-	background-image: url(../imagens/bg-besni-proxima.jpg);
-}
+
 #fique-ligado, #besni-proxima {
-	width: 100%;
-	height: auto;
-	background-size: cover;
-	margin: 80px 0px;
-	font-weight: 600;
-	text-transform: uppercase;
-	color: white;
-	padding: 80px 0px;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    margin: 80px 0px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    padding: 80px 0px;
 }
-#fique-ligado span, #besni-proxima span {
-	font-family: 'baseninemedium';
-	font-size: 35px;
+
+#besni-proxima {
+    background-image: url(../imagens/bg-besni-proxima.jpg);
+    margin-bottom: 0px;
 }
+
+    #fique-ligado span, #besni-proxima span {
+        font-family: 'baseninemedium';
+        font-size: 35px;
+    }
+
 .btn-confira-ganhadores {
-	font-family: 'baseninebold';
-	border: 1px solid #fff;
-	background-color: transparent;
-	color: #fff;
-	text-transform: uppercase;
-	-webkit-appearance: none;
+    font-family: 'baseninebold';
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-appearance: none;
     padding: 10px 20px;
     font-size: 18px;
     margin-top: 40px;
 }
+
 div#premios {
-	margin-bottom: 180px;
+    margin-bottom: 180px;
 }
-div#premios div[class*='col'] {
-	margin-top: 80px;
-}
-div#premios div[class*='col'] > div {
-    background-color: #f6f6f6;
-    margin: 0px 12%;
-    padding: 50px 50px 115px;
-}
-div#premios div[class*='col'] > img {
-    position: absolute;
-    bottom: -100px;
-    right: 0;
-}
+
+    div#premios div[class*='col'] {
+        margin-top: 80px;
+    }
+
+        div#premios div[class*='col'] > div {
+            background-color: #f6f6f6;
+            margin: 0px 12%;
+            padding: 50px 50px 115px;
+        }
+
+        div#premios div[class*='col'] > img {
+            position: absolute;
+            bottom: -100px;
+            right: 0;
+        }
+
 #galeria-instagram {
-	margin: 50px 0px;;
+    margin: 50px 0px;
+    ;
 }
+
 .redes {
-	font-family: 'baseninemedium';
-	font-size: 25px;
-	margin-top: -5px;
+    font-family: 'baseninemedium';
+    font-size: 25px;
+    margin-top: -5px;
 }
-.redes *{
-	display: inline-block;
-	vertical-align: middle
+
+    .redes * {
+        display: inline-block;
+        vertical-align: middle
+    }
+
+    .redes p {
+        padding-top: 10px;
+    }
+
+/* COMO PARTICIPAR */
+#como-participar {
+    margin-top: 20%;
+    margin-bottom: 10%;
 }
-.redes p{
-	padding-top: 10px;
+
+    #como-participar .espaco-colunas .col-xs-3 {
+        margin-top: 5px;
+    }
+
+/* PREMIOS */
+#premios {
+    margin: 100px 0px;
 }
-#rodape {
-	margin-bottom: 30px;
+
+/* FAQ */
+#faq {
+    margin-top: 20%;
+    margin-bottom: 10%;
 }
-#rodape .container > div{
-	margin: 0px 50px
-}
-#rodape span {
-	font-size: 12px;
-    line-height: 25px;
-    padding-right: 60px;
-    display: block;
-}
-#rodape div[class*='col'] {
+
+h4.underline-azul {
     display: inline-block;
-    float: none;
-    vertical-align: middle;
 }
+
+    h4.underline-azul:after {
+        width: 99%;
+        height: 1px;
+        background-color: #0989b2;
+        content: "";
+        display: block;
+        opacity: 0.5;
+        margin-top: 2px;
+    }
+
+/* RODAPE */
+#rodape {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #f6f6f6;
+}
+
+    #rodape .container > div {
+        margin: 0px 50px
+    }
+
+    #rodape span {
+        font-size: 12px;
+        line-height: 25px;
+        padding-right: 60px;
+        display: block;
+    }
+
+    #rodape div[class*='col'] {
+        display: inline-block;
+        float: none;
+        vertical-align: middle;
+    }

@@ -20,7 +20,7 @@
 <!--banner-->
 <section id="banner">
 	<div class="banner">
-		<div id="imagem-carro"><img src="/assets/imagens/imagem-carro.png" alt=""></div>
+		<div id="imagem-carro"><img src="/assets/imagens/imagem-carro.png" alt="Imagem prêmios"></div>
 	</div>
 </section>
 
@@ -89,7 +89,7 @@
 				</em>
 				
 			</div>
-			<img src="assets/imagens/jeep.png" alt="">
+			<img src="assets/imagens/jeep.png" alt="Imagem Jeep">
 		</div>
 		<div class="col-md-6">
 			<div>
@@ -105,7 +105,7 @@
 					saiba mais
 				</em>
 			</div>
-			<img src="assets/imagens/moto-bull.png" alt="">
+			<img src="assets/imagens/moto-bull.png" alt="Imagem moto">
 		</div>
 	</div>
 	<div class="container">
@@ -126,8 +126,8 @@
 			<div style="margin: auto; margin-bottom: 30px;" class="traco-vermelho"></div>
 			<h3 class="basenine">#FecheoAnoComBesni</h3>
 			<div class="redes">
-				<img src="assets/imagens/icone-facebook.png" alt="">
-				<img src="assets/imagens/icone-instagram.png" alt="">
+				<img src="assets/imagens/icone-facebook.png" alt="Ícone facebook">
+				<img src="assets/imagens/icone-instagram.png" alt="Ícone instagram">
 				<p>/lojasbesni</p>
 			</div>
 		</div>

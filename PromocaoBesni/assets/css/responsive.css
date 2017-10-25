@@ -1,84 +1,199 @@
 @media screen and (min-width: 700px) and (max-width: 768px) {
-	
+    .navbar-header {
+        padding-bottom: 10px;
+    }
+
+    .navbar-toggle {
+        margin-bottom: 0px;
+        margin-top: 5px !important;
+    }
+
+    #banner {
+        height: 38%;
+        margin-top: 104px;
+    }
+
+        #banner .banner {
+            height: 100%;
+        }
+
+    #banner-premios {
+        height: 15%;
+    }
+
+    #banner-escrita {
+        height: 30%;
+        margin-top: 104px;
+    }
+
+    /* HOME */
+    div#premios div[class*='col']:last-child {
+        margin-top: 150px;
+    }
 }
+
 @media screen and (max-width: 768px) {
-	.navbar-toggle {
-		margin-top: 0px;
-		background-color: transparent;
-		border: 0px;
-	}
-	.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-		background-color: transparent
-	}
-	nav.navbar.navbar-default {
-		padding: 30px 0px 22px;
-	}
-	#banner {
-		margin-top: -2%;
-	}
+    h2 br, h3 br, span br {
+        display: none;
+    }
+
+    .navbar-nav > li {
+        float: none !important;
+    }
+
+    .navbar-right {
+        float: none !important;
+        margin-right: inherit !important;
+    }
+
+    .navbar-nav {
+        float: none !important;
+        margin: inherit !important;
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+        height: inherit;
+        padding-bottom: inherit;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+    }
+
+        .navbar-collapse.collapse.in {
+            display: block !important;
+        }
+
+    .navbar-header {
+        float: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+        margin-top: 0px;
+        background-color: transparent;
+        border: 0px;
+    }
+
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+        background-color: transparent
+    }
+
+    nav.navbar.navbar-default {
+        padding: 30px 0px 22px;
+    }
+
+    #home .espaco-colunas div[class*='col']:last-child {
+        margin-top: 70px;
+    }
+
+    #como-participar .espaco-colunas > div[class*='col']:last-child {
+        margin-top: 10%;
+    }
+
+    #rodape .container > div {
+        margin: 0px 0px
+    }
+
+    #rodape span {
+        padding-right: 0px;
+    }
+
+    #rodape .col-md-3 {
+        margin-top: 30px;
+    }
 }
+
 @media screen and (max-width: 600px) {
-	h2 {
-		font-size: 25px;
-		line-height: 30px;
-	}
-	h3 {
-		font-size: 20px;
-	}
-	h2 br, h3 br, span br {
-		display: none;
-	}
-	#premios h2 {
-		line-height: 40px;
-	}
-	a.navbar-brand {
-		width: 180px;
-    	height: 32px;
-	}
-	#banner .banner {
-		height: 28%;
-	}
-	#banner {
-		height: auto;
-		position: inherit;
-	}
-	.btn-home-cadastre, .btn-confira-ganhadores {
-		font-size: 15px;
-	}
-	#home {
-		padding-top: 65%;
-	}
-	.saiba-concorra {
-		padding-right: 0px;
-	}
-	div#premios {
-		margin-bottom: 100px;
-	}
-	div#premios div[class*='col'] > div {
-		margin: 0px;
-		padding: 50px 10% 29%;
-	}
-	div#premios div[class*='col'] > img {
-		bottom: -12%;
-		width: 80%;
-	}
-	div#premios div[class*='col']:last-child > img {
-		bottom: -5%;
-    	width: 60%;
-	}
-	#rodape .container > div{
-		margin: 0px 0px
-	}
-	#rodape span {
-		padding-right: 0px;
-	}
-	#rodape .col-md-3 {
-		margin-top: 30px;
-	}
-	#fique-ligado, #besni-proxima {
-		margin: 50px 0px
-	}
-	#fique-ligado span, #besni-proxima span {
-		font-size: 25px;
-	}
+    #banner-escrita {
+        height: 30%;
+        margin-top: 92px;
+    }
+
+    #banner {
+        height: 38%;
+        margin-top: 92px;
+    }
+
+    h2 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    #premios h2 {
+        line-height: 40px;
+    }
+
+    a.navbar-brand {
+        width: 180px;
+        height: 32px;
+    }
+
+    #banner .banner {
+        height: 28%;
+    }
+
+    #banner {
+        height: auto;
+        position: inherit;
+    }
+
+    #banner-premios {
+        height: 10%;
+        margin-top: 92px;
+    }
+
+    .btn-home-cadastre, .btn-confira-ganhadores {
+        font-size: 15px;
+    }
+
+    #home {
+        padding-top: 65%;
+    }
+
+    .saiba-concorra {
+        padding-right: 0px;
+    }
+
+    div#premios {
+        margin-bottom: 100px;
+    }
+
+        div#premios div[class*='col'] > div {
+            margin: 0px;
+            padding: 50px 10% 29%;
+        }
+
+        div#premios div[class*='col'] > img {
+            bottom: -12%;
+            width: 80%;
+        }
+
+        div#premios div[class*='col']:last-child > img {
+            bottom: -5%;
+            width: 60%;
+        }
+
+    #fique-ligado, #besni-proxima {
+        margin: 50px 0px
+    }
+
+        #fique-ligado span, #besni-proxima span {
+            font-size: 25px;
+        }
+
+    #premios {
+        margin: 50px 0px;
+    }
+
+        #premios .row {
+            text-align: center !important
+        }
+
+            #premios .row img {
+                width: 90%;
+                margin-top: 30px
+            }
 }

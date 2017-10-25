@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -105,6 +106,32 @@
     <Content Include="admin\js\morris-data.js" />
     <Content Include="admin\js\morris.min.js" />
     <Content Include="admin\js\raphael.min.js" />
+    <Content Include="assets\css\bootstrap-theme.min.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\responsive.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\imagens\banner-promocao.jpg" />
+    <Content Include="assets\imagens\bg-besni-proxima.jpg" />
+    <Content Include="assets\imagens\bg-fique-ligado.jpg" />
+    <Content Include="assets\imagens\icone-facebook.png" />
+    <Content Include="assets\imagens\icone-instagram.png" />
+    <Content Include="assets\imagens\imagem-carro.png" />
+    <Content Include="assets\imagens\jeep.png" />
+    <Content Include="assets\imagens\logo-besni.png" />
+    <Content Include="assets\imagens\logo-rodape.png" />
+    <Content Include="assets\imagens\marcacao-instagram.jpg" />
+    <Content Include="assets\imagens\moto-bull.png" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\jquery-3.2.1.min.js" />
+    <Content Include="como-participar.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="fale-conosco.aspx" />
+    <Content Include="faq.aspx" />
+    <Content Include="inc\footer.ascx" />
+    <Content Include="inc\head.ascx" />
+    <Content Include="inc\menu.ascx" />
+    <Content Include="inc\scripts.ascx" />
     <Content Include="js\InnerFormValidation.js" />
     <Content Include="js\InnerLibs.js" />
     <Content Include="js\jquery.innerform.js" />
@@ -117,6 +144,14 @@
     <Content Include="admin\fonts\fontawesome-webfont.woff" />
     <Content Include="admin\fonts\fontawesome-webfont.woff2" />
     <Content Include="admin\fonts\FontAwesome.otf" />
+    <Content Include="assets\fonts\baseninesmallcaps-webfont.woff" />
+    <Content Include="assets\fonts\baseninesmallcaps-webfont.woff2" />
+    <Content Include="assets\fonts\basenine_bold-webfont.woff" />
+    <Content Include="assets\fonts\basenine_bold-webfont.woff2" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\PROVISORIO.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -136,6 +171,7 @@
     <Content Include="admin\js\metisMenu.min.js" />
     <Content Include="admin\js\sb-admin-2.js" />
     <Content Include="admin\login.aspx" />
+    <Content Include="premios.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Web.config">
@@ -163,6 +199,69 @@
     </Compile>
     <Compile Include="class\utils.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="como-participar.aspx.cs">
+      <DependentUpon>como-participar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="como-participar.aspx.designer.cs">
+      <DependentUpon>como-participar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="fale-conosco.aspx.cs">
+      <DependentUpon>fale-conosco.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="fale-conosco.aspx.designer.cs">
+      <DependentUpon>fale-conosco.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="faq.aspx.cs">
+      <DependentUpon>faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="faq.aspx.designer.cs">
+      <DependentUpon>faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inc\footer.ascx.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\footer.ascx.designer.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="inc\head.ascx.cs">
+      <DependentUpon>head.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\head.ascx.designer.cs">
+      <DependentUpon>head.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="inc\menu.ascx.cs">
+      <DependentUpon>menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\menu.ascx.designer.cs">
+      <DependentUpon>menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="inc\scripts.ascx.cs">
+      <DependentUpon>scripts.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\scripts.ascx.designer.cs">
+      <DependentUpon>scripts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="premios.aspx.cs">
+      <DependentUpon>premios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="premios.aspx.designer.cs">
+      <DependentUpon>premios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
