@@ -28,7 +28,7 @@ namespace PromocaoBesni.admin
 
         public void PegarResultado()
         {
-            Besni_Caixa.Caixa response = AJAX.GET<Besni_Caixa.Caixa>("http://confiraloterias.com.br/api0/json.php?loteria=federal&token=G9kUg07Fqc73gxo");
+            Besni_Caixa.Caixa response = AJAX.GET<Besni_Caixa.Caixa>("http://confiraloterias.com.br/api0/json.php?loteria=federal&token=Y6BsKU2Bt3pGePJ");
 
             try
             {

@@ -50,14 +50,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/" title="Dashboard"><img src="images/logo.png" /></a>
+                <a class="navbar-brand" href="/" title="Dashboard">
+                    <img src="images/logo.png" /></a>
             </div>
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-envelope fa-fw"></i><i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-messages">
                         <li>
@@ -108,7 +109,7 @@
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-tasks fa-fw"></i><i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-tasks">
                         <li>
@@ -187,13 +188,13 @@
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-bell fa-fw"></i><i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-alerts">
                         <li>
                             <a href="#">
                                 <div>
-                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <i class="fa fa-comment fa-fw"></i>New Comment
                                     <span class="pull-right text-muted small">4 minutes ago</span>
                                 </div>
                             </a>
@@ -202,7 +203,7 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <i class="fa fa-twitter fa-fw"></i>3 New Followers
                                     <span class="pull-right text-muted small">12 minutes ago</span>
                                 </div>
                             </a>
@@ -211,7 +212,7 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <i class="fa fa-envelope fa-fw"></i>Message Sent
                                     <span class="pull-right text-muted small">4 minutes ago</span>
                                 </div>
                             </a>
@@ -220,7 +221,7 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <i class="fa fa-tasks fa-fw"></i>New Task
                                     <span class="pull-right text-muted small">4 minutes ago</span>
                                 </div>
                             </a>
@@ -229,7 +230,7 @@
                         <li>
                             <a href="#">
                                 <div>
-                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <i class="fa fa-upload fa-fw"></i>Server Rebooted
                                     <span class="pull-right text-muted small">4 minutes ago</span>
                                 </div>
                             </a>
@@ -247,15 +248,15 @@
                 <!-- /.dropdown -->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                        <i class="fa fa-user fa-fw"></i><i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.aspx"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="login.aspx"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -278,22 +279,22 @@
                             </div>
                         </li>--%>
                         <li>
-                            <a href="index.aspx"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="index.aspx"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);"><i class="fa fa-bar-chart-o fa-fw"></i> Usuários</a>
+                            <a href="javascript:void(0);"><i class="fa fa-bar-chart-o fa-fw"></i>Usuários</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);"><i class="fa fa-table fa-fw"></i> Números da Sorte</a>
+                            <a href="javascript:void(0);"><i class="fa fa-table fa-fw"></i>Números da Sorte</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);"><i class="fa fa-edit fa-fw"></i> Números da Sorte Especial</a>
+                            <a href="javascript:void(0);"><i class="fa fa-edit fa-fw"></i>Números da Sorte Especial</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);"><i class="fa fa-wrench fa-fw"></i> CPFs Bloqueados</a>
+                            <a href="javascript:void(0);"><i class="fa fa-wrench fa-fw"></i>CPFs Bloqueados</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0);"><i class="fa fa-sitemap fa-fw"></i> Ganhadores</a>
+                            <a href="javascript:void(0);"><i class="fa fa-sitemap fa-fw"></i>Ganhadores</a>
                         </li>
                     </ul>
                 </div>
@@ -406,7 +407,7 @@
                 <div class="col-lg-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-university fa-fw"></i> Último sorteio
+                            <i class="fa fa-university fa-fw"></i>Último sorteio
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -415,7 +416,7 @@
                                     <strong id="linha1" runat="server"></strong>
                                 </a>
                                 <a href="javascript:void(0);" class="list-group-item">
-                                    <i class="fa fa-gift fa-fw"></i> <strong>Número da Sorte Besni</strong>
+                                    <i class="fa fa-gift fa-fw"></i><strong>Número da Sorte Besni</strong>
                                     <span class="pull-right text-muted"><strong><em>99999</em></strong>
                                     </span>
                                 </a>
@@ -425,7 +426,7 @@
                                     </span>
                                 </a>
                                 <a href="#" class="list-group-item">
-                                   <strong>2º</strong> Prêmio
+                                    <strong>2º</strong> Prêmio
                                     <span class="pull-right text-muted small"><em>07253</em>
                                     </span>
                                 </a>
@@ -457,8 +458,8 @@
                 <div class="col-lg-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example
-                            <div class="pull-right">
+                            <i class="fa fa-bar-chart-o fa-fw"></i>xxxxx
+                            <%--<div class="pull-right">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
                                         Ações
@@ -476,11 +477,11 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div>--%>
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div id="morris-area-chart"></div>
+                            <div id="piechart" style="width: 100%; min-height: 341px;"></div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -505,9 +506,41 @@
     <script src="js/metisMenu.min.js"></script>
 
     <!-- Morris Charts JavaScript -->
-    <script src="js/raphael.min.js"></script>
+    <%-- <script src="js/raphael.min.js"></script>
     <script src="js/morris.min.js"></script>
-    <script src="js/morris-data.js"></script>
+    <script src="js/morris-data.js"></script>--%>
+
+    <!-- Flot Charts JavaScript -->
+   <%-- <script src="js/excanvas.min.js"></script>
+    <script src="js/jquery.flot.js"></script>
+    <script src="js/jquery.flot.pie.js"></script>
+    <script src="js/jquery.flot.resize.js"></script>
+    <script src="js/jquery.flot.time.js"></script>
+    <script src="js/jquery.flot.tooltip.min.js"></script>
+    <script src="js/flot-data.js"></script>--%>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Sexo', 'Quantidade'],
+      ['Homens',     11],
+      ['Mulheres',      2]
+    ]);
+
+    var options = {
+      title: ''
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+    chart.draw(data, options);
+  }
+</script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/sb-admin-2.js"></script>
