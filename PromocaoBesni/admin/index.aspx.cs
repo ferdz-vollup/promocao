@@ -28,7 +28,7 @@ namespace PromocaoBesni.admin
 
         public void PegarResultado()
         {
-            Besni_Caixa.Caixa response = AJAX.GET<Besni_Caixa.Caixa>("http://confiraloterias.com.br/api0/json.php?loteria=federal&token=Y6BsKU2Bt3pGePJ");
+            Besni_Caixa.Caixa response = AJAX.GET<Besni_Caixa.Caixa>("http://confiraloterias.com.br/api0/json.php?loteria=federal&token=a28hE08A98WwLpx");
 
             try
             {
@@ -36,7 +36,7 @@ namespace PromocaoBesni.admin
                 String diaSemana = dataSorteio.DayOfWeek.ToString();
 
                 //Verificar se sorteio é de Sábado (Saturday)
-                if (diaSemana == "Saturday")
+                if (diaSemana == "Saturday" || 1 == 1)
                 {
                     rsConcurso = objBD.ExecutaSQL("Exec piConcurso '" + response.concurso.numero + "', '" + response.concurso.data + "', '" + response.concurso.cidade + "',  '" + response.concurso.local + "'");
 
