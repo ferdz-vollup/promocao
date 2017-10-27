@@ -16,7 +16,7 @@ namespace PromocaoBesni.admin
     {
         bd objBD = new bd();
         utils objUtils = new utils();
-        private OleDbDataReader rsConcurso, rsResultado;
+        private OleDbDataReader rsConcurso, rsResultado, rsPremiacao;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -28,7 +28,7 @@ namespace PromocaoBesni.admin
 
         public void PegarResultado()
         {
-            Besni_Caixa.Caixa response = AJAX.GET<Besni_Caixa.Caixa>("http://confiraloterias.com.br/api0/json.php?loteria=federal&token=a28hE08A98WwLpx");
+            Besni_Caixa.Caixa response = AJAX.GET<Besni_Caixa.Caixa>("http://confiraloterias.com.br/api0/json.php?loteria=federal&token=l5hRfcYH0xAcSAS");
 
             try
             {
@@ -38,26 +38,34 @@ namespace PromocaoBesni.admin
                 //Verificar se sorteio é de Sábado (Saturday)
                 if (diaSemana == "Saturday" || 1 == 1)
                 {
-                    rsConcurso = objBD.ExecutaSQL("Exec piConcurso '" + response.concurso.numero + "', '" + response.concurso.data + "', '" + response.concurso.cidade + "',  '" + response.concurso.local + "'");
-
-                    //Response.Write("Exec piConcurso '" + response.concurso.numero + "', '" + response.concurso.data + "', '" + response.concurso.cidade + "',  '" + response.concurso.local + "'");
-
-                    /*Response.Write(dataSorteio.DayOfWeek + "<br/><br/>");
-                    Response.Write("Concurso: " + response.concurso.numero + "<br/><br/>");
-
-                    Response.Write("1º Prêmio: " + response.concurso.premiacao.premio_1.bilhete + "<br/>");
-                    Response.Write("2º Prêmio: " + response.concurso.premiacao.premio_2.bilhete + "<br/>");
-                    Response.Write("3º Prêmio: " + response.concurso.premiacao.premio_3.bilhete + "<br/>");
-                    Response.Write("4º Prêmio: " + response.concurso.premiacao.premio_4.bilhete + "<br/>");
-                    Response.Write("5º Prêmio: " + response.concurso.premiacao.premio_5.bilhete + "<br/><br/><br/><br/>");
-
-                    string numeroSorte = response.concurso.premiacao.premio_1.bilhete[4].ToString();
+                    //Gerando número da sorte Besni
+                    string numeroSorte = "01-";
+                    numeroSorte = numeroSorte += response.concurso.premiacao.premio_1.bilhete[4];
                     numeroSorte = numeroSorte += response.concurso.premiacao.premio_2.bilhete[4];
                     numeroSorte = numeroSorte += response.concurso.premiacao.premio_3.bilhete[4];
                     numeroSorte = numeroSorte += response.concurso.premiacao.premio_4.bilhete[4];
                     numeroSorte = numeroSorte += response.concurso.premiacao.premio_5.bilhete[4];
 
-                    Response.Write("Número da Sorte: " + numeroSorte);*/
+
+                    //Salva os dados do Concurso
+                    rsConcurso = objBD.ExecutaSQL("Exec piuConcurso '" + response.concurso.numero + "', '" + response.concurso.data + "', '" + response.concurso.cidade + "',  '" + response.concurso.local + "',NULL,'" + response.concurso.premiacao.premio_1.bilhete + "', '" + response.concurso.premiacao.premio_2.bilhete + "', '" + response.concurso.premiacao.premio_3.bilhete + "', '" + response.concurso.premiacao.premio_4.bilhete + "', '" + response.concurso.premiacao.premio_5.bilhete + "', '" + numeroSorte + "'");
+
+                    if (rsConcurso == null)
+                    {
+                        throw new Exception();
+                    }
+                    if (rsConcurso.HasRows)
+                    {
+                        rsConcurso.Read();
+
+                        //Salva a premiacao
+                        //rsPremiacao = objBD.ExecutaSQL("Exec piPremiacao '"+ rsConcurso["CON_ID"]+ "','"+ response.concurso.premiacao.premio_1.bilhete + "', '" + response.concurso.premiacao.premio_2.bilhete + "', '" + response.concurso.premiacao.premio_3.bilhete + "', '" + response.concurso.premiacao.premio_4.bilhete + "', '" + response.concurso.premiacao.premio_5.bilhete + "', '"+ numeroSorte + "'");
+
+                        //DISPARAR E-MAIL PARA AS AGÊNCIAS
+
+                    }
+                    rsConcurso.Close();
+                    rsConcurso.Dispose();
                 }
 
                 ExbirResultado();
@@ -73,7 +81,7 @@ namespace PromocaoBesni.admin
         public void ExbirResultado()
         {
             //MUDAR POR PROCEDURE
-            rsResultado = objBD.ExecutaSQL("select * from concurso");
+            rsResultado = objBD.ExecutaSQL("EXEC psConcursoPremiacao");
             if (rsResultado == null)
             {
                 throw new Exception();
@@ -83,11 +91,16 @@ namespace PromocaoBesni.admin
             {
                 rsResultado.Read();
 
-                linha1.InnerHtml = "Concuros: "+rsResultado["CON_NUMERO"]+ " | " + rsResultado["CON_DATA"] + " ";
+                linha1.InnerHtml = "Concuros: " + rsResultado["CON_NUMERO"] + " | " + rsResultado["CON_DATA"] + " ";
+                premio1.InnerHtml = "<em>" + rsResultado["PRE_BILHETE_1"] + "</em>";
+                premio2.InnerHtml = "<em>" + rsResultado["PRE_BILHETE_2"] + "</em>";
+                premio3.InnerHtml = "<em>" + rsResultado["PRE_BILHETE_3"] + "</em>";
+                premio4.InnerHtml = "<em>" + rsResultado["PRE_BILHETE_4"] + "</em>";
+                premio5.InnerHtml = "<em>" + rsResultado["PRE_BILHETE_5"] + "</em>";
+                premioBesni.InnerHtml = "<strong><em>" + rsResultado["PRE_BESNI"] + "</em></strong>";
             }
             rsResultado.Close();
             rsResultado.Dispose();
         }
-
     }
 }
