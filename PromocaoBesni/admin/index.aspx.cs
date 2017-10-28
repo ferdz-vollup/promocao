@@ -16,7 +16,7 @@ namespace PromocaoBesni.admin
     {
         bd objBD = new bd();
         utils objUtils = new utils();
-        private OleDbDataReader rsConcurso, rsResultado, rsPremiacao;
+        private OleDbDataReader rsConcurso, rsResultado;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -28,7 +28,7 @@ namespace PromocaoBesni.admin
 
         public void PegarResultado()
         {
-            Besni_Caixa.Caixa response = AJAX.GET<Besni_Caixa.Caixa>("http://confiraloterias.com.br/api0/json.php?loteria=federal&token=l5hRfcYH0xAcSAS");
+            Besni_Caixa.Caixa response = AJAX.GET<Besni_Caixa.Caixa>("http://confiraloterias.com.br/api0/json.php?loteria=federal&token=PCpMgVWMSxemYRQ");
 
             try
             {

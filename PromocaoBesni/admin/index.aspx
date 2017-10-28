@@ -417,33 +417,27 @@
                                 </a>
                                 <a href="javascript:void(0);" class="list-group-item">
                                     <i class="fa fa-gift fa-fw"></i><strong>Número da Sorte Besni</strong>
-                                    <span class="pull-right text-muted"><strong><em>99999</em></strong>
-                                    </span>
+                                    <span class="pull-right text-muted" id="premioBesni" runat="server"></span>
                                 </a>
-                                <a href="#" class="list-group-item">
+                                <a href="javascript:void(0);" class="list-group-item">
                                     <strong>1º</strong> Prêmio
-                                    <span class="pull-right text-muted small"><em>14679</em>
-                                    </span>
+                                    <span class="pull-right text-muted small" id="premio1" runat="server"></span>
                                 </a>
-                                <a href="#" class="list-group-item">
+                                <a href="javascript:void(0);" class="list-group-item">
                                     <strong>2º</strong> Prêmio
-                                    <span class="pull-right text-muted small"><em>07253</em>
-                                    </span>
+                                    <span class="pull-right text-muted small" id="premio2" runat="server"></span>
                                 </a>
-                                <a href="#" class="list-group-item">
+                                <a href="javascript:void(0);" class="list-group-item">
                                     <strong>3º</strong> Prêmio
-                                    <span class="pull-right text-muted small"><em>52928</em>
-                                    </span>
+                                    <span class="pull-right text-muted small" id="premio3" runat="server">javascript:void(0);</span>
                                 </a>
-                                <a href="#" class="list-group-item">
+                                <a href="javascript:void(0);" class="list-group-item">
                                     <strong>4º</strong> Prêmio
-                                    <span class="pull-right text-muted small"><em>76518</em>
-                                    </span>
+                                    <span class="pull-right text-muted small" id="premio4" runat="server"></span>
                                 </a>
-                                <a href="#" class="list-group-item">
+                                <a href="javascript:void(0);" class="list-group-item">
                                     <strong>5º</strong> Prêmio
-                                    <span class="pull-right text-muted small"><em>16533</em>
-                                    </span>
+                                    <span class="pull-right text-muted small" id="premio5" runat="server"></span>
                                 </a>
                             </div>
                             <!-- /.list-group -->
@@ -511,7 +505,7 @@
     <script src="js/morris-data.js"></script>--%>
 
     <!-- Flot Charts JavaScript -->
-   <%-- <script src="js/excanvas.min.js"></script>
+    <%-- <script src="js/excanvas.min.js"></script>
     <script src="js/jquery.flot.js"></script>
     <script src="js/jquery.flot.pie.js"></script>
     <script src="js/jquery.flot.resize.js"></script>
@@ -520,27 +514,59 @@
     <script src="js/flot-data.js"></script>--%>
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-  google.charts.load('current', {'packages':['corechart']});
-  google.charts.setOnLoadCallback(drawChart);
+    <script type="text/javascript">
+        //AJAX
+        function ajaxInit() {
+            var req;
+            try {
+                req = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e) {
+                try {
+                    req = new ActiveXObject("Msxml2.XMLHTTP");
+                } catch (ex) {
+                    try {
+                        req = new XMLHttpRequest();
+                    } catch (exc) {
+                        alert("Esse browser não tem recursos para uso do Ajax");
+                        req = null;
+                    }
+                }
+            }
+            return req;
+        }
 
-  function drawChart() {
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
 
-    var data = google.visualization.arrayToDataTable([
-      ['Sexo', 'Quantidade'],
-      ['Homens',     11],
-      ['Mulheres',      2]
-    ]);
+        function drawChart() {
+            ajax2 = ajaxInit();
+            ajax2.open("GET", "../ajax/acoes.aspx?acao=totalSexo&Rand=" + Math.ceil(Math.random() * 100000), true);
+            ajax2.setRequestHeader("Content-Type", "charset=iso-8859-1");
+            ajax2.onreadystatechange = function () {
+                if (ajax2.readyState == 4) {
+                    if (ajax2.status == 200) {
+                        var arr = ajax2.responseText.split('|');
+                        //$("#sPP_" + pos_id).html(arr[0]);
+                        //$("#sPN_" + pos_id).html(arr[1]);
+                        var data = google.visualization.arrayToDataTable([
+                        ['Sexo', 'Quantidade'],
+                        ['Homens', parseInt(arr[0])],
+                        ['Mulheres', parseInt(arr[1])]
+                        ]);
 
-    var options = {
-      title: ''
-    };
+                        var options = {
+                            title: ''
+                        };
 
-    var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+                        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
-    chart.draw(data, options);
-  }
-</script>
+                        chart.draw(data, options);
+                    }
+                }
+            }
+            ajax2.send(null);
+        }
+    </script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/sb-admin-2.js"></script>
