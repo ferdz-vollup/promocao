@@ -26,9 +26,42 @@
         margin-top: 104px;
     }
 
+    #banner-escrita-imagem {
+        height: 20%;
+        margin-top: 104px;
+    }
+
+        #banner-escrita-imagem #imagem-carro img {
+            height: 73%;
+            top: 50%;
+            right: 6%;
+        }
+
+        #banner-escrita-imagem .centraliza {
+            width: 750px;
+        }
+
     /* HOME */
     div#premios div[class*='col']:last-child {
         margin-top: 150px;
+    }
+
+    /* FALE CONOSCO */
+    #fale-conosco {
+        margin: 100px 0px;
+    }
+
+    #ganhadores {
+        margin: 150px 0px 70px;
+    }
+
+    #login {
+        margin: 150px 0px 70px;
+    }
+
+    /* CADASTRO */
+    .metodo-compras .saiba-concorra {
+        padding-right: 0px;
     }
 }
 
@@ -71,6 +104,7 @@
         margin-top: 0px;
         background-color: transparent;
         border: 0px;
+        margin-right: 0px;
     }
 
     .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
@@ -81,14 +115,44 @@
         padding: 30px 0px 22px;
     }
 
+    /* HOME */
     #home .espaco-colunas div[class*='col']:last-child {
         margin-top: 70px;
     }
 
+    /* COMO PARTICIPAR */
     #como-participar .espaco-colunas > div[class*='col']:last-child {
         margin-top: 10%;
     }
 
+    /* CADASTRO */
+    #formCadastro form .row:not(.not-flex) div[class*='col'] {
+        display: block;
+    }
+
+        #formCadastro form .row:not(.not-flex) div[class*='col'] *:not(label):not(div):not(span) {
+            width: 100%;
+        }
+
+    #formCadastro .labelFormTwo, #formCadastro .labelForm {
+        margin: 0px;
+        text-align: left;
+        width: auto !important;
+    }
+
+        #formCadastro .labelFormTwo span {
+            font-size: 14px;
+            line-height: 20px;
+            display: inline-block;
+            margin: 0px;
+        }
+
+    #cadastro {
+        margin-top: 20%
+    }
+
+
+    /* RODAPE */
     #rodape .container > div {
         margin: 0px 0px
     }
@@ -103,6 +167,13 @@
 }
 
 @media screen and (max-width: 600px) {
+    .centraliza {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
     #banner-escrita {
         height: 30%;
         margin-top: 92px;
@@ -112,6 +183,20 @@
         height: 38%;
         margin-top: 92px;
     }
+
+    #banner-escrita-imagem {
+        height: 16.5%;
+    }
+
+        #banner-escrita-imagem #imagem-escrita img {
+            left: 15px;
+        }
+
+        #banner-escrita-imagem #imagem-carro img {
+            right: 15px;
+            top: 55%;
+            height: 65%;
+        }
 
     h2 {
         font-size: 25px;
@@ -196,4 +281,49 @@
                 width: 90%;
                 margin-top: 30px
             }
+
+    #fale-conosco {
+        margin: 15% 0px;
+    }
+
+    div#formFaleConosco {
+        padding: 0px 10%;
+        margin-top: 15%;
+    }
+
+        div#formFaleConosco .row div[class*='col']:not([class*='12']):last-child {
+            margin-top: 10px;
+        }
+
+    #formCadastro form div[class*='col']:last-child {
+        margin-top: 10px;
+    }
+
+    div[class*='12'] .labelRadio span {
+        width: 89% !important;
+    }
+
+    #ganhadores {
+        margin: 20% 0px 20%;
+    }
+
+    #login {
+        margin: 20% 0px 20%;
+    }
+
+    .sorteios .col-sm-3 {
+        margin: 0px 15px;
+    }
+
+    #ganhadores .row[style*='50'] {
+        margin-top: 30px !important;
+    }
+
+    .metodo-compras .btn-form[data-cartao='Sim'] {
+        margin-top: 30px;
+    }
+
+    .metodo-compras .col-sm-5 {
+        margin-bottom: 20px;
+    }
 }

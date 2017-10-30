@@ -34,9 +34,7 @@ a.navbar-brand {
 nav.navbar.navbar-default {
     box-shadow: none;
     background-color: transparent;
-    border: 0px;
-    box-shadow: none;
-    background-color: transparent;
+    background-image: none;
     border: 0px;
     padding: 30px 0px;
     margin-bottom: 0px;
@@ -97,6 +95,7 @@ section#menu {
         position: relative;
         margin: 0px auto;
         height: 100%;
+        max-width: 100%;
     }
 
     #banner-escrita-imagem .banner {
@@ -204,6 +203,85 @@ section#menu {
 .azul-claro {
     color: #0989b2
 }
+
+input, textarea {
+    background-color: #f9f9f9;
+    /*border: 1px solid #f9f9f9;*/
+    border: 1px solid black;
+    color: #6a6a6a;
+    width: 100%;
+    padding: 5px 15px;
+}
+
+    input.error, textarea.error {
+        border: 1px solid red;
+    }
+
+#email {
+    background-image: url(../imagens/icone-mail.png);
+    background-position: 15px;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    padding-left: 40px;
+}
+
+#telefone {
+    background-image: url(../imagens/icone-telefone.png);
+    background-position: 15px;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    padding-left: 40px;
+}
+
+.btn-form {
+    border: 2px solid #707070;
+    background-color: transparent;
+    color: #363636;
+    font-family: 'baseninebold';
+    text-transform: uppercase;
+    -webkit-appearance: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.labelRadio {
+    margin-right: 20px;
+    margin-top: 5px;
+    color: #6a6a6a;
+}
+
+    .labelRadio input {
+        width: 16px !important;
+        height: 16px;
+        border-radius: 50px;
+        -webkit-appearance: none;
+        position: relative;
+        background-color: #f9f9f9;
+        border: 1px solid black;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 0px;
+        margin-right: 10px;
+    }
+
+    .labelRadio span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .labelRadio input:checked:before {
+        width: 10px;
+        content: "";
+        height: 10px;
+        background-color: black;
+        display: block;
+        border-radius: 50px;
+        margin-top: -5px;
+        top: 50%;
+        position: absolute;
+        margin-left: -5px;
+        left: 50%;
+    }
 
 
 /* HOME */
@@ -331,7 +409,7 @@ div#premios {
 
 /* PREMIOS */
 #premios {
-    margin: 100px 0px;
+    margin: 100px auto;
 }
 
 /* FAQ */
@@ -353,6 +431,212 @@ h4.underline-azul {
         opacity: 0.5;
         margin-top: 2px;
     }
+
+/* FALE CONOSCO */
+#fale-conosco {
+    margin: 150px 0px;
+}
+
+div#formFaleConosco, div#formCadastro {
+    padding: 0px 15%;
+}
+
+    div#formFaleConosco div[class*='col'], div#formCadastro div[class*='col'] {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+/* CADASTRO */
+#cadastro {
+    margin: 250px 0px 100px;
+}
+
+#formCadastro form .row:not(.not-flex) div[class*='col'] {
+    display: flex;
+    align-items: center;
+}
+
+    #formCadastro form .row:not(.not-flex) div[class*='col'] * {
+        flex-grow: 0;
+        width: auto;
+    }
+
+        #formCadastro form .row:not(.not-flex) div[class*='col'] *:last-child {
+            flex-grow: 1;
+        }
+
+#formCadastro div[class*='label'] {
+    margin-right: 20px;
+    text-transform: uppercase;
+    color: #6a6a6a;
+}
+
+#formCadastro .labelFormTwo {
+    margin-left: 10px;
+    width: 15% !important;
+}
+
+#formCadastro .row.not-flex div[class*='label'] {
+    margin-right: 0px;
+    margin-left: 0px;
+    width: auto !important;
+}
+
+#formCadastro .labelFormTwo span {
+    font-size: 10px;
+    line-height: 50px;
+    display: block;
+    margin-bottom: -20px;
+    margin-top: -18px;
+}
+
+#formCadastro, .metodo-compras {
+    margin-top: 70px;
+}
+
+#formCadastro {
+    max-height: 0px;
+    transition: 0.4s ease;
+    overflow: hidden;
+}
+
+.cartao input {
+    text-align: center;
+    padding: 5px 5px;
+}
+
+#formCadastro.aberto {
+    max-height: 2000px
+}
+
+.metodo-compras.fechado {
+    max-height: 0px;
+}
+
+.metodo-compras {
+    max-height: 1000px;
+    transition: 0.2s ease;
+    overflow: hidden;
+}
+
+.numero-cartao .col-md-2.col-xs-3 {
+    margin-top: 0px !important;
+}
+
+.metodo-compras .btn-form[data-cartao='Sim'] {
+    margin-top: 60px;
+}
+
+.metodo-compras .btn-form[data-cartao='Não'] {
+    margin-top: 30px;
+}
+
+/* GANHADORES */
+#ganhadores {
+    margin: 250px 0px 100px;
+}
+
+.sorteios span {
+    font-size: 20px;
+    display: block;
+    line-height: 20px;
+    font-family: 'baseninemedium';
+    font-weight: 600;
+}
+
+    .sorteios span.premio {
+        font-size: 14px;
+        display: block;
+        line-height: 20px;
+    }
+
+.sorteios .mostra-codigos {
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+
+.sorteios.ativo .mostra-codigos {
+    max-height: 700px;
+}
+
+.sorteios .ativo .mostra-codigos {
+    max-height: 500px;
+}
+
+.sorteios .botao {
+    cursor: pointer;
+}
+
+.sorteios span.codigos {
+    font-size: 15px;
+    display: block;
+    line-height: 20px;
+    color: #231f20 !important;
+    text-transform: none;
+    margin-bottom: 20px;
+}
+
+.sorteios .passou span {
+    color: #97092a
+}
+
+.sorteios .atual span {
+    color: white
+}
+
+.sorteios .proximo span {
+    color: #9d9b9b
+}
+
+.sorteios .col-sm-3 {
+    padding: 15px 15px;
+}
+
+.sorteios.ativo .col-sm-3 {
+    padding: 15px 15px 25px;
+}
+
+.sorteios .atual {
+    background-color: #d5a131
+}
+
+/* ONDE ESTAMOS */
+#map {
+    height: 500px;
+    margin-top: 50px;
+}
+
+/* LOGIN */
+#login {
+    margin: 250px 0px 100px;
+}
+
+/* Paulo */
+.traco-vermelho.meio {
+    margin-left: calc(50% - 25px);
+    margin-right: calc(50% - 25px);
+}
+
+.cupon {
+    width: 100%;
+    height: 65px;
+    margin: 10px 0px;
+    display: table;
+}
+
+    .cupon h4 {
+        display: table-cell;
+        vertical-align: middle;
+        color: #fff;
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+#cadastro, #como-participar {
+    margin-top: 150px;
+    margin-bottom: 10%;
+}
 
 /* RODAPE */
 #rodape {
