@@ -399,13 +399,11 @@ div#premios {
 
 /* COMO PARTICIPAR */
 #como-participar {
-    margin-top: 20%;
-    margin-bottom: 10%;
+    margin: 250px 0px 100px;
 }
-
-    #como-participar .espaco-colunas .col-xs-3 {
-        margin-top: 5px;
-    }
+#como-participar .espaco-colunas .col-xs-3 {
+    margin-top: 5px;
+}
 
 /* PREMIOS */
 #premios {
