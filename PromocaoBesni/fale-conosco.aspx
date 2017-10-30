@@ -21,8 +21,8 @@
 <section id="banner-escrita-imagem">
 	<div class="banner">
 		<div class="centraliza">
-			<div id="imagem-escrita"><img src="assets/imagens/escrita-banner.png" alt=""></div>
-			<div id="imagem-carro"><img src="assets/imagens/imagem-carro.png" alt=""></div>
+			<div id="imagem-escrita"><img src="/assets/imagens/escrita-banner.png" alt=""></div>
+			<div id="imagem-carro"><img src="/assets/imagens/imagem-carro.png" alt=""></div>
 		</div>
 	</div>
 </section>
@@ -43,7 +43,7 @@
 					Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. 
 				</span>
 			</div>
-			<img src="assets/imagens/jeep.png" alt="Imagem jeep">
+			<img src="/assets/imagens/jeep.png" alt="Imagem jeep">
 		</div>
 		<div class="row" style="margin-top: 10%;text-align: right">
 			<div class="col-md-6" style="text-align: left">
@@ -53,7 +53,7 @@
 					Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. 
 				</span>
 			</div>
-			<img src="assets/imagens/moto-bull.png" alt="Imagem moto bull">
+			<img src="/assets/imagens/moto-bull.png" alt="Imagem moto bull">
 		</div>
 	</div>
 </section>
