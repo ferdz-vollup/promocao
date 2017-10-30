@@ -600,6 +600,9 @@ div#formFaleConosco, div#formCadastro {
 }
 
 /* ONDE ESTAMOS */
+#onde-estamos {
+    margin-top:150px;
+}
 #map {
     height: 500px;
     margin-top: 50px;
