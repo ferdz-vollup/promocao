@@ -69,7 +69,7 @@
 						</span>
 					</div>
 				</div>
-				<button class="btn-form" data-cartao="Não">Clique aqui</button>
+				<button class="btn-form" data-cartao="Nao">Clique aqui</button>
 			</div>
 			<div class="col-sm-1"></div>
 		</div>
