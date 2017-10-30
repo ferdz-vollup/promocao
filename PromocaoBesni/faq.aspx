@@ -20,7 +20,7 @@
 <!--banner-->
 <section id="banner-premios">
 	<div class="banner">
-		<div id="imagem-carro"><img src="assets/imagens/imagem-carro.png" alt=""></div>
+		<div id="imagem-carro"><img src="/assets/imagens/imagem-carro.png" alt=""></div>
 	</div>
 </section>
 
