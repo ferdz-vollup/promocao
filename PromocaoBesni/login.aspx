@@ -49,7 +49,9 @@
 				</div>
                 <h3 class="basenine text-uppercase cinza">primeiro acesso</h3>
                 <div class="traco-vermelho"></div>
-				<button class="btn-form" style="width: 100%;">cadastre-se agora</button>
+                <a href="/cadastro.aspx">
+				    <button class="btn-form" style="width: 100%;">cadastre-se agora</button>
+                </a>
             </div>
 		</div>
 	</div>
