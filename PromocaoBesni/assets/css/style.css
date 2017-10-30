@@ -631,7 +631,7 @@ div#formFaleConosco, div#formCadastro {
         font-size: 2.5rem;
     }
 
-#cadastro, #como-participar {
+#cadastro{
     margin-top: 150px;
     margin-bottom: 10%;
 }
