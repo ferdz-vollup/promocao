@@ -126,6 +126,7 @@ function initMap() {
     });
 
     infowindow = new google.maps.InfoWindow();
+	
 }
 
 function callback(results, status) {
@@ -153,17 +154,28 @@ function createMarker(place) {
 }
 
 function chama() {
-	var geocoder= new google.maps.Geocoder();
-	var address = 'Loja besni 04086-010';
-				geocoder.geocode( { 'address': address}, function(results, status) {
-			  if (status == google.maps.GeocoderStatus.OK) {
-				map.setZoom(18);
-				map.setCenter(results[0].geometry.location);
-				  createMarker(results[0]);
-			  } else {
-				alert("Geocode was not successful for the following reason: " + status);
-			  }
-			});
+	var address = "Besni "+jQuery(".cep").val();
 	
+	
+	var geocoder= new google.maps.Geocoder();
+	geocoder.geocode( { 'address': address}, function(results, status) {
+		if (status == google.maps.GeocoderStatus.OK) {
+			map.setZoom(14);
+			
+			request = {
+				location: results[0].geometry.location,
+				radius: '100',
+				query: address
+			};
+			var service = new google.maps.places.PlacesService(map);
+			service.textSearch(request, callback);
+			var marker = new google.maps.Marker({
+				map: map,
+				position: results[0].geometry.location
+			});
+		} else {
+			alert("Geocode was not successful for the following reason: " + status);
+		}
+	});
 }
 	
