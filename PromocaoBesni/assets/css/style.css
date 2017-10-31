@@ -744,7 +744,8 @@ input#valor_nota {
     width: 78%;
     display: inline-block;
     padding-left: 0px;
-    margin-left: 5px;
+    margin-left: 0px;
+    outline:none
 }
 #cadastrar-cupom button {
     margin-top: 20px;
