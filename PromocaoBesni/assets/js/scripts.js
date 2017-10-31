@@ -19,6 +19,8 @@ jQuery(document).ready(function () {
     jQuery('.data-nasc').mask("99/99/9999");
     jQuery('.cel').mask("(99) 99999-9999");
     jQuery('.cep').mask("99999-999");
+    jQuery('.cnpj').mask("00.000.000/0000-00");
+    jQuery('.valor-nota').mask("R$ #.##0,00", { reverse: true });
 
     jQuery(".btn-limpar").click(function () {
         var formulario = jQuery(this).parent().parent().parent();
@@ -180,14 +182,15 @@ function createMarker(place) {
     });
 
     google.maps.event.addListener(marker, 'click', function () {
-        infowindow.setContent("<center>" + place.name + "<br>" + place.formatted_address + "</center>");
+        infowindow.setContent("<center>Loja Besni<br>" + place.formatted_address + "</center>");
         infowindow.open(map, this);
     });
 }
 
 function chama() {
+    var cep = jQuery(".cep").val();
     var geocoder = new google.maps.Geocoder();
-    var address = 'Loja besni 04086-010';
+    var address = 'Loja besni ' + cep;
     geocoder.geocode({ 'address': address }, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             map.setZoom(18);
@@ -197,5 +200,4 @@ function chama() {
             alert("Geocode was not successful for the following reason: " + status);
         }
     });
-
 }
