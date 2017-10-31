@@ -20,7 +20,7 @@
 <!--banner-->
 <section id="banner">
 	<div class="banner">
-		<div id="imagem-carro"><img src="/assets/imagens/imagem-carro.png" alt="Imagem prêmios"></div>
+		<div id="imagem-carro"><img src="/assets/imagens/imagem-carro.png" alt=""></div>
 	</div>
 </section>
 
@@ -62,7 +62,7 @@
 	</div>
 	<div id="fique-ligado">
 		<div class="container text-center">
-			<span>fique ligado! <br>o próximo sorteio é no dia <br>18 de novembro<br></span>
+			<span id="proximoSorteio" runat="server"></span>
 			<button class="btn-confira-ganhadores">
 				clique aqui e Confira os ganhadores
 			</button>
@@ -89,7 +89,7 @@
 				</em>
 				
 			</div>
-			<img src="assets/imagens/jeep.png" alt="Imagem Jeep">
+			<img src="assets/imagens/jeep.png" alt="">
 		</div>
 		<div class="col-md-6">
 			<div>
@@ -105,7 +105,7 @@
 					saiba mais
 				</em>
 			</div>
-			<img src="assets/imagens/moto-bull.png" alt="Imagem moto">
+			<img src="assets/imagens/moto-bull.png" alt="">
 		</div>
 	</div>
 	<div class="container">
@@ -126,8 +126,8 @@
 			<div style="margin: auto; margin-bottom: 30px;" class="traco-vermelho"></div>
 			<h3 class="basenine">#FecheoAnoComBesni</h3>
 			<div class="redes">
-				<img src="assets/imagens/icone-facebook.png" alt="Ícone facebook">
-				<img src="assets/imagens/icone-instagram.png" alt="Ícone instagram">
+				<img src="assets/imagens/icone-facebook.png" alt="">
+				<img src="assets/imagens/icone-instagram.png" alt="">
 				<p>/lojasbesni</p>
 			</div>
 		</div>
