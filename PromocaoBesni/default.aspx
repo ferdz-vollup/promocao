@@ -128,14 +128,17 @@
 		<div class="container text-center">
 			<h2 class="basenine text-uppercase vermelho">
 				Compartilhe suas fotos de  produtos Besni com a <br>nossa hashtag e apareça em nossas redes sociais!
-			</h2><br><br>
-			<img src="assets/imagens/marcacao-instagram.jpg" alt="">
-            <!-- ISTAGRAM-->
-            <ul id="insta" runat="server">
-
-            </ul>
+			</h2>
+            <!--<br><br>
+            <!-- ISTAGRAM
+            <ul id="insta" runat="server"></ul>-->
 		</div>
 	</div>
+
+    <div class="container">
+        <ul id="instaFeed"></ul>
+    </div>
+
 	<div class="container">
 		<div class="text-center">
 			<div style="margin: auto; margin-bottom: 30px;" class="traco-vermelho"></div>

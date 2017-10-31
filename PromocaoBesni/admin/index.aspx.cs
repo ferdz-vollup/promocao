@@ -23,7 +23,7 @@ namespace PromocaoBesni.admin
             objUtils = new utils();
             objBD = new bd();
 
-            PegarResultado();
+            //PegarResultado();
         }
 
         public void PegarResultado()

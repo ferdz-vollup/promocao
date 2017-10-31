@@ -723,6 +723,22 @@ div#formFaleConosco, div#formCadastro {
     margin-bottom: 10%;
 }
 
+/* INSTAGRAM */
+#instaFeed {
+    margin-bottom: 35px;
+    text-align: center;
+    padding: 0px 5%;
+}
+#instaFeed > li {
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    margin: 5px;
+}
+#instaFeed > li > img {
+    width: auto;
+}
+
 /* RODAPE */
 #rodape {
     padding-top: 30px;
