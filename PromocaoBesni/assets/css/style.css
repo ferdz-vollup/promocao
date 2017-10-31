@@ -730,9 +730,21 @@ div#formFaleConosco, div#formCadastro {
     border: none;
     width: 75%;
     height: 50px;
-    float: left;
     margin: 10px auto 10px 10px;
     font-family: 'metronic_proregular';
+}
+.lblValorNota {
+    width: auto;
+    font-family: 'metronic_proregular';
+    padding-left: 27px;
+    color: #6a6a6a;
+    font-weight: 100;
+}
+input#valor_nota {
+    width: 78%;
+    display: inline-block;
+    padding-left: 0px;
+    margin-left: 5px;
 }
 #cadastrar-cupom button {
     margin-top: 20px;

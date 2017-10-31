@@ -55,7 +55,8 @@
                     </div>
                     <div class="novo-cupon">
                         <span>4</span>
-                        <input type="text" placeholder="R$ xxx,xx" id="valor_nota" name="valor nota" class="valor-nota">
+                        <label class="lblValorNota">R$</label>
+                        <input type="text" placeholder="xxx,xx" id="valor_nota" name="valor nota" class="valor-nota">
                     </div>
                     <div class="col-sm-3 col-md-4"></div>
                     <div class="col-xs-12 col-sm-9 col-md-6 two-buttons-wrapping">
