@@ -15,7 +15,7 @@ namespace PromocaoBesni
     {
         bd objBD = new bd();
         utils objUtils = new utils();
-        private OleDbDataReader rsSorteio;
+        private OleDbDataReader rsSorteio, rsInstagram;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,6 +23,7 @@ namespace PromocaoBesni
             objBD = new bd();
 
             ProximoSorteio();
+            PopularInstagram();
         }
 
         public void ProximoSorteio()
@@ -41,8 +42,39 @@ namespace PromocaoBesni
                 proximoSorteio.InnerHtml = "fique ligado! <br>o próximo sorteio é no dia <br>" + rsSorteio["dia"] + " de " + objUtils.MesExtenso(Convert.ToInt16(rsSorteio["mes"]))+ " <br>";
             }
 
-            rsSorteio.Close();
             rsSorteio.Dispose();
+            rsSorteio.Close();
+        }
+
+        public void PopularInstagram()
+        {
+            try
+            {
+                rsInstagram = objBD.ExecutaSQL("exec psInstagram");
+
+                if(rsInstagram == null)
+                {
+                    throw new Exception();
+                }
+                if(rsInstagram.HasRows)
+                {
+                    while(rsInstagram.Read())
+                    {
+                        insta.InnerHtml += "<li>";
+                        insta.InnerHtml += "    <a href=\""+rsInstagram["INS_URL"]+"\" rel=\"nofollow\" target=\"_blank\">";
+                        insta.InnerHtml += "        <img onerror=\"$(this).parent('a').parent('li').remove()\" src=\"" + rsInstagram["INS_THUMB"] + ">";
+                        insta.InnerHtml += "    </a>";
+                        insta.InnerHtml += "</li>";
+                    }
+                }
+                rsInstagram.Dispose();
+                rsInstagram.Close();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }
