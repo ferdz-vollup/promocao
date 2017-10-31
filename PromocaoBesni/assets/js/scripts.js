@@ -3,8 +3,21 @@ jQuery(document).ready(function () {
     jQuery("#banner-escrita img").attr("style", "margin-top:-" + alturaEscrita / 2 + "px");
     jQuery(".banner img").fadeIn(1000);
 
-    jQuery('.telefone').mask("(99) 99999-9999");
+    var SPMaskBehavior = function (val) {
+        return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+    },
+    spOptions = {
+        onKeyPress: function (val, e, field, options) {
+            field.mask(SPMaskBehavior.apply({}, arguments), options);
+        }
+    };
+    $('.telefone').mask(SPMaskBehavior, spOptions);
+
     jQuery('.cpf').mask("999.999.999-99");
+    jQuery('.rg').mask("99.999.999-9");
+    jQuery('.data-nasc').mask("99/99/9999");
+    jQuery('.cel').mask("(99) 99999-9999");
+    jQuery('.cep').mask("99999-999");
 
     jQuery(".btn-limpar").click(function () {
         var formulario = jQuery(this).parent().parent().parent();
@@ -53,10 +66,15 @@ jQuery(document).ready(function () {
     });
 
     jQuery(".numero-cartao .inputs").keyup(function () {
-        alert("aa");
-        if (jQuery(this).value.length == jQuery(this).maxLength) {
-            var next = jQuery(this).next('.inputs');
-            jQuery(this).next('.inputs').focus();
+        var digitados = jQuery(this).val().length;
+        jQuery(this).attr("maxlength", "4");
+        var press = jQuery.Event("keypress");
+        press.ctrlKey = false;
+        press.which = 13;
+        var maxLenght = jQuery(this).attr("maxlength");
+        if (digitados == maxLenght) {
+            console.log("oi");
+            jQuery(this).trigger(press);
         }
     });
 

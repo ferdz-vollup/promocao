@@ -35,15 +35,15 @@
 	            <h3 class="basenine text-uppercase cinza">já sou cadastrado</h3>
 				<div class="traco-vermelho"></div>
 				<div style="padding:0;margin-bottom: 50px;">
-                	<form action="" id="loginForm">
-                		<input type="text" placeholder="CPF" id="cpf" name="cpf" class="cpf">
-                		<input style="margin-top: 10px;" type="password" placeholder="senha" id="senha" name="senha">
+                	<form action="javascript:void(0)" method="post" novalidate enctype="multipart/form-data" class="form" id="loginForm">
+                		<input type="text" placeholder="CPF" id="cpf" name="cpf" class="cpf inputs">
+                		<input style="margin-top: 10px;" type="password" placeholder="senha" id="senha" name="senha" class="inputs">
                 		<div style="height: 15px;"></div>
                 		<div style="display: inline-block; vertical-align: middle;width: 49%;">
                 			<a href="#" style="color:#6a6a6a;text-decoration: underline;">esqueci minha senha</a>
                 		</div>
                 		<div style="display: inline-block; vertical-align: middle;width: 49.7%; text-align: right">
-                			<button class="btn-form btn-enviar">Enviar</button>
+                			<button type="submit" class="btn-form btn-enviar">Enviar</button>
                 		</div>
                 	</form>
 				</div>

@@ -37,14 +37,6 @@
 		</div>
 		<div id="formFaleConosco" style="margin-top: 70px">
 			<form action="javascript:void(0)" method="post" novalidate enctype="multipart/form-data" id="faleConoscoForm" class="form">
-			
-				<input type="hidden" name="Destinatario" value="|vitor.emanuel@vollup.com">
-				<input type="hidden" name="Obrigatorios" value="nome|email|mensagem">
-				<input type="hidden" name="autoresposta" value="teste">
-				<input type="hidden" name="idioma" value="pt">
-				<input type="hidden" name="metodo" value="ajax">
-				<input type="hidden" name="Assunto" id="assunto" value="Contato Fale Conosco - Promoção Besni">
-				
 				<div class="row">
 					<div class="col-md-8 col-sm-8">
 						<input type="text" placeholder="NOME" name="nome" class="inputs">

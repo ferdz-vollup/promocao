@@ -65,13 +65,13 @@
 					</div>
 					<div class="col-sm-6">
 						<div class="labelFormTwo text-center">RG</div>
-						<input type="text" name="rg" class="inputs cpf">
+						<input type="text" name="rg" class="inputs rg">
 					</div>
 				</div>
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-sm-6">
 						<div class="labelForm">Data de nascimento</div>
-						<input type="text" name="dtnascimento" class="inputs cpf">
+						<input type="text" name="dtnascimento" class="inputs data-nasc">
 					</div>
 					<div class="col-sm-6">
 						<div class="labelFormTwo text-center">Sexo</div>
@@ -88,22 +88,22 @@
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-sm-6">
 						<div class="labelForm">Telefone</div>
-						<input type="text" name="telefone" class="inputs cpf">
+						<input type="text" name="telefone" class="inputs telefone">
 					</div>
 					<div class="col-sm-6">
 						<div class="labelFormTwo text-center">Celular</div>
-						<input type="text" name="celular" class="inputs cpf">
+						<input type="text" name="celular" class="inputs cel">
 					</div>
 				</div>
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-sm-6">
 						<div class="labelForm">E-mail</div>
-						<input type="text" name="email" class="inputs cpf">
+						<input type="email" name="email" class="inputs">
 					</div>
 					<div class="col-sm-6">
 						<div class="labelFormTwo text-center">
 							<span>Confirmar</span> E-mail</div>
-						<input type="text" name="email2" class="inputs cpf">
+						<input type="email" name="email2" class="inputs">
 					</div>
 				</div>
 				
@@ -119,9 +119,25 @@
 							</label>
 						</div>
 					</div>
-					<div class="col-sm-7 col-md-9">
+				</div>
+
+                <div class="row not-flex cartao" style="margin-top: 50px;display: none">
+					<div class="col-sm-12">
 						<div class="labelFormTwo">número do cartão</div>
-						<input type="text" name="numerocartao" class="inputs cpf">
+						<div style="margin-left: -5px" class="numero-cartao">
+							<div class="col-md-2 col-xs-3">
+								<input type="text" name="cartao1" class="inputs" maxlength="4">
+							</div>
+							<div class="col-md-2 col-xs-3">
+								<input type="text" name="cartao2" class="inputs" maxlength="4">
+							</div>
+							<div class="col-md-2 col-xs-3">
+								<input type="text" name="cartao3" class="inputs" maxlength="4">
+							</div>
+							<div class="col-md-2 col-xs-3">
+								<input type="text" name="cartao4" class="inputs" maxlength="4">
+							</div>
+						</div>
 					</div>
 				</div>
 				
@@ -136,37 +152,37 @@
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-md-8">
 						<div class="labelForm">CEP</div>
-						<input type="text" name="cep" class="inputs">
+						<input type="text" name="cep" class="inputs cep">
 					</div>
 				</div>
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-sm-8">
 						<div class="labelForm">Logradouro</div>
-						<input type="text" name="logradour" class="inputs cpf">
+						<input type="text" name="logradouro" class="inputs">
 					</div>
 					<div class="col-sm-4">
 						<div class="labelForm text-center" style="margin-right: 10px;">Número</div>
-						<input type="text" name="numero" class="inputs cpf">
+						<input type="text" name="numero" class="inputs">
 					</div>
 				</div>
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-sm-6">
 						<div class="labelForm">Complemento</div>
-						<input type="text" name="complemento" class="inputs cpf">
+						<input type="text" name="complemento" class="inputs">
 					</div>
 					<div class="col-sm-6">
 						<div class="labelFormTwo text-center">Bairro</div>
-						<input type="text" name="bairro" class="inputs cpf">
+						<input type="text" name="bairro" class="inputs">
 					</div>
 				</div>
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-sm-6">
 						<div class="labelForm">Cidade</div>
-						<input type="text" name="cidade" class="inputs cpf">
+						<input type="text" name="cidade" class="inputs">
 					</div>
 					<div class="col-sm-6">
 						<div class="labelFormTwo text-center">Estado</div>
-						<input type="text" name="uf" class="inputs cpf">
+						<input type="text" name="uf" class="inputs" maxlength="2">
 					</div>
 				</div>
 				
@@ -187,12 +203,12 @@
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-sm-6">
 						<div style="width: 50px;" class="labelForm">Senha</div>
-						<input type="text" name="senha" class="inputs cpf">
+						<input type="password" name="senha" class="inputs">
 					</div>
 					<div class="col-sm-6">
 						<div class="labelFormTwo text-center">
 							<span>Confirmar</span> Senha</div>
-						<input type="text" name="senha2" class="inputs cpf">
+						<input type="password" name="senha2" class="inputs">
 					</div>
 				</div>
 				<div class="row" style="margin-top: 50px;">
