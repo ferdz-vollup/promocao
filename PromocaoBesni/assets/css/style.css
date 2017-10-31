@@ -702,21 +702,96 @@ div#formFaleConosco, div#formCadastro {
     margin-left: calc(50% - 25px);
     margin-right: calc(50% - 25px);
 }
-
 .cupon {
     width: 100%;
     height: 65px;
     margin: 10px 0px;
     display: table;
 }
-
-    .cupon h4 {
-        display: table-cell;
-        vertical-align: middle;
-        color: #fff;
-        text-align: center;
-        font-size: 2.5rem;
+.cupon h4 {
+    display: table-cell;
+    vertical-align: middle;
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.novo-cupon span {
+    background: #a8272d;
+    color: #fff;
+    width: 30px;
+    float: left;
+    text-align: left;
+    width: 50px;
+    height: 50px;
+    padding: 15px 20px;
+    margin: 10px 0 10px auto;
+}
+.novo-cupon input {
+    border: none;
+    width: 75%;
+    height: 50px;
+    float: left;
+    margin: 10px auto 10px 10px;
+    font-family: 'metronic_proregular';
+}
+#cadastrar-cupom button {
+    margin-top: 20px;
+    text-align: cente;
+}
+#cadastrar-cupom div button:first-child {
+    float: right;
+}
+#cadastrar-cupom div button:last-child {
+    float: left;
+}
+.two-buttons-wrap {
+    text-align: center;
+}
+.receipt-wrapping {
+    margin-bottom: 0;
+    padding: 0 20px;
+}
+.receipt-wrapping img {
+    box-shadow: 0px 0px 10px gray;
+    box-shadow: -1px 1px 5px 2px gray;
+}
+@media only screen and (min-width: 768px) {
+    #cadastrar h2:first-child {
+        margin-top: 50px;
     }
+    #cadastrar h3:first-child {
+        margin-top: 0px;
+    }
+    .novo-cupon input {
+        width: 75%;
+    }
+    #cadastrar-cupom button {
+        float: right;
+    }    
+    .two-buttons-wrapping {
+        float: right;
+        text-align: right;
+        padding: 0;
+    }    
+    #cadastrar-cupom div button:first-child {
+        margin-left: 5px;
+        margin-right: 0px;
+    }
+    #cadastrar-cupom div button:last-child {
+        margin-right: 5px;
+        margin-left: 0px;
+        float: right;
+    }    
+}
+@media only screen and (min-width: 992px) {
+    .novo-cupon input {
+        width: 85%;
+    }
+    .receipt-wrapping {
+        margin-top: -100px;
+        margin-bottom: none;         
+    }
+} 
 
 #cadastro{
     margin-top: 150px;
