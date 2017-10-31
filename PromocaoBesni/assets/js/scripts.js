@@ -39,7 +39,21 @@ jQuery(document).ready(function () {
             }
         }
         if (jQuery(this).find(".error").length == 0) {
-            envia(idForm);
+            var eml = jQuery("#email").val();
+            console.log(eml);
+            var filtroregexemail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+            console.log(filtroregexemail.test(eml));
+            if (filtroregexemail.test() == true) {
+                if (idForm == "#faleConoscoForm") {
+                    enviaFerdz(idForm);
+                }
+                else {
+                    envia(idForm);
+                }
+            } else {
+                jQuery(this).addClass("error");
+                console.log("err");
+            }
         }
     });
 
@@ -89,7 +103,7 @@ jQuery(document).ready(function () {
     })
 })
 
-function envia(idForm) {
+function enviaFerdz(idForm) {
     if (document.querySelectorAll(idForm + " .error").length == 0) {
         var form = jQuery(idForm).serialize();
         jQuery.ajax({
@@ -101,43 +115,26 @@ function envia(idForm) {
             success: function (data) {
                 if (data == "sucesso") {
                     console.log("sucesso total");
-                    jQuery("#msgContato").html("<h2>Obrigado por entrar em contato! <br/>Em breve daremos um retorno</h2>");
-                    jQuery(".btnLogin").fadeOut(0);
+                    jQuery(idForm+" .retorno-mensagem").html("Obrigado por entrar em contato! Em breve daremos um retorno");
                 } else {
                     console.log("sucesso, porém erro");
-                    jQuery("#msgContato").html("<h2>Ops...<br/>Erro ao tentar enviar, por favor, tente novamente!</h2>");
-                    jQuery('html, body').animate({
-                        scrollTop: jQuery("#msgContato").first().offset().top - 140
-                    }, 500);
-                    jQuery("#imgLoader").fadeOut("5000");
+                    jQuery(idForm+" .retorno-mensagem").html("Ops... Erro ao tentar enviar, por favor, tente novamente!");
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 console.log("erro total");
-                jQuery("#msgContato").html("<h2>Ops...<br/>Erro ao tentar enviar, por favor, tente novamente!</h2>");
-                jQuery('html, body').animate({
-                    scrollTop: jQuery("#msgContato").first().offset().top - 140
-                }, 500);
-                jQuery("#imgLoader").fadeOut("5000");
+                jQuery(idForm + " .retorno-mensagem").html("Ops... Erro ao tentar enviar, por favor, tente novamente!");
             },
             beforeSend: function () {
-                jQuery("#msgContato").show();
-                jQuery("#msgContato").html("<h2><i class=\"fa fa-spin fa-spinner\"></i> Por favor, aguarde enquanto enviamos a sua mensagem.</h2>");
-                jQuery("#form_contato").hide();
-                jQuery('html, body').animate({
-                    scrollTop: jQuery("#msgContato").first().offset().top - 140
-                }, 500);
-                jQuery(".btn_form").attr("disabled", "disabled");
+                jQuery(".retorno-mensagem").html("<span class='loader'></span>Enviando mensagem...");
+                jQuery(idForm+" button").attr("disabled", "disabled");
             },
             complete: function () {
                 console.log("request completo");
                 setTimeout(function () {
-                    jQuery("#msgContato").hide();
-                    jQuery("#form_contato").fadeIn("1500");
-                    jQuery("#imgLoader").hide();
-                    jQuery(".btn_form").removeAttr("disabled");
-                    jQuery("#msgContato").html("<h2><i class=\"fa fa-spin fa-spinner\"></i> Por favor, aguarde enquanto enviamos a sua mensagem.</h2>");
-                    jQuery("#form_contato")[0].reset();
+                    jQuery(idForm + " button").removeAttr("disabled");
+                    jQuery(idForm + " .retorno-mensagem").html("");
+                    jQuery(idForm)[0].reset();
                 }, 6000);
 
             }
