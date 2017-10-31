@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="PromocaoBesni.admin.index" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="instagram.aspx.cs" Inherits="PromocaoBesni.admin.instagram" %>
 <%@ Register Src="~/admin/inc/head.ascx" TagPrefix="besni" TagName="head" %>
 <%@ Register Src="~/admin/inc/menu.ascx" TagPrefix="besni" TagName="menu" %>
 <%@ Register Src="~/admin/inc/footer.ascx" TagPrefix="besni" TagName="footer" %>
@@ -113,7 +113,7 @@
 
     <!--footer-->
     <besni:footer runat="server" ID="footer" />
-
+      <script src="js/instagram.js"></script>
 </body>
 
 </html>
