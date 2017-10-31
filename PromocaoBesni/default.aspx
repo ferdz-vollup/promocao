@@ -31,9 +31,11 @@
 			<h2 class="basenine text-uppercase vermelho">
 				concorra, nas compras acima de R$200,00
 			</h2>
-			<button class="btn-home-cadastre">
-				clique aqui e Cadastre seus cupons
-			</button>	
+            <a href="/login.aspx" title="Clique aqui e cadastre seus cupons">
+			    <button class="btn-home-cadastre">
+				    clique aqui e Cadastre seus cupons
+			    </button>	
+            </a>
 		</div>
 		<div style="margin-top: 70px">
 			<div class="col-md-6">
@@ -43,9 +45,11 @@
 					Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
 				</span>
 				<br><br>
-				<em style="text-decoration: underline; font-weight: 600" class="vinho">
-					saiba mais
-				</em>
+                <a href="/como-participar.aspx" title="Saiba mais">
+				    <em style="text-decoration: underline; font-weight: 600" class="vinho">
+					    saiba mais
+				    </em>
+                </a>
 			</div>
 			<div class="col-md-6">
 				<h3 class="basenine text-uppercase cinza">concorra a prêmios</h3>
@@ -54,18 +58,22 @@
 					Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
 				</span>
 				<br><br>
-				<em style="text-decoration: underline; font-weight: 600" class="vinho">
-					saiba mais
-				</em>
+                <a href="/premios.aspx" title="Saiba mais">
+				    <em style="text-decoration: underline; font-weight: 600" class="vinho">
+					    saiba mais
+				    </em>
+                </a>
 			</div>
 		</div>
 	</div>
 	<div id="fique-ligado">
 		<div class="container text-center">
 			<span id="proximoSorteio" runat="server"></span>
-			<button class="btn-confira-ganhadores">
-				clique aqui e Confira os ganhadores
-			</button>
+            <a href="/ganhadores.aspx" title="Clique aqui e confira os ganhadores">
+			    <button class="btn-confira-ganhadores">
+				    clique aqui e Confira os ganhadores
+			    </button>
+            </a>
 		</div>
 	</div>
 	<div class="container" id="premios">
@@ -84,10 +92,11 @@
 					Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. 
 				</span>
 				<br><br>
-				<em style="text-decoration: underline; font-weight: 600" class="vinho">
-					saiba mais
-				</em>
-				
+                <a href="/premios.aspx" title="Saiba mais">
+				    <em style="text-decoration: underline; font-weight: 600" class="vinho">
+					    saiba mais
+				    </em>
+				</a>
 			</div>
 			<img src="assets/imagens/jeep.png" alt="">
 		</div>
@@ -101,9 +110,11 @@
 					Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. 
 				</span>
 				<br><br>
-				<em style="text-decoration: underline; font-weight: 600" class="vinho">
-					saiba mais
-				</em>
+                <a href="/premios.aspx" title="Saiba mais">
+				    <em style="text-decoration: underline; font-weight: 600" class="vinho">
+					    saiba mais
+				    </em>
+                </a>
 			</div>
 			<img src="assets/imagens/moto-bull.png" alt="">
 		</div>
@@ -130,8 +141,12 @@
 			<div style="margin: auto; margin-bottom: 30px;" class="traco-vermelho"></div>
 			<h3 class="basenine">#FecheoAnoComBesni</h3>
 			<div class="redes">
-				<img src="assets/imagens/icone-facebook.png" alt="">
-				<img src="assets/imagens/icone-instagram.png" alt="">
+                <a href="https://www.facebook.com/LojasBesni/" title="Lojas Besni no facebook">
+                    <img src="assets/imagens/icone-facebook.png" alt="ícone facebook">
+                </a>
+                <a href="https://www.instagram.com/lojasbesni/" title="Lojas Besni no instagram">
+				    <img src="assets/imagens/icone-instagram.png" alt="ícone instagram">
+                </a>
 				<p>/lojasbesni</p>
 			</div>
 		</div>
@@ -139,9 +154,11 @@
 	<div id="besni-proxima">
 		<div class="container text-center">
 			<span>tem uma <br>Besni perto de você!<br></span>
-			<button class="btn-confira-ganhadores">
-				clique aqui e veja aonde estamos
-			</button>
+            <a href="/onde-estamos.aspx" title="Clique aqui e veja aonde estamos">
+			    <button class="btn-onde-estamos">
+				    clique aqui e veja aonde estamos
+			    </button>
+            </a>
 		</div>
 	</div>
 </section>

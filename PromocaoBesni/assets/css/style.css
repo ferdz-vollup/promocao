@@ -182,6 +182,13 @@ section#menu {
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'metronic_proregular';
+    src: url('../fonts/metronicpro-webfont.woff2') format('woff2'), url('../fonts/metronicpro-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 .basenine {
     font-family: 'baseninemedium';
@@ -211,11 +218,12 @@ input, textarea {
     color: #6a6a6a;
     width: 100%;
     padding: 5px 15px;
+    font-family: 'metronic_proregular';
 }
 
-    input.error, textarea.error {
-        border: 1px solid red;
-    }
+input.error, textarea.error {
+    border: 1px solid red;
+}
 
 #email {
     background-image: url(../imagens/icone-mail.png);
@@ -248,9 +256,10 @@ input, textarea {
     margin-right: 20px;
     margin-top: 5px;
     color: #6a6a6a;
+    font-family: 'metronic_proregular';
 }
 
-    .labelRadio input {
+.labelRadio input {
         width: 16px !important;
         height: 16px;
         border-radius: 50px;
@@ -262,7 +271,7 @@ input, textarea {
         vertical-align: middle;
         margin-top: 0px;
         margin-right: 10px;
-    }
+}
 
     .labelRadio span {
         display: inline-block;
@@ -303,6 +312,14 @@ input, textarea {
     padding: 10px 20px;
     font-size: 18px;
     margin-top: 30px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.btn-home-cadastre:hover {
+    background-color: #363636;
+    color: white;
 }
 
 .traco-vermelho {
@@ -355,6 +372,33 @@ input, textarea {
     padding: 10px 20px;
     font-size: 18px;
     margin-top: 40px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.btn-confira-ganhadores:hover {
+    background-color: white;
+    color: #a52218;
+}
+.btn-onde-estamos {
+    font-family: 'baseninebold';
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-appearance: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 40px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.btn-onde-estamos:hover {
+    background-color: white;
+    color: #d39f31;
 }
 
 div#premios {
@@ -467,6 +511,7 @@ div#formFaleConosco, div#formCadastro {
     margin-right: 20px;
     text-transform: uppercase;
     color: #6a6a6a;
+    font-family: 'metronic_proregular';
 }
 
 #formCadastro .labelFormTwo {
