@@ -316,6 +316,9 @@
     #onde-estamos {
         margin-top: 15%;
     }
+    .retorno-mensagem {
+        margin-top: 86px;
+    }
 
     .sorteios .col-sm-3 {
         margin: 0px 15px;

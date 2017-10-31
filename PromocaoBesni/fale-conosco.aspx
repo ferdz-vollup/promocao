@@ -60,10 +60,10 @@
 				</div>
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-md-12 text-right">
+                        <div class="retorno-mensagem"><span class="loader"></span>Enviando mensagem...</div>
 						<button type="button" class="btn-form btn-limpar" style="margin-right: 10px;">Limpar</button>
 						<button type="submit" class="btn-form btn-enviar">Enviar</button>
 					</div>
-                    <div class="retorno-mensagem"><span class="loader"></span>Enviando mensagem...</div>
 				</div>
 			</form>
 		</div>
