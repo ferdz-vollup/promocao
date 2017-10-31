@@ -136,7 +136,7 @@
 	</div>
 
     <div class="container">
-        <ul id="instaFeed"></ul>
+        <ul id="instaFeed" runat="server"></ul>
     </div>
 
 	<div class="container">

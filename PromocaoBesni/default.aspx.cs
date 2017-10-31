@@ -60,11 +60,11 @@ namespace PromocaoBesni
                 {
                     while(rsInstagram.Read())
                     {
-                        insta.InnerHtml += "<li>";
-                        insta.InnerHtml += "    <a href=\""+rsInstagram["INS_URL"]+"\" rel=\"nofollow\" target=\"_blank\">";
-                        insta.InnerHtml += "        <img onerror=\"$(this).parent('a').parent('li').remove()\" src=\"" + rsInstagram["INS_THUMB"] + ">";
-                        insta.InnerHtml += "    </a>";
-                        insta.InnerHtml += "</li>";
+                        instaFeed.InnerHtml += "<li>";
+                        instaFeed.InnerHtml += "    <a href=\""+rsInstagram["INS_URL"]+"\" rel=\"nofollow\" target=\"_blank\">";
+                        instaFeed.InnerHtml += "        <img onerror=\"$(this).parent('a').parent('li').remove()\" src=\"" + rsInstagram["INS_THUMB"] + ">";
+                        instaFeed.InnerHtml += "    </a>";
+                        instaFeed.InnerHtml += "</li>";
                     }
                 }
                 rsInstagram.Dispose();
