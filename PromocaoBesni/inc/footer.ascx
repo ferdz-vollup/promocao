@@ -17,7 +17,9 @@
 				</span>
 			</div>
 			<div class="col-md-3 col-xs-12 text-center">
-				<img src="/assets/imagens/logo-rodape.png" alt="Logo besni">
+                <a href="/" title="Besni">
+				    <img src="/assets/imagens/logo-rodape.png" alt="Logo besni">
+                </a>
 			</div>
 		</div>
 	</div>

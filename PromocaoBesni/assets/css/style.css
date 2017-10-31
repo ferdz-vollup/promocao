@@ -250,6 +250,14 @@ input.error, textarea.error {
     -webkit-appearance: none;
     padding: 10px 20px;
     font-size: 16px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.btn-form:hover {
+    background-color: #363636;
+    color: white;
 }
 
 .labelRadio {
@@ -423,23 +431,19 @@ div#premios {
 
 #galeria-instagram {
     margin: 50px 0px;
-    ;
 }
-
 .redes {
     font-family: 'baseninemedium';
     font-size: 25px;
     margin-top: -5px;
 }
-
-    .redes * {
-        display: inline-block;
-        vertical-align: middle
-    }
-
-    .redes p {
-        padding-top: 10px;
-    }
+.redes *:not(a) {
+    display: inline-block;
+    vertical-align: middle
+}
+.redes p {
+    padding-top: 10px;
+}
 
 /* COMO PARTICIPAR */
 #como-participar {
@@ -539,7 +543,10 @@ div#formFaleConosco, div#formCadastro {
 
 #formCadastro {
     max-height: 0px;
-    transition: 0.4s ease;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
     overflow: hidden;
 }
 
@@ -558,7 +565,10 @@ div#formFaleConosco, div#formCadastro {
 
 .metodo-compras {
     max-height: 1000px;
-    transition: 0.2s ease;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
     overflow: hidden;
 }
 
@@ -596,7 +606,10 @@ div#formFaleConosco, div#formCadastro {
 .sorteios .mostra-codigos {
     max-height: 0px;
     overflow: hidden;
-    transition: 0.5s ease;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
 }
 
 .sorteios.ativo .mostra-codigos {
