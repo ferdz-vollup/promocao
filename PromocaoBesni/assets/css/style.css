@@ -158,6 +158,7 @@ section#menu {
         background-image: url(../imagens/bg-besni-proxima.jpg);
         position: absolute;
         background-size: cover;
+        background-position: center center;
     }
 
     #banner-premios #imagem-carro img {
@@ -189,6 +190,26 @@ section#menu {
     font-style: normal;
 }
 
+.loader {
+    border: 2px solid #f9f9f9;
+    border-top: 2px solid #363636;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    margin-top: -3px;
+    display: inline-block;
+    vertical-align: middle;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 
 .basenine {
     font-family: 'baseninemedium';

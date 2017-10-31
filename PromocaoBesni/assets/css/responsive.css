@@ -226,8 +226,15 @@
     }
 
     #banner-premios {
-        height: 10%;
+        height: 15%;
         margin-top: 92px;
+    }
+    #banner-premios #imagem-carro img {
+        width: 90%;
+        top: 30%;
+        left: 50%;
+        margin-left: -45%;
+        position: absolute;
     }
 
     .btn-home-cadastre, .btn-confira-ganhadores {
@@ -303,12 +310,11 @@
         width: 89% !important;
     }
 
-    #ganhadores {
-        margin: 20% 0px 20%;
+    #como-participar, #login, #ganhadores, #faq {
+        margin: 25% 0px 100px;
     }
-
-    #login {
-        margin: 20% 0px 20%;
+    #onde-estamos {
+        margin-top: 15%;
     }
 
     .sorteios .col-sm-3 {
