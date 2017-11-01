@@ -135,8 +135,8 @@
 		</div>
 	</div>
 
-    <div class="container">
-        <ul id="instaFeed" runat="server"></ul>
+    <div class="container" id="divInsta" runat="server">
+        <ul id="instaFeed"></ul>
     </div>
 
 	<div class="container">

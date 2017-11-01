@@ -4,8 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Globalization;
+using System.Data.SqlClient;
 using Etnia.classe;
+using InnerLibs;
 using System.Data.OleDb;
+using System.Threading;
 
 namespace PromocaoBesni.ajax
 {
@@ -16,6 +20,7 @@ namespace PromocaoBesni.ajax
         utils objUtils = new utils();
         private OleDbDataReader rsCadastro, rsSexo;
         string retorno = "";
+        Thread Atualizador;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -31,6 +36,11 @@ namespace PromocaoBesni.ajax
                     break;
                 case "totalSexo":
                     totalSexo();
+                    break;
+                case "addInstagram":
+                    // Atualizador = new Thread(() => InfoInsta(Request["url"],Request["url"], Request["url"], Request["url"], Request["url"], Request["url"]));
+                    //  Atualizador.Start();
+                    InfoInsta(Request["url"], Request["id"], Request["imagem"], Request["thumb"], Request["likes"], Request["tags"]);
                     break;
                 default:
                     break;
@@ -96,6 +106,15 @@ namespace PromocaoBesni.ajax
             rsSexo.Dispose();
             rsSexo.Close();
            
+        }
+
+        public void InfoInsta(string url, string id, string imagem, string thumb, string likes, string tags)
+        {
+
+            //Response.Write("exec piInstagram '" + url + "','" + id + "','" + imagem + "','" + thumb + "','" + likes + "','" + tags + "'");
+            //Response.End();
+             
+            objBD.ExecutaSQL("exec piInstagram '"+ url + "','" + id + "','" + imagem + "','" + thumb + "','" + likes + "','NULL'");
         }
     }
 }
