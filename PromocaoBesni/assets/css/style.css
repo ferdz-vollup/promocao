@@ -1,7 +1,13 @@
 html, body {
     height: 100%
 }
-
+a:hover {
+    text-decoration: none;
+}
+a em {
+    position: relative;
+    z-index: 9;
+}
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0px;
@@ -9,11 +15,9 @@ body {
     overflow-x: hidden;
     color: #231f20
 }
-
 h1, h2, h3, h4, h5, h6 {
     margin: 0px;
 }
-
 img {
     max-width: 100%
 }
@@ -275,6 +279,7 @@ input.error, textarea.error {
     text-transform: uppercase;
     -webkit-appearance: none;
     padding: 10px 20px;
+    width:auto;
     font-size: 16px;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;

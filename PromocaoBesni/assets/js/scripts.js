@@ -84,14 +84,12 @@ jQuery(document).ready(function () {
 
     jQuery(".numero-cartao .inputs").keyup(function () {
         var digitados = jQuery(this).val().length;
-        jQuery(this).attr("maxlength", "4");
-        var press = jQuery.Event("keypress");
-        press.ctrlKey = false;
-        press.which = 13;
+        jQuery(this).attr("maxlength", "4");       
         var maxLenght = jQuery(this).attr("maxlength");
         if (digitados == maxLenght) {
-            console.log("oi");
-            jQuery(this).trigger(press);
+            jQuery(this).addClass("esse");
+            jQuery(".esse").parent("div").next("div").children("input").focus();
+            jQuery(".esse").removeClass("esse");
         }
     });
 

@@ -26,13 +26,57 @@
 </section>
 
 <!--CONTAINER-->
-<section id="cadastro">
+<section id="ganhadores">
 	<div class="container">
 		<div class="text-center">
 			<h2 class="basenine text-uppercase vermelho">
 				cadastro
 			</h2>	
 		</div>
+
+        <div class="row metodo-compras">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-5">
+				<h3 class="basenine">
+					fiz minhas compras <br>
+					com o <span class="vermelho">cartão besni</span>
+				</h3>
+				<div class="traco-vermelho"></div>
+				<div class="row">
+					<div class="col-md-3 col-xs-3 text-center" style="margin-top: 10px;">
+						<img src="assets/imagens/icone-cartao-besni.png" alt="">
+					</div>
+					<div class="col-md-9 col-xs-9">
+						<span class="saiba-concorra">
+							Nas compras com Cartão Besni você dobra seus números da sorte, e tem mais chances de ganhar!
+						</span>
+					</div>
+				</div>
+				<button class="btn-form" data-cartao="Sim">Clique aqui</button>
+			</div>
+			<div class="col-sm-5">
+				<h3 class="basenine">
+					fiz minhas compras <br>
+					de <span class="vermelho">outras formas</span>
+				</h3>
+				<div class="traco-vermelho"></div>
+				<div class="row">
+					<div class="col-md-3 col-xs-3 text-center" style="margin-top: 10px;">
+						<img src="assets/imagens/icone-compras-acima.png" width="77%" alt="">
+					</div>
+					<div class="col-md-9 col-xs-9">
+						<span class="saiba-concorra">
+							A cada R$200 em compras você ganha 1 número da sorte para participar para os sorteios semanais, e 1 número para o sorteio final!
+						</span>
+					</div>
+				</div>
+				<button class="btn-form" data-cartao="Nao">Clique aqui</button>
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
+
+
+
 		<div id="formCadastro" style="margin-top: 70px">
 			<div class="row">
 				<div class="col-md-12">

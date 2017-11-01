@@ -57,8 +57,12 @@
                                         
 			<div class="row">
 				<div class="col-xs-10 col-sm-4" style="margin: auto; float: none;margin-bottom: 5px;">
-					<button class="btn-form" style="width: 100%;">cadastrar novos cupons</button>
-					<button class="btn-form" style="width: 100%;margin-top: 10px;">voltar</button>
+                    <a href="cadastrar-cupom.aspx" title="Cadastrar novos cupons">
+					    <button class="btn-form" style="width: 100%;">cadastrar novos cupons</button>
+                    </a>
+                    <a href="/" title="Voltar">
+					    <button class="btn-form" style="width: 100%;margin-top: 10px;">voltar</button>
+                    </a>
 				</div>
 			</div>
 		</div>      
