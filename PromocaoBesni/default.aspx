@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="PromocaoBesni._default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="PromocaoBesni._default1" %>
+
 <%@ Register Src="~/inc/head.ascx" TagPrefix="besni" TagName="head" %>
 <%@ Register Src="~/inc/menu.ascx" TagPrefix="besni" TagName="menu" %>
 <%@ Register Src="~/inc/footer.ascx" TagPrefix="besni" TagName="footer" %>
@@ -129,14 +130,11 @@
 			<h2 class="basenine text-uppercase vermelho">
 				Compartilhe suas fotos de  produtos Besni com a <br>nossa hashtag e apareça em nossas redes sociais!
 			</h2>
-            <!--<br><br>
-            <!-- ISTAGRAM
-            <ul id="insta" runat="server"></ul>-->
 		</div>
 	</div>
 
-    <div class="container" id="divInsta" runat="server">
-        <ul id="instaFeed"></ul>
+    <div class="container" id="divInstagram" runat="server">
+        
     </div>
 
 	<div class="container">

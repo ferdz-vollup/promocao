@@ -40,7 +40,7 @@ function proxima(proximaURL) {
             }
         },
         error: function (data) {
-            alert("2")
+            return false;
             console.log(data);
         }
     });
@@ -55,7 +55,7 @@ function addInstagram(url, id, imagem, thumb, likes, tags, proximaURL)
     ajax2.onreadystatechange = function () {
         if (ajax2.readyState == 4) {
             if (ajax2.status == 200) {
-                setTimeout(proxima(proximaURL), 15000);
+               // setTimeout(proxima(proximaURL), 15000);
             }
         }
     }

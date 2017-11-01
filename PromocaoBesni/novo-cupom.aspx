@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="PromocaoBesni._default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="novo-cupom.aspx.cs" Inherits="PromocaoBesni.novo_cupom" %>
 <%@ Register Src="~/inc/head.ascx" TagPrefix="besni" TagName="head" %>
 <%@ Register Src="~/inc/menu.ascx" TagPrefix="besni" TagName="menu" %>
 <%@ Register Src="~/inc/footer.ascx" TagPrefix="besni" TagName="footer" %>

@@ -11,7 +11,7 @@ using System.Data.OleDb;
 
 namespace PromocaoBesni
 {
-    public partial class _default : System.Web.UI.Page
+    public partial class _default1 : System.Web.UI.Page
     {
         bd objBD = new bd();
         utils objUtils = new utils();
@@ -39,7 +39,7 @@ namespace PromocaoBesni
             {
                 rsSorteio.Read();
 
-               // proximoSorteio.InnerHtml = "fique ligado! <br>o próximo sorteio é no dia <br>" + rsSorteio["dia"] + " de " + objUtils.MesExtenso(Convert.ToInt16(rsSorteio["mes"]))+ " <br>";
+                proximoSorteio.InnerHtml = "fique ligado! <br>o próximo sorteio é no dia <br>" + rsSorteio["dia"] + " de " + objUtils.MesExtenso(Convert.ToInt16(rsSorteio["mes"]))+ " <br>";
             }
 
             rsSorteio.Dispose();
@@ -52,20 +52,24 @@ namespace PromocaoBesni
             {
                 rsInstagram = objBD.ExecutaSQL("exec psInstagram");
 
-                if(rsInstagram == null)
+                if (rsInstagram == null)
                 {
                     throw new Exception();
                 }
-                if(rsInstagram.HasRows)
+                if (rsInstagram.HasRows)
                 {
-                    while(rsInstagram.Read())
+                    divInstagram.InnerHtml += "<ul id=\"instaFeed\">";
+
+                    while (rsInstagram.Read())
                     {
-                        divInsta.InnerHtml += "<li>";
-                        divInsta.InnerHtml += "    <a href=\""+rsInstagram["INS_URL"]+"\" rel=\"nofollow\" target=\"_blank\">";
-                        divInsta.InnerHtml += "        <img onerror=\"$(this).parent('a').parent('li').remove()\" src=\"" + rsInstagram["INS_THUMB"] + ">";
-                        divInsta.InnerHtml += "    </a>";
-                        divInsta.InnerHtml += "</li>";
+                        divInstagram.InnerHtml += "<li>";
+                        divInstagram.InnerHtml += "    <a href=\"" + rsInstagram["INS_URL"] + "\" rel=\"nofollow\" target=\"_blank\">";
+                        divInstagram.InnerHtml += "        <img onerror='$(this).parent('a').parent('li').remove()' src='" + rsInstagram["INS_THUMB"] + "'>";
+                        divInstagram.InnerHtml += "    </a>";
+                        divInstagram.InnerHtml += "</li>";
                     }
+
+                    divInstagram.InnerHtml += "</ul>";
                 }
                 rsInstagram.Dispose();
                 rsInstagram.Close();

@@ -10,7 +10,7 @@
 namespace PromocaoBesni {
     
     
-    public partial class _default {
+    public partial class _default1 {
         
         /// <summary>
         /// head control.
@@ -40,22 +40,13 @@ namespace PromocaoBesni {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl proximoSorteio;
         
         /// <summary>
-        /// insta control.
+        /// divInstagram control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl insta;
-        
-        /// <summary>
-        /// divInsta control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divInsta;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divInstagram;
         
         /// <summary>
         /// footer control.
