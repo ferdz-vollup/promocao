@@ -259,7 +259,7 @@
 					<div class="col-md-12">
 						<div>
 							<label for="termos" class="labelRadio">
-								<input type="radio" id="termos" name="aceito os termos" class="inputs" value="Sim"><span>Li e aceito todos as condições do regulamento da campanha.</span>
+								<input type="radio" id="termos" name="termos" class="inputs" value="1"><span>Li e aceito todos as condições do regulamento da campanha.</span>
 							</label>
 						</div>
 					</div>
@@ -268,7 +268,7 @@
 					<div class="col-md-12">
 						<div>
 							<label for="novidades" class="labelRadio">
-								<input type="radio" id="novidades" name="desejo receber noidades" class="inputs" value="Sim"><span>Desejo receber novidades e atualizações sobre produtos via e-mail</span>
+								<input type="radio" id="novidades" name="novidades" class="inputs" value="1"><span>Desejo receber novidades e atualizações sobre produtos via e-mail</span>
 							</label>
 						</div>
 					</div>

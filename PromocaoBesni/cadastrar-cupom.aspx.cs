@@ -11,7 +11,7 @@ namespace PromocaoBesni
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            usuario.InnerHtml += Session["cadNome"].ToString();
         }
     }
 }

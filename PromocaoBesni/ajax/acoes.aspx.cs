@@ -32,7 +32,7 @@ namespace PromocaoBesni.ajax
             switch (acao)
             {
                 case "novoCadastro":
-                    GerarNovoUsuario(Request["nome"].ToString(), Request["cpf"].ToString(), Request["rg"].ToString(), Request["dtnascimento"].ToString(), Request["sexo"].ToString(), Request["email"].ToString());
+                    GerarNovoUsuario(Request["nome"].ToString(), Request["cpf"].ToString(), Request["rg"].ToString(), Request["dtnascimento"].ToString(), Request["sexo"].ToString(), Request["telefone"].ToString(), Request["celular"].ToString(), Request["email"].ToString(),Request["cartao1"].ToString(), Request["cartao2"].ToString(), Request["cartao3"].ToString(), Request["cartao4"].ToString(), Request["cep"].ToString(), Request["logradouro"].ToString(), Request["numero"].ToString(), Request["complemento"].ToString(), Request["bairro"].ToString(), Request["cidade"].ToString(), Request["uf"].ToString(), Request["senha"], Request["termos"], Request["novidades"]);
                     break;
                 case "totalSexo":
                     totalSexo();
@@ -57,13 +57,17 @@ namespace PromocaoBesni.ajax
             objBD.ExecutaSQL("exec puInstagram '" + status + "','" + id + "'");
         }
 
-        public void GerarNovoUsuario(string nome, string cpf, string rg, string dtnascimento, string sexo, string email)
+        public void GerarNovoUsuario(string nome, string cpf, string rg, string dtnascimento, string sexo, string telefone, string celular, string email, string cartao1, string cartao2, string cartao3, string cartao4, string cep, string logradouro, string numero, string complemento, string bairro, string cidade, string uf, string senha, string termos, string novidades)
         {
+            //Ajustes nos campos
+            cpf = cpf.Replace(".", "").Replace("-", "");
+            rg = rg.Replace(".","").Replace("-", "");
+            string cartaoBesni = cartao1 + cartao2 + cartao3 + cartao4;
 
-           //Response.Write("EXEC piuCadastro null, '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + email + "'");
-           //Response.End();
+          Response.Write("EXEC piuCadastro 0, '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "','" + cartaoBesni + "','" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','"+ objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "'");
+         // Response.End();
 
-            rsCadastro = objBD.ExecutaSQL("EXEC piuCadastro 0, '" + nome + "','"+ cpf + "','"+rg+"','"+ dtnascimento + "','"+ sexo + "','"+email+"'");
+            rsCadastro = objBD.ExecutaSQL("EXEC piuCadastro 0, '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "','" + cartaoBesni + "','" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','" + objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "'");
             if (rsCadastro == null)
             {
                 throw new Exception();
@@ -72,8 +76,8 @@ namespace PromocaoBesni.ajax
             {
                 rsCadastro.Read();
                 //Salvando as Session do usuário
-                //Session["petNome"] = rsCadastro["PET_NOME"].ToString();
-                //Session["petID"] = rsCadastro["PET_ID"].ToString();
+                Session["cadNome"] = nome;
+                Session["cadID"] = rsCadastro["CAD_ID"].ToString();
                 //Session["petUsuario"] = rsCadastro["PET_USUARIO"].ToString();
 
                 //Salvando Cookie para se manter logado
@@ -85,7 +89,7 @@ namespace PromocaoBesni.ajax
                 //Utils.Banco().RunSQL("EXEC psLog '" + rsCadastro["PET_ID"] + "',null,'Parabéns! Você ganhou a medalha INICIANTE por se cadastrar e efetuar o login no site.','1'");
 
                 //Redirecionando para a home do usuário
-                Response.Redirect("/completar-cadastro/");
+                Response.Redirect("/cadastrar-cupom.aspx");
                 Response.End();
             }
             else

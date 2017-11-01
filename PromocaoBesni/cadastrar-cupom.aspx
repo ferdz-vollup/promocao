@@ -35,7 +35,7 @@
                 <h3 class="basenine text-uppercase cinza" style="text-align: left;">cadastrar cupon</h3>
                 <div style="text-align: left" class="traco-vermelho"></div><br>
                 <span style="line-height:30px">
-                    Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi.<br />
+                    Olá, <strong><span runat="server" id="usuario"> </span></strong> duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi.<br />
                     accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.
                 </span>
             </div>
