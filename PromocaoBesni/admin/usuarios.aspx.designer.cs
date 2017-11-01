@@ -10,7 +10,7 @@
 namespace PromocaoBesni.admin {
     
     
-    public partial class instagram {
+    public partial class usuarios {
         
         /// <summary>
         /// Controle head.
@@ -40,22 +40,13 @@ namespace PromocaoBesni.admin {
         protected global::PromocaoBesni.admin.inc.menu menu;
         
         /// <summary>
-        /// Controle fotosNaoAprovadas.
+        /// Controle usuariosCadastrados.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl fotosNaoAprovadas;
-        
-        /// <summary>
-        /// Controle fotosAprovadas.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl fotosAprovadas;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl usuariosCadastrados;
         
         /// <summary>
         /// Controle footer.

@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="PromocaoBesni.admin.index" %>
 <%@ Register Src="~/admin/inc/head.ascx" TagPrefix="besni" TagName="head" %>
+<%@ Register Src="~/admin/inc/menu-topo.ascx" TagPrefix="besni" TagName="menuTopo" %>
 <%@ Register Src="~/admin/inc/menu.ascx" TagPrefix="besni" TagName="menu" %>
 <%@ Register Src="~/admin/inc/footer.ascx" TagPrefix="besni" TagName="footer" %>
 
@@ -14,7 +15,10 @@
     <div id="wrapper">
 
         <!--menu-->
-        <besni:menu runat="server" ID="menu" />
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <besni:menuTopo runat="server" ID="menuTopo" />
+            <besni:menu runat="server" ID="menu" />
+        </nav>
 
         <div id="page-wrapper">
             <div class="row">
@@ -30,7 +34,7 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-user-plus fa-4x"></i>
+                                    <i class="fa fa-user-plus fa-2x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">26</div>
@@ -52,7 +56,7 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-barcode fa-4x"></i>
+                                    <i class="fa fa-barcode fa-2x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">12</div>
@@ -74,7 +78,7 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-credit-card-alt fa-4x"></i>
+                                    <i class="fa fa-credit-card-alt fa-2x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">124</div>
@@ -96,7 +100,7 @@
                         <div class="panel-heading">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <i class="fa fa-instagram fa-4x"></i>
+                                    <i class="fa fa-instagram fa-2x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
                                     <div class="huge">13</div>

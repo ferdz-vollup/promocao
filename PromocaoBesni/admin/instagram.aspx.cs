@@ -17,32 +17,94 @@ namespace PromocaoBesni.admin
     {
         private bd objBD;
         private utils objUtils;
-       // Thread Atualizador;
+        private OleDbDataReader rsFotosNaoAprovadas, rsFotosAprovadas;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             objUtils = new utils();
             objBD = new bd();
 
-            switch (Request["acao"])
+            imagensNaoAprovadas();
+            imagensAprovadas();
+
+            string acao = Request["acao"];
+
+            switch (acao)
             {
-                //case "AprovarInstagram":
-                //    objBD.ExecutaSQL("UPDATE Instagram_fotos SET INS_ATIVO = " + Request["INS_ATIVO"] + " where INS_ID = " + Request["INS_ID"]);
-                //    Response.End();
-                //    break;
-                //case "ErroImagem":
-                //    objBD.ExecutaSQL("DELETE from Instagram_fotos where INS_ID = " + Request["INS_ID"]);
-                //    Response.WriteEnd(Request["INS_ID"]);
-                //    break;
+                case "carregaFotos":
+                    //imagensNaoAprovadasResp();
+                    //imagensAprovadasResp();
+                    break;
                 default:
-                 //   InfoInsta("teste");
-                    // TrazTags();
-                    // PopulaLista(Request["INS_TAGS"]);
-                   // Atualizador = new Thread(() => InfoInsta(Request["URL"]));
-                    //Atualizador.Start();
                     break;
             }
         }
-        
+
+        public void imagensNaoAprovadas()
+        {
+            try
+            {
+                rsFotosNaoAprovadas = objBD.ExecutaSQL("exec psInstagramPorAtivo 0,12");
+
+                if (rsFotosNaoAprovadas == null)
+                {
+                    throw new Exception();
+                }
+                if (rsFotosNaoAprovadas.HasRows)
+                {
+                    fotosNaoAprovadas.InnerHtml = "";
+
+                    while (rsFotosNaoAprovadas.Read())
+                    {
+                        fotosNaoAprovadas.InnerHtml += "<a href='javascript:void(0)' rel=\"nofollow\" onClick='mudaStatusFoto(1, "+ rsFotosNaoAprovadas["INS_ID"] + ")' data-id='"+rsFotosNaoAprovadas["INS_ID"]+"' class='fotosInstagram'>";
+                        fotosNaoAprovadas.InnerHtml += "    <div class='picInsta'>";
+                        fotosNaoAprovadas.InnerHtml += "        <div><i class='fa fa-check-circle'></i></div>";
+                        fotosNaoAprovadas.InnerHtml += "        <img src='" + rsFotosNaoAprovadas["INS_THUMB"] + "'>";
+                        fotosNaoAprovadas.InnerHtml += "    </div>";
+                        fotosNaoAprovadas.InnerHtml += "</a>";
+                    }
+                }
+                rsFotosNaoAprovadas.Dispose();
+                rsFotosNaoAprovadas.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void imagensAprovadas()
+        {
+            try
+            {
+                rsFotosAprovadas = objBD.ExecutaSQL("exec psInstagramPorAtivo 1,12");
+
+                if (rsFotosAprovadas == null)
+                {
+                    throw new Exception();
+                }
+                if (rsFotosAprovadas.HasRows)
+                {
+
+                    fotosAprovadas.InnerHtml = "";
+
+                    while (rsFotosAprovadas.Read())
+                    {
+                        fotosAprovadas.InnerHtml += "<a href='javascript:void(0)' rel=\"nofollow\" onClick='mudaStatusFoto(0, " + rsFotosAprovadas["INS_ID"] + ")' data-id='" + rsFotosAprovadas["INS_ID"] + "' class='fotosInstagram'>";
+                        fotosAprovadas.InnerHtml += "    <div class='picInsta'>";
+                        fotosAprovadas.InnerHtml += "        <div><i class='fa fa-times-circle'></i></div>";
+                        fotosAprovadas.InnerHtml += "        <img src='" + rsFotosAprovadas["INS_THUMB"] + "'>";
+                        fotosAprovadas.InnerHtml += "    </div>";
+                        fotosAprovadas.InnerHtml += "</a>";
+                    }
+                }
+                rsFotosAprovadas.Dispose();
+                rsFotosAprovadas.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

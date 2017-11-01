@@ -22,6 +22,15 @@ namespace PromocaoBesni.admin {
         protected global::PromocaoBesni.admin.inc.head head;
         
         /// <summary>
+        /// Controle menuTopo.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::PromocaoBesni.admin.inc.menu_topo menuTopo;
+        
+        /// <summary>
         /// Controle menu.
         /// </summary>
         /// <remarks>

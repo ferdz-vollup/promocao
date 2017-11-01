@@ -42,11 +42,19 @@ namespace PromocaoBesni.ajax
                     //  Atualizador.Start();
                     InfoInsta(Request["url"], Request["id"], Request["imagem"], Request["thumb"], Request["likes"], Request["tags"]);
                     break;
+                case "mudaStatusFoto":
+                    mudarStatusFoto(Request["status"], Request["id"]);
+                    break;
                 default:
                     break;
             }
 
             //PegarResultado();
+        }
+
+        public void mudarStatusFoto(string status, string id)
+        {
+            objBD.ExecutaSQL("exec puInstagram '" + status + "','" + id + "'");
         }
 
         public void GerarNovoUsuario(string nome, string cpf, string rg, string dtnascimento, string sexo, string email)
@@ -116,5 +124,6 @@ namespace PromocaoBesni.ajax
              
             objBD.ExecutaSQL("exec piInstagram '"+ url + "','" + id + "','" + imagem + "','" + thumb + "','" + likes + "','NULL'");
         }
+
     }
 }
