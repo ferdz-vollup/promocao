@@ -16,7 +16,7 @@ namespace PromocaoBesni.admin
     {
         bd objBD = new bd();
         utils objUtils = new utils();
-        private OleDbDataReader rsConcurso, rsResultado;
+        private OleDbDataReader rsConcurso, rsResultado, rsContagem;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -24,6 +24,7 @@ namespace PromocaoBesni.admin
             objBD = new bd();
 
             //PegarResultado();
+            Contagem();
         }
 
         public void PegarResultado()
@@ -101,6 +102,25 @@ namespace PromocaoBesni.admin
             }
             rsResultado.Close();
             rsResultado.Dispose();
+        }
+
+        public void Contagem()
+        {
+            rsContagem = objBD.ExecutaSQL("EXEC pContagem");
+            if (rsContagem == null)
+            {
+                throw new Exception();
+            }
+
+            if (rsContagem.HasRows)
+            {
+                rsContagem.Read();
+                contagemCadastros.InnerHtml = ""+ rsContagem["total_usuarios"];
+                contagemInstagram.InnerHtml = "" + rsContagem["total_instagram"];
+                contagemCupons.InnerHtml = "" + rsContagem["total_cupons"];
+            }
+            rsContagem.Close();
+            rsContagem.Dispose();
         }
     }
 }

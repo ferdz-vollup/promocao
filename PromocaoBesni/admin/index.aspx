@@ -36,8 +36,8 @@
                                 <div class="col-xs-3">
                                     <i class="fa fa-user-plus fa-2x"></i>
                                 </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">26</div>
+                                <div class="col-xs-12 text-right">
+                                    <div class="huge" id="contagemCadastros" runat="server"></div>
                                     <div>Cadastros efetuados</div>
                                 </div>
                             </div>
@@ -58,8 +58,8 @@
                                 <div class="col-xs-3">
                                     <i class="fa fa-barcode fa-2x"></i>
                                 </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>
+                                <div class="col-xs-12 text-right">
+                                    <div class="huge" id="contagemCupons" runat="server"></div>
                                     <div>Cupons gerados</div>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@
                                 <div class="col-xs-3">
                                     <i class="fa fa-credit-card-alt fa-2x"></i>
                                 </div>
-                                <div class="col-xs-9 text-right">
+                                <div class="col-xs-12 text-right">
                                     <div class="huge">124</div>
                                     <div>Vendidos na promoção</div>
                                 </div>
@@ -102,8 +102,8 @@
                                 <div class="col-xs-3">
                                     <i class="fa fa-instagram fa-2x"></i>
                                 </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">13</div>
+                                <div class="col-xs-12 text-right">
+                                    <div class="huge" id="contagemInstagram" runat="server"></div>
                                     <div>Fotos do instagram</div>
                                 </div>
                             </div>

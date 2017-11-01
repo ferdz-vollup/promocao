@@ -40,6 +40,33 @@ namespace PromocaoBesni.admin {
         protected global::PromocaoBesni.admin.inc.menu menu;
         
         /// <summary>
+        /// Controle contagemCadastros.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl contagemCadastros;
+        
+        /// <summary>
+        /// Controle contagemCupons.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl contagemCupons;
+        
+        /// <summary>
+        /// Controle contagemInstagram.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl contagemInstagram;
+        
+        /// <summary>
         /// Controle linha1.
         /// </summary>
         /// <remarks>

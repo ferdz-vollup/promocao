@@ -36,3 +36,6 @@
 #fotosNaoAprovadas .picInsta div i {
     color: #82bdbd
 }
+.panel-heading .col-xs-3 {
+    position: absolute;
+}
