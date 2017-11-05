@@ -10,7 +10,7 @@
                 <a href="usuarios.aspx"><i class="fa fa-user fa-fw"></i> Usuários</a>
             </li>
             <li>
-                <a href="javascript:void(0);"><i class="fa fa-table fa-fw"></i> Números da Sorte</a>
+                <a href="cupons.aspx"><i class="fa fa-table fa-fw"></i> Números da Sorte</a>
             </li>
             <li>
                 <a href="javascript:void(0);"><i class="fa fa-edit fa-fw"></i> Números da Sorte Especial</a>

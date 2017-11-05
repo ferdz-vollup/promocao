@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="usuarios.aspx.cs" Inherits="PromocaoBesni.admin.usuarios" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cupons.aspx.cs" Inherits="PromocaoBesni.admin.cupons" %>
 <%@ Register Src="~/admin/inc/head.ascx" TagPrefix="besni" TagName="head" %>
 <%@ Register Src="~/admin/inc/menu-topo.ascx" TagPrefix="besni" TagName="menuTopo" %>
 <%@ Register Src="~/admin/inc/menu.ascx" TagPrefix="besni" TagName="menu" %>
@@ -23,7 +23,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Usuários</h1>
+                    <h1 class="page-header">Cupons</h1>
                 </div>
             </div>
             
@@ -31,21 +31,20 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-user fa-fw"></i> Usuários cadastrados
+                            <i class="fa fa-user fa-fw"></i> Cupons cadastrados
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered table-hover">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>Nome</th>
-                                            <th>Sexo</th>
-                                            <th>E-mail</th>
-                                            <th></th>
+                                            <th>Número</th>
+                                            <th>Cod usuário</th>
+                                            <th>Valor</th>
+                                            <th>Data</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="usuariosCadastrados" runat="server"></tbody>
+                                    <tbody id="cuponsCadastrados" runat="server"></tbody>
                                 </table>
                             </div>
                         </div>
@@ -57,6 +56,7 @@
 
     <!--footer-->
     <besni:footer runat="server" ID="footer" />
+      <script src="js/instagram.js"></script>
 </body>
 
 </html>

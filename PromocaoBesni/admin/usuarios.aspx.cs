@@ -46,6 +46,7 @@ namespace PromocaoBesni.admin
                         usuariosCadastrados.InnerHtml += "<td>" + rsCadastros["CAD_NOME"] + "</td>";
                         usuariosCadastrados.InnerHtml += "<td>" + rsCadastros["CAD_SEXO"] + "</td>";
                         usuariosCadastrados.InnerHtml += "<td>" + rsCadastros["CAD_EMAIL"] + "</td>";
+                        usuariosCadastrados.InnerHtml += "<td><i class='fa fa-pencil-square-o' aria-hidden='true'></i></td>";
                         usuariosCadastrados.InnerHtml += "</tr>";
                     }
                 }

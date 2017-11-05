@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="usuarios.aspx.cs" Inherits="PromocaoBesni.admin.usuarios" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cpfs-bloqueados.aspx.cs" Inherits="PromocaoBesni.admin.cpfs_bloqueados" %>
 <%@ Register Src="~/admin/inc/head.ascx" TagPrefix="besni" TagName="head" %>
 <%@ Register Src="~/admin/inc/menu-topo.ascx" TagPrefix="besni" TagName="menuTopo" %>
 <%@ Register Src="~/admin/inc/menu.ascx" TagPrefix="besni" TagName="menu" %>
@@ -21,31 +21,27 @@
         </nav>
 
         <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Usuários</h1>
+            <div class="row displayFlex">
+                <div class="col-lg-11">
+                    <h1 class="page-header">Cpfs bloqueados</h1>
+                </div>
+                <div class="col-lg-1">
+                    <i class="fa fa-plus" style="font-size:25px;color:green" aria-hidden="true"></i>
                 </div>
             </div>
             
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-user fa-fw"></i> Usuários cadastrados
-                        </div>
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered table-hover">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>Nome</th>
-                                            <th>Sexo</th>
-                                            <th>E-mail</th>
-                                            <th></th>
+                                            <th>CPF</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="usuariosCadastrados" runat="server"></tbody>
+                                    <tbody id="cpfsBloqueados" runat="server"></tbody>
                                 </table>
                             </div>
                         </div>
@@ -57,6 +53,7 @@
 
     <!--footer-->
     <besni:footer runat="server" ID="footer" />
+      <script src="js/instagram.js"></script>
 </body>
 
 </html>

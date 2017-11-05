@@ -39,3 +39,7 @@
 .panel-heading .col-xs-3 {
     position: absolute;
 }
+.displayFlex {
+    display:flex;
+    align-items:center;
+}
