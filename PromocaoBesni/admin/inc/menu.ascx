@@ -13,13 +13,10 @@
                 <a href="cupons.aspx"><i class="fa fa-table fa-fw"></i> Números da Sorte</a>
             </li>
             <li>
-                <a href="javascript:void(0);"><i class="fa fa-edit fa-fw"></i> Números da Sorte Especial</a>
+                <a href="cpfs-bloqueados.aspx"><i class="fa fa-wrench fa-fw"></i> CPFs Bloqueados</a>
             </li>
             <li>
-                <a href="javascript:void(0);"><i class="fa fa-wrench fa-fw"></i> CPFs Bloqueados</a>
-            </li>
-            <li>
-                <a href="javascript:void(0);"><i class="fa fa-sitemap fa-fw"></i> Ganhadores</a>
+                <a href="ganhadores.aspx"><i class="fa fa-sitemap fa-fw"></i> Ganhadores</a>
             </li>
             <li>
                 <a href="instagram.aspx"><i class="fa fa-picture-o fa-fw"></i> Instagram</a>

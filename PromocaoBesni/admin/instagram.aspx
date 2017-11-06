@@ -63,12 +63,23 @@
                 if (ajax2.readyState == 4) {
                     if (ajax2.status == 200) {
                         ajax2 = ajaxInit();
-                        ajax2.open("GET", "instagram.aspx?acao=carregaFotos", true);
+                        ajax2.open("GET", "instagram.aspx?acao=carregaFotosNaoAp", true);
                         ajax2.setRequestHeader("Content-Type", "charset=iso-8859-1");
                         ajax2.onreadystatechange = function () {
                             if (ajax2.readyState == 4) {
                                 if (ajax2.status == 200) {
-                                    alert("deu");
+                                    jQuery("#fotosNaoAprovadas").html(ajax2.responseText);
+                                    ajax2 = ajaxInit();
+                                    ajax2.open("GET", "instagram.aspx?acao=carregaFotosAp", true);
+                                    ajax2.setRequestHeader("Content-Type", "charset=iso-8859-1");
+                                    ajax2.onreadystatechange = function () {
+                                        if (ajax2.readyState == 4) {
+                                            if (ajax2.status == 200) {
+                                                jQuery("#fotosAprovadas").html(ajax2.responseText);
+                                            }
+                                        }
+                                    }
+                                    ajax2.send(null);
                                 }
                             }
                         }

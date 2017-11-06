@@ -18,6 +18,7 @@ namespace PromocaoBesni.admin
         private bd objBD;
         private utils objUtils;
         private OleDbDataReader rsFotosNaoAprovadas, rsFotosAprovadas;
+        string resposta = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -31,13 +32,86 @@ namespace PromocaoBesni.admin
 
             switch (acao)
             {
-                case "carregaFotos":
-                    //imagensNaoAprovadasResp();
-                    //imagensAprovadasResp();
+                case "carregaFotosNaoAp":
+                    imagensNaoAprovadasResp();
+                    break;
+                case "carregaFotosAp":
+                    imagensAprovadasResp();
                     break;
                 default:
                     break;
             }
+        }
+
+        public void imagensNaoAprovadasResp()
+        {
+            try
+            {
+                rsFotosNaoAprovadas = objBD.ExecutaSQL("exec psInstagramPorAtivo 0,12");
+
+                if (rsFotosNaoAprovadas == null)
+                {
+                    throw new Exception();
+                }
+                if (rsFotosNaoAprovadas.HasRows)
+                {
+
+                    while (rsFotosNaoAprovadas.Read())
+                    {
+                        resposta += "<a href='javascript:void(0)' rel=\"nofollow\" onClick='mudaStatusFoto(1, " + rsFotosNaoAprovadas["INS_ID"] + ")' data-id='" + rsFotosNaoAprovadas["INS_ID"] + "' class='fotosInstagram'>";
+                        resposta += "    <div class='picInsta'>";
+                        resposta += "        <div><i class='fa fa-check-circle'></i></div>";
+                        resposta += "        <img src='" + rsFotosNaoAprovadas["INS_THUMB"] + "'>";
+                        resposta += "    </div>";
+                        resposta += "</a>";
+                    }
+                }
+                rsFotosNaoAprovadas.Dispose();
+                rsFotosNaoAprovadas.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            Response.Write(resposta);
+            Response.End();
+
+        }
+
+        public void imagensAprovadasResp()
+        {
+            try
+            {
+                rsFotosAprovadas = objBD.ExecutaSQL("exec psInstagramPorAtivo 1,12");
+
+                if (rsFotosAprovadas == null)
+                {
+                    throw new Exception();
+                }
+                if (rsFotosAprovadas.HasRows)
+                {
+                    while (rsFotosAprovadas.Read())
+                    {
+                        resposta += "<a href='javascript:void(0)' rel=\"nofollow\" onClick='mudaStatusFoto(0, " + rsFotosAprovadas["INS_ID"] + ")' data-id='" + rsFotosAprovadas["INS_ID"] + "' class='fotosInstagram'>";
+                        resposta += "    <div class='picInsta'>";
+                        resposta += "        <div><i class='fa fa-times-circle'></i></div>";
+                        resposta += "        <img src='" + rsFotosAprovadas["INS_THUMB"] + "'>";
+                        resposta += "    </div>";
+                        resposta += "</a>";
+                    }
+                }
+                rsFotosAprovadas.Dispose();
+                rsFotosAprovadas.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+            Response.Write(resposta);
+            Response.End();
+
         }
 
         public void imagensNaoAprovadas()

@@ -42,7 +42,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="javascript:void(0);">
+                        <a href="usuarios.aspx">
                             <div class="panel-footer">
                                 <span class="pull-left">Ver detalhes</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -64,7 +64,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="javascript:void(0);">
+                        <a href="cupons.aspx">
                             <div class="panel-footer">
                                 <span class="pull-left">Ver detalhes</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -108,7 +108,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="javascript:void(0);">
+                        <a href="instagram.aspx">
                             <div class="panel-footer">
                                 <span class="pull-left">Ver detalhes</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -124,7 +124,7 @@
                 <div class="col-lg-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-university fa-fw"></i>Último sorteio
+                            <i class="fa fa-university fa-fw"></i> Último sorteio
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -146,7 +146,7 @@
                                 </a>
                                 <a href="javascript:void(0);" class="list-group-item">
                                     <strong>3º</strong> Prêmio
-                                    <span class="pull-right text-muted small" id="premio3" runat="server">javascript:void(0);</span>
+                                    <span class="pull-right text-muted small" id="premio3" runat="server"></span>
                                 </a>
                                 <a href="javascript:void(0);" class="list-group-item">
                                     <strong>4º</strong> Prêmio
@@ -158,7 +158,7 @@
                                 </a>
                             </div>
                             <!-- /.list-group -->
-                            <a href="javascript:void(0);" class="btn btn-default btn-block">Veja os ganhadores</a>
+                            <a href="ganhadores.aspx" class="btn btn-default btn-block">Veja os ganhadores</a>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -169,7 +169,7 @@
                 <div class="col-lg-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i>xxxxx
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Cadastros
                             <%--<div class="pull-right">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
