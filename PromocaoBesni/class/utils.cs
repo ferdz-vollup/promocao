@@ -201,28 +201,38 @@ namespace Etnia.classe
 
             //Define o corpo do e-mail.
 
-            string conteudoMensagem = "<center>";
-            conteudoMensagem += "<table id='Tabela_01' width='600' height='217' border='0' cellpadding='0' cellspacing='0'>";
+            string conteudoMensagem = "";
+            conteudoMensagem += "<table id='Tabela_01' width='450' height='217' border='0' cellpadding='0' cellspacing='0'>";
+            conteudoMensagem += "   <center>";            conteudoMensagem += "       <table width='450' border='0' cellpadding='0' cellspacing='0'>";
+            conteudoMensagem += "           <tr>";
+            conteudoMensagem += "               <td>";
+            conteudoMensagem += "                    <a href='http://www.promocaobesni.com.br/?utm_source=autoresposta&utm_medium=email&utm_campaign=hotsite' target='blank' title='Visitar Besni website'><img src='http://vollup.servicos.ws/besni/emkts/images/index_01.jpg' width='450' height='175' alt='Besni' style='display:block; border:0px; '></a>";
+            conteudoMensagem += "               </td>";
+            conteudoMensagem += "           </tr>";
 
-            conteudoMensagem += "    <tr>";
-            conteudoMensagem += "        <td colspan=\"2\" align=\"left\" valign=\"middle\">";
-            conteudoMensagem += "            <img style='width:600px' src='http://petnativa.provisorio.ws/images/topo-email.jpg' />";
-            conteudoMensagem += "        </td>";
-            conteudoMensagem += "    </tr>";
-            conteudoMensagem += "    <tr>";
-
-            conteudoMensagem += "    <tr>";
-            conteudoMensagem += "        <td colspan=\"2\" align=\"left\" valign=\"middle\" style=\"color:#68455b;font-family: Arial, Helvetica, sans-serif;\">";
+            conteudoMensagem += "           <tr>";
+            conteudoMensagem += "               <td>";
+            conteudoMensagem += "                    <a href='http://www.promocaobesni.com.br/?utm_source=autoresposta&utm_medium=email&utm_campaign=hotsite' target='blank' title='Visitar Besni website'><img src='http://vollup.servicos.ws/besni/emkts/images/index_02.jpg' width='450' height='83' alt='Besni' style=''display:block; border:0px; ></a>";
+            conteudoMensagem += "               </td>";
+            conteudoMensagem += "           </tr>";
+            
+            //TR DO CONTEÚDO
+            conteudoMensagem += "    <tr style='margin: -90px auto 20px auto;>";
+            conteudoMensagem += "        <td align='center' width='450' height='180' >";
             conteudoMensagem += mensagem;
             conteudoMensagem += "        </td>";
             conteudoMensagem += "    </tr>";
-            conteudoMensagem += "    <tr>";
 
-            conteudoMensagem += "    <br><tr>";
-            conteudoMensagem += "        <td colspan=\"2\">";
-            conteudoMensagem += "            <img style='width:600px' src='http://petnativa.provisorio.ws/images/rodape-email.jpg' />";
-            conteudoMensagem += "        </td>";
-            conteudoMensagem += "    </tr></table></center>";
+            conteudoMensagem += "        </table>";
+            conteudoMensagem += "   </center>";
+
+            //conteudoMensagem += "    <tr>";
+            // conteudoMensagem += "    <br><tr>";
+            // conteudoMensagem += "        <td colspan=\"2\">";
+            // conteudoMensagem += "            <img style='width:600px' src='http://petnativa.provisorio.ws/images/rodape-email.jpg' />";
+            // conteudoMensagem += "        </td>";
+            // conteudoMensagem += "    </tr></table>";
+            conteudoMensagem += "</table>";
 
             // coloca no corpo do email
             objEmail.Body = conteudoMensagem;
