@@ -93,7 +93,7 @@
                 if (ajax2.readyState == 4) {
                     if (ajax2.status == 200) {
                         if (ajax2.responseText == "ok") {
-                            window.location.href = "/meus-cupons.aspx";
+                            window.location.href = "/novo-cupom.aspx";
                         }
                         //alert(ajax2.responseText);
                     }

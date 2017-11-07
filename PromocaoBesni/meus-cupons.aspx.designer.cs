@@ -31,6 +31,15 @@ namespace PromocaoBesni {
         protected global::PromocaoBesni.inc.menu menu;
         
         /// <summary>
+        /// Controle secCupons.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl secCupons;
+        
+        /// <summary>
         /// Controle footer.
         /// </summary>
         /// <remarks>

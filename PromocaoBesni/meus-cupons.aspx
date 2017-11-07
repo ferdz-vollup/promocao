@@ -37,18 +37,9 @@
                	</h3>
                 <div class="traco-vermelho meio"></div>
                 
-				<div class="cupon" style="background:#c8962b;">
-                	<h4 class="basenine">cód. 02689-9</h4>
-                </div>                   
-                <div class="cupon" style="background:#c8962b">
-                	<h4 class="basenine">cód. 02689-9</h4>
-               	</div>
-                <div class="cupon" style="background:#97092a">
-					<h4 class="basenine">cód. 02689-9</h4>
-                </div>
-                <div class="cupon" style="background:#97092a">
-					<h4 class="basenine">cód. 02689-9</h4>
-                </div>                  
+                <!-- lista de cupons -->
+                <section id="secCupons" runat="server"></section>
+
             </div>
 			<div class="col-sm-7 col-md-5 text-center" style="margin: auto; float: none; padding: 20px 15px;">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>

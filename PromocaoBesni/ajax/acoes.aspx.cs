@@ -66,11 +66,25 @@ namespace PromocaoBesni.ajax
             //SE FOR CLIENTE BESNI TOTAL DEVE SER VEZES 2
             //GERAR O CUPOM ESPEICIAL
 
+           
+
             valor = valor.Remove(valor.Length - 3).Replace(".","");
             total = Convert.ToInt32(valor) / 200;
+            //string especial = "";
+
+            //Verificar se é Cliente Besni
+            if (Session["Besni"].ToString().Length > 15)
+            {
+                total = total * 2;
+            }
+
+            for (int i = 1; i <= total; i++) {
+                GerarCupom(cnpj, data, cco, valor, "");
+            }
+
             for (int i = 1; i <= total; i++)
             {
-                GerarCupom(cnpj, data, cco, valor);
+                GerarCupom(cnpj, data, cco, valor, "E");
             }
 
             Response.Write("ok");
@@ -93,10 +107,11 @@ namespace PromocaoBesni.ajax
                 //Salvando as Session do usuário
                 Session["cadNome"] = rsLogin["CAD_NOME"].ToString();
                 Session["cadID"] = rsLogin["CAD_ID"].ToString();
+                Session["Besni"] = rsLogin["CAD_CARTAO_BESNI"].ToString();
 
                 //Salvando no log
                 //Utils.Banco().RunSQL("EXEC psLog '" + rsLogin["PET_ID"] + "',null,'Login efetuado no Portal','0'");
-                
+
 
                 Response.Redirect("/cadastrar-cupom.aspx");
                 Response.End();
@@ -182,7 +197,7 @@ namespace PromocaoBesni.ajax
             objBD.ExecutaSQL("exec piInstagram '"+ url + "','" + id + "','" + imagem + "','" + thumb + "','" + likes + "','NULL'");
         }
 
-        public void GerarCupom(string cnpj, string data, string cco, string valor)
+        public void GerarCupom(string cnpj, string data, string cco, string valor, string especial)
         {
             rsSerie = objBD.ExecutaSQL("set dateformat dmy; select top 1 SER_INICIO,  SER_FINAL from serie where CONVERT(VARCHAR(8), SER_DH_INICIO, 5) > CONVERT(VARCHAR(8), getDate(), 5) and   cONVERT(VARCHAR(8), getDate(), 5) < CONVERT(VARCHAR(8), SER_DH_FINAL, 5)");
 
@@ -208,6 +223,11 @@ namespace PromocaoBesni.ajax
             {
                 //Salvar no BD
                 cupom = serie + "-" + numero;
+
+                if (especial == "E")
+                {
+                    cupom = "E-" + cupom;
+                }
 
                 objBD.ExecutaSQL("insert into cupom values('" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + cco + "','" + valor + "',getDate(),'" + serie + "')");
                // Response.Write("insert into cupom values('" + Session["cadID"].ToString() + "','" + cupom + "','"+ cnpj + "','"+data+"','"+cco+"','"+valor+"',getDate(),'"+ serie + "')");
