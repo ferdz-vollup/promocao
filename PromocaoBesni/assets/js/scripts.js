@@ -42,7 +42,7 @@ jQuery(document).ready(function () {
             if (inputs[i].value == "") {
                 jQuery(inputs[i]).addClass("error");
                 
-                $('html, body').animate({
+                $('html, body').animate({ 
                     scrollTop: $(inputs[i]).offset().top-180
                 }, 1000);
 
