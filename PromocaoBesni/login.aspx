@@ -32,16 +32,16 @@
 		</div>
 		<div class="row espaco-colunas" style="margin-top: 70px">
 			<div class="col-sm-6 col-md-4" style="float: none; margin: auto">
-	            <h3 class="basenine text-uppercase cinza">já sou cadastrado</h3>
+	            <h3 class="basenine text-uppercase cinza" id="h3">já sou cadastrado</h3>
 				<div class="traco-vermelho"></div>
 				<div style="padding:0;margin-bottom: 50px;">
                 	<form action="/ajax/acoes.aspx" method="post" novalidate enctype="multipart/form-data" class="form" id="loginForm">
-                            <input type="hidden" name="acao" value="FazerLogin" />
+                            <input type="hidden" id="acao" name="acao" value="FazerLogin" />
                 		<input type="text" placeholder="CPF" id="cpf" name="cpf" class="cpf inputs">
                 		<input style="margin-top: 10px;" type="password" placeholder="senha" id="senha" name="senha" class="inputs">
                 		<div style="height: 15px;"></div>
                 		<div style="display: inline-block; vertical-align: middle;width: 49%;">
-                			<a href="javascript:void(0);" style="color:#6a6a6a;text-decoration: underline;">esqueci minha senha</a>
+                			<a href="javascript:void(0);" onclick="esqueciSenha(this.rel);" rel="1" id="linkSenha" style="color:#6a6a6a;text-decoration: underline;">esqueci minha senha</a>
                 		</div>
                 		<div style="display: inline-block; vertical-align: middle;width: 49.7%; text-align: right">
                 			<button type="submit" class="btn-form btn-enviar">Enviar</button>
@@ -77,6 +77,23 @@
                 return false;
             };
         });
+
+        function esqueciSenha(valor) {
+            if(valor == 1){
+            $('#linkSenha').html("voltar");
+            $('#h3').html("esqueci minha senha");
+            $('#acao').attr('value', 'esqueciSenha');
+            $('#senha').hide();
+            $('#linkSenha').attr('rel', '2');
+            }
+            else {
+                $('#linkSenha').html("esqueci minha senha");
+                $('#h3').html("já sou cadastrado");
+                $('#acao').attr('value', 'FazerLogin');
+                $('#senha').show();
+                $('#linkSenha').attr('rel', '1');
+            }
+        }
     </script>
 
 </body>

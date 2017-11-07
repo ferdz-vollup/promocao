@@ -20,7 +20,7 @@ namespace PromocaoBesni.ajax
         utils objUtils = new utils();
         private OleDbDataReader rsCadastro, rsSexo, rsLogin;
         string retorno = "";
-        Thread Atualizador;
+      //  Thread Atualizador;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -74,10 +74,7 @@ namespace PromocaoBesni.ajax
 
                 //Salvando no log
                 //Utils.Banco().RunSQL("EXEC psLog '" + rsLogin["PET_ID"] + "',null,'Login efetuado no Portal','0'");
-                string conteudo = "<h1 style='margin:0 auto 50px auto; font-size:24px;font-family:'arial'; letter-spacing: 1.8; font-weight: 800; text-align:center; color:#a8272d; text-transform:uppercase;'>ESQUECI A SENHA</h1>";
-                conteudo += "<a href='javascript:void(0);' style='text-decoration: none;color:#000; padding:20px 60px; text-align:center; letter-spacing: 1.5; border:1px solid black; text-transform:uppercase; font-size: 13px; font-family:'arial'; font-weight:800;' title='Clique e tente de novo'>Clique e tente de novo</a>";
                 
-                objUtils.EnviaEmail("fernando.santos@vollup.com", "Esqueci a Senha", conteudo, "", "", null, "queroser@misasi.com.br", null);
 
                 Response.Redirect("/cadastrar-cupom.aspx");
                 Response.End();
@@ -93,7 +90,6 @@ namespace PromocaoBesni.ajax
             rsLogin.Close();
         }
 
-
         public void mudarStatusFoto(string status, string id)
         {
             objBD.ExecutaSQL("exec puInstagram '" + status + "','" + id + "'");
@@ -105,9 +101,6 @@ namespace PromocaoBesni.ajax
             cpf = cpf.Replace(".", "").Replace("-", "");
             rg = rg.Replace(".","").Replace("-", "");
             string cartaoBesni = cartao1 + cartao2 + cartao3 + cartao4;
-
-          //Response.Write("EXEC piuCadastro 0, '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "','" + cartaoBesni + "','" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','"+ objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "'");
-         // Response.End();
 
             rsCadastro = objBD.ExecutaSQL("EXEC piuCadastro 0, '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "','" + cartaoBesni + "','" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','" + objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "'");
             if (rsCadastro == null)
