@@ -25,22 +25,41 @@ jQuery(document).ready(function () {
     jQuery(".btn-limpar").click(function () {
         var formulario = jQuery(this).parent().parent().parent();
         formulario[0].reset();
-    })
-
-    jQuery(".form").submit(function () {
-        var idForm = "#" + jQuery(this).attr("id");
-        var inputs = jQuery(this).find(".inputs:not(.no-obg)");
+    });
+    
+    jQuery(".btn-form").click(function () {
+        if ($("input[name='senha']").val() != $("input[name='senha2']").val()) {
+            $("input[name='senha2']").addClass("error");
+            console.log("Falha na confirmação da senha, campo: " + inputs[i].name);
+        }
+        if ($("input[name='email']").val() != $("input[name='email2']").val()) {
+            $("input[name='email2']").addClass("error");
+            console.log("Falha na confirmação do email, campo: " + inputs[i].name);
+        }
+        var idForm = "#" + jQuery(this).data("form");
+        var inputs = jQuery(idForm).find(".inputs:not(.no-obg)");
         for (i = 0; i < inputs.length; i++) {
             if (inputs[i].value == "") {
                 jQuery(inputs[i]).addClass("error");
+                
+                $('html, body').animate({
+                    scrollTop: $(inputs[i]).offset().top-180
+                }, 1000);
+
+
                 console.log("erro de campos com o valor vazio, campo: " + inputs[i].name);
                 return;
+
+   
+
+ 
             }
             else {
                 jQuery(inputs).removeClass("error");
             }
         }
-        if (jQuery(this).find(".error").length == 0) {
+
+        if (jQuery(idForm).find(".error").length == 0) {
             var eml = jQuery("#email").val();
             console.log(eml);
             var filtroregexemail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
@@ -48,9 +67,11 @@ jQuery(document).ready(function () {
             if (filtroregexemail.test() == true) {
                 if (idForm == "#faleConoscoForm") {
                     enviaFerdz(idForm);
+                    jQuery(idForm).submit();
                 }
                 else {
                     envia(idForm);
+                    jQuery(idForm).submit();
                 }
             } else {
                 jQuery(this).addClass("error");
