@@ -46,6 +46,7 @@ jQuery(document).ready(function () {
                     scrollTop: $(inputs[i]).offset().top-180
                 }, 1000);
 
+                teste
 
                 console.log("erro de campos com o valor vazio, campo: " + inputs[i].name);
                 return;
