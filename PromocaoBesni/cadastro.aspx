@@ -87,7 +87,7 @@
 			</div>
 			
 			<%--<form action="javascript:void(0)" method="post" novalidate enctype="multipart/form-data" id="cadastroForm" class="form">--%>
-			<form action="/ajax/acoes.aspx" method="post" class="form">
+			<form action="/ajax/acoes.aspx" method="post" class="form" id="formCadastrar">
                 <input type="hidden" name="acao" value="novoCadastro" />
 				<%--<input type="hidden" name="Destinatario" value="|vitor.emanuel@vollup.com">
 				<input type="hidden" name="Obrigatorios" value="nome|email|mensagem">
@@ -279,7 +279,7 @@
 						<button type="button" class="btn-form btn-limpar" style="margin-right: 10px;">Limpar</button>
 						<%--<button type="submit" class="btn-form btn-enviar">Enviar</button>--%>
                         
-                        <input type="submit" value="Enviar" class="btn-form btn-enviar" />
+                        <input type="button" data-form="formCadastrar" value="Enviar" class="btn-form btn-enviar" />
 					</div>
 				</div>
 				
