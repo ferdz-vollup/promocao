@@ -18,9 +18,10 @@ namespace PromocaoBesni.ajax
 
         bd objBD = new bd();
         utils objUtils = new utils();
-        private OleDbDataReader rsCadastro, rsSexo, rsLogin;
-        string retorno = "";
-      //  Thread Atualizador;
+        private OleDbDataReader rsCadastro, rsSexo, rsLogin, rsSerie;
+        string retorno = "", serie = "", numero = "", cupom = "";
+        int total = 0;
+        //  Thread Atualizador;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -48,11 +49,32 @@ namespace PromocaoBesni.ajax
                 case "mudaStatusFoto":
                     mudarStatusFoto(Request["status"], Request["id"]);
                     break;
+                case "GerarCupom":
+                    // GerarCupom(Request["cnpj"], Request["data"], Request["cco"], Request["valor"]);
+                    Teste(Request["cnpj"], Request["data"], Request["cco"], Request["valor"]);
+
+                    break;
                 default:
                     break;
             }
 
             //PegarResultado();
+        }
+
+        public void Teste(string cnpj, string data, string cco, string valor)
+        {
+            //SE FOR CLIENTE BESNI TOTAL DEVE SER VEZES 2
+            //GERAR O CUPOM ESPEICIAL
+
+            valor = valor.Remove(valor.Length - 3).Replace(".","");
+            total = Convert.ToInt32(valor) / 200;
+            for (int i = 1; i <= total; i++)
+            {
+                GerarCupom(cnpj, data, cco, valor);
+            }
+
+            Response.Write("ok");
+            Response.End();
         }
 
         public void FazerLogin(string cpf, string senha)
@@ -158,6 +180,49 @@ namespace PromocaoBesni.ajax
         public void InfoInsta(string url, string id, string imagem, string thumb, string likes, string tags)
         {             
             objBD.ExecutaSQL("exec piInstagram '"+ url + "','" + id + "','" + imagem + "','" + thumb + "','" + likes + "','NULL'");
+        }
+
+        public void GerarCupom(string cnpj, string data, string cco, string valor)
+        {
+            rsSerie = objBD.ExecutaSQL("set dateformat dmy; select top 1 SER_INICIO,  SER_FINAL from serie where CONVERT(VARCHAR(8), SER_DH_INICIO, 5) > CONVERT(VARCHAR(8), getDate(), 5) and   cONVERT(VARCHAR(8), getDate(), 5) < CONVERT(VARCHAR(8), SER_DH_FINAL, 5)");
+
+            if (rsSerie == null)
+            {
+                throw new Exception();
+            }
+            if (rsSerie.HasRows)
+            {
+                rsSerie.Read();
+                serie = rsSerie["SER_INICIO"].ToString();
+                numero = NumeroAleatorio().PadLeft(5, '0');
+            }
+
+            //Verificar se numero já foi cadastrado
+            if (1 == 2)
+            {
+                rsSerie.Dispose();
+                rsSerie.Close();
+               // GerarCupom();
+            }
+            else
+            {
+                //Salvar no BD
+                cupom = serie + "-" + numero;
+
+                objBD.ExecutaSQL("insert into cupom values('" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + cco + "','" + valor + "',getDate(),'" + serie + "')");
+               // Response.Write("insert into cupom values('" + Session["cadID"].ToString() + "','" + cupom + "','"+ cnpj + "','"+data+"','"+cco+"','"+valor+"',getDate(),'"+ serie + "')");
+               // Response.End();
+            }
+
+        }
+
+        public string NumeroAleatorio()
+        {
+            Random rdn = new Random();
+            int strNumeroaleatorio;
+            strNumeroaleatorio = rdn.Next(00000, 99999);
+
+            return strNumeroaleatorio.ToString();
         }
 
     }

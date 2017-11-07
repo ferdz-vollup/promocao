@@ -40,7 +40,7 @@
                 </span>
             </div>
             <div class="col-xs-12 col-sm-6">
-                <form id="cadastrar-cupom">
+                <form id="cadastrar-cupom" action="javascript:GerarCupom($('#cnpj').val(),$('#date').val(),$('#coo').val(),$('#valor_nota').val());">
                     <div class="novo-cupon">
                         <span>1</span>
                         <input type="text" placeholder="CNPJ" id="cnpj" name="cnpj" class="cnpj">
@@ -84,6 +84,24 @@
 
 <!--scripts-->
     <besni:scripts runat="server" ID="scripts" />
+    <script type="text/javascript">
+        function GerarCupom(cnpj, data, cco, valor) {
+            ajax2 = ajaxInit();
+            ajax2.open("GET", "/ajax/acoes.aspx?acao=GerarCupom&cnpj=" + cnpj + "&data=" + data + "&cco=" + cco + "&valor=" + valor, true);
+            ajax2.setRequestHeader("Content-Type", "charset=iso-8859-1");
+            ajax2.onreadystatechange = function () {
+                if (ajax2.readyState == 4) {
+                    if (ajax2.status == 200) {
+                        if (ajax2.responseText == "ok") {
+                            window.location.href = "/meus-cupons.aspx";
+                        }
+                        //alert(ajax2.responseText);
+                    }
+                }
+            }
+            ajax2.send(null);
+        }
+    </script>
 
 </body>
 </html>
