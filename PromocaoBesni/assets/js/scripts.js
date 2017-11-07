@@ -1,4 +1,4 @@
-jQuery(document).ready(function () {
+﻿jQuery(document).ready(function () {
 
     var alturaEscrita = jQuery("#banner-escrita img").height();
     jQuery("#banner-escrita img").attr("style", "margin-top:-" + alturaEscrita / 2 + "px");
@@ -17,7 +17,7 @@ jQuery(document).ready(function () {
     jQuery('.cpf').mask("999.999.999-99");
     jQuery('.rg').mask("99.999.999-9");
     jQuery('.data-nasc').mask("99/99/9999");
-    jQuery('.cel').mask("(99) 99999-9999");
+    jQuery('.cel').mask("(99) 99999-9999"); 
     jQuery('.cep').mask("99999-999");
     jQuery('.cnpj').mask("00.000.000/0000-00");
     jQuery('.valor-nota').mask("#.##0,00", { reverse: true });
