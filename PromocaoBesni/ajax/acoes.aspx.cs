@@ -33,7 +33,7 @@ namespace PromocaoBesni.ajax
             switch (acao)
             {
                 case "novoCadastro":
-                    GerarNovoUsuario(Request["nome"].ToString(), Request["cpf"].ToString(), Request["rg"].ToString(), Request["dtnascimento"].ToString(), Request["sexo"].ToString(), Request["telefone"].ToString(), Request["celular"].ToString(), Request["email"].ToString(),Request["cartao1"].ToString(), Request["cartao2"].ToString(), Request["cartao3"].ToString(), Request["cartao4"].ToString(), Request["cep"].ToString(), Request["logradouro"].ToString(), Request["numero"].ToString(), Request["complemento"].ToString(), Request["bairro"].ToString(), Request["cidade"].ToString(), Request["uf"].ToString(), Request["senha"], Request["termos"], Request["novidades"]);
+                    GerarNovoUsuario(Request["nome"].ToString(), Request["cpf"].ToString(), Request["rg"].ToString(), Request["dtnascimento"].ToString(), Request["sexo"].ToString(), Request["telefone"].ToString(), Request["celular"].ToString(), Request["email"].ToString(), Request["cartao1"].ToString(), Request["cartao2"].ToString(), Request["cartao3"].ToString(), Request["cartao4"].ToString(), Request["cep"].ToString(), Request["logradouro"].ToString(), Request["numero"].ToString(), Request["complemento"].ToString(), Request["bairro"].ToString(), Request["cidade"].ToString(), Request["uf"].ToString(), Request["senha"], Request["termos"], Request["novidades"]);
                     break;
                 case "FazerLogin":
                     FazerLogin(Request["cpf"].ToString().Replace(".", "").Replace("-", ""), objUtils.getMD5Hash(Request["senha"].ToString()));
@@ -52,7 +52,12 @@ namespace PromocaoBesni.ajax
                 case "GerarCupom":
                     // GerarCupom(Request["cnpj"], Request["data"], Request["cco"], Request["valor"]);
                     Teste(Request["cnpj"], Request["data"], Request["cco"], Request["valor"]);
-
+                    break;
+                case "esqueciSenha":
+                    EsqueciSenha(Request["cpf"]);
+                    break;
+                case "mudarSenha":
+                    MudarSenha(Request["senha"], Request["cpf"]);
                     break;
                 default:
                     break;
@@ -66,9 +71,9 @@ namespace PromocaoBesni.ajax
             //SE FOR CLIENTE BESNI TOTAL DEVE SER VEZES 2
             //GERAR O CUPOM ESPEICIAL
 
-           
 
-            valor = valor.Remove(valor.Length - 3).Replace(".","");
+
+            valor = valor.Remove(valor.Length - 3).Replace(".", "");
             total = Convert.ToInt32(valor) / 200;
             //string especial = "";
 
@@ -78,7 +83,8 @@ namespace PromocaoBesni.ajax
                 total = total * 2;
             }
 
-            for (int i = 1; i <= total; i++) {
+            for (int i = 1; i <= total; i++)
+            {
                 GerarCupom(cnpj, data, cco, valor, "");
             }
 
@@ -87,14 +93,14 @@ namespace PromocaoBesni.ajax
                 GerarCupom(cnpj, data, cco, valor, "E");
             }
 
-            Response.Write("ok");
+            Response.Write("ok");// MANDAR OK|TOTAL E PEGAR O TOTLA PARA SABER QUANTOS REGISTRO MOSTRAR NO NOVO-CUPOM
             Response.End();
         }
 
         public void FazerLogin(string cpf, string senha)
         {
             //Verificar se o usuário existe (comparando usuário e senha)
-            rsLogin = objBD.ExecutaSQL("EXEC psUsuarioPorCpfeSenha '"+ cpf + "','"+senha+"'");
+            rsLogin = objBD.ExecutaSQL("EXEC psUsuarioPorCpfeSenha '" + cpf + "','" + senha + "'");
 
             if (rsLogin == null)
             {
@@ -136,7 +142,7 @@ namespace PromocaoBesni.ajax
         {
             //Ajustes nos campos
             cpf = cpf.Replace(".", "").Replace("-", "");
-            rg = rg.Replace(".","").Replace("-", "");
+            rg = rg.Replace(".", "").Replace("-", "");
             string cartaoBesni = cartao1 + cartao2 + cartao3 + cartao4;
 
             rsCadastro = objBD.ExecutaSQL("EXEC piuCadastro 0, '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "','" + cartaoBesni + "','" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','" + objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "'");
@@ -189,12 +195,12 @@ namespace PromocaoBesni.ajax
             }
             rsSexo.Dispose();
             rsSexo.Close();
-           
+
         }
 
         public void InfoInsta(string url, string id, string imagem, string thumb, string likes, string tags)
-        {             
-            objBD.ExecutaSQL("exec piInstagram '"+ url + "','" + id + "','" + imagem + "','" + thumb + "','" + likes + "','NULL'");
+        {
+            objBD.ExecutaSQL("exec piInstagram '" + url + "','" + id + "','" + imagem + "','" + thumb + "','" + likes + "','NULL'");
         }
 
         public void GerarCupom(string cnpj, string data, string cco, string valor, string especial)
@@ -217,7 +223,7 @@ namespace PromocaoBesni.ajax
             {
                 rsSerie.Dispose();
                 rsSerie.Close();
-               // GerarCupom();
+                // GerarCupom();
             }
             else
             {
@@ -230,8 +236,8 @@ namespace PromocaoBesni.ajax
                 }
 
                 objBD.ExecutaSQL("insert into cupom values('" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + cco + "','" + valor + "',getDate(),'" + serie + "')");
-               // Response.Write("insert into cupom values('" + Session["cadID"].ToString() + "','" + cupom + "','"+ cnpj + "','"+data+"','"+cco+"','"+valor+"',getDate(),'"+ serie + "')");
-               // Response.End();
+                // Response.Write("insert into cupom values('" + Session["cadID"].ToString() + "','" + cupom + "','"+ cnpj + "','"+data+"','"+cco+"','"+valor+"',getDate(),'"+ serie + "')");
+                // Response.End();
             }
 
         }
@@ -245,5 +251,51 @@ namespace PromocaoBesni.ajax
             return strNumeroaleatorio.ToString();
         }
 
+        public void EsqueciSenha(string cpf)
+        {
+            rsLogin = objBD.ExecutaSQL("select TOP 1 CAD_EMAIL from cadastro where CAD_CPF = '" + cpf.ToString().Replace(".", "").Replace("-", "") + "'");
+            if (rsLogin == null)
+            {
+                throw new Exception();
+            }
+            if (rsLogin.HasRows)
+            {
+                rsLogin.Read();
+
+                string conteudo = "<h1 style=\"margin:0 auto 50px auto; font-size:24px;font-family:'arial'; letter-spacing: 1.8; font-weight: 800; text-align:center; color:#a8272d; text-transform:uppercase;\">ESQUECI A SENHA</h1>";
+                conteudo += "<a href=\"http://www.promocaobesni.provisorio.ws/mudar-senha.aspx?CPF=" + cpf.ToString().Replace(".", "").Replace("-", "") + "  \" style=\"text-decoration:none; color:#000; padding:20px 50px; text-align:center; letter-spacing:1.5; border:1px solid black; text-transform:uppercase; font-size: 13px; font-family:'arial'; font-weight:800;\" title='Clique e tente de novo'>Clique aqui para gerar uma nova senha</a>";
+
+                objUtils.EnviaEmail(rsLogin["CAD_EMAIL"].ToString(), "Esqueci a Senha", conteudo, "", "", null, "queroser@misasi.com.br", null);
+
+                Response.Redirect("/");
+                Response.End();
+            }
+            rsLogin.Dispose();
+            rsLogin.Close();
+        }
+
+        public void MudarSenha(string senha, string cpf)
+        {
+            rsLogin = objBD.ExecutaSQL("EXEC puSenhaPorCPF '" + objUtils.getMD5Hash(senha) + "','"+cpf+"'");
+            if (rsLogin == null)
+            {
+                throw new Exception();
+            }
+            if (rsLogin.HasRows)
+            {
+                rsLogin.Read();
+
+                string conteudo = "<h1 style=\"margin:0 auto 50px auto; font-size:24px;font-family:'arial'; letter-spacing: 1.8; font-weight: 800; text-align:center; color:#a8272d; text-transform:uppercase;\">SENHA ALTERADA</h1>";
+                conteudo += "<p><center>Olá, " + rsLogin["CAD_NOME"].ToString() + "!</center></p>";
+                conteudo += "<p><center>A sua senha foi alterada com sucesso!</center></p>";
+
+                objUtils.EnviaEmail(rsLogin["CAD_EMAIL"].ToString(), "Senha Alterada", conteudo, "", "", null, "queroser@misasi.com.br", null);
+
+                Response.Redirect("/");
+                Response.End();
+            }
+            rsLogin.Dispose();
+            rsLogin.Close();
+        }
     }
 }
