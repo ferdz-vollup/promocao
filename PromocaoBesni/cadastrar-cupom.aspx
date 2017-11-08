@@ -55,8 +55,8 @@
                     </div>
                     <div class="novo-cupon">
                         <span>4</span>
-                        <label class="lblValorNota">R$</label>
-                        <input type="text" placeholder="xxx,xx" id="valor_nota" name="valor nota" class="valor-nota">
+                        <!--<label class="lblValorNota">R$</label>-->
+                        <input type="text" placeholder="R$ xxx,xx" id="valor_nota" name="valor nota" class="valor-nota">
                     </div>
                     <div class="col-sm-3 col-md-4"></div>
                     <div class="col-xs-12 col-sm-9 col-md-6 two-buttons-wrapping">
@@ -86,6 +86,20 @@
     <besni:scripts runat="server" ID="scripts" />
     <script type="text/javascript">
         function GerarCupom(cnpj, data, cco, valor) {
+
+            valor = valor.replace(".", "").replace(",", "")
+            
+            if (valor >= 20000) {
+                jQuery(this).removeClass("error");
+                console.log("no err");
+            } else {
+                jQuery(this).addClass("error");
+                $("#valor_nota").css({ 'color': 'red' });
+                $("#valor_nota").val("Apenas valores a partir de R$200,00");
+                console.log("err");
+                return false;
+            }
+
             ajax2 = ajaxInit();
             ajax2.open("GET", "/ajax/acoes.aspx?acao=GerarCupom&cnpj=" + cnpj + "&data=" + data + "&cco=" + cco + "&valor=" + valor, true);
             ajax2.setRequestHeader("Content-Type", "charset=iso-8859-1");

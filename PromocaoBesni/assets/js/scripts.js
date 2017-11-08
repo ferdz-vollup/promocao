@@ -30,11 +30,16 @@
     jQuery(".btn-form").click(function () {
         if ($("input[name='senha']").val() != $("input[name='senha2']").val()) {
             $("input[name='senha2']").addClass("error");
-            console.log("Falha na confirmação da senha, campo: " + inputs[i].name);
+            console.log("Confirmação de senha não corresponde à digitada.");
+            return;
         }
         if ($("input[name='email']").val() != $("input[name='email2']").val()) {
             $("input[name='email2']").addClass("error");
-            console.log("Falha na confirmação do email, campo: " + inputs[i].name);
+            $('html, body').animate({
+                scrollTop: $("#formCadastrar").offset().top - 180
+            }, 1000);
+            console.log("Confirmação de email não corresponde ao digitado.");
+            return;
         }
         var idForm = "#" + jQuery(this).data("form");
         var inputs = jQuery(idForm).find(".inputs:not(.no-obg)");
@@ -46,14 +51,9 @@
                     scrollTop: $(inputs[i]).offset().top-180
                 }, 1000);
 
-
-
                 console.log("erro de campos com o valor vazio, campo: " + inputs[i].name);
                 return;
-
-   
-
- 
+                
             }
             else {
                 jQuery(inputs).removeClass("error");
@@ -61,32 +61,34 @@
         }
 
         if (jQuery(idForm).find(".error").length == 0) {
-            var eml = jQuery("#email").val();
+            var eml = jQuery("input[type='email']").val();
             console.log(eml);
             var filtroregexemail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
             console.log(filtroregexemail.test(eml));
-            if (filtroregexemail.test() == true) {
+            if (filtroregexemail.test(eml) == true) {
                 if (idForm == "#faleConoscoForm") {
                     enviaFerdz(idForm);
                     jQuery(idForm).submit();
                 }
                 else {
-                    envia(idForm);
+                    console.log();
+                    //envia(idForm);
                     jQuery(idForm).submit();
                 }
             } else {
-                jQuery(this).addClass("error");
+                console.log("erro email");
+                jQuery(eml).addClass("error");
                 console.log("err");
             }
         }
     });
 
-    jQuery("#email").on("blur", function () {
+    jQuery("input[type='email']").on("blur", function () {
         var eml = jQuery(this).val();
         console.log(eml);
         var filtroregexemail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
         console.log(filtroregexemail.test(eml));
-        if (filtroregexemail.test() == true) {
+        if (filtroregexemail.test(eml) == true) {
             jQuery(this).removeClass("error");
             console.log("no err");
         } else {
@@ -101,6 +103,24 @@
         }
         else {
             jQuery(".sorteios").addClass("ativo");
+        }
+    });
+
+
+    // Validação de valor mínimo do Cupom
+
+    jQuery("input[type='submit']").click(function () {
+        var valCupom = jQuery("#valor_nota").val();
+
+        alert(jQuery("#valor_nota").val());
+        return false;
+
+        if (valCupom >= 200.00) {
+            jQuery(this).removeClass("error");
+            console.log("no err");
+        } else {
+            jQuery(this).addClass("error");
+            console.log("err");
         }
     });
 
