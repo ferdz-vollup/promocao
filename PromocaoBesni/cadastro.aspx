@@ -156,16 +156,16 @@
 						<div class="labelForm">você tem cartão besni ?</div>
 						<div class="text-uppercase">
 							<label for="sim" class="labelRadio">
-								<input type="radio" id="sim" name="tem cartao" class="inputs" value="Sim"><span>Sim</span>
+								<input type="radio" id="sim" name="changeCard" class="inputs card-show" value="Sim"><span>Sim</span>
 							</label>
 							<label for="nao" class="labelRadio">
-								<input type="radio" id="nao" name="tem cartao" class="inputs" value="Não"><span>Não</span>
+								<input type="radio" id="nao" name="changeCard" class="inputs card-hide" value="Não"><span>Não</span>
 							</label>
 						</div>
 					</div>
 				</div>
 
-                <div class="row not-flex cartao" style="margin-top: 50px;display: none">
+                <div class="row not-flex cardBesni cartao" style="margin-top: 50px;display: none">
 					<div class="col-sm-12">
 						<div class="labelFormTwo">número do cartão</div>
 						<div style="margin-left: -5px" class="numero-cartao">
@@ -212,7 +212,7 @@
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-sm-6">
 						<div class="labelForm">Complemento</div>
-						<input type="text" name="complemento" class="inputs">
+						<input type="text" name="complemento" class="inputs no-obg">
 					</div>
 					<div class="col-sm-6">
 						<div class="labelFormTwo text-center">Bairro</div>
@@ -226,7 +226,7 @@
 					</div>
 					<div class="col-sm-6">
 						<div class="labelFormTwo text-center">Estado</div>
-						<input type="text" name="uf" class="inputs" maxlength="2">
+						<input type="text" name="uf" class="inputs text-uppercase" maxlength="2">
 					</div>
 				</div>
 				
@@ -238,12 +238,6 @@
 					</div>
 				</div>
 				
-				<%--<div class="row" style="margin-top: 10px;">
-					<div class="col-md-6">
-						<div style="width: 50px;" class="labelForm">CPF</div>
-						<input type="text" name="cpf2" class="inputs">
-					</div>
-				</div>--%>
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-sm-6">
 						<div style="width: 50px;" class="labelForm">Senha</div>
@@ -258,8 +252,8 @@
 				<div class="row" style="margin-top: 50px;">
 					<div class="col-md-12">
 						<div>
-							<label for="termos" class="labelRadio">
-								<input type="radio" id="termos" name="termos" class="inputs" value="1"><span>Li e aceito todos as condições do regulamento da campanha.</span>
+							<label for="termos" class="checkboxLabel">
+								<input type="checkbox" id="termos" name="termos" class="inputs termos-obg" value="1"><span>Li e aceito todos as condições do regulamento da campanha.</span>
 							</label>
 						</div>
 					</div>
@@ -267,8 +261,8 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div>
-							<label for="novidades" class="labelRadio">
-								<input type="radio" id="novidades" name="novidades" class="inputs" value="1"><span>Desejo receber novidades e atualizações sobre produtos via e-mail</span>
+							<label for="novidades" class="checkboxLabel">
+								<input type="checkbox" id="novidades" name="novidades" class="inputs no-obg" value="1"><span>Desejo receber novidades e atualizações sobre produtos via e-mail</span>
 							</label>
 						</div>
 					</div>
@@ -277,7 +271,6 @@
 				<div class="row not-flex" style="margin-top: 50px;">
 					<div class="col-md-12 text-right">
 						<button type="button" class="btn-form btn-limpar" style="margin-right: 10px;">Limpar</button>
-						<%--<button type="submit" class="btn-form btn-enviar">Enviar</button>--%>
                         
                         <input type="button" data-form="formCadastrar" value="Enviar" class="btn-form btn-enviar" />
 					</div>

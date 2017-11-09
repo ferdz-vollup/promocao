@@ -15,7 +15,7 @@
     $('.telefone').mask(SPMaskBehavior, spOptions);
 
     jQuery('.cpf').mask("999.999.999-99");
-    jQuery('.rg').mask("99.999.999-9");
+    jQuery('.rg').mask("AA.AAA.AAA-A");
     jQuery('.data-nasc').mask("99/99/9999");
     jQuery('.cel').mask("(99) 99999-9999"); 
     jQuery('.cep').mask("99999-999");
@@ -27,7 +27,7 @@
         formulario[0].reset();
     });
     
-    jQuery(".btn-form").click(function () {
+    jQuery(".btn-enviar").click(function () {
         if ($("input[name='senha']").val() != $("input[name='senha2']").val()) {
             $("input[name='senha2']").addClass("error");
             console.log("Confirmação de senha não corresponde à digitada.");
@@ -41,6 +41,7 @@
             console.log("Confirmação de email não corresponde ao digitado.");
             return;
         }
+
         var idForm = "#" + jQuery(this).data("form");
         var inputs = jQuery(idForm).find(".inputs:not(.no-obg)");
         for (i = 0; i < inputs.length; i++) {
@@ -59,6 +60,16 @@
                 jQuery(inputs).removeClass("error");
             }
         }
+        if (jQuery("#termos").length > 0) {
+            if (jQuery("#termos").is(':checked')) {
+                jQuery("#termos").removeClass("error");
+            } else {
+                alert("Você deve aceitar nossas condições da campanha");
+                jQuery("#termos").addClass("error");
+            }
+        }
+        
+
 
         if (jQuery(idForm).find(".error").length == 0) {
             var eml = jQuery("input[type='email']").val();
@@ -74,13 +85,19 @@
                     console.log();
                     //envia(idForm);
                     jQuery(idForm).submit();
-                }
+                } 
             } else {
                 console.log("erro email");
                 jQuery(eml).addClass("error");
                 console.log("err");
+
             }
         }
+    });
+
+    // Check if Disclaimer is checked -------- NOT WORKING!!!!
+    jQuery(".btn-form").click(function () {
+        
     });
 
     jQuery("input[type='email']").on("blur", function () {
@@ -105,6 +122,22 @@
             jQuery(".sorteios").addClass("ativo");
         }
     });
+
+
+    // Exibir campos para cartão Besni
+
+
+   
+    $(".card-hide").click(function () {
+        $(".cardBesni input").val("");
+        $(".cardBesni input").addClass("no-obg");
+
+        $(".cardBesni").hide();
+    });
+    $(".card-show").click(function () {
+        $(".cardBesni").show();
+    });
+    
 
 
     // Validação de valor mínimo do Cupom

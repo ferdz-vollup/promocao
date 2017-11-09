@@ -49,18 +49,21 @@
 			<div class="row" style="margin-top: 50px;">
 				<div class="col-md-5" style="margin: auto; float: none">
 					<form action="/ajax/acoes.aspx">
-                        <input type="hidden" name="acao" value="mudarSenha" />
-                        <input type="text" name="cpf" value="25613748829"/>
-						<div class="col-sm-6">
-						    <div style="width: 50px;" class="labelForm">Nova Senha</div>
-						    <input name="senha" class="inputs" type="password">
-					    </div>
-                        <div class="col-sm-6">
-						<div class="labelFormTwo text-center">
-							<span>Confirmar</span> Senha</div>
-						<input name="senha2" class="inputs" type="password">
-					    </div>
-                        <input type="submit" data-form="formCadastrar" value="Enviar" class="" />
+                            <input type="hidden" name="acao" value="mudarSenha" />
+                            <input type="text" name="cpf" value="25613748829"/>
+
+                            <div class="inputWrapper">
+						            <div class="labelForm">Nova Senha</div>
+						            <input name="senha" class="inputs" type="password">
+                            </div>
+
+                            <div class="inputWrapper">
+                                <div class="labelFormTwo"><span>Confirmar</span> Senha</div>
+						        <input name="senha2" class="inputs" type="password">
+                            </div>					        
+
+                                <input type="submit" data-form="formCadastrar" value="Enviar" class="btn-form btn-enviar"" />
+                                
 					</form>
 				</div>
 			</div>
@@ -75,6 +78,59 @@
 
 <!--scripts-->
     <besni:scripts runat="server" ID="scripts" />
+
+    <script type="text/javascript">
+
+
+
+        jQuery(".btn-enviar").click(function () {
+            if ($("input[name='senha']").val() != $("input[name='senha2']").val()) {
+                $("input[name='senha2']").addClass("error");
+                console.log("Confirmação de sua nova senha não corresponde àquela digitada no campo anterior.");
+                return;
+            }
+
+            else {
+                jQuery(inputs).removeClass("error");
+            }
+           
+            if (jQuery(idForm).find(".error").length == 0) {
+                var eml = jQuery("input[type='email']").val();
+                console.log(eml);
+                var filtroregexemail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+                console.log(filtroregexemail.test(eml));
+                if (filtroregexemail.test(eml) == true) {
+                    if (idForm == "#faleConoscoForm") {
+                        enviaFerdz(idForm);
+                        jQuery(idForm).submit();
+                    }
+                    else {
+                        console.log();
+                        //envia(idForm);
+                        jQuery(idForm).submit();
+                    }
+                } else {
+                    console.log("erro email");
+                    jQuery(eml).addClass("error");
+                    console.log("err");
+
+                }
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
 
 </body>
 </html>
