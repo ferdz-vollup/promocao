@@ -40,7 +40,7 @@
             }, 1000);
             console.log("Confirmação de email não corresponde ao digitado.");
             return;
-        }
+        } 
 
         var idForm = "#" + jQuery(this).data("form");
         var inputs = jQuery(idForm).find(".inputs:not(.no-obg)");
