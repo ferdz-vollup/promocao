@@ -73,7 +73,7 @@ namespace PromocaoBesni.ajax
 
 
 
-            valor = valor.Remove(valor.Length - 3).Replace(".", "");
+            valor = valor.Remove(valor.Length - 2).Replace(".", "");
             total = Convert.ToInt32(valor) / 200;
             //string especial = "";
 
@@ -93,7 +93,7 @@ namespace PromocaoBesni.ajax
                 GerarCupom(cnpj, data, cco, valor, "E");
             }
 
-            Response.Write("ok");// MANDAR OK|TOTAL E PEGAR O TOTLA PARA SABER QUANTOS REGISTRO MOSTRAR NO NOVO-CUPOM
+            Response.Write("ok|"+ total);// MANDAR OK|TOTAL E PEGAR O TOTLA PARA SABER QUANTOS REGISTRO MOSTRAR NO NOVO-CUPOM
             Response.End();
         }
 
@@ -235,9 +235,10 @@ namespace PromocaoBesni.ajax
                     cupom = "E-" + cupom;
                 }
 
-                objBD.ExecutaSQL("insert into cupom values('" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + cco + "','" + valor + "',getDate(),'" + serie + "')");
+                objBD.ExecutaSQL("EXEC pGerarCupom '" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + cco + "','" + valor + "','" + serie + "'");
                 // Response.Write("insert into cupom values('" + Session["cadID"].ToString() + "','" + cupom + "','"+ cnpj + "','"+data+"','"+cco+"','"+valor+"',getDate(),'"+ serie + "')");
                 // Response.End();
+
             }
 
         }

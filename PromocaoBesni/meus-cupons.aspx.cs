@@ -16,7 +16,7 @@ namespace PromocaoBesni
         bd objBD = new bd();
         utils objUtils = new utils();
         private OleDbDataReader rsCupons;
-        
+
         protected void Page_Load(object sender, EventArgs e)
         {
             objUtils = new utils();
@@ -28,6 +28,7 @@ namespace PromocaoBesni
                 objUtils = new utils();
                 string acao = Request["acao"];
 
+               
                 trazerCupons();
             }
             else
@@ -39,6 +40,10 @@ namespace PromocaoBesni
 
         public void trazerCupons()
         {
+
+            //Response.Write("select CUP_NUMERO_SORTE from cupom where CAD_ID = " + Session["cadID"].ToString() + " ");
+            //Response.End();
+
             rsCupons = objBD.ExecutaSQL("select CUP_NUMERO_SORTE from cupom where CAD_ID = " + Session["cadID"].ToString() + " ");
 
             if (rsCupons == null)
@@ -60,7 +65,7 @@ namespace PromocaoBesni
                     {
                         secCupons.InnerHtml += " <div class=\"cupon\" style=\"background:#97092a;\">";
                     }
-                    secCupons.InnerHtml += "    <h4 class=\"basenine\">cód. "+rsCupons["CUP_NUMERO_SORTE"] +"</h4>";
+                    secCupons.InnerHtml += "    <h4 class=\"basenine\">cód. " + rsCupons["CUP_NUMERO_SORTE"] + "</h4>";
                     secCupons.InnerHtml += " </div> ";
                     count++;
                 }

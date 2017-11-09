@@ -172,10 +172,11 @@
             ajax2.onreadystatechange = function () {
                 if (ajax2.readyState == 4) {
                     if (ajax2.status == 200) {
-                        if (ajax2.responseText == "ok") {
-                            window.location.href = "/novo-cupom.aspx";
+                        var resultado = ajax2.responseText.split("|");
+                       // alert(resultado[1]);
+                        if (resultado[1] >= 2) {
+                            window.location.href = "/novo-cupom.aspx?total=" + resultado[1];
                         }
-                        //alert(ajax2.responseText);
                     }
                 }
             }

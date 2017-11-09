@@ -201,9 +201,10 @@ namespace Etnia.classe
 
             //Define o corpo do e-mail.
 
-            string conteudoMensagem = "";
+            string conteudoMensagem = "<center>";
             conteudoMensagem += "<table id='Tabela_01' width='450' height='217' border='0' cellpadding='0' cellspacing='0'>";
-            conteudoMensagem += "   <center>";            conteudoMensagem += "       <table width='450' border='0' cellpadding='0' cellspacing='0'>";
+            conteudoMensagem += "   <center>";
+            conteudoMensagem += "       <table width='450' border='0' cellpadding='0' cellspacing='0'>";
             conteudoMensagem += "           <tr>";
             conteudoMensagem += "               <td>";
             conteudoMensagem += "                    <a href='http://www.promocaobesni.com.br/?utm_source=autoresposta&utm_medium=email&utm_campaign=hotsite' target='blank' title='Visitar Besni website'><img src='http://vollup.servicos.ws/besni/emkts/images/index_01.jpg' width='450' height='175' alt='Besni' style='display:block; border:0px; '></a>";
@@ -223,6 +224,25 @@ namespace Etnia.classe
             conteudoMensagem += "        </td>";
             conteudoMensagem += "    </tr>";
 
+            conteudoMensagem += "   <tr style=\"margin-top:50px;\">";
+            conteudoMensagem += "       <td>";
+            conteudoMensagem += "           <table width=\"450\" height=\"179\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\">";
+            conteudoMensagem += "               <tr>";
+            conteudoMensagem += "                   <td>";
+            conteudoMensagem += "                       <img src=\"http://vollup.servicos.ws/besni/emkts/images/rodape_01.jpg\" width=\"44\" height=\"99\" alt=\"\"></td>";
+            conteudoMensagem += "                   <td>";
+            conteudoMensagem += "                       <a href=\"https://www.facebook.com/LojasBesni\" target=\"_blank\" title=\"Visitar Besni Facebook\"><img src=\"http://vollup.servicos.ws/besni/emkts/images/rodape_02.jpg\" width=\"17\" height=\"99\" alt=\"Facebook Link\"></a></td>";
+            conteudoMensagem += "                   <td>";
+            conteudoMensagem += "                       <a href=\"https://www.instagram.com/lojasbesni/\" target=\"_blank\" title=\"Visitar Besni Instagram\"><img src=\"http://vollup.servicos.ws/besni/emkts/images/rodape_03.jpg\" width=\"16\" height=\"99\" alt=\"Instagram Link\"></a></td>";
+            conteudoMensagem += "                   <td>";
+            conteudoMensagem += "                       <img src=\"http://vollup.servicos.ws/besni/emkts/images/rodape_04.jpg\" width=\"196\" height=\"99\" alt=\"\"></td>";
+            conteudoMensagem += "                   <td>";
+            conteudoMensagem += "                       <a href=\"http://www.promocaobesni.com.br/?utm_source=autoresposta&utm_medium=email&utm_campaign=hotsite\" target=\"_blank\" title=\"Visitar Besni website\"><img src=\"http://vollup.servicos.ws/besni/emkts/images/rodape_05.jpg\" width=\"177\" height=\"99\" alt=\"Website Link\"></a></td>";
+            conteudoMensagem += "               </tr>";
+            conteudoMensagem += "           </table> ";
+            conteudoMensagem += "      </td> ";
+            conteudoMensagem += "   </tr>";
+
             conteudoMensagem += "        </table>";
             conteudoMensagem += "   </center>";
 
@@ -232,7 +252,7 @@ namespace Etnia.classe
             // conteudoMensagem += "            <img style='width:600px' src='http://petnativa.provisorio.ws/images/rodape-email.jpg' />";
             // conteudoMensagem += "        </td>";
             // conteudoMensagem += "    </tr></table>";
-            conteudoMensagem += "</table>";
+            conteudoMensagem += "</table></center>";
 
             // coloca no corpo do email
             objEmail.Body = conteudoMensagem;
