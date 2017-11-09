@@ -1,94 +1,160 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="cadastrar-cupom.aspx.cs" Inherits="PromocaoBesni.cadastrar_cupom" %>
+
 <%@ Register Src="~/inc/head.ascx" TagPrefix="besni" TagName="head" %>
 <%@ Register Src="~/inc/menu.ascx" TagPrefix="besni" TagName="menu" %>
 <%@ Register Src="~/inc/footer.ascx" TagPrefix="besni" TagName="footer" %>
 <%@ Register Src="~/inc/scripts.ascx" TagPrefix="besni" TagName="scripts" %>
 
 <!doctype html>
+
 <html>
 
 <!--head-->
 <head>
     <besni:head runat="server" ID="head" />
     <title>Promoção Besni</title>
+
+    <style type="text/css">
+        .container {
+            margin-top: 20px;
+        }
+
+        .image-preview-input {
+            position: relative;
+            overflow: hidden;
+            margin: 0px;
+            color: #333;
+            background-color: #fff;
+            border-color: #ccc;
+        }
+
+            .image-preview-input input[type=file] {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 0;
+                padding: 0;
+                font-size: 20px;
+                cursor: pointer;
+                opacity: 0;
+                filter: alpha(opacity=0);
+            }
+
+        .image-preview-input-title {
+            margin-left: 2px;
+        }
+    </style>
 </head>
 
 <body>
-<!--menu-->
-<besni:menu runat="server" ID="menu" />
+    <!--menu-->
+    <besni:menu runat="server" ID="menu" />
 
-<!--banner-->
-<section id="banner-premios">
-	<div class="banner">
-		<div id="imagem-carro"><img src="/assets/imagens/imagem-carro.png" alt=""></div>
-	</div>
-</section>
-
-<!--CONTAINER-->
-<section id="ganhadores">
-	<div class="container">
-		<div class="text-center">
-			<h2 class="basenine text-uppercase vermelho">cadastro</h2>
-		</div>                  
-        <div class="row" style="margin-top:70px">
-            <div class="col-xs-12">
-                <h3 class="basenine text-uppercase cinza" style="text-align: left;">cadastrar cupon</h3>
-                <div style="text-align: left" class="traco-vermelho"></div><br>
-                <span style="line-height:30px">
-                    Olá, <strong><span runat="server" id="usuario"> </span></strong> duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi.<br />
-                    accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.
-                </span>
+    <!--banner-->
+    <section id="banner-premios">
+        <div class="banner">
+            <div id="imagem-carro">
+                <img src="/assets/imagens/imagem-carro.png" alt="">
             </div>
-            <div class="col-xs-12 col-sm-6">
-                <form id="cadastrar-cupom" action="javascript:GerarCupom($('#cnpj').val(),$('#date').val(),$('#coo').val(),$('#valor_nota').val());">
-                    <div class="novo-cupon">
-                        <span>1</span>
-                        <input type="text" placeholder="CNPJ" id="cnpj" name="cnpj" class="cnpj">
-                    </div>
-                    <div class="novo-cupon">
-                        <span>2</span>
-                        <input type="text" placeholder="dd/mm/aaaa" id="date" name="date" class="data-nasc">
-                    </div>                       
-                    <div class="novo-cupon">
-                        <span>3</span>
-                        <input type="text" placeholder="COO" id="coo" name="coo">
-                    </div>
-                    <div class="novo-cupon">
-                        <span>4</span>
-                        <!--<label class="lblValorNota">R$</label>-->
-                        <input type="text" placeholder="R$ xxx,xx" id="valor_nota" name="valor nota" class="valor-nota">
-                    </div>
-                    <div class="col-sm-3 col-md-4"></div>
-                    <div class="col-xs-12 col-sm-9 col-md-6 two-buttons-wrapping">
-                        <button type="submit" style="" class="btn-form btn-enviar">Enviar</button>  
-                        <button style="" type="reset" class="btn-form btn-enviar">Limpar</button>                                                               
-                    </div>
-                </form>
-            </div>
-            <div class="col-xs-12 col-sm-6 receipt-wrapping">
-                <div class="col-sm-10" style="margin:auto; float:none">
-                    <br><img src="/assets/imagens/cupom-fiscal-legenda.png" alt="exemplo cupon fiscal" />
-                    <p style="text-align: left; margin-top: 15px;">
-                        * Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
-                    </p><br>
-                </div>                                    
-            </div>                         
         </div>
-	</div>
-</section>
+    </section>
 
-<!--rodapé-->
+    <!--CONTAINER-->
+    <section id="ganhadores">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="basenine text-uppercase vermelho">cadastro</h2>
+            </div>
+            <div class="row" style="margin-top: 70px">
+                <div class="col-xs-12">
+                    <h3 class="basenine text-uppercase cinza" style="text-align: left;">cadastrar cupon</h3>
+                    <div style="text-align: left" class="traco-vermelho"></div>
+                    <br>
+                    <span style="line-height: 30px">Olá, <strong><span runat="server" id="usuario"></span></strong>duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi.<br />
+                        accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.
+                    </span>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <form id="cadastrar-cupom" action="javascript:GerarCupom($('#cnpj').val(),$('#date').val(),$('#coo').val(),$('#valor_nota').val());">
+                        <div class="novo-cupon">
+                            <span>1</span>
+                            <input type="text" placeholder="CNPJ" id="cnpj" name="cnpj" class="cnpj">
+                        </div>
+                        <div class="novo-cupon">
+                            <span>2</span>
+                            <input type="text" placeholder="dd/mm/aaaa" id="date" name="date" class="data-nasc">
+                        </div>
+                        <div class="novo-cupon">
+                            <span>3</span>
+                            <input type="text" placeholder="COO" id="coo" name="coo">
+                        </div>
+                        <div class="novo-cupon">
+                            <span>4</span>
+                            <!--<label class="lblValorNota">R$</label>-->
+                            <input type="text" placeholder="R$ xxx,xx" id="valor_nota" name="valor nota" class="valor-nota">
+                        </div>
+
+                        <div class="container novo-cupon">
+                            <span>5</span>
+                            <div class="row">
+                                <%-- <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">  --%>
+                                <!-- image-preview-filename input [CUT FROM HERE]-->
+                                <div class="input-group image-preview">
+                                    <input type="text" class="form-control image-preview-filename" disabled="disabled">
+                                    <!-- don't give a name === doesn't send on POST/GET -->
+                                    <span class="input-group-btn">
+                                        <!-- image-preview-clear button -->
+                                        <button type="button" class="btn btn-default image-preview-clear" style="display: none;">
+                                            <span class="glyphicon glyphicon-remove"></span>Limpar
+                   
+                                        </button>
+                                        <!-- image-preview-input -->
+                                        <div class="btn btn-default image-preview-input">
+                                            <span class="glyphicon glyphicon-folder-open"></span>
+                                            <span class="image-preview-input-title">Browse</span>
+                                            <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview" />
+                                            <!-- rename it -->
+                                        </div>
+                                    </span>
+                                </div>
+                                <!-- /input-group image-preview [TO HERE]-->
+                                <%--</div>--%>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3 col-md-4"></div>
+                        <div class="col-xs-12 col-sm-9 col-md-6 two-buttons-wrapping">
+                            <button type="submit" style="" class="btn-form btn-enviar">Enviar</button>
+                            <button style="" type="reset" class="btn-form btn-enviar">Limpar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xs-12 col-sm-6 receipt-wrapping">
+                    <div class="col-sm-10" style="margin: auto; float: none">
+                        <br>
+                        <img src="/assets/imagens/cupom-fiscal-legenda.png" alt="exemplo cupon fiscal" />
+                        <p style="text-align: left; margin-top: 15px;">
+                            * Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+                        </p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--rodapé-->
 
     <!--footer-->
     <besni:footer runat="server" ID="footer" />
 
-<!--scripts-->
+    <!--scripts-->
     <besni:scripts runat="server" ID="scripts" />
     <script type="text/javascript">
         function GerarCupom(cnpj, data, cco, valor) {
 
             valor = valor.replace(".", "").replace(",", "")
-            
+
             if (valor >= 20000) {
                 jQuery(this).removeClass("error");
                 console.log("no err");
@@ -115,6 +181,66 @@
             }
             ajax2.send(null);
         }
+
+        $(document).on('click', '#close-preview', function () {
+            $('.image-preview').popover('hide');
+            // Hover befor close the preview
+            $('.image-preview').hover(
+                function () {
+                    $('.image-preview').popover('show');
+                },
+                 function () {
+                     $('.image-preview').popover('hide');
+                 }
+            );
+        });
+
+        $(function () {
+            // Create the close button
+            var closebtn = $('<button/>', {
+                type: "button",
+                text: 'x',
+                id: 'close-preview',
+                style: 'font-size: initial;',
+            });
+            closebtn.attr("class", "close pull-right");
+            // Set the popover default content
+            $('.image-preview').popover({
+                trigger: 'manual',
+                html: true,
+                title: "<strong>Previsão</strong>" + $(closebtn)[0].outerHTML,
+                content: "Não há imagem",
+                placement: 'bottom'
+            });
+            // Clear event
+            $('.image-preview-clear').click(function () {
+                $('.image-preview').attr("data-content", "").popover('hide');
+                $('.image-preview-filename').val("");
+                $('.image-preview-clear').hide();
+                $('.image-preview-input input:file').val("");
+                $(".image-preview-input-title").text("Pasta");
+            });
+            // Create the preview image
+            $(".image-preview-input input:file").change(function () {
+                var img = $('<img/>', {
+                    id: 'dynamic',
+                    width: 250,
+                    height: 200
+                });
+                var file = this.files[0];
+                var reader = new FileReader();
+                // Set preview image into the popover data-content
+                reader.onload = function (e) {
+                    $(".image-preview-input-title").text("Mudar");
+                    $(".image-preview-clear").show();
+                    $(".image-preview-filename").val(file.name);
+                    img.attr('src', e.target.result);
+                    $(".image-preview").attr("data-content", $(img)[0].outerHTML).popover("show");
+                }
+                reader.readAsDataURL(file);
+            });
+        });
+
     </script>
 
 </body>
