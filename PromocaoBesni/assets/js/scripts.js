@@ -1,4 +1,20 @@
-﻿jQuery(document).ready(function () {
+﻿jQuery(document).ready(function ($) {
+
+    // Recuperação de Senha (COMEÇO)
+
+    $(".novaSenhaClick").click(function () {
+        var senha1 = $("input[name=senha]").val();
+        var senha2 = $("input[name=senha2]").val();
+        if (senha1 == senha2) {
+
+            alert("Senha nova salva com sucesso!");
+        } else {
+            alert("Erro: você precisa confirmar a nova senha nos dois campos.");
+        }
+    });
+
+
+    // Recuperação de Senha (FIM)
 
     var alturaEscrita = jQuery("#banner-escrita img").height();
     jQuery("#banner-escrita img").attr("style", "margin-top:-" + alturaEscrita / 2 + "px");
