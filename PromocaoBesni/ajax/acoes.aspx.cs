@@ -156,15 +156,15 @@ namespace PromocaoBesni.ajax
                 //Salvando as Session do usuário
                 Session["cadNome"] = nome;
                 Session["cadID"] = rsCadastro["CAD_ID"].ToString();
-                //Session["petUsuario"] = rsCadastro["PET_USUARIO"].ToString();
-
-                //Salvando Cookie para se manter logado
-                //myCookie.Value = rsCadastro["PET_ID"].ToString();
-                //myCookie.Expires = DateTime.Now.AddHours(168); //1 semana
-                //Response.Cookies.Add(myCookie);
 
                 //Salvando no log
                 //Utils.Banco().RunSQL("EXEC psLog '" + rsCadastro["PET_ID"] + "',null,'Parabéns! Você ganhou a medalha INICIANTE por se cadastrar e efetuar o login no site.','1'");
+
+                //Enviar e-mail
+                string conteudo = "<h1 style=\"margin:0 auto 50px auto; font-size:24px;font-family:'arial'; letter-spacing: 1.8; font-weight: 800; text-align:center; color:#a8272d; text-transform:uppercase;\">USUÁRIO CADASTRADO</h1>";
+                conteudo += "<center><p style=\"font-weight:700; font-size: 16px;\">Olá, "+ nome + "!</p></center>";
+                conteudo += "<center><p style=\"font-weight:700; font-size: 16px;\">Seu cadastro foi realizado com sucesso.</p></center>";
+                objUtils.EnviaEmail(email, "Usuário Cadastrado", conteudo, "", "", null, "queroser@misasi.com.br", null);
 
                 //Redirecionando para a home do usuário
                 Response.Redirect("/cadastrar-cupom.aspx");
