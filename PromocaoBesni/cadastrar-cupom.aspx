@@ -28,7 +28,7 @@
             border-color: #ccc;
         }
 
-            .image-preview-input input[type=file] {
+        .image-preview-input input[type=file] {
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -38,10 +38,63 @@
                 cursor: pointer;
                 opacity: 0;
                 filter: alpha(opacity=0);
-            }
+        }
 
         .image-preview-input-title {
             margin-left: 2px;
+        }
+        .image-preview-filename {
+            border-radius: 0px;
+            box-shadow: none;
+            border: 1px solid black !important;
+            width: 77% !important;
+        }
+        .input-group.image-preview {
+            width: 85%;
+            display: inline-block;
+        }
+        .btn.btn-default.image-preview-input {
+            background: none;
+            border: 0px;
+            padding: 0px;
+            margin: 0px;
+            height: 50px;
+            border-radius: 0px;
+        }
+        span.input-group-btn.buttons-uploads {
+            border: 0px;
+            width: auto;
+            margin-left: 1%;
+            margin-top: -4px;
+            display: inline-block;
+        }
+        .btn.btn-default.image-preview-input span, button.btn.btn-default.image-preview-clear span {
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 4px;
+        }
+        button.btn.btn-default.image-preview-clear {
+            position: absolute;
+            background: transparent;
+            border: 0px;
+            margin: 0px !important;
+            padding: 0px;
+            top: 0;
+            right: 113%;
+        }
+        button.btn.btn-default.image-preview-clear span {
+            margin: 0px;
+        }
+        button#close-preview {
+            margin: 0px;
+        }
+        .popover-content img {
+            height: auto !important;
+            width: 100% !important;
         }
     </style>
 </head>
@@ -94,24 +147,22 @@
                             <input type="text" placeholder="R$ xxx,xx" id="valor_nota" name="valor nota" class="valor-nota">
                         </div>
 
-                        <div class="container novo-cupon">
+                        <div class="novo-cupon">
                             <span>5</span>
-                            <div class="row">
                                 <%-- <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">  --%>
                                 <!-- image-preview-filename input [CUT FROM HERE]-->
                                 <div class="input-group image-preview">
-                                    <input type="text" class="form-control image-preview-filename" disabled="disabled">
+                                    <input type="text" class="image-preview-filename" disabled="disabled">
                                     <!-- don't give a name === doesn't send on POST/GET -->
-                                    <span class="input-group-btn">
+                                    <span class="input-group-btn buttons-uploads">
                                         <!-- image-preview-clear button -->
                                         <button type="button" class="btn btn-default image-preview-clear" style="display: none;">
-                                            <span class="glyphicon glyphicon-remove"></span>Limpar
+                                            <span class="glyphicon glyphicon-remove"></span>
                    
                                         </button>
                                         <!-- image-preview-input -->
                                         <div class="btn btn-default image-preview-input">
                                             <span class="glyphicon glyphicon-folder-open"></span>
-                                            <span class="image-preview-input-title">Browse</span>
                                             <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview" />
                                             <!-- rename it -->
                                         </div>
@@ -119,7 +170,6 @@
                                 </div>
                                 <!-- /input-group image-preview [TO HERE]-->
                                 <%--</div>--%>
-                            </div>
                         </div>
 
                         <div class="col-sm-3 col-md-4"></div>
