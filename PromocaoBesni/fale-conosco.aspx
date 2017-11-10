@@ -70,7 +70,7 @@
 					<div class="col-md-12 text-right">
                         <div class="retorno-mensagem"></div>
 						<button type="button" class="btn-form btn-limpar" style="margin-right: 10px;">Limpar</button>
-						<button type="submit" class="btn-form btn-enviar">Enviar</button>
+						<button type="submit" class="btn-form btn-contato" data-form="formFaleConosco">Enviar</button>
 					</div>
 				</div>
 			</form>
@@ -85,6 +85,46 @@
 
 <!--scripts-->
     <besni:scripts runat="server" ID="scripts" />
+
+    <script>
+        jQuery(".btn-contato").click(function () {
+           
+
+            var idForm = "#" + jQuery(this).data("form");
+            var inputs = jQuery(idForm).find(".inputs:not(.no-obg)");
+            for (i = 0; i < inputs.length; i++) {
+                if (inputs[i].value == "") {
+                    jQuery(inputs[i]).addClass("error");
+
+                    $('html, body').animate({
+                        scrollTop: $(inputs[i]).offset().top - 180
+                    }, 1000);
+
+                    console.log("erro de campos com o valor vazio, campo: " + inputs[i].name);
+                    return;
+
+                }
+                else {
+                    jQuery(inputs).removeClass("error");
+                }
+            }
+            
+            if (jQuery(idForm).find(".error").length == 0) {
+                var eml = jQuery("input[type='email']").val();
+                console.log(eml);
+                var filtroregexemail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+                console.log(filtroregexemail.test(eml));
+                if (filtroregexemail.test(eml) == true) {
+                    enviaFerdz(idForm);
+                    jQuery(idForm).submit();
+                 } else {
+                    console.log("erro email");
+                    jQuery(eml).addClass("error");
+                    console.log("err");
+                }
+            }
+        });
+    </script>
 
 </body>
 </html>

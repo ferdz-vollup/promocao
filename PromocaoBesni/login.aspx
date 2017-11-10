@@ -92,6 +92,9 @@
                 $('#acao').attr('value', 'FazerLogin');
                 $('#senha').show();
                 $('#linkSenha').attr('rel', '1');
+
+                /* Test by Paulo */
+                alert("Um email foi enviado para você redefinir sua senha!");
             }
         }
     </script>

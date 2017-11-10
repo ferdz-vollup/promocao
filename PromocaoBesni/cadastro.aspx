@@ -196,13 +196,13 @@
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-md-8">
 						<div class="labelForm">CEP</div>
-						<input type="text" name="cep" class="inputs cep">
+						<input id="cep" type="text" name="cep" class="inputs cep">
 					</div>
 				</div>
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-sm-8">
 						<div class="labelForm">Logradouro</div>
-						<input type="text" name="logradouro" class="inputs">
+						<input id="rua" type="text" name="logradouro" class="inputs">
 					</div>
 					<div class="col-sm-4">
 						<div class="labelForm text-center" style="margin-right: 10px;">Número</div>
@@ -216,17 +216,17 @@
 					</div>
 					<div class="col-sm-6">
 						<div class="labelFormTwo text-center">Bairro</div>
-						<input type="text" name="bairro" class="inputs">
+						<input id="bairro" type="text" name="bairro" class="inputs">
 					</div>
 				</div>
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-sm-6">
 						<div class="labelForm">Cidade</div>
-						<input type="text" name="cidade" class="inputs">
+						<input id="cidade" type="text" name="cidade" class="inputs">
 					</div>
 					<div class="col-sm-6">
 						<div class="labelFormTwo text-center">Estado</div>
-						<input type="text" name="uf" class="inputs text-uppercase" maxlength="2">
+						<input id="uf" type="text" name="uf" class="inputs text-uppercase" maxlength="2">
 					</div>
 				</div>
 				
@@ -290,6 +290,75 @@
 
 <!--scripts-->
     <besni:scripts runat="server" ID="scripts" />
+
+    <script type="text/javascript">
+
+        function limpa_formulário_cep() {
+            //Limpa valores do formulário de cep.
+            document.getElementById('rua').value = ("");
+            document.getElementById('bairro').value = ("");
+            document.getElementById('cidade').value = ("");
+            document.getElementById('uf').value = ("");
+        }
+
+        function fillByZipcode(conteudo) {
+            if (!("erro" in conteudo)) {
+                //Atualiza os campos com os valores.
+                document.getElementById('rua').value = (conteudo.logradouro);
+                document.getElementById('bairro').value = (conteudo.bairro);
+                document.getElementById('cidade').value = (conteudo.localidade);
+                document.getElementById('uf').value = (conteudo.uf);
+            } //end if.
+            else {
+                //CEP não Encontrado.
+                limpa_formulário_cep();
+                alert("CEP não encontrado.");
+            }
+        }
+
+        function pesquisacep(valor) {
+
+            //Nova variável "cep" somente com dígitos.
+            var cep = valor.replace(/\D/g, '');
+
+            //Verifica se campo cep possui valor informado.
+            if (cep != "") {
+
+                //Expressão regular para validar o CEP.
+                var validacep = /^[0-9]{8}$/;
+
+                //Valida o formato do CEP.
+                if (validacep.test(cep)) {
+
+                    //Preenche os campos com "..." enquanto consulta webservice.
+                    document.getElementById('rua').value = "...";
+                    document.getElementById('bairro').value = "...";
+                    document.getElementById('cidade').value = "...";
+                    document.getElementById('uf').value = "...";
+
+                    //Cria um elemento javascript.
+                    var script = document.createElement('script');
+
+                    //Sincroniza com o callback.
+                    script.src = '//viacep.com.br/ws/' + cep + '/json/?callback=fillByZipcode';
+
+                    //Insere script no documento e carrega o conteúdo.
+                    document.body.appendChild(script);
+
+                } //end if.
+                else {
+                    //cep é inválido.
+                    limpa_formulário_cep();
+                    alert("Formato de CEP inválido.");
+                }
+            } //end if.
+            else {
+                //cep sem valor, limpa formulário.
+                limpa_formulário_cep();
+            }
+        };
+
+    </script>
 
 </body>
 </html>

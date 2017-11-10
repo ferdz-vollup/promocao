@@ -99,13 +99,23 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\cpfs-bloqueados.aspx" />
     <Content Include="admin\css\morris.css" />
+    <Content Include="admin\cupons.aspx" />
     <Content Include="admin\fonts\fontawesome-webfont.svg" />
+    <Content Include="admin\ganhadores.aspx" />
     <Content Include="admin\images\bg-login.jpg" />
     <Content Include="admin\images\logo.png" />
+    <Content Include="admin\inc\footer.ascx" />
+    <Content Include="admin\inc\head.ascx" />
+    <Content Include="admin\inc\menu-topo.ascx" />
+    <Content Include="admin\inc\menu.ascx" />
+    <Content Include="admin\instagram.aspx" />
     <Content Include="admin\js\morris-data.js" />
     <Content Include="admin\js\morris.min.js" />
     <Content Include="admin\js\raphael.min.js" />
+    <Content Include="admin\usuarios.aspx" />
+    <Content Include="ajax\acoes.aspx" />
     <Content Include="assets\css\bootstrap-theme.min.css" />
     <Content Include="assets\css\bootstrap.min.css" />
     <Content Include="assets\css\responsive.css" />
@@ -124,10 +134,14 @@
     <Content Include="assets\imagens\moto-bull.png" />
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\js\jquery-3.2.1.min.js" />
+    <Content Include="assets\js\scripts.js" />
+    <Content Include="cadastrar-cupom.aspx" />
+    <Content Include="cadastro.aspx" />
     <Content Include="como-participar.aspx" />
     <Content Include="default.aspx" />
     <Content Include="fale-conosco.aspx" />
     <Content Include="faq.aspx" />
+    <Content Include="ganhadores.aspx" />
     <Content Include="inc\footer.ascx" />
     <Content Include="inc\head.ascx" />
     <Content Include="inc\menu.ascx" />
@@ -135,6 +149,11 @@
     <Content Include="js\InnerFormValidation.js" />
     <Content Include="js\InnerLibs.js" />
     <Content Include="js\jquery.innerform.js" />
+    <Content Include="login.aspx" />
+    <Content Include="meus-cupons.aspx" />
+    <Content Include="mudar-senha.aspx" />
+    <Content Include="novo-cupom.aspx" />
+    <Content Include="onde-estamos.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -180,6 +199,55 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="admin\caixa.cs" />
+    <Compile Include="admin\cpfs-bloqueados.aspx.cs">
+      <DependentUpon>cpfs-bloqueados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\cpfs-bloqueados.aspx.designer.cs">
+      <DependentUpon>cpfs-bloqueados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\cupons.aspx.cs">
+      <DependentUpon>cupons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\cupons.aspx.designer.cs">
+      <DependentUpon>cupons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ganhadores.aspx.cs">
+      <DependentUpon>ganhadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ganhadores.aspx.designer.cs">
+      <DependentUpon>ganhadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\inc\footer.ascx.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\inc\footer.ascx.designer.cs">
+      <DependentUpon>footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\inc\head.ascx.cs">
+      <DependentUpon>head.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\inc\head.ascx.designer.cs">
+      <DependentUpon>head.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\inc\menu-topo.ascx.cs">
+      <DependentUpon>menu-topo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\inc\menu-topo.ascx.designer.cs">
+      <DependentUpon>menu-topo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\inc\menu.ascx.cs">
+      <DependentUpon>menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\inc\menu.ascx.designer.cs">
+      <DependentUpon>menu.ascx</DependentUpon>
+    </Compile>
     <Compile Include="admin\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -187,12 +255,48 @@
     <Compile Include="admin\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\insta.cs" />
+    <Compile Include="admin\instagram.aspx.cs">
+      <DependentUpon>instagram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\instagram.aspx.designer.cs">
+      <DependentUpon>instagram.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\usuarios.aspx.cs">
+      <DependentUpon>usuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\usuarios.aspx.designer.cs">
+      <DependentUpon>usuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\acoes.aspx.cs">
+      <DependentUpon>acoes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\acoes.aspx.designer.cs">
+      <DependentUpon>acoes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cadastrar-cupom.aspx.cs">
+      <DependentUpon>cadastrar-cupom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cadastrar-cupom.aspx.designer.cs">
+      <DependentUpon>cadastrar-cupom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cadastro.aspx.cs">
+      <DependentUpon>cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cadastro.aspx.designer.cs">
+      <DependentUpon>cadastro.aspx</DependentUpon>
     </Compile>
     <Compile Include="class\bd.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -228,6 +332,13 @@
     <Compile Include="faq.aspx.designer.cs">
       <DependentUpon>faq.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ganhadores.aspx.cs">
+      <DependentUpon>ganhadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ganhadores.aspx.designer.cs">
+      <DependentUpon>ganhadores.aspx</DependentUpon>
+    </Compile>
     <Compile Include="inc\footer.ascx.cs">
       <DependentUpon>footer.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -255,6 +366,41 @@
     </Compile>
     <Compile Include="inc\scripts.ascx.designer.cs">
       <DependentUpon>scripts.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="meus-cupons.aspx.cs">
+      <DependentUpon>meus-cupons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="meus-cupons.aspx.designer.cs">
+      <DependentUpon>meus-cupons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mudar-senha.aspx.cs">
+      <DependentUpon>mudar-senha.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mudar-senha.aspx.designer.cs">
+      <DependentUpon>mudar-senha.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="novo-cupom.aspx.cs">
+      <DependentUpon>novo-cupom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="novo-cupom.aspx.designer.cs">
+      <DependentUpon>novo-cupom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="onde-estamos.aspx.cs">
+      <DependentUpon>onde-estamos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="onde-estamos.aspx.designer.cs">
+      <DependentUpon>onde-estamos.aspx</DependentUpon>
     </Compile>
     <Compile Include="premios.aspx.cs">
       <DependentUpon>premios.aspx</DependentUpon>

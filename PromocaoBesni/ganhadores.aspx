@@ -53,7 +53,7 @@
 				<span style="line-height: 30px;">
 					Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.
 				</span>
-                <a href="/novo-cupom.aspx" title="Cadastrar novos cupons">
+                <a href="/cadastrar-cupom.aspx" title="Cadastrar novos cupons">
 				    <button style="margin-top: 40px" class="btn-form">cadastrar novos cupons</button>
                 </a>
 			</div>

@@ -70,7 +70,6 @@
 
                 console.log("erro de campos com o valor vazio, campo: " + inputs[i].name);
                 return;
-                
             }
             else {
                 jQuery(inputs).removeClass("error");
