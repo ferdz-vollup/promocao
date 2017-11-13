@@ -35,7 +35,7 @@
 		</div>
 		<div class="row espaco-colunas" style="margin-top: 10%">
 			<div class="col-md-6">
-				<h3 class="basenine text-uppercase cinza">compras acima de r$200</h3>
+				<h3 class="basenine text-uppercase cinza">Faça sua compra na Besni </h3>
 				<div class="traco-vermelho"></div>
 				<div class="row">
 					<div class="col-md-3 col-xs-3 text-center">
@@ -43,7 +43,7 @@
 					</div>
 					<div class="col-md-9 col-xs-9">
 						<span class="saiba-concorra">
-							Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. 
+							Para participar da promoção, basta efetuar uma compra de R$200 ou mais a partir do dia 26/11/2017 em qualquer loja Besni e cadastrar o cupom fiscal aqui no site da promoção. Quanto mais compras você realizar, mais chances de ganhar! 
 						</span>
 					</div>
 				</div>
@@ -57,7 +57,7 @@
 					</div>
 					<div class="col-md-9 col-xs-9">
 						<span class="saiba-concorra">
-							Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. 
+							Após efetuar a compra, faça seu cadastro aqui no site, incluindo dados pessoais e informações do seu cupom fiscal. Caso você tenha feito as compras com o Cartão Besni, deverá informar ainda o número do cartão usado para o pagamento – ele dobra as suas chances de ganhar!  
 						</span>
 					</div>
 				</div>
@@ -73,7 +73,13 @@
 					</div>
 					<div class="col-md-9 col-xs-9">
 						<span class="saiba-concorra">
-							Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.  
+							Durante o período da promoção, serão realizados quatro sorteios:
+<p style="margin-left:25px;">1º sorteio em 09/12/2017</p>
+<p style="margin-left:25px;">2º sorteio em 16/12/2017</p>
+<p style="margin-left:25px;">3º sorteio em 23/12/2017</p>
+<p style="margin-left:25px;">Sorteio final em 03/01/2018</p>
+<p>Os sorteados serão informados através dos dados preenchidos no cadastro e seus nomes serão divulgados aqui no site da promoção.</p>
+  
 						</span>
 					</div>
 				</div>
@@ -87,7 +93,8 @@
 					</div>
 					<div class="col-md-9 col-xs-9">
 						<span class="saiba-concorra">
-							Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.  
+							Serão sorteadas 10 motos 0km a cada sorteio periódico, totalizando 30 prêmios, e 01 Jeep Renegade Custom 0km no sorteio final da promoção*.<br /><br />
+                            *O ganhador poderá trocar o prêmio por valor em cartão presente. Consulte o regulamento para mais informações.
 						</span>
 					</div>
 				</div>
