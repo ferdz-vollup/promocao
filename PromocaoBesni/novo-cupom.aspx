@@ -44,8 +44,7 @@
 		</div>
         <div class="row text-center">
             <div class="col-sm-8 col-md-6" style="margin: auto; float: none; padding: 20px 15px;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                <p>Esses são os seus números da sorte. Com eles, você estará concorrendo aos sorteios periódicos e ao sorteio final da promoção.</p><br /><p> Você pode acessá-los a qualquer momento aqui no site, com seu login e senha cadastrados.</p>
             </div>
         </div>
     <div class="row">
