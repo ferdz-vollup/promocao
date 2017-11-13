@@ -41,7 +41,7 @@
 			<div class="row">
 				<div class="col-sm-8" style="margin: auto; float: none">
 					<span>
-						Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+						Quer encontrar a loja mais próxima da sua casa ou trabalho? Digite o CEP e clique em BUSCAR.
 					</span>
 				</div>
 			</div>
