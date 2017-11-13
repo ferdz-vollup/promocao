@@ -119,15 +119,17 @@
                 <h2 class="basenine text-uppercase vermelho">cadastro</h2>
             </div>
             <div class="row" style="margin-top: 70px">
-                <div class="col-xs-12">
+                <div class="col-xs-12 col-sm-6">
                     <h3 class="basenine text-uppercase cinza" style="text-align: left;">cadastrar cupon</h3>
                     <div style="text-align: left" class="traco-vermelho"></div>
                     <br>
-                    <span style="line-height: 30px">Olá, <strong><span runat="server" id="usuario"></span></strong>duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi.<br />
-                        accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.
-                    </span>
+                    <span style="line-height: 30px">Olá, <strong><span runat="server" id="usuario"></span></strong>. Tenha em mãos o cupom fiscal da sua compra realizada em qualquer loja Besni para preencher os campos abaixo. Lembre-se que a compra precisa ser de, no mínimo, R$200. Não nos responsabilizamos por erros de digitação.</span>
+                
+                <!--
                 </div>
-                <div class="col-xs-12 col-sm-6">
+                <div class="col-xs-12 col-sm-4">
+                    -->
+                
                     <form id="cadastrar-cupom" action="javascript:GerarCupom($('#cnpj').val(),$('#date').val(),$('#coo').val(),$('#valor_nota').val());">
                         <div class="novo-cupon">
                             <span>1</span>
@@ -184,7 +186,7 @@
                         <br>
                         <img src="/assets/imagens/cupom-fiscal-legenda.png" alt="exemplo cupon fiscal" />
                         <p style="text-align: left; margin-top: 15px;">
-                            * Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit.
+                            * Tire uma foto do seu cupom fiscal, sem cortar nenhuma informação. A imagem precisa estar nos formatos .png, .jpeg ou .pdf, com o tamanho máximo de xxMB. Confira o seu arquivo antes de clicar em ENVIAR.
                         </p>
                         <br>
                     </div>
