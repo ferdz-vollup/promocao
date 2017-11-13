@@ -34,7 +34,7 @@
 			<div class="row" style="margin-top: 50px;">
 				<div class="col-sm-8 col-md-5" style="margin: auto;float: none">
 					<span style="line-height: 30px;">
-						Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.
+						Clique nas datas dos sorteios e confira os ganhadores.
 					</span>
 				</div>
 			</div>
@@ -51,7 +51,7 @@
 		<div class="row text-center">
 			<div class="col-sm-8 col-md-5" style="margin: auto;float: none">
 				<span style="line-height: 30px;">
-					Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor.
+					Não foi dessa vez? Realize novas compras na Besni e aumente suas chances de ganhar!
 				</span>
                 <a href="/cadastrar-cupom.aspx" title="Cadastrar novos cupons">
 				    <button style="margin-top: 40px" class="btn-form">cadastrar novos cupons</button>
