@@ -712,261 +712,273 @@ div#formFaleConosco, div#formCadastro {
     margin: 250px 0px 100px;
 }
 
-.sorteios span {
-    font-size: 20px;
-    display: block;
-    line-height: 20px;
-    font-family: 'baseninemedium';
-    font-weight: 600;
-}
 
-    .sorteios span.premio {
-        font-size: 14px;
-        display: block;
-        line-height: 20px;
-    }
-
-.sorteios .mostra-codigos {
-    max-height: 0px;
-    overflow: hidden;
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
-}
-
-.sorteios.ativo .mostra-codigos {
-    max-height: 700px;
-}
-
-.sorteios .ativo .mostra-codigos {
-    max-height: 500px;
-}
-
-.sorteios .botao {
-    cursor: pointer;
-}
-
-.sorteios span.codigos {
-    font-size: 15px;
-    display: block;
-    line-height: 20px;
-    color: #231f20 !important;
-    text-transform: none;
-    margin-bottom: 20px;
-}
-
-.sorteios .passou span {
-    color: #97092a
-}
-
-.sorteios .atual span {
-    color: white
-}
-
-.sorteios .proximo span {
-    color: #9d9b9b
-}
-
-.sorteios .col-sm-3 {
-    padding: 15px 15px;
-}
-
-.sorteios.ativo .col-sm-3 {
-    padding: 15px 15px 25px;
-}
-
-.sorteios .atual {
-    background-color: #d5a131
-}
-
-/* ONDE ESTAMOS */
-#onde-estamos {
-    margin-top: 150px;
-}
-
-#map {
-    height: 500px;
-    margin-top: 50px;
-}
-
-/* LOGIN */
-#login {
-    margin: 250px 0px 100px;
-}
-
-/* Paulo */
-.traco-vermelho.meio {
-    margin-left: calc(50% - 25px);
-    margin-right: calc(50% - 25px);
-}
-
-.cupon {
-    width: 100%;
-    height: 65px;
-    margin: 10px 0px;
-    display: table;
-}
-
-    .cupon h4 {
-        display: table-cell;
-        vertical-align: middle;
-        color: #fff;
-        text-align: center;
-        font-size: 2.5rem;
-    }
-
-.novo-cupon span:not(.buttons-uploads) {
-    background: #a8272d;
-    color: #fff;
-    width: 30px;
-    float: left;
-    text-align: left;
-    width: 50px;
-    height: 50px;
-    padding: 15px 20px;
-    margin: 10px 0 10px auto;
-}
-
-.novo-cupon input {
-    border: none;
-    width: 75%;
-    height: 50px;
-    margin: 10px auto 10px 10px;
-    /*font-family: 'metronic_proregular';*/
-    font-family: 'Open Sans', sans-serif;
-}
-
-.lblValorNota {
-    width: auto;
-    font-family: 'metronic_proregular';
-    padding-left: 27px;
-    color: #6a6a6a;
-    font-weight: 100;
-}
-
-input#valor_nota {
-    width: 78%;
-    display: inline-block;
-    outline: none
-}
-
-#cadastrar-cupom button {
-    margin-top: 20px;
-    text-align: cente;
-}
-
-#cadastrar-cupom div button:first-child {
-    float: right;
-}
-
-#cadastrar-cupom div button:last-child {
-    float: left;
-}
-
-.two-buttons-wrap {
-    text-align: center;
-}
-
-.receipt-wrapping {
-    margin-bottom: 0;
-    padding: 0 20px;
-}
-
-    .receipt-wrapping img {
-        box-shadow: 0px 0px 10px gray;
-        box-shadow: -1px 1px 5px 2px gray;
-    }
 
 @media only screen and (min-width: 768px) {
-    #cadastrar h2:first-child {
+
+    #ganhadores > .container .receipt-wrapping {
+        margin-top: 275px;
+
+    }
+
+
+}
+    
+    .sorteios span {
+        font-size: 20px;
+        display: block;
+        line-height: 20px;
+        font-family: 'baseninemedium';
+        font-weight: 600;
+    }
+
+        .sorteios span.premio {
+            font-size: 14px;
+            display: block;
+            line-height: 20px;
+        }
+
+    .sorteios .mostra-codigos {
+        max-height: 0px;
+        overflow: hidden;
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+    }
+
+    .sorteios.ativo .mostra-codigos {
+        max-height: 700px;
+    }
+
+    .sorteios .ativo .mostra-codigos {
+        max-height: 500px;
+    }
+
+    .sorteios .botao {
+        cursor: pointer;
+    }
+
+    .sorteios span.codigos {
+        font-size: 15px;
+        display: block;
+        line-height: 20px;
+        color: #231f20 !important;
+        text-transform: none;
+        margin-bottom: 20px;
+    }
+
+    .sorteios .passou span {
+        color: #97092a
+    }
+
+    .sorteios .atual span {
+        color: white
+    }
+
+    .sorteios .proximo span {
+        color: #9d9b9b
+    }
+
+    .sorteios .col-sm-3 {
+        padding: 15px 15px;
+    }
+
+    .sorteios.ativo .col-sm-3 {
+        padding: 15px 15px 25px;
+    }
+
+    .sorteios .atual {
+        background-color: #d5a131
+    }
+
+    /* ONDE ESTAMOS */
+    #onde-estamos {
+        margin-top: 150px;
+    }
+
+    #map {
+        height: 500px;
         margin-top: 50px;
     }
 
-    #cadastrar h3:first-child {
-        margin-top: 0px;
+    /* LOGIN */
+    #login {
+        margin: 250px 0px 100px;
+    }
+
+    /* Paulo */
+    .traco-vermelho.meio {
+        margin-left: calc(50% - 25px);
+        margin-right: calc(50% - 25px);
+    }
+
+    .cupon {
+        width: 100%;
+        height: 65px;
+        margin: 10px 0px;
+        display: table;
+    }
+
+        .cupon h4 {
+            display: table-cell;
+            vertical-align: middle;
+            color: #fff;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+    .novo-cupon span:not(.buttons-uploads) {
+        background: #a8272d;
+        color: #fff;
+        width: 30px;
+        float: left;
+        text-align: left;
+        width: 50px;
+        height: 50px;
+        padding: 15px 20px;
+        margin: 10px 0 10px auto;
     }
 
     .novo-cupon input {
+        border: none;
         width: 75%;
+        height: 50px;
+        margin: 10px auto 10px 10px;
+        /*font-family: 'metronic_proregular';*/
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .lblValorNota {
+        width: auto;
+        font-family: 'metronic_proregular';
+        padding-left: 27px;
+        color: #6a6a6a;
+        font-weight: 100;
+    }
+
+    input#valor_nota {
+        width: 78%;
+        display: inline-block;
+        outline: none
     }
 
     #cadastrar-cupom button {
-        float: right;
-    }
-
-    .two-buttons-wrapping {
-        float: right;
-        text-align: right;
-        padding: 0;
+        margin-top: 20px;
+        text-align: cente;
     }
 
     #cadastrar-cupom div button:first-child {
-        margin-left: 5px;
-        margin-right: 0px;
+        float: right;
     }
 
     #cadastrar-cupom div button:last-child {
-        margin-right: 5px;
-        margin-left: 0px;
-        float: right;
+        float: left;
     }
-}
 
-@media only screen and (min-width: 992px) {
-    .novo-cupon input {
-        width: 85%;
+    .two-buttons-wrap {
+        text-align: center;
     }
 
     .receipt-wrapping {
-        margin-top: -100px;
-        margin-bottom: none;
-    }
-}
-
-#cadastro {
-    margin-top: 150px;
-    margin-bottom: 10%;
-}
-
-/* INSTAGRAM */
-#instaFeed {
-    margin-bottom: 35px;
-    text-align: center;
-    padding: 0px 5%;
-}
-
-    #instaFeed > li {
-        list-style: none;
-        display: inline-block;
-        text-align: center;
-        margin: 5px;
+        margin-bottom: 0;
+        padding: 0 20px;
     }
 
-        #instaFeed > li > img {
-            width: auto;
+        .receipt-wrapping img {
+            box-shadow: 0px 0px 10px gray;
+            box-shadow: -1px 1px 5px 2px gray;
         }
 
-/* RODAPE */
-#rodape {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: #f6f6f6;
-}
+    @media only screen and (min-width: 768px) {
+        #cadastrar h2:first-child {
+            margin-top: 50px;
+        }
 
-    #rodape .container > div {
-        margin: 0px 50px
+        #cadastrar h3:first-child {
+            margin-top: 0px;
+        }
+
+        .novo-cupon input {
+            width: 75%;
+        }
+
+        #cadastrar-cupom button {
+            float: right;
+        }
+
+        .two-buttons-wrapping {
+            float: right;
+            text-align: right;
+            padding: 0;
+        }
+
+        #cadastrar-cupom div button:first-child {
+            margin-left: 5px;
+            margin-right: 0px;
+        }
+
+        #cadastrar-cupom div button:last-child {
+            margin-right: 5px;
+            margin-left: 0px;
+            float: right;
+        }
     }
 
-    #rodape span {
-        font-size: 12px;
-        line-height: 25px;
-        padding-right: 60px;
-        display: block;
+    @media only screen and (min-width: 992px) {
+        .novo-cupon input {
+            width: 85%;
+        }
+
+        .receipt-wrapping {
+            margin-top: -100px;
+            margin-bottom: none;
+        }
     }
 
-    #rodape div[class*='col'] {
-        display: inline-block;
-        float: none;
-        vertical-align: middle;
+    #cadastro {
+        margin-top: 150px;
+        margin-bottom: 10%;
     }
+
+    /* INSTAGRAM */
+    #instaFeed {
+        margin-bottom: 35px;
+        text-align: center;
+        padding: 0px 5%;
+    }
+
+        #instaFeed > li {
+            list-style: none;
+            display: inline-block;
+            text-align: center;
+            margin: 5px;
+        }
+
+            #instaFeed > li > img {
+                width: auto;
+            }
+
+    /* RODAPE */
+    #rodape {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: #f6f6f6;
+    }
+
+        #rodape .container > div {
+            margin: 0px 50px
+        }
+
+        #rodape span {
+            font-size: 12px;
+            line-height: 25px;
+            padding-right: 60px;
+            display: block;
+        }
+
+        #rodape div[class*='col'] {
+            display: inline-block;
+            float: none;
+            vertical-align: middle;
+        }
