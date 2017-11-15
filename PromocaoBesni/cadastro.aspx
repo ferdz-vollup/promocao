@@ -105,7 +105,7 @@
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-sm-6">
 						<div style="width: 50px" class="labelForm">CPF</div>
-						<input type="text" name="cpf" class="inputs cpf">
+						<input type="text" onchange="validarCPF(this.value);" name="cpf" class="inputs cpf">
 					</div>
 					<div class="col-sm-6">
 						<div class="labelFormTwo text-center">RG</div>
@@ -292,6 +292,24 @@
     <besni:scripts runat="server" ID="scripts" />
 
     <script type="text/javascript">
+
+        function validarCPF(cpf) {
+            ajax2 = ajaxInit();
+            ajax2.open("GET", "/ajax/acoes.aspx?acao=validarCPF&cpf=" + cpf, true);
+            ajax2.setRequestHeader("Content-Type", "charset=iso-8859-1");
+            ajax2.onreadystatechange = function () {
+                if (ajax2.readyState == 4) {
+                    if (ajax2.status == 200) {
+                      //  var resultado = ajax2.responseText.split("|");
+                        alert(ajax2.responseText);
+                        if (ajax2.responseText == 1) {
+                            alert("já existe");
+                        }
+                    }
+                }
+            }
+            ajax2.send(null);
+        }
 
         function limpa_formulário_cep() {
             //Limpa valores do formulário de cep.

@@ -59,6 +59,9 @@ namespace PromocaoBesni.ajax
                 case "mudarSenha":
                     MudarSenha(Request["senha"], Request["cpf"]);
                     break;
+                case "validarCPF":
+                    validarCPF(Request["cpf"].ToString().Replace(".", "").Replace("-", ""));
+                    break;
                 default:
                     break;
             }
@@ -297,6 +300,28 @@ namespace PromocaoBesni.ajax
             }
             rsLogin.Dispose();
             rsLogin.Close();
+        }
+
+        public void validarCPF(string cpf)
+        {
+            rsSexo = objBD.ExecutaSQL("select count(*) as total from cadastro where cad_cpf = "+ cpf + " ");
+            if (rsSexo == null)
+            {
+                throw new Exception();
+            }
+            if (rsSexo.HasRows)
+            {
+                rsSexo.Read();
+                Response.Write("1");
+                Response.End();
+            }
+            else
+            {
+                Response.Write("0");
+                Response.End();
+            }
+            rsSexo.Dispose();
+            rsSexo.Close();
         }
     }
 }
