@@ -45,7 +45,7 @@
 					</span>
 				</div>
 			</div>
-			<div class="row" style="margin-top: 50px;">
+			<div class="row" style="margin-top: 15px;">
 				<div class="col-md-5" style="margin: auto; float: none">
 					<form action="javascript:void(0)">
 						<input type="text" placeholder="DIGITE SEU CEP" name="cep" class="cep" style="text-align: center">
