@@ -194,6 +194,7 @@
 })
 
 function enviaFerdz(idForm) {
+   
     if (document.querySelectorAll(idForm + " .error").length == 0) {
         var form = jQuery(idForm).serialize();
         jQuery.ajax({

@@ -982,3 +982,9 @@ div#formFaleConosco, div#formCadastro {
             float: none;
             vertical-align: middle;
         }
+
+        /*FERDZ*/
+.msgErro {
+    margin-left: 3px;
+    color: red;
+}

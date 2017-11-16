@@ -18,7 +18,7 @@ namespace PromocaoBesni.ajax
 
         bd objBD = new bd();
         utils objUtils = new utils();
-        private OleDbDataReader rsCadastro, rsSexo, rsLogin, rsSerie;
+        private OleDbDataReader rsCadastro, rsSexo, rsLogin, rsSerie, rs;
         string retorno = "", serie = "", numero = "", cupom = "";
         int total = 0;
         //  Thread Atualizador;
@@ -304,24 +304,19 @@ namespace PromocaoBesni.ajax
 
         public void validarCPF(string cpf)
         {
-            rsSexo = objBD.ExecutaSQL("select count(*) as total from cadastro where cad_cpf = "+ cpf + " ");
-            if (rsSexo == null)
+            rs = objBD.ExecutaSQL("select count(*) as total from cadastro where cad_cpf = '"+ cpf + "' ");
+            if (rs == null)
             {
                 throw new Exception();
             }
-            if (rsSexo.HasRows)
+            if (rs.HasRows)
             {
-                rsSexo.Read();
-                Response.Write("1");
+                rs.Read();
+                Response.Write(rs["total"]);
                 Response.End();
             }
-            else
-            {
-                Response.Write("0");
-                Response.End();
-            }
-            rsSexo.Dispose();
-            rsSexo.Close();
+            rs.Dispose();
+            rs.Close();
         }
     }
 }
