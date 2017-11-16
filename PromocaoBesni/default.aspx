@@ -30,7 +30,7 @@
 	<div class="container">
 		<div class="text-center">
 			<h2 class="basenine text-uppercase vermelho">
-				concorra, nas compras acima de R$200,00
+				concorra, nas compras a cada R$200,00
 			</h2>
             <a href="/login.aspx" title="Clique aqui e cadastre seus cupons">
 			    <button class="btn-home-cadastre">
