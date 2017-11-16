@@ -43,7 +43,7 @@
 				<h3 class="basenine text-uppercase cinza">saiba como participar</h3>
 				<div class="traco-vermelho"></div>
 				<span class="saiba-concorra">
-					Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+					Basta efetuar uma compra de R$200 ou mais a partir do dia 26/11/2017 em qualquer loja Besni e cadastrar o cupom fiscal aqui no site da promoção. Quanto mais compras você realizar, mais chances de ganhar! 
 				</span>
 				<br><br>
                 <a href="/como-participar.aspx" title="Saiba mais">
@@ -56,7 +56,7 @@
 				<h3 class="basenine text-uppercase cinza">concorra a prêmios</h3>
 				<div class="traco-vermelho"></div>
 				<span class="saiba-concorra">
-					Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+					Serão sorteadas 10 motos 0km a cada sorteio periódico, totalizando 30 prêmios, e 01 Jeep Renegade Custom 0km no sorteio final da promoção.
 				</span>
 				<br><br>
                 <a href="/premios.aspx" title="Saiba mais">
