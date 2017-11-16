@@ -303,6 +303,7 @@
     <script type="text/javascript">
 
         function validarCPF(cpf) {
+
             ajax2 = ajaxInit();
             ajax2.open("GET", "/ajax/acoes.aspx?acao=validarCPF&cpf=" + cpf, true);
             ajax2.setRequestHeader("Content-Type", "charset=iso-8859-1");
