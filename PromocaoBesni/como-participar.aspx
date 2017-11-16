@@ -94,7 +94,7 @@
 					<div class="col-md-9 col-xs-9">
 						<span class="saiba-concorra">
 							Serão sorteadas 10 motos 0km a cada sorteio periódico, totalizando 30 prêmios, e 01 Jeep Renegade Custom 0km no sorteio final da promoção*.<br /><br />
-                            *O ganhador poderá trocar o prêmio por valor em cartão presente. Consulte o regulamento para mais informações.
+                            <span style="font-size:12px;">*O ganhador poderá trocar o prêmio por valor em cartão presente. Consulte o regulamento para mais informações.</span>
 						</span>
 					</div>
 				</div>
