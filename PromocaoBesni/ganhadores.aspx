@@ -14,23 +14,21 @@
 
     <style type="text/css">
 
-        /* Overriding file responsive.css:69*/
+        /* Reescrevendo rules de responsive.css:69*/
 
-        div.col-sm-8 col-md-5 > span > br {
+        div.col-sm-8.col-md-5 > span > br {
             display: none;
         }
                 
-        @media screen and (max-width: 768px) {
+        @media screen and (min-width: 768px) {
 
-            div.col-sm-8 col-md-5 > span > br {
+            div.col-sm-8.col-md-5 > span > br {
                 display: block;
             }
         }
         
-        
-
-
     </style>
+
 </head>
 
 <body>
