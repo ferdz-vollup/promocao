@@ -11,6 +11,26 @@
 <head>
     <besni:head runat="server" ID="head" />
     <title>Promoção Besni</title>
+
+    <style type="text/css">
+
+        /* Overriding file responsive.css:69*/
+
+        div.col-sm-8 col-md-5 > span > br {
+            display: none;
+        }
+                
+        @media screen and (max-width: 768px) {
+
+            div.col-sm-8 col-md-5 > span > br {
+                display: block;
+            }
+        }
+        
+        
+
+
+    </style>
 </head>
 
 <body>
@@ -51,7 +71,7 @@
 		<div class="row text-center">
 			<div class="col-sm-8 col-md-5" style="margin: auto;float: none">
 				<span style="line-height: 30px;">
-					Não foi dessa vez? Realize novas compras na Besni<br />e aumente suas chances de ganhar!
+					Não foi dessa vez? Realize novas compras na Besni <br />e aumente suas chances de ganhar!
 				</span>
                 <a href="/cadastrar-cupom.aspx" title="Cadastrar novos cupons">
 				    <button style="margin-top: 40px" class="btn-form">cadastrar novos cupons</button>
