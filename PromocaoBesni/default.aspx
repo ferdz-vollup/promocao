@@ -90,7 +90,7 @@
 				</h3>
 				<div class="traco-vermelho"></div>
 				<span class="saiba-concorra">
-					Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. 
+					Jepp Renegade Custom, modelo 2018, 05 (cinco) portas, flex, no valor de R$76.000,00 (setenta e seis mil reais). 
 				</span>
 				<br><br>
                 <a href="/premios.aspx" title="Saiba mais">
@@ -108,7 +108,7 @@
 				</h3>
 				<div class="traco-vermelho"></div>
 				<span class="saiba-concorra">
-					Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. 
+					Motocicleta 0km da marca Bull Motors, Modelo KRC 50 LX, 2015/2015, gasolina, no valor de R$5.500,00 (cinco mil e quinhentos reais). 
 				</span>
 				<br><br>
                 <a href="/premios.aspx" title="Saiba mais">
