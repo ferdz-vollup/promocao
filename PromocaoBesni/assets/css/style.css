@@ -615,6 +615,21 @@ div#formFaleConosco, div#formCadastro {
         padding-right: 5px;
     }
 
+#formFaleConosco button.btn-limpar {
+    float: left;
+}
+@media only screen and (min-width: 325px) {
+
+    #formFaleConosco button.btn-limpar {
+        float: none;
+    }
+
+}
+
+
+
+
+
 /* CADASTRO */
 #cadastro {
     margin: 250px 0px 100px;
