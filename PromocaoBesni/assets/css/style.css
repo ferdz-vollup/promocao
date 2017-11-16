@@ -273,8 +273,7 @@ input, textarea {
     padding: 5px 15px;
     font-family: 'metronic_proregular';
 }
-
-input[placeholder="DIGITE SEU CEP"] {
+#onde-estamos input[placeholder="DIGITE SEU CEP"] {
     width: 140px;
 }
 
