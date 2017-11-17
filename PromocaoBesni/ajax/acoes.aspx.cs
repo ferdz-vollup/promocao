@@ -38,6 +38,9 @@ namespace PromocaoBesni.ajax
                 case "FazerLogin":
                     FazerLogin(Request["cpf"].ToString().Replace(".", "").Replace("-", ""), objUtils.getMD5Hash(Request["senha"].ToString()));
                     break;
+                case "logout":
+                    logout();
+                    break;
                 case "totalSexo":
                     totalSexo();
                     break;
@@ -122,7 +125,7 @@ namespace PromocaoBesni.ajax
                 //Utils.Banco().RunSQL("EXEC psLog '" + rsLogin["PET_ID"] + "',null,'Login efetuado no Portal','0'");
 
 
-                Response.Redirect("/cadastrar-cupom.aspx");
+                Response.Redirect("/cadastro-abertura.aspx");
                 Response.End();
 
                 Response.End();
@@ -134,6 +137,23 @@ namespace PromocaoBesni.ajax
 
             rsLogin.Dispose();
             rsLogin.Close();
+        }
+
+        public void logout()
+        {
+            if (Session["cadID"] != null)
+            {
+                //Salvando no log
+               //  objBD.ExecutaSQL("EXEC psLog '" + Session["petID"].ToString() + "',null,'Você se deslogou do Portal','0'");
+
+                Session.Abandon();
+                Response.Redirect("/");
+            }
+            else
+            {
+                //DESLOGADO
+                Response.Redirect("/");
+            }
         }
 
         public void mudarStatusFoto(string status, string id)
