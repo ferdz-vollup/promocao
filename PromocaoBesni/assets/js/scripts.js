@@ -113,10 +113,7 @@
         }
     });
 
-    // Check if Disclaimer is checked (not working)
-    jQuery(".btn-form").click(function () {
-        
-    });
+    
 
     jQuery("input[type='email']").on("blur", function () {
         var eml = jQuery(this).val();
@@ -149,7 +146,6 @@
         $(".cardBesni input").val("");
         $(".cardBesni input").addClass("no-obg");
         $(".cardBesni").hide();
-        alert("teste nao");
     });
     $(".card-show").click(function () {
         $(".cardBesni").show();
