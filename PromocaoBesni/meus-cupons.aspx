@@ -42,8 +42,7 @@
 
             </div>
 			<div class="col-sm-7 col-md-5 text-center" style="margin: auto; float: none; padding: 20px 15px;">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+				<p>Realize novas compras na Besni e aumente suas chances de ganhar!</p>
             </div>
                                         
 			<div class="row">
