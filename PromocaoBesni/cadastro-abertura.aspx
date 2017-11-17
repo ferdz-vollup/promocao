@@ -5,7 +5,6 @@
 <%@ Register Src="~/inc/footer.ascx" TagPrefix="besni" TagName="footer" %>
 <%@ Register Src="~/inc/scripts.ascx" TagPrefix="besni" TagName="scripts" %>
 
-
 <!doctype html>
 <html>
 <head>
@@ -81,7 +80,7 @@
                         <div class="row">
 
                             <div class="col-sm-6 col-md-5" style="margin: auto; float: none; margin-bottom: 5px;">
-                                <button class="btn-form" style="width: 100%;">cadastrar novos cupons</button>
+                                <button onclick="javascript:abrirLink('cadastrar-cupom.aspx');" class="btn-form" style="width: 100%;">cadastrar novos cupons</button>
                             </div>
 
                         </div>
@@ -89,7 +88,7 @@
                         <div class="row">
 
                             <div class="col-sm-6 col-md-5" style="margin: auto; float: none; margin-bottom: 5px;">
-                                <button class="btn-form" style="width: 100%;">ver meus cupons</button>
+                                <button onclick="javascript:abrirLink('meus-cupons.aspx');" class="btn-form" style="width: 100%;">ver meus cupons</button>
                             </div>
 
                         </div>
@@ -97,7 +96,7 @@
                         <div class="row">
 
                             <div class="col-sm-6 col-md-5" style="margin: auto; float: none; margin-bottom: 5px;">
-                                <button class="btn-form" style="width: 100%;">ver os ganhadores e próximos sorteios</button>
+                                <button onclick="javascript:abrirLink('ganhadores.aspx');" class="btn-form" style="width: 100%;">ver os ganhadores e próximos sorteios</button>
                             </div>
 
                         </div>
@@ -115,6 +114,14 @@
 
     <!--scripts-->
     <besni:scripts runat="server" ID="scripts" />
+
+    <script type="text/javascript">
+        function abrirLink(link) {
+            location.href = link
+        }
+        
+    </script>
+    </script>
 
 </body>
 </html>
