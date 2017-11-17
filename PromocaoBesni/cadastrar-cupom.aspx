@@ -176,7 +176,8 @@
 
                         <div class="col-sm-3 col-md-4"></div>
                         <div class="col-xs-12 col-sm-9 col-md-6 two-buttons-wrapping">
-                            <button type="submit" style="" class="btn-form btn-enviar">Enviar</button>
+                           <%-- <button type="submit" style="" class="btn-form btn-enviar">Enviar</button>--%>
+                             <button type="button" style="" class="btn-form btn-enviar">Enviar</button>
                             <button style="" type="reset" class="btn-form btn-enviar">Limpar</button>
                         </div>
                     </form>
