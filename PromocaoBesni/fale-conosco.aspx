@@ -113,12 +113,12 @@
             }
             
             if (jQuery(idForm).find(".error").length == 0) {
-                var eml = jQuery("input[type='email']").val();
+                var eml = jQuery("input[type='email']");
                 console.log(eml);
                 var filtroregexemail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
                 console.log(filtroregexemail.test(eml));
-                if (filtroregexemail.test(eml) == true) {
-                    
+                if (filtroregexemail.test(eml.val()) == true) {
+                    alert("nao erro");
                     enviaFerdz(idForm);
                     jQuery(idForm).submit();
                  } else {
