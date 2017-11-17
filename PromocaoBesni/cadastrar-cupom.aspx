@@ -186,7 +186,7 @@
                         <br>
                         <img src="/assets/imagens/cupom-fiscal-legenda.png" alt="exemplo cupon fiscal" />
                         <p style="text-align: left; margin-top: 15px;">
-                            * Tire uma foto do seu cupom fiscal, sem cortar nenhuma informação. A imagem precisa estar nos formatos .png, .jpeg ou .pdf, com o tamanho máximo de xxMB. Confira o seu arquivo antes de clicar em ENVIAR.
+                            * Tire uma foto do seu cupom fiscal, sem cortar nenhuma informação. A imagem precisa estar nos formatos .png, .jpeg ou .pdf, com o tamanho máximo de 3MB. Confira o seu arquivo antes de clicar em ENVIAR.
                         </p>
                         <br>
                     </div>
