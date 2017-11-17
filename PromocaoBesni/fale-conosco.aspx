@@ -90,7 +90,7 @@
         jQuery(".btn-contato").click(function () {
            
 
-            var idForm = "#" + jQuery(this).data("form");
+            var idForm = "#faleConoscoForm";
             var inputs = jQuery(idForm).find(".inputs:not(.no-obg)");
             for (i = 0; i < inputs.length; i++) {
                 if (inputs[i].value == "") {
@@ -118,6 +118,7 @@
                 var filtroregexemail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
                 console.log(filtroregexemail.test(eml));
                 if (filtroregexemail.test(eml) == true) {
+                    
                     enviaFerdz(idForm);
                     jQuery(idForm).submit();
                  } else {
