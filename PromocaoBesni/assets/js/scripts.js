@@ -145,12 +145,6 @@
     // Exibir campos para cartão Besni
 
 
-    $("button[data-cartao='Sim']").click(function () {
-        $(".cardBesni").show();
-    });
-    $("button[data-cartao='Nao']").click(function () {
-        $(".cardBesni").hide();
-    });
 
     
     $(".card-hide").click(function () {
