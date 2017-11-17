@@ -4,7 +4,7 @@
 		<div>
 			<div class="col-md-8">
 				<div class="redes">
-					<a href="https://www.facebook.com/LojasBesni/" title="Lojas Besni no facebook">
+					<a href="https://www.facebook.com/LojasBesni/" title="Lojas Besni no facebook" >
                         <img src="assets/imagens/icone-facebook.png" alt="ícone facebook">
                     </a>
                     <a href="https://www.instagram.com/lojasbesni/" title="Lojas Besni no instagram">
