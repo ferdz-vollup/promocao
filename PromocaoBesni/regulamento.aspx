@@ -134,7 +134,7 @@
         <!--CONTAINER-->
         <section id="regulamento">
 	        <div class="container">
-		        <div class="text-center">
+		        <div class="text-center" style="margin-top: 50px;">
 
 			        <h4 class="basenine text-uppercase azul-claro underline-azul">regulamento</h4>	
 
