@@ -58,6 +58,9 @@
             return;
         } 
 
+
+        // Campos Obrigatórios
+
         var idForm = "#" + jQuery(this).data("form");
         var inputs = jQuery(idForm).find(".inputs:not(.no-obg)");
         for (i = 0; i < inputs.length; i++) {
@@ -110,7 +113,7 @@
         }
     });
 
-    // Check if Disclaimer is checked -------- NOT WORKING!!!!
+    // Check if Disclaimer is checked (not working)
     jQuery(".btn-form").click(function () {
         
     });
@@ -142,7 +145,14 @@
     // Exibir campos para cartão Besni
 
 
-   
+    $("button[data-cartao='Sim']").click(function () {
+        $(".cardBesni").show();
+    });
+    $("button[data-cartao='Nao']").click(function () {
+        $(".cardBesni").hide();
+    });
+
+    
     $(".card-hide").click(function () {
         $(".cardBesni input").val("");
         $(".cardBesni input").addClass("no-obg");
@@ -152,7 +162,8 @@
     $(".card-show").click(function () {
         $(".cardBesni").show();
     });
-    
+
+
     // Validação de valor mínimo do Cupom
 
     jQuery("input[type='submit']").click(function () {
