@@ -103,6 +103,9 @@
                     console.log("erro de campos com o valor vazio, campo: " + inputs[i].name);
                     return;
 
+                    /* Teste by Paulo */
+                    alert("É necessário preencher " + inputs[i].name);
+
                 }
                 else {
                     jQuery(inputs).removeClass("error");
