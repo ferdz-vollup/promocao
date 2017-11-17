@@ -108,6 +108,10 @@
                 .hideSpace-mobileView {
                     display: table-row;
                 }
+
+                #regulamento > .container > .text-center {
+                    margin-top: 50px;
+                }
             }
 
 
@@ -134,7 +138,7 @@
         <!--CONTAINER-->
         <section id="regulamento">
 	        <div class="container">
-		        <div class="text-center" style="margin-top: 50px;">
+		        <div class="text-center">
 
 			        <h4 class="basenine text-uppercase azul-claro underline-azul">regulamento</h4>	
 
