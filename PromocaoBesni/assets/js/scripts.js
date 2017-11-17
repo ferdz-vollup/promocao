@@ -150,11 +150,13 @@
     $(".card-hide").click(function () {
         $(".cardBesni input").val("");
         $(".cardBesni input").addClass("no-obg");
-
+        $("#nao").prop("checked");
         $(".cardBesni").hide();
     });
     $(".card-show").click(function () {
+        $("#sim").prop("checked");
         $(".cardBesni").show();
+
     });
 
 
