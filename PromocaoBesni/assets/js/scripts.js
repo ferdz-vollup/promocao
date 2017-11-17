@@ -144,19 +144,15 @@
 
     // Exibir campos para cartão Besni
 
-
-
     
     $(".card-hide").click(function () {
         $(".cardBesni input").val("");
         $(".cardBesni input").addClass("no-obg");
-        $("#nao").prop("checked");
         $(".cardBesni").hide();
+        alert("teste nao");
     });
     $(".card-show").click(function () {
-        $("#sim").prop("checked");
         $(".cardBesni").show();
-
     });
 
 
@@ -193,10 +189,20 @@
         jQuery(".metodo-compras").fadeOut(100);
         jQuery("#formCadastro").addClass("aberto");
         if (jQuery(this).data("cartao") == "Sim") {
+            jQuery("#sim").prop("checked");
             jQuery(".cartao").fadeIn(100);
+        } else {
+            jQuery("#nao").prop("checked");
         }
     })
 })
+
+
+
+
+
+
+
 
 function enviaFerdz(idForm) {
     if (document.querySelectorAll(idForm + " .error").length == 0) {
