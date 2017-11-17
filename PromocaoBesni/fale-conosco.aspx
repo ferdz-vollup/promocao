@@ -103,7 +103,7 @@
                     console.log("erro de campos com o valor vazio, campo: " + inputs[i].name);
                     return;
 
-                    /* Teste by Paulo */
+                    /* Teste by Paulo (not working) */
                     alert("É necessário preencher " + inputs[i].name);
 
                 }
