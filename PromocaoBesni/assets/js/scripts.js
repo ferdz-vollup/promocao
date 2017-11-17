@@ -189,10 +189,10 @@
         jQuery(".metodo-compras").fadeOut(100);
         jQuery("#formCadastro").addClass("aberto");
         if (jQuery(this).data("cartao") == "Sim") {
-            jQuery("#sim").prop("checked");
+            jQuery("#sim").attr("checked","checked");
             jQuery(".cartao").fadeIn(100);
         } else {
-            jQuery("#nao").prop("checked");
+            jQuery("#nao").attr("checked", "checked");
         }
     })
 })
