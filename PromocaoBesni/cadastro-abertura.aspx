@@ -42,18 +42,18 @@
                                     <div class="row">
                                         <div class="col-xs-6 col-sm-3">
 
-                                            <p style="float: left;">Olá, <a href="#" style="color: #6a6a6a; text-decoration: underline;"><span runat="server" id="usuario"></span></a></p>
+                                            <p style="color: #231f20; float: left;">Olá, <a href="#" style="color: #231f20; text-decoration: underline;"><span runat="server" id="usuario"></span></a></p>
                                         </div>
 
                                         <div class="col-xs-6 col-sm-6">
 
-                                            <a href="javascript:void(0);" style="color: #6a6a6a; text-decoration: underline;">editar dados pessoais</a>
+                                            <a href="javascript:void(0);" style="color: #231f20; text-decoration: underline;">editar dados pessoais</a>
 
                                         </div>
 
                                         <div class="col-xs-6 col-sm-3">
 
-                                            <a href="/ajax/acoes.aspx?acao=logout" style="color: #6a6a6a; text-decoration: underline; float: right;">sair</a>
+                                            <a href="/ajax/acoes.aspx?acao=logout" style="color: #231f20; text-decoration: underline; float: right;">sair</a>
 
                                         </div>
                                     </div>
