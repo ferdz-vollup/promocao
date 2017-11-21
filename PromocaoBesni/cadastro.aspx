@@ -78,8 +78,6 @@
                 <div class="col-sm-1"></div>
             </div>
 
-
-
             <div id="formCadastro" style="margin-top: 70px">
                 <div class="row">
                     <div class="col-md-12">
