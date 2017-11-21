@@ -44,7 +44,7 @@ namespace PromocaoBesni
             //Response.Write("select CUP_NUMERO_SORTE from cupom where CAD_ID = " + Session["cadID"].ToString() + " ");
             //Response.End();
 
-            rsCupons = objBD.ExecutaSQL("select CUP_NUMERO_SORTE from cupom where CAD_ID = " + Session["cadID"].ToString() + " ");
+            rsCupons = objBD.ExecutaSQL("select CUP_NUMERO_SORTE from cupom where CAD_ID = " + Session["cadID"].ToString() + " order by CUP_DH_CADASTRO desc ");
 
             if (rsCupons == null)
             {
