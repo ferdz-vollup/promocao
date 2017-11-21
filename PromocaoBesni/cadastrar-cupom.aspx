@@ -131,7 +131,7 @@
                     -->
                 
                    <%-- <form id="cadastrar-cupom" enctype="multipart/form-data" method="post" action="javascript:GerarCupom($('#cnpj').val(),$('#date').val(),$('#coo').val(),$('#valor_nota_02').val());">--%>
-                    <form method="post" id="cadastrar" enctype="multipart/form-data" runat="server">
+                    <form method="post" id="cadastrarcupom" enctype="multipart/form-data" runat="server">
                         <div class="novo-cupon">
                             <span>1</span>
                             <input type="text" placeholder="CNPJ" id="cnpj" name="cnpj" class="cnpj inputs">
@@ -177,7 +177,7 @@
                         <div class="col-sm-3 col-md-4"></div>
                         <div class="col-xs-12 col-sm-9 col-md-6 two-buttons-wrapping">
                              <%--<button type="submit" style="" class="btn-form btn-enviar" data-form="cadastrar-cupom">Enviar</button>--%>
-                             <asp:Button ID="pub" runat="server" Text="Enviar" CssClass="btn-form btn-enviar" OnClick="pub_Click" />
+                             <asp:Button ID="pub" runat="server" Text="Enviar" CssClass="btn-form btn-enviar" data-form="cadastrarcupom"  OnClick="pub_Click" />
                             <button style="" type="reset" class="btn-form btn-enviar">Limpar</button>
                         </div>
                     </form>
