@@ -146,7 +146,7 @@
                         <div class="novo-cupon">
                             <span>4</span>
                             <!--<label class="lblValorNota">R$</label>-->
-                            <input type="text" placeholder="R$ xxx,xx" id="valor_nota" name="valor nota" class="valor-nota">
+                            <input type="text" placeholder="R$ xxx,xx" id="valor_nota" name="valor nota" class="valor-nota" onkeypress="return(MascaraMoeda(this,'.',',',event))">
                         </div>
 
                         <div class="novo-cupon">
