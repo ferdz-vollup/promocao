@@ -7,7 +7,9 @@ using System.Web.UI.WebControls;
 using System.Globalization;
 using System.Data.SqlClient;
 using Etnia.classe;
+using System.IO;
 using InnerLibs;
+using System.Drawing.Imaging;
 using System.Data.OleDb;
 using System.Threading;
 
@@ -228,7 +230,17 @@ namespace PromocaoBesni.ajax
 
         public void GerarCupom(string cnpj, string data, string cco, string valor, string especial)
         {
-            rsSerie = objBD.ExecutaSQL("set dateformat dmy; select top 1 SER_INICIO,  SER_FINAL from serie where CONVERT(VARCHAR(8), SER_DH_INICIO, 5) > CONVERT(VARCHAR(8), getDate(), 5) and   cONVERT(VARCHAR(8), getDate(), 5) < CONVERT(VARCHAR(8), SER_DH_FINAL, 5)");
+            byte[] foto = null;
+            HttpPostedFile arquivo = Request.Files[0];
+            if (arquivo.ContentLength > 0)
+            {
+                foto = arquivo.ToImage().Resize(450, 300, true).ToBytes(ImageFormat.Jpeg);
+                Response.Write(foto);
+                Response.End();
+            }
+
+            Response.End();
+                rsSerie = objBD.ExecutaSQL("set dateformat dmy; select top 1 SER_INICIO,  SER_FINAL from serie where CONVERT(VARCHAR(8), SER_DH_INICIO, 5) > CONVERT(VARCHAR(8), getDate(), 5) and   cONVERT(VARCHAR(8), getDate(), 5) < CONVERT(VARCHAR(8), SER_DH_FINAL, 5)");
 
             if (rsSerie == null)
             {
@@ -291,7 +303,12 @@ namespace PromocaoBesni.ajax
 
                 objUtils.EnviaEmail(rsLogin["CAD_EMAIL"].ToString(), "Esqueci a Senha", conteudo, "", "", null, "queroser@misasi.com.br", null);
 
-                Response.Redirect("/");
+                Response.Redirect("/login.aspx?erro=0");
+                Response.End();
+            }
+            else
+            {
+                Response.Redirect("/login.aspx?erro=1");
                 Response.End();
             }
             rsLogin.Dispose();
