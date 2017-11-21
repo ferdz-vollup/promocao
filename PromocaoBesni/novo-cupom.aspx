@@ -52,7 +52,7 @@
             <a href="cadastrar-cupom.aspx" title="Cadastrar mais">
                 <button class="btn-form" style="width: 100%;">cadastrar mais</button>
             </a>
-            <a href="meus-cupons.aspx" title="Início">
+            <a href="cadastro-abertura.aspx" title="Início">
                 <button class="btn-form" style="width: 100%; margin-top: 10px;">início</button>
             </a>
         </div>
