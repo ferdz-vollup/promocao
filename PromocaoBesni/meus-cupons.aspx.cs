@@ -44,7 +44,7 @@ namespace PromocaoBesni
             //Response.Write("select CUP_NUMERO_SORTE from cupom where CAD_ID = " + Session["cadID"].ToString() + " ");
             //Response.End();
 
-            rsCupons = objBD.ExecutaSQL("select CUP_NUMERO_SORTE from cupom where CAD_ID = " + Session["cadID"].ToString() + " order by CUP_DH_CADASTRO desc ");
+            rsCupons = objBD.ExecutaSQL("select CUP_NUMERO_SORTE from cupom where CAD_ID = " + Session["cadID"].ToString() + " order by CUP_NUMERO_SORTE desc ");
 
             if (rsCupons == null)
             {
@@ -52,22 +52,21 @@ namespace PromocaoBesni
             }
             if (rsCupons.HasRows)
             {
-                int count = 1;
+                string palavra = "E";
 
                 while (rsCupons.Read())
                 {
 
-                    if (count % 2 == 0)
-                    {
-                        secCupons.InnerHtml += " <div class=\"cupon\" style=\"background:#c8962b;\">";
-                    }
-                    else
+                    if (rsCupons["CUP_NUMERO_SORTE"].ToString().Contains(palavra))
                     {
                         secCupons.InnerHtml += " <div class=\"cupon\" style=\"background:#97092a;\">";
                     }
+                    else
+                    {
+                        secCupons.InnerHtml += " <div class=\"cupon\" style=\"background:#c8962b;\">";
+                    }
                     secCupons.InnerHtml += "    <h4 class=\"basenine\">cód. " + rsCupons["CUP_NUMERO_SORTE"] + "</h4>";
                     secCupons.InnerHtml += " </div> ";
-                    count++;
                 }
             }
         }

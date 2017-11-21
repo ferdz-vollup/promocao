@@ -50,7 +50,7 @@
                     <a href="cadastrar-cupom.aspx" title="Cadastrar novos cupons">
 					    <button class="btn-form" style="width: 100%;">cadastrar novos cupons</button>
                     </a>
-                    <a href="/" title="Voltar">
+                    <a href="javascript:history.back()" title="Voltar">
 					    <button class="btn-form" style="width: 100%;margin-top: 10px;">voltar</button>
                     </a>
 				</div>
