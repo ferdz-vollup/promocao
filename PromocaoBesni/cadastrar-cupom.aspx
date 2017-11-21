@@ -133,20 +133,20 @@
                     <form id="cadastrar-cupom" action="javascript:GerarCupom($('#cnpj').val(),$('#date').val(),$('#coo').val(),$('#valor_nota').val());">
                         <div class="novo-cupon">
                             <span>1</span>
-                            <input type="text" placeholder="CNPJ" id="cnpj" name="cnpj" class="cnpj">
+                            <input type="text" placeholder="CNPJ" id="cnpj" name="cnpj" class="cnpj inputs">
                         </div>
                         <div class="novo-cupon">
                             <span>2</span>
-                            <input type="text" placeholder="dd/mm/aaaa" id="date" name="date" class="data-nasc">
+                            <input type="text" placeholder="dd/mm/aaaa" id="date" name="date" class="data-nasc inputs">
                         </div>
                         <div class="novo-cupon">
                             <span>3</span>
-                            <input type="text" placeholder="COO" id="coo" name="coo">
+                            <input type="text" placeholder="COO" id="coo" name="coo" class="inputs">
                         </div>
                         <div class="novo-cupon">
                             <span>4</span>
                             <!--<label class="lblValorNota">R$</label>-->
-                            <input type="text" placeholder="R$ xxx,xx" id="valor_nota" name="valor nota" class="valor-nota" onkeypress="return(MascaraMoeda(this,'.',',',event))">
+                            <input type="text" placeholder="R$ xxx,xx" id="valor_nota" name="valor nota" class="valor-nota inputs" onkeypress="return(MascaraMoeda(this,'.',',',event))">
                         </div>
 
                         <div class="novo-cupon">
@@ -177,7 +177,7 @@
                         <div class="col-sm-3 col-md-4"></div>
                         <div class="col-xs-12 col-sm-9 col-md-6 two-buttons-wrapping">
                            <%-- <button type="submit" style="" class="btn-form btn-enviar">Enviar</button>--%>
-                             <button type="button" style="" class="btn-form btn-enviar">Enviar</button>
+                             <button type="submit" style="" class="btn-form btn-enviar" data-form="cadastrar-cupom">Enviar</button>
                             <button style="" type="reset" class="btn-form btn-enviar">Limpar</button>
                         </div>
                     </form>
