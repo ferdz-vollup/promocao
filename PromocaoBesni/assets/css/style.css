@@ -524,177 +524,196 @@ div#premios {
             right: 0;
         }
 
+
+/* INSTAGRAM BESNI */
 #galeria-instagram {
     margin: 50px 0px;
 }
 
-.redes {
-    font-family: 'baseninemedium';
-    font-size: 25px;
-    margin-top: -5px;
-}
-
-    .redes *:not(a) {
-        display: inline-block;
-        vertical-align: middle
-    }
-
-    .redes p {
-        padding-top: 10px;
-    }
-
-    .redes a:focus {
-        text-decoration: none;
-    }
-
-/* COMO PARTICIPAR */
-#como-participar {
-    margin: 250px 0px 100px;
-}
-
-    #como-participar .espaco-colunas .col-xs-3 {
-        margin-top: 5px;
-    }
-
-/* PREMIOS */
-#premios {
-    margin: 100px auto;
-}
-
-/* FAQ */
-#faq {
-    margin-top: 20%;
-    margin-bottom: 10%;
-}
-
-h4.underline-azul {
-    display: inline-block;
-}
-
-    h4.underline-azul:after {
-        width: 99%;
-        height: 1px;
-        background-color: #0989b2;
-        content: "";
-        display: block;
-        opacity: 0.5;
-        margin-top: 2px;
-    }
-
-/* FALE CONOSCO */
-#fale-conosco {
-    margin: 150px 0px;
-}
-
-div#formFaleConosco, div#formCadastro {
-    padding: 0px 15%;
-}
-
-    div#formFaleConosco div[class*='col'], div#formCadastro div[class*='col'] {
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-#formFaleConosco button.btn-limpar {
-    float: left;
-}
-
-/* CADASTRO */
-#cadastro {
-    margin: 250px 0px 100px;
-}
-
-#formCadastro form .row:not(.not-flex) div[class*='col'] {
-    display: flex;
-    align-items: center;
-}
-
-#formCadastro form .row:not(.not-flex) div[class*='col'] * {
-    flex-grow: 0;
-    width: auto;
-}
-
-#formCadastro form .row:not(.not-flex) div[class*='col'] *:last-child {
-    flex-grow: 1;
-}
-
-#formCadastro div[class*='label'] {
-    margin-right: 20px;
-    text-transform: uppercase;
-    color: #6a6a6a;
-    font-family: 'metronic_proregular';
-}
-
-#formCadastro .labelFormTwo {
-    margin-left: 10px;
-    width: 15% !important;
-}
-
-#formCadastro .row.not-flex div[class*='label'] {
-    margin-right: 0px;
-    margin-left: 0px;
-    width: auto !important;
-}
-
-#formCadastro .labelFormTwo span {
-    font-size: 10px;
-    line-height: 50px;
-    display: block;
-    margin-bottom: -20px;
-    margin-top: -18px;
-}
-
-#formCadastro, .metodo-compras {
-    margin-top: 70px;
-}
-
-#formCadastro {
-    max-height: 0px;
-    -webkit-transition: all 0.4s ease-out;
-    -moz-transition: all 0.4s ease-out;
-    -o-transition: all 0.4s ease-out;
-    transition: all 0.4s ease-out;
-    overflow: hidden;
-}
-
-.cartao input {
+#divInstagramFeed {
+    margin-bottom: 35px;
     text-align: center;
-    padding: 5px 5px;
+    padding: 0px 5%;
 }
+    
+    #divInstagramFeed > li {
+        list-style: none;
+        display: inline-block;
+        text-align: center;
+        margin: 5px;
+    }
 
-#formCadastro.aberto {
-    max-height: 2000px
-}
+        #divInstagramFeed > li > img {
+            width: auto;
+        }
 
-.metodo-compras.fechado {
-    max-height: 0px;
-}
+    .redes {
+        font-family: 'baseninemedium';
+        font-size: 25px;
+        margin-top: -5px;
+    }
 
-.metodo-compras {
-    max-height: 1000px;
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
-    -o-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out;
-    overflow: hidden;
-}
+        .redes *:not(a) {
+            display: inline-block;
+            vertical-align: middle
+        }
 
-.numero-cartao .col-md-2.col-xs-3 {
-    margin-top: 0px !important;
-}
+        .redes p {
+            padding-top: 10px;
+        }
 
-.metodo-compras .btn-form[data-cartao='Sim'] {
-    margin-top: 60px;
-}
+        .redes a:focus {
+            text-decoration: none;
+        }
 
-.metodo-compras .btn-form[data-cartao='Nao'] {
-    margin-top: 30px;
-}
+    /* COMO PARTICIPAR */
+    #como-participar {
+        margin: 250px 0px 100px;
+    }
 
-/* GANHADORES */
-#ganhadores {
-    margin: 250px 0px 100px;
-}
+        #como-participar .espaco-colunas .col-xs-3 {
+            margin-top: 5px;
+        }
+
+    /* PREMIOS */
+    #premios {
+        margin: 100px auto;
+    }
+
+    /* FAQ */
+    #faq {
+        margin-top: 20%;
+        margin-bottom: 10%;
+    }
+
+    h4.underline-azul {
+        display: inline-block;
+    }
+
+        h4.underline-azul:after {
+            width: 99%;
+            height: 1px;
+            background-color: #0989b2;
+            content: "";
+            display: block;
+            opacity: 0.5;
+            margin-top: 2px;
+        }
+
+    /* FALE CONOSCO */
+    #fale-conosco {
+        margin: 150px 0px;
+    }
+
+    div#formFaleConosco, div#formCadastro {
+        padding: 0px 15%;
+    }
+
+        div#formFaleConosco div[class*='col'], div#formCadastro div[class*='col'] {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+    #formFaleConosco button.btn-limpar {
+        float: left;
+    }
+
+    /* CADASTRO */
+    #cadastro {
+        margin: 250px 0px 100px;
+    }
+
+    #formCadastro form .row:not(.not-flex) div[class*='col'] {
+        display: flex;
+        align-items: center;
+    }
+
+        #formCadastro form .row:not(.not-flex) div[class*='col'] * {
+            flex-grow: 0;
+            width: auto;
+        }
+
+            #formCadastro form .row:not(.not-flex) div[class*='col'] *:last-child {
+                flex-grow: 1;
+            }
+
+    #formCadastro div[class*='label'] {
+        margin-right: 20px;
+        text-transform: uppercase;
+        color: #6a6a6a;
+        font-family: 'metronic_proregular';
+    }
+
+    #formCadastro .labelFormTwo {
+        margin-left: 10px;
+        width: 15% !important;
+    }
+
+    #formCadastro .row.not-flex div[class*='label'] {
+        margin-right: 0px;
+        margin-left: 0px;
+        width: auto !important;
+    }
+
+    #formCadastro .labelFormTwo span {
+        font-size: 10px;
+        line-height: 50px;
+        display: block;
+        margin-bottom: -20px;
+        margin-top: -18px;
+    }
+
+    #formCadastro, .metodo-compras {
+        margin-top: 70px;
+    }
+
+    #formCadastro {
+        max-height: 0px;
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out;
+        overflow: hidden;
+    }
+
+    .cartao input {
+        text-align: center;
+        padding: 5px 5px;
+    }
+
+    #formCadastro.aberto {
+        max-height: 2000px
+    }
+
+    .metodo-compras.fechado {
+        max-height: 0px;
+    }
+
+    .metodo-compras {
+        max-height: 1000px;
+        -webkit-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+        overflow: hidden;
+    }
+
+    .numero-cartao .col-md-2.col-xs-3 {
+        margin-top: 0px !important;
+    }
+
+    .metodo-compras .btn-form[data-cartao='Sim'] {
+        margin-top: 60px;
+    }
+
+    .metodo-compras .btn-form[data-cartao='Nao'] {
+        margin-top: 30px;
+    }
+
+    /* GANHADORES */
+    #ganhadores {
+        margin: 250px 0px 100px;
+    }
 
     .sorteios span {
         font-size: 20px;
@@ -779,7 +798,6 @@ div#formFaleConosco, div#formCadastro {
         margin: 250px 0px 100px;
     }
 
-    /* Paulo */
     .traco-vermelho.meio {
         margin-left: calc(50% - 25px);
         margin-right: calc(50% - 25px);
@@ -861,29 +879,11 @@ div#formFaleConosco, div#formCadastro {
             box-shadow: 0px 0px 10px gray;
             box-shadow: -1px 1px 5px 2px gray;
         }
-        
+
     #cadastro {
         margin-top: 150px;
         margin-bottom: 10%;
     }
-
-    /* INSTAGRAM */
-    #instaFeed {
-        margin-bottom: 35px;
-        text-align: center;
-        padding: 0px 5%;
-    }
-
-        #instaFeed > li {
-            list-style: none;
-            display: inline-block;
-            text-align: center;
-            margin: 5px;
-        }
-
-            #instaFeed > li > img {
-                width: auto;
-            }
 
     /* RODAPE */
     #rodape {
@@ -916,78 +916,206 @@ div#formFaleConosco, div#formCadastro {
     }
 
 
+/*INSTAGRAM */
 
-    @media only screen and (min-width: 325px) {
+#divInstagram {
+    height: 180px;
+    margin: 30px 15px;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
 
-        #formFaleConosco button.btn-limpar {
-            float: none;
-        }
+#divInstagram ul {
+    width: 1200%;
+    height: 100%;
+    padding: 0px;
+}
+
+    #divInstagram ul li {
+        position: relative;
+        display: inline-block;
+        border-top: none;
+        border-bottom: none;
+        opacity: 1;
+        float: left;
+        padding: 0px;
+        margin: 15px 0;
+        cursor: pointer;
+        border: 0px solid #a8272d;
+        margin: 0px;
+        padding: 10px;
     }
 
-    @media only screen and (min-width: 768px) {
-
-        .inputWrapper {
-            width: 40%;
-            margin: 15px 30% 0 30%;
+        #divInstagram ul li:hover {
+            opacity: 1.0;
         }
 
-        .checkboxLabel span {
-            margin-left: 7px;
-            padding-bottom: 10px;
-        }
-        
-        #cadastrar h2:first-child {
-            margin-top: 50px;
-        }
-
-        #cadastrar h3:first-child {
-            margin-top: 0px;
+        #divInstagram ul li img {
+            height: 100%;
+            filter: brightness(1.1);
+            -webkit-filter: brightness(1.1);
+            -moz-filter: brightness(1.1);
+            -ms-filter: brightness(1.1);
+            -o-filter: brightness(1.1);
         }
 
-        .novo-cupon input {
-            width: 75%;
-        }
+#galeria ul.carrousel {
+    width: 100%;
+}
 
-        #cadastrar-cupom button {
-            float: right;
-        }
-
-        .two-buttons-wrapping {
-            float: right;
-            text-align: right;
-            padding: 0;
-        }
-
-        #cadastrar-cupom div button:first-child {
-            margin-left: 5px;
-            margin-right: 0px;
-        }
-
-        #cadastrar-cupom div button:last-child {
-            margin-right: 5px;
-            margin-left: 0px;
-            float: right;
-        }
-
-        #ganhadores > .container .receipt-wrapping {
-            margin-top: 275px;
-        }
+    #galeria ul.carrousel li {
+        width: 235px;
+        padding: 0px 30px;
+        display: inline-block;
+        float: left;
+        cursor: pointer;
     }
 
-    @media only screen and (min-width: 992px) {
-        .novo-cupon input {
-            width: 85%;
+        #galeria ul.carrousel li img {
+            margin: 0 auto;
+            width: 100%;
+            cursor: pointer;
         }
 
-        .receipt-wrapping {
-            margin-top: -100px;
-            margin-bottom: none;
+        #galeria ul.carrousel li p {
+            font-size: 12px;
+            font-family: Arial,sans-serif;
+            font-weight: bold;
+            color: #ae080f;
+            margin-top: 8px;
+            text-transform: uppercase;
         }
+
+#galeria .mascara .left {
+    position: absolute;
+    left: 30px;
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+    padding: 9px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: center;
+    -webkit-justify-content: center;
+    cursor: pointer
+}
+
+#galeria .mascara .right {
+    position: absolute;
+    right: 9px;
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+    padding: 9px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: center;
+    -webkit-justify-content: center;
+    cursor: pointer
+}
+
+#galeria .mascara .right:hover, #galeria .mascara .left:hover {
+    background: rgba(0,0,0,0.6)
+}
+
+@media only screen and (min-width: 325px) {
+
+    #formFaleConosco button.btn-limpar {
+        float: none;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+
+    #divInstagram {
+        height: 320px;
+        margin: 30px 15px;
+        overflow: hidden;
+        display: flow-root;
+        width: 100%;
+        padding: 0 10%;
     }
 
-    @media only screen and (min-width: 1800px) {
 
-        #cadastro {
-            margin-top: 350px;
-        }
+    #divInstagram ul {
+        width: auto;
+        display: flow-root;
     }
+    #divInstagram ul li {
+        padding: 5px;
+        1margin: 0;
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .inputWrapper {
+        width: 40%;
+        margin: 15px 30% 0 30%;
+    }
+
+    .checkboxLabel span {
+        margin-left: 7px;
+        padding-bottom: 10px;
+    }
+
+    #cadastrar h2:first-child {
+        margin-top: 50px;
+    }
+
+    #cadastrar h3:first-child {
+        margin-top: 0px;
+    }
+
+    .novo-cupon input {
+        width: 75%;
+    }
+
+    #cadastrar-cupom button {
+        float: right;
+    }
+
+    .two-buttons-wrapping {
+        float: right;
+        text-align: right;
+        padding: 0;
+    }
+
+    #cadastrar-cupom div button:first-child {
+        margin-left: 5px;
+        margin-right: 0px;
+    }
+
+    #cadastrar-cupom div button:last-child {
+        margin-right: 5px;
+        margin-left: 0px;
+        float: right;
+    }
+
+    #ganhadores > .container .receipt-wrapping {
+        margin-top: 275px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .novo-cupon input {
+        width: 85%;
+    }
+
+    .receipt-wrapping {
+        margin-top: -100px;
+        margin-bottom: none;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+
+    #cadastro {
+        margin-top: 350px;
+    }
+}
