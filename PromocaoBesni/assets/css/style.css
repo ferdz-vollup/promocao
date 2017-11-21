@@ -740,12 +740,18 @@ div#formFaleConosco, div#formCadastro {
 
     #ganhadores > .container .receipt-wrapping {
         margin-top: 275px;
+    }
+}
 
+@media only screen and (min-width: 1800px) {
+
+    #cadastro {
+        margin-top: 350px;
     }
 
-
 }
-    
+
+
     .sorteios span {
         font-size: 20px;
         display: block;
@@ -1005,8 +1011,8 @@ div#formFaleConosco, div#formCadastro {
             vertical-align: middle;
         }
 
-        /*FERDZ*/
-.msgErro {
-    margin-left: 3px;
-    color: red;
-}
+    /*FERDZ*/
+    .msgErro {
+        margin-left: 3px;
+        color: red;
+    }
