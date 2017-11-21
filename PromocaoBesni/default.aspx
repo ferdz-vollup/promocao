@@ -30,7 +30,7 @@
 	<div class="container">
 		<div class="text-center">
 			<h2 class="basenine text-uppercase vermelho">
-				concorra, nas compras a cada R$200,00
+				concorra a cada R$200,00 em compras 
 			</h2>
             <a href="/login.aspx" title="Clique aqui e cadastre seus cupons">
 			    <button class="btn-home-cadastre">
@@ -142,10 +142,10 @@
 			<div style="margin: auto; margin-bottom: 30px;" class="traco-vermelho"></div>
 			<h3 class="basenine">#FecheoAnoComBesni</h3>
 			<div class="redes">
-                <a href="https://www.facebook.com/LojasBesni/" title="Lojas Besni no facebook">
+                <a href="https://www.facebook.com/LojasBesni/" title="Lojas Besni no facebook"  target="_blank">
                     <img src="assets/imagens/icone-facebook.png" alt="ícone facebook">
                 </a>
-                <a href="https://www.instagram.com/lojasbesni/" title="Lojas Besni no instagram">
+                <a href="https://www.instagram.com/lojasbesni/" title="Lojas Besni no instagram"  target="_blank">
 				    <img src="assets/imagens/icone-instagram.png" alt="ícone instagram">
                 </a>
 				<p>/lojasbesni</p>
