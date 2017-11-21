@@ -185,7 +185,7 @@
                     <tr>
                         <td class="rule-number"><strong></strong></td>
                         <td class="rule-sub-number"><strong>1.2.2</strong></td>
-                        <td class="rule-content">Cada cupom fiscal cadastrado, referente a compras de valor mínimo de R$ 200,00 (duzentos reais) dará ao participante o direito a 01 (um) número da sorte, para concorrer na apuração correspondente à data do registro e 01 (um) número da sorte da série especial, para concorrer no sorteio final da promoção. <span class="underline">No caso de compras registradas após o dia 22/12/2017, o participante receberá apenas o número da sorte referente ao último sorteio.</span></td>
+                        <td class="rule-content">Cada cupom fiscal cadastrado, referente a compras de valor mínimo de R$ 200,00 (duzentos reais) dará ao participante o direito a 01 (um) número da sorte, para concorrer na apuração correspondente à data do registro e 01 (um) número da sorte da série especial, para concorrer no sorteio final da promoção. No caso de compras registradas após o dia 22/12/2017, o participante receberá apenas o número da sorte referente ao último sorteio.</td>
                     </tr>
                     <tr></tr>
                     <tr>
@@ -201,6 +201,12 @@
                     </tr>
                     <tr></tr>
                     <tr>
+                        <td class="rule-number"><strong></strong></td>
+                        <td class="rule-sub-number"><strong>1.2.5</strong></td>
+                        <td class="rule-content">Não será permitida a soma de valores constantes em cupons fiscais distintos, com o objetivo de se alcançar o valor de R$ 200,00 (duzentos reais), previsto neste Regulamento. Da mesma forma, somente serão considerados os múltiplos de R$ 200,00 (duzentos reais), para fins de atribuição de números da sorte, se constantes no mesmo cupom fiscal, sempre se desprezado o saldo eventualmente existente.</td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
                         <td class="rule-number"><strong>1.3</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
                         <td class="rule-content">Conforme previsto acima, após efetuar sua compra, nos termos previstos neste Regulamento, o consumidor participante deverá acessar o hotsite www.promocaobesni.com.br para efetuar seu cadastro, devendo informar, nesta oportunidade, obrigatoriamente, os seguintes dados pessoais e da compra: nome completo, data de nascimento, RG, CPF, endereço completo (rua, número, bairro, CEP, cidade, estado), telefone fixo (opcional), telefone celular, e-mail, senha para logar no site da promoção, número e valor do cupom fiscal e data da compra. Caso o participante tenha efetuado suas compras com cartão Besni, deverá informar, ainda, o número do cartão Besni usado para o pagamento da compra, para concessão do benefício previsto neste regulamento.</td>
@@ -209,12 +215,6 @@
                     <tr>
                         <td class="rule-number"><strong></strong></td>
                         <td class="rule-sub-number"><strong>1.3.1</strong></td>
-                        <td class="rule-content">Cada nota fiscal registrada na promoção, emitida nos termos deste regulamento, atribuirá ao participante a quantidade de números da sorte indicada nos itens 1.2.2 e 1.2.4, independentemente do valor da nota (contanto que superior a R$ 200,00).</td>
-                    </tr>
-                    <tr></tr>
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong>1.3.2</strong></td>
                         <td class="rule-content"><strong><span class="underline">O participante deverá guardar as Notas Fiscais cadastradas na promoção</span></strong>, uma vez que, a fim de validar as informações cadastradas, a <span class="underline">Promotora poderá, a seu critério, solicitar a apresentação da Nota/Cupom Fiscal cadastrado, sendo esta condição para a validação da contemplação e consequente entrega do prêmio</span>, nos termos previstos no art. 46, parágrafo único da Portaria MF 41/08. </td>
                     </tr>
                     <tr></tr>
@@ -308,6 +308,12 @@
                             <th>Sorteio</th>
                         </tr>
                         <tr>
+                            <td>Geral (sorteio final)</td>
+                            <td>de 26/11 a 31/12/17</td>
+                            <td>000 a 099</td>
+                            <td>03/01/2018</td>
+                        </tr>
+                        <tr>
                             <td>1º</td>
                             <td>de 26/11 a 08/12/17</td>
                             <td>100 a 109</td>
@@ -325,12 +331,7 @@
                             <td>120 a 129</td>
                             <td>23/12/17</td>
                         </tr>
-                        <tr>
-                            <td>Geral</td>
-                            <td>de 26/11 a 31/12/17</td>
-                            <td>000 a 099</td>
-                            <td>03/01/2018</td>
-                        </tr>
+
                     </table>
                 </div>
             </div>
@@ -371,50 +372,6 @@
                 </div>
             </div>
         </section>          
-          
-        <section id="regulamento" style="padding-top: 10px;">
-            <div class="container">
-                <table class="regulamento" cellpadding=5 cellspacing=10>
-                   <tr></tr>
-                    <tr class="hideSpace-mobileView">
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content" style="color: transparent;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam optio, recusandae aspernatur adipisci eligendi! Facilis doloribus illum aspernat</td>
-                    </tr>
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Exemplo de número de sorte para concorrer aos prêmios do sorteio final (série especial):</td>
-                    </tr>
-      
-                    </table>
-                </div>
-            
-        </section>                                           
-                                                                                        
-        <section id="regulamento" style="padding-top: 10px;">
-            <div class="container">      
-                    <div class="tabela">
-                     <table style="margin: 0 auto;">
-                        <tr>
-                            <th colspan="6" style="width: 300px;">Número da Sorte</th>
-                        </tr>     
-                        <tr>
-                            <th colspan="1" style="width: 300px;">Número da série</th>
-                            <th colspan="5" style="width: 80px;">Número de ordem</th>
-                        </tr>
-                        <tr>
-                            <td>057</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>0</td>
-                            <td>0</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-        </section>         
                             
         <section id="regulamento" style="padding-top: 10px;">
             <div class="container">
@@ -442,7 +399,7 @@
                     <tr>
                         <td class="rule-number"><strong>2.1</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Serão distribuídos 31 (trinta e um) prêmios, totalizando R$ 166.000,00 (cento e sessenta e seis mil reais). </td>
+                        <td class="rule-content">2.1	Serão distribuídos 31 (trinta e um) prêmios, totalizando R$ 241.000,00 (duzentos e quarenta e um mil reais).</td>
                     </tr>
                     <tr></tr>
                     <tr>
@@ -474,202 +431,110 @@
                         <td class="rule-sub-number"><strong></strong></td>
                         <td class="rule-content">Haverá 04 (quatro) datas de sorteio para definição dos ganhadores, em correlação com os resultados da extração da Loteria Federal do Brasil dos dias <strong class="underline" >09/12/2017; 16/12/2017, 23/12/2017 e 03/01/2018.</strong> Nas três primeiras datas serão realizados os sorteios periódicos e na última data, será apurado o ganhador da série Especial.</td>
                     </tr>
-
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content"><strong class="underline"><br />Identificação do ganhador dos sorteios Periódicos</strong></td>
-                    </tr>
-
                     <tr></tr>
                     <tr>
                         <td class="rule-number"><strong>3.2</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Para a obtenção do ganhador de cada sorteio periódico, em cada uma das datas indicadas no item 1.9 deste Regulamento, primeiramente serão aplicadas as regras para se conhecer a Série que será identificada como vencedora, dentro da qual serão identificados 10 (dez) números da sorte vencedores, nos termos a seguir expostos, totalizando 10 (dez) ganhadores por sorteio.</td>
+                        <td class="rule-content">Para a obtenção dos ganhadores de cada sorteio, primeiramente serão aplicadas as regras para se conhecer a Série que será identificada como vencedora, dentro da qual serão identificados os números da sorte vencedores, nos termos a seguir expostos, totalizando:</td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td class="rule-number"><strong></strong></td>
+                        <td class="rule-sub-number"><strong>3.2.1</strong></td>
+                        <td class="rule-content">10 (dez) ganhadores em cada sorteio periódico, que serão contemplados, cada um, com o prêmio descrito no item 2.2.1 deste Regulamento;</td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td class="rule-number"><strong></strong></td>
+                        <td class="rule-sub-number"><strong>3.2.2</strong></td>
+                        <td class="rule-content">01 (um) ganhador no sorteio final, que será contemplado com o prêmio identificado no item 2.2.2 deste Regulamento.</td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td class="rule-number"><strong></strong></td>
+                        <td class="rule-sub-number"><strong></strong></td>
+                        <td class="rule-content"><br /><strong class="underline" style="font-style:italic;">Regra de Apuração da série: </strong></td>
                     </tr>
                     <tr></tr>
                     <tr>
                         <td class="rule-number"><strong>3.3</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Para tanto, considerando que não haverá variação no primeiro e segundo dígitos das séries distribuídas em cada período, aplicar-se-á a regra para identificação do segundo dígito que compõe a série, de forma que corresponda ao algarismo da dezena simples do primeiro Prêmio da Loteria Federal, lidos de cima para baixo, nos termos do exemplo abaixo:</td>
-                    </tr>
-
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content"><br />Exemplo de Extração da Loteria Federal do Brasil</td>
-                    </tr>
-
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content"><br />1º prêmio: 2 3.3 <strong class="underline">3</strong> 7<img class="diclaimer-arrow-1" src="assets/imagens/full-arrow.png"/><br />2º prêmio: 8 2.5 1 3<br />3º prêmio: 1 7.0 8 2<br />4º prêmio: 5 3.1 9 5<br />5º prêmio: 4 9.5 0 4</td>
-                    </tr>
-
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content"><br />Número de Série Inicialmente identificado: (XX)3, onde (XX) pode ser 10 (1º período), 11 (2º período) ou 12 (3º período), a depender do período a que a apuração se referir (conforme item 1.9).</td>
-                    </tr>
-
+                        <td class="rule-content">A definição da série participante se dará a partir dos prêmios da Extração da Loteria Federal, lidos de cima para baixo, por meio da combinação das dezenas simples do primeiro ao terceiro prêmio.</td>
                     </tr>
                     <tr></tr>
                     <tr>
                         <td class="rule-number"><strong></strong></td>
                         <td class="rule-sub-number"><strong>3.3.1</strong></td>
-                        <td class="rule-content">A título exemplificativo, considerando <strong class="underline">exemplo de sorteio constante do item 3.3 (Número de Série identificado: (XX)3),</strong>  supondo que este número tenha sido identificado no sorteio <strong class="underline">do 2º período,</strong>  será considerada <strong class="underline">série vencedora a de número 113.</strong></td>
+                        <td class="rule-content">Caso o número de série encontrado seja superior à maior série da apuração, deverá ser subtraída a quantidade de séries da apuração, do número de série encontrado, tantas vezes quantas forem necessárias, até que o número obtido esteja dentro do intervalo de séries da apuração. Caso o número de série encontrado seja inferior à menor série da apuração, deverá ser adicionada a quantidade de séries da apuração, do número de série encontrado, tantas vezes quantas forem necessárias, até que o número obtido esteja dentro do intervalo de séries da apuração.</td>
+                    </tr>
+                    <tr>
+                        <td class="rule-number"><strong></strong></td>
+                        <td class="rule-sub-number"><strong></strong></td>
+                        <td class="rule-content"><br /><strong class="underline" style="font-style:italic;">Regra de Apuração do elemento sorteável:</strong></td>
                     </tr>
                     <tr></tr>
                     <tr>
                         <td class="rule-number"><strong>3.4</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Após a aplicação da regra de identificação da série vencedora, partir-se-á para a identificação do número de ordem vencedor, utilizada a combinação a seguir descrita.</td>
-                    </tr>
-                    <tr></tr>
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong>3.4.1</strong></td>
-                        <td class="rule-content">O número de ordem será identificado utilizando-se os algarismos das unidades simples dos 05 (cinco) primeiros prêmios, lidos verticalmente de cima para baixo.
-
-
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content"><br />Exemplo de Extração da Loteria Federal do Brasil</td>
-                    </tr>
-
-
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content"><br />1º prêmio: 2 3.3 3 <strong>7</strong><img class="diclaimer-arrow-2" src="assets/imagens/full-arrow.png"/><br />2º prêmio: 8 2.5 1 <strong>3</strong><br />3º prêmio: 1 7.0 8 <strong>2</strong><br />4º prêmio: 5 3.1 9 <strong>5</strong><br />5º prêmio: 4 9.5 0 <strong>4</strong></td>
-                    </tr>
-
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content"><br />Número de ordem identificado: 73254.</td>
-                    </tr>
-
-                    </tr>
-                    <tr></tr>
-                    <tr>
-                        <td class="rule-number"><strong>3.4.2</strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Serão considerados ganhadores de cada sorteio periódico os portadores dos números da sorte da série identificada como ganhadora, correspondentes ao número de ordem identificado nos termos supra previstos, bem como aos 09 (nove) números imediatamente superiores distribuídos dentro da mesma série. Na falta de números superiores em quantidade suficiente, buscar-se-á os números imediatamente inferiores ao número de ordem, até que sejam identificados 10 (dez) ganhadores.</td>
-                    </tr>
-                    <tr></tr>
-                    <tr>
-                        <td class="rule-number"><strong>3.4.3</strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Assim, de acordo as regras e o exemplo de Extração da Loteria Federal acima, considerando o 2º período desta promoção, os titulares dos números da sorte correspondentes aos números 73254, 73255, 73256, 73257, 73258, 73259, 73260, 73261, 73262 e 73263 (considerando que tenham sido todos distribuídos) da série 13 serão os ganhadores do período, contemplados, cada um, com 01 (um) prêmio, correspondente ao previsto no item 2.2.1 deste Regulamento.</td>
-                     <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content"><br /><strong class="underline" style="font-style:italic;">Identificação do ganhador do sorteio da série Especial</strong></td>
-                    </tr>
-
+                        <td class="rule-content">A definição do elemento sorteável se dará a partir dos prêmios da Extração da Loteria Federal, lidos de cima para baixo, por meio da combinação das unidades simples do primeiro ao quinto prêmio.</td>
                     </tr>
                     <tr></tr>
                     <tr>
                         <td class="rule-number"><strong>3.5</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Para a obtenção do ganhador da série Especial primeiramente serão aplicadas as regras para se conhecer a Série que será identificada como vencedora, dentro da qual se identificará 01 (um) ganhador, nos termos a seguir expostos, totalizando 01 (um) ganhador nesta série.</td>
+                        <td class="rule-content">O número da sorte contemplado será composto da série apurada seguida do elemento sorteável apurado.</td>
                     </tr>
                     <tr></tr>
                     <tr>
                         <td class="rule-number"><strong>3.6</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Para identificação da série ganhadora, considerando que não há variação no primeiro dígito da série, serão utilizadas para identificação dos segundo e terceiro dígitos as dezenas simples dos 02 (dois) primeiros prêmios da Loteria Federal do dia <strong class="underline" >03/01/2018</strong>, de forma que correspondam aos algarismos das dezenas simples dos 02 (dois) primeiros Prêmios da Loteria Federal, lidos de cima para baixo, nos termos do exemplo abaixo:</td>
-
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content"><br />Exemplo de Extração da Loteria Federal do Brasil</td>
-                    </tr>
-
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content"><br />1º prêmio: 2 5. 9 <strong class="underline">8</strong> 4<img class="diclaimer-arrow-3" src="assets/imagens/small-arrow.png"/><br />2º prêmio: 6 5. 4 <strong class="underline">1</strong> 8<br />3º prêmio: 1 9. 0 7 9<br />4º prêmio: 3 3. 6 5 7<br />5º prêmio: 0 0. 6 4 7</td>
-                    </tr>
-
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content"><br />Número de Série Identificado: 081.</td>
-                    </tr>
+                        <td class="rule-content">A identificação dos contemplados de cada apuração (sorteio) se dará mediante a busca dos titulares dos números da sorte contemplados, conforme regras acima indicadas.</td>
                     </tr>
                     <tr></tr>
                     <tr>
                         <td class="rule-number"><strong>3.7</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Após a aplicação da regra de identificação da série vencedora, partir-se-á para a identificação do número de ordem vencedor, utilizada a combinação a seguir descrita.</td>
-                    </tr>
-                    <tr></tr>
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong>3.7.1</strong></td>
-                        <td class="rule-content">O número de ordem será identificado utilizando-se os algarismos das unidades simples dos 05 (cinco) primeiros prêmios, lidos verticalmente de cima para baixo.</td>
-                    </tr>
-
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content"><br />Exemplo de Extração da Loteria Federal do Brasil</td>
-                    </tr>
-
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content"><br />1º prêmio: 2 5. 9 8 <strong class="underline">4</strong><img class="diclaimer-arrow-4" src="assets/imagens/full-arrow.png"/><br />2º prêmio: 6 5. 4 1 <strong class="underline">8</strong><br />3º prêmio: 1 9. 0 7 <strong class="underline">9</strong><br />4º prêmio: 3 3. 6 5 <strong class="underline">7</strong><br />5º prêmio: 0 0. 6 4 <strong class="underline">7</strong></td>
-                    </tr>
-
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content"><br />Número de ordem identificado: 48.977</td>
-                    </tr>
-
-                    <tr></tr>
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong>3.7.2</strong></td>
-                        <td class="rule-content">Será considerado ganhador o portador do número da sorte correspondente aos números de série e de ordem identificados nos termos supra previstos, portanto, o portador do número da sorte 48.977 da série 081 (série Especial).</td>
-                    </tr>
-                    <tr></tr>
-                    <tr>
-                        <td class="rule-number"><strong></strong></td>
-                        <td class="rule-sub-number"><strong>3.7.3</strong></td>
-                        <td class="rule-content">O ganhador da série especial será contemplado com o prêmio previsto no item 2.2.2 deste Regulamento.</td>
+                        <td class="rule-content">Para determinação do primeiro participante contemplado, este deve possuir o “Número da sorte” que coincide exatamente com o “Número da Sorte contemplado” e atender aos critérios de participação. Os demais contemplados serão determinados pelos “Elementos sorteáveis” imediatamente posteriores.</td>
                     </tr>
                     <tr></tr>
                     <tr>
                         <td class="rule-number"><strong>3.8</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Na eventualidade do número de ordem contemplado, de qualquer das séries vencedoras, não encontrar correspondente nos números de ordem distribuídos nas respectivas séries, pelo fato de não ter sido atribuído a nenhum participante, o prêmio caberá ao portador do número de ordem distribuído, dentro da mesma série, imediatamente superior ou, na falta destes, ao imediatamente inferior, até que se identifique o ganhador da série em questão. Caso não tenha sido distribuído nenhum número na Série contemplada, será considerada como Série Vencedora, a imediatamente inferior dentre as distribuídas. </td>
+                        <td class="rule-content">Um mesmo “Número da Sorte” não pode ser contemplado mais de uma vez na mesma apuração.</td>
                     </tr>
                     <tr></tr>
                     <tr>
                         <td class="rule-number"><strong>3.9</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Caso a Extração da Loteria Federal não venha a ocorrer em qualquer das datas previstas, por qualquer motivo, será considerada para efeitos de apuração do resultado desta promoção, a data da Extração da Loteria Federal subsequente.</td>
+                        <td class="rule-content">No caso de não ter sido distribuído o “Número da sorte” apurado ou do seu titular não atender aos critérios de participação, dar-se-á a entrega do(s) prêmio(s), alternadamente, ao “Elemento sorteável” imediatamente superior, dentro da mesma série, ou, na falta deste, ao imediatamente inferior, repetindo-se tal procedimento até que se encontre um “Elemento sorteável” distribuído mais próximo ao apurado com base no resultado da loteria federal. No caso de se alcançar o número sequencial inicial ou final, buscar-se-á apenas os imediatamente superiores e inferiores, respectivamente.</td>
                     </tr>
                     <tr></tr>
                     <tr>
                         <td class="rule-number"><strong>3.10</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Os ganhadores contemplados, titulares do número de ordem de cada uma das séries, encontrados nos termos acima previstos, serão localizados por meio dos dados constantes no cadastro e serão comunicados sobre a sua contemplação no prazo de 07 (sete) dias úteis, contados da data de sua identificação, por meio de telefonema e/ou e-mail e/ou telegrama com AR.</td>
+                        <td class="rule-content">Caso não tenha sido distribuído nenhum “Elemento sorteável” na série apurada, deve-se repetir o procedimento descrito no parágrafo anterior para todas as séries que compõem a apuração, alternadamente para a série imediatamente superior, ou, na falta desta, para a imediatamente inferior. No caso de se alcançar a série inicial ou final, buscar-se-á apenas as imediatamente superiores e inferiores, respectivamente.</td>
                     </tr>
                     <tr></tr>
                     <tr>
                         <td class="rule-number"><strong>3.11</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Após a identificação dos titulares dos números da sorte contemplados, a Promotora apurará a regularidade da Nota Fiscal cadastrada na promoção, para validar a contemplação, observando a regra prevista no item 3.8 deste Regulamento. </td>
+                        <td class="rule-content">Caso a Extração da Loteria Federal não venha a ocorrer em qualquer das datas previstas, por qualquer motivo, será considerada para efeitos de apuração do resultado desta promoção, a data da Extração da Loteria Federal subsequente.</td>
+                    </tr>
+                    <tr></tr>
+                                        <tr>
+                        <td class="rule-number"><strong>3.12</strong></td>
+                        <td class="rule-sub-number"><strong></strong></td>
+                        <td class="rule-content">Os ganhadores contemplados, titulares do número de ordem de cada uma das séries, encontrados nos termos acima previstos, serão localizados por meio dos dados constantes no cadastro e serão comunicados sobre a sua contemplação no prazo de 07 (sete) dias úteis, contados da data de sua identificação, por meio de telefonema e/ou e-mail e/ou telegrama com AR.</td>
                     </tr>
                     <tr></tr>
                     <tr>
-                        <td class="rule-number"><strong>3.12</strong></td>
+                        <td class="rule-number"><strong>3.13</strong></td>
+                        <td class="rule-sub-number"><strong></strong></td>
+                        <td class="rule-content">Após a identificação dos titulares dos números da sorte contemplados, a Promotora apurará a regularidade da Nota Fiscal cadastrada na promoção, para validar a contemplação, observando a regra prevista no item 4.2 deste Regulamento.</td>
+                    </tr>
+                    <tr></tr>
+                    <tr>
+                        <td class="rule-number"><strong>3.14</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
                         <td class="rule-content">Os nomes dos ganhadores serão divulgados no hotsite da promoção, em até 07 (sete) dias úteis, após o respectivo sorteio.</td>
                     </tr>
