@@ -44,9 +44,26 @@ namespace PromocaoBesni
             objUtils = new utils();
             objBD = new bd();
         }
+
+        public string NumeroAleatorio()
+        {
+            Random rdn = new Random();
+            int strNumeroaleatorio;
+            strNumeroaleatorio = rdn.Next(00000, 99999);
+
+            return strNumeroaleatorio.ToString();
+        }
+
         protected void pub_Click(object sender, EventArgs e)
         {
-            string arquivo = "NULL", nome = "", filename = "", extensao = "";
+
+            string arquivo = "NULL", nome = "", filename = "", extensao = "", valor = "" , cnpj = "" , data= "", coo = "", imagem = "";
+            valor = Request["valor_nota_02"];
+            cnpj = Request["cnpj"];
+            data = Request["date"]; ;
+            coo = Request["coo"];
+
+            int total = 0;
             HttpFileCollection hfc = Request.Files;
             for (int i = 0; i < hfc.Count; i++)
             {
@@ -62,6 +79,8 @@ namespace PromocaoBesni
                     //Gera nome novo do Arquivo numericamente
                     filename = DateTime.Now.ToString().Replace("/", "").Replace(":", "").Replace(" ", "");
 
+                    imagem = filename + extensao;
+
                     //cria a pasta se a mesma nao existir
                     if (Directory.Exists(Server.MapPath("~/upload/cupons/usuarios/")) == false)
                     {
@@ -73,10 +92,74 @@ namespace PromocaoBesni
 
                     var prefixo = Session["cadID"] + "_";
 
-                    Response.Write(nome);
+                    //SE FOR CLIENTE BESNI TOTAL DEVE SER VEZES 2
+                    //GERAR O CUPOM ESPEICIAL
+
+                    valor = valor.Remove(valor.Length - 3).Replace(".", "");
+                    total = Convert.ToInt32(valor) / 200;
+                    //string especial = "";
+
+                    //Verificar se é Cliente Besni
+                    if (Session["Besni"].ToString().Length > 15)
+                    {
+                        total = total * 2;
+                    }
+
+                    for (int aux = 1; aux <= total; aux++)
+                    {
+                        GerarCupom(cnpj, data, coo, valor, "", imagem);
+                    }
+
+                    for (int aux = 1; aux <= total; aux++)
+                    {
+                        GerarCupom(cnpj, data, coo, valor, "E", imagem);
+                    }
+
+                    Response.Write("ok|" + total);// MANDAR OK|TOTAL E PEGAR O TOTLA PARA SABER QUANTOS REGISTRO MOSTRAR NO NOVO-CUPOM
                     Response.End();
+
                 }
             }
+        }
+
+        public void GerarCupom(string cnpj, string data, string coo, string valor, string especial, string imagem)
+        {
+            rsSerie = objBD.ExecutaSQL("set dateformat dmy; select top 1 SER_INICIO,  SER_FINAL from serie where CONVERT(VARCHAR(8), SER_DH_INICIO, 5) > CONVERT(VARCHAR(8), getDate(), 5) and   cONVERT(VARCHAR(8), getDate(), 5) < CONVERT(VARCHAR(8), SER_DH_FINAL, 5)");
+
+            if (rsSerie == null)
+            {
+                throw new Exception();
+            }
+            if (rsSerie.HasRows)
+            {
+                rsSerie.Read();
+                serie = rsSerie["SER_INICIO"].ToString();
+                numero = NumeroAleatorio().PadLeft(5, '0');
+            }
+
+            //Verificar se numero já foi cadastrado
+            if (1 == 2)
+            {
+                rsSerie.Dispose();
+                rsSerie.Close();
+                // GerarCupom();
+            }
+            else
+            {
+                //Salvar no BD
+                cupom = serie + "-" + numero;
+
+                if (especial == "E")
+                {
+                    cupom = "E-" + cupom;
+                }
+
+                //objBD.ExecutaSQL("EXEC pGerarCupom '" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + cco + "','" + valor + "','" + serie + "'");
+                 Response.Write("EXEC pGerarCupom '" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + coo + "','" + valor + "','" + serie + "', '"+imagem+"'");
+                 Response.End();
+
+            }
+
         }
     }
 }

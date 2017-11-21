@@ -130,8 +130,8 @@
                 <div class="col-xs-12 col-sm-4">
                     -->
                 
-                   <%-- <form id="cadastrar-cupom" enctype="multipart/form-data" method="post" action="javascript:GerarCupom($('#cnpj').val(),$('#date').val(),$('#coo').val(),$('#valor_nota').val());">--%>
-                    <form method="post" id="cadastrar" enctype="multipart/form-data" runat="server" action="javascript:GerarCupom($('#cnpj').val(),$('#date').val(),$('#coo').val(),$('#valor_nota_02').val());">
+                   <%-- <form id="cadastrar-cupom" enctype="multipart/form-data" method="post" action="javascript:GerarCupom($('#cnpj').val(),$('#date').val(),$('#coo').val(),$('#valor_nota_02').val());">--%>
+                    <form method="post" id="cadastrar" enctype="multipart/form-data" runat="server">
                         <div class="novo-cupon">
                             <span>1</span>
                             <input type="text" placeholder="CNPJ" id="cnpj" name="cnpj" class="cnpj inputs">
@@ -147,7 +147,7 @@
                         <div class="novo-cupon">
                             <span>4</span>
                             <!--<label class="lblValorNota">R$</label>-->
-                            <input type="text" placeholder="R$ xxx,xx" id="valor_nota_02" name="valor nota" class="valor-nota inputs" onkeypress="return(MascaraMoeda(this,'.',',',event))">
+                            <input type="text" placeholder="R$ xxx,xx" id="valor_nota_02" name="valor_nota_02" class="valor-nota inputs" onkeypress="return(MascaraMoeda(this,'.',',',event))">
                         </div>
                         <div class="novo-cupon">
                             <span>5</span>
@@ -205,13 +205,15 @@
     <besni:scripts runat="server" ID="scripts" />
     <script type="text/javascript">
         function GerarCupom(cnpj, data, cco, valor) {
+            alert("entrou");
            
             valor = valor.replace(".", "").replace(",", "")
-
             if (valor >= 20000) {
+                alert("1");
                 jQuery(this).removeClass("error");
                 console.log("no err");
             } else {
+                alert("2");
                 jQuery(this).addClass("error");
                 $("#valor_nota").css({ 'color': 'red' });
                 $("#valor_nota").val("Apenas valores a partir de R$200,00");
