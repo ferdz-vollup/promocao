@@ -130,7 +130,8 @@
                 <div class="col-xs-12 col-sm-4">
                     -->
                 
-                    <form id="cadastrar-cupom" action="javascript:GerarCupom($('#cnpj').val(),$('#date').val(),$('#coo').val(),$('#valor_nota').val());">
+                   <%-- <form id="cadastrar-cupom" enctype="multipart/form-data" method="post" action="javascript:GerarCupom($('#cnpj').val(),$('#date').val(),$('#coo').val(),$('#valor_nota').val());">--%>
+                    <form method="post" id="cadastrar" enctype="multipart/form-data" runat="server" action="javascript:GerarCupom($('#cnpj').val(),$('#date').val(),$('#coo').val(),$('#valor_nota_02').val());">
                         <div class="novo-cupon">
                             <span>1</span>
                             <input type="text" placeholder="CNPJ" id="cnpj" name="cnpj" class="cnpj inputs">
@@ -146,9 +147,8 @@
                         <div class="novo-cupon">
                             <span>4</span>
                             <!--<label class="lblValorNota">R$</label>-->
-                            <input type="text" placeholder="R$ xxx,xx" id="valor_nota" name="valor nota" class="valor-nota inputs" onkeypress="return(MascaraMoeda(this,'.',',',event))">
+                            <input type="text" placeholder="R$ xxx,xx" id="valor_nota_02" name="valor nota" class="valor-nota inputs" onkeypress="return(MascaraMoeda(this,'.',',',event))">
                         </div>
-
                         <div class="novo-cupon">
                             <span>5</span>
                                 <%-- <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">  --%>
@@ -176,8 +176,8 @@
 
                         <div class="col-sm-3 col-md-4"></div>
                         <div class="col-xs-12 col-sm-9 col-md-6 two-buttons-wrapping">
-                           <%-- <button type="submit" style="" class="btn-form btn-enviar">Enviar</button>--%>
-                             <button type="submit" style="" class="btn-form btn-enviar" data-form="cadastrar-cupom">Enviar</button>
+                             <%--<button type="submit" style="" class="btn-form btn-enviar" data-form="cadastrar-cupom">Enviar</button>--%>
+                             <asp:Button ID="pub" runat="server" Text="Enviar" CssClass="btn-form btn-enviar" OnClick="pub_Click" />
                             <button style="" type="reset" class="btn-form btn-enviar">Limpar</button>
                         </div>
                     </form>
@@ -205,7 +205,7 @@
     <besni:scripts runat="server" ID="scripts" />
     <script type="text/javascript">
         function GerarCupom(cnpj, data, cco, valor) {
-
+           
             valor = valor.replace(".", "").replace(",", "")
 
             if (valor >= 20000) {
@@ -219,21 +219,21 @@
                 return false;
             }
 
-            ajax2 = ajaxInit();
-            ajax2.open("GET", "/ajax/acoes.aspx?acao=GerarCupom&cnpj=" + cnpj + "&data=" + data + "&cco=" + cco + "&valor=" + valor, true);
-            ajax2.setRequestHeader("Content-Type", "charset=iso-8859-1");
-            ajax2.onreadystatechange = function () {
-                if (ajax2.readyState == 4) {
-                    if (ajax2.status == 200) {
-                        var resultado = ajax2.responseText.split("|");
-                       // alert(resultado[1]);
-                        if (resultado[1] >= 2) {
-                            window.location.href = "/novo-cupom.aspx?total=" + resultado[1];
-                        }
-                    }
-                }
-            }
-            ajax2.send(null);
+            //ajax2 = ajaxInit();
+            //ajax2.open("GET", "/ajax/acoes.aspx?acao=GerarCupom&cnpj=" + cnpj + "&data=" + data + "&cco=" + cco + "&valor=" + valor, true);
+            //ajax2.setRequestHeader("Content-Type", "charset=iso-8859-1");
+            //ajax2.onreadystatechange = function () {
+            //    if (ajax2.readyState == 4) {
+            //        if (ajax2.status == 200) {
+            //            var resultado = ajax2.responseText.split("|");
+            //           // alert(resultado[1]);
+            //            if (resultado[1] >= 2) {
+            //                window.location.href = "/novo-cupom.aspx?total=" + resultado[1];
+            //            }
+            //        }
+            //    }
+            //}
+            //ajax2.send(null);
         }
 
         $(document).on('click', '#close-preview', function () {
@@ -283,6 +283,7 @@
                 });
                 var file = this.files[0];
                 var reader = new FileReader();
+                
                 // Set preview image into the popover data-content
                 reader.onload = function (e) {
                     $(".image-preview-input-title").text("Mudar");

@@ -40,6 +40,24 @@ namespace PromocaoBesni {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl usuario;
         
         /// <summary>
+        /// Controle cadastrar.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm cadastrar;
+        
+        /// <summary>
+        /// Controle pub.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button pub;
+        
+        /// <summary>
         /// Controle footer.
         /// </summary>
         /// <remarks>
