@@ -11,7 +11,12 @@ namespace PromocaoBesni
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //Verificar se ainda está logado
+            if (Session["cadID"] != null)
+            {
+                string acao = Request["acao"];
+                Response.Redirect("/cadastro-abertura.aspx");
+            }
         }
     }
 }

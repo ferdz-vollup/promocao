@@ -39,7 +39,7 @@
                             <input type="hidden" id="acao" name="acao" value="FazerLogin" />
                 		<input type="text" placeholder="CPF" id="cpf" name="cpf" class="cpf inputs">
                 		<input style="margin-top: 10px;" type="password" placeholder="senha" id="senha" name="senha" class="inputs">
-                		<div style="height: 15px;"></div>
+                		<div style="height: 15px; margin-bottom:25px; color:#ff0000; " id="msgErro"></div>
                 		<div style="display: inline-block; vertical-align: middle;width: 49%;">
                 			<a href="javascript:void(0);" onclick="esqueciSenha(this.rel);" rel="1" id="linkSenha" style="color:#6a6a6a;text-decoration: underline;">esqueci minha senha</a>
                 		</div>
@@ -69,6 +69,11 @@
     <script type="text/javascript">
         $(document).ready(function (e) {
             var url = location.href;
+            var parametrosDaUrl = url.split("?")
+            var erro = url.split("=")
+
+          //  alert(erro[1]);
+
             if (url.indexOf("erroLogin") > 1) {
                 alert("Ops... Tem um erro com usuário e/ou senha.");
                 $('html, body').animate({
@@ -76,6 +81,33 @@
                 }, 1000);
                 return false;
             };
+
+            if (erro[1] == 1) {
+                $('#linkSenha').html("voltar");
+                $('#h3').html("esqueci minha senha");
+                $('#acao').attr('value', 'esqueciSenha');
+                $('#senha').hide();
+                $('#linkSenha').attr('rel', '2');
+                $('#msgErro').html('<p><strong>Atenção: </strong>CPF não localizado.</p>');
+                $('html, body').animate({
+                    scrollTop: $('#loginForm').offset().top
+                }, 1000);
+                return false;
+            };
+
+            if (erro[1] == 0) {
+                $('#linkSenha').html("voltar");
+                $('#h3').html("esqueci minha senha");
+                $('#acao').attr('value', 'esqueciSenha');
+                $('#senha').hide();
+                $('#linkSenha').attr('rel', '2');
+                $('#msgErro').html('<p><strong>Atenção: </strong>Um e-mail foi enviado para você redefinir sua senha!</p>');
+                $('html, body').animate({
+                    scrollTop: $('#loginForm').offset().top
+                }, 1000);
+                return false;
+            };
+
         });
 
         function esqueciSenha(valor) {
@@ -92,9 +124,10 @@
                 $('#acao').attr('value', 'FazerLogin');
                 $('#senha').show();
                 $('#linkSenha').attr('rel', '1');
+                $('#msgErro').html('&nbsp;');
 
                 /* Test by Paulo */
-                alert("Um email foi enviado para você redefinir sua senha!");
+               // alert("Um email foi enviado para você redefinir sua senha!");
             }
         }
     </script>
