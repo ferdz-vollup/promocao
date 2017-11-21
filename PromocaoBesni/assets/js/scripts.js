@@ -13,7 +13,6 @@
         }
     });
 
-
     // Recuperação de Senha (FIM)
 
     var alturaEscrita = jQuery("#banner-escrita img").height();
@@ -28,15 +27,53 @@
             field.mask(SPMaskBehavior.apply({}, arguments), options);
         }
     };
-    $('.telefone').mask(SPMaskBehavior, spOptions);
+   // $('.telefone').mask(SPMaskBehavior, spOptions);
 
-    jQuery('.cpf').mask("999.999.999-99");
-    jQuery('.rg').mask("AA.AAA.AAA-A");
-    jQuery('.data-nasc').mask("99/99/9999");
-    jQuery('.cel').mask("(99) 99999-9999"); 
-    jQuery('.cep').mask("99999-999");
-    jQuery('.cnpj').mask("00.000.000/0000-00");
-    jQuery('.valor-nota').mask("#.##0,00", { reverse: true });
+    
+
+
+    $(function ($) {
+        $(".cpf").mask("999.999.999-99");
+        $('.rg').mask("**.***.***-*");
+        $('.data-nasc').mask("99/99/9999");
+        $('.cel').mask("(99) 99999-9999");
+        $('.cep').mask("99999-999");
+        $('.cnpj').mask("00.000.000/0000-00");
+        $('.valor-nota').mask("#.##0,00", { reverse: true });
+        $('.telefone').unbind('focusout').focusout(function () {
+            var valor = $(this).val().replace('_', '');
+            var len = valor.length;
+            if (len >= 14) {
+                $(this).unmask();
+                if (len == 14) {
+                    $(this).mask("(99) 9999-9999?9");
+                    $(this).removeClass('error');
+                }
+                else {
+                    $(this).mask("(99) 99999-999?9");
+                    $(this).removeClass('error');
+                }
+            }
+        }).trigger('focusout');
+
+        $('.telefone').focusout(function (e) {
+            var valor = $(this).val().replace('_', '');
+            var len = valor.length;
+            if (len >= 14) {
+                $(this).unmask();
+                if (len == 14) {
+                    $(this).mask("(99) 9999-9999?9");
+                    $(this).removeClass('error');
+                }
+                else {
+                    $(this).mask("(99) 99999-999?9");
+                    $(this).removeClass('error');
+                }
+            } else {
+                $(this).addClass('error')
+            }
+        });
+    });
 
     jQuery(".btn-limpar").click(function () {
         var formulario = jQuery(this).parent().parent().parent();
@@ -63,20 +100,80 @@
 
         var idForm = "#" + jQuery(this).data("form");
         var inputs = jQuery(idForm).find(".inputs:not(.no-obg)");
-        for (i = 0; i < inputs.length; i++) {
+        /*for (i = 0; i < inputs.length; i++) {
             if (inputs[i].value == "") {
                 jQuery(inputs[i]).addClass("error");
                 
                 $('html, body').animate({ 
                     scrollTop: $(inputs[i]).offset().top-180
                 }, 1000);
-
+                alert('teste');
                 console.log("erro de campos com o valor vazio, campo: " + inputs[i].name);
                 return;
             }
             else {
                 jQuery(inputs).removeClass("error");
             }
+        }*/
+
+        $(idForm+' .inputs:not(.no-obg)').each(function () {
+            if ($(this).val() == "") {
+                $(this).addClass('error')
+            } else {
+                if ($(this).hasClass('email')) {
+                    email = $(this).val()
+                    var filtro = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+                    if (filtro.test(email)) {
+                        $(this).removeClass('error')
+                    } else {
+                        $(this).addClass('error')
+                    }
+                } else if ($(this).hasClass('url')) {
+                    urlValida = $(this).val();
+                    validaUrl = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/ig;
+                    if (validaUrl.test(urlValida)) {
+                        $(this).removeClass('error')
+                    } else {
+                        $(this).addClass('error')
+                    }
+                } else if ($(this).hasClass('data')) {
+                    var dataValida = $(this).val();
+                    var validaData = /((0[1-9]|[12][0-9]|3[01])\/(0[13578]|1[02])\/[12][0-9]{3})|((0[1-9]|[12][0-9]|30)\/(0[469]|11)\/[12][0-9]{3})|((0[1-9]|1[0-9]|2[0-8])\/02\/[12][0-9]([02468][1235679]|[13579][01345789]))|((0[1-9]|[12][0-9])\/02\/[12][0-9]([02468][048]|[13579][26]))/gi;
+                    if (validaData.test(dataValida)) {
+                        $(this).removeClass('error')
+                    } else {
+                        $(this).addClass('error')
+                    }
+                } else if ($(this).hasClass('nome')) {
+                    var validaNome = /[^0-9A-Za-zà-úÀ-Ú]{3}/;
+                    nomeValida = $(this).val()
+                    if (!validaNome.test(nomeValida.replace(/\s/g, ''))) {
+                        $(this).removeClass('error')
+                    } else {
+                        $(this).addClass('error')
+                    }
+                } else if ($(this).hasClass('hora')) {
+                    var horaValida = $(this).val();
+                    var validaHora = /^([0-1][0-9]|2[0-3]):[0-5][0-9]$/gi;
+                    if (validaHora.test(horaValida)) {
+                        $(this).removeClass('error')
+                    } else {
+                        $(this).addClass('error')
+                    }
+                } else {
+                    $(this).removeClass('error')
+                }
+            }
+        });
+        if ($(idForm + ' .inputs').hasClass('error')) {
+            
+            $('html, body').animate({
+                scrollTop: $(idForm + ' .inputs.error:first').offset().top - 180
+            }, 1000);
+
+            return false
+        } else {
+           
         }
         if (jQuery("#termos").length > 0) {
             if (jQuery("#termos").is(':checked')) {
@@ -248,14 +345,18 @@ var request;
 var localizacao;
 
 function initMap() {
-    localizacao = { lat: -23.5558717, lng: -46.6993749 };
+    if (document.getElementById('map')) {
 
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: localizacao,
-        zoom: 15
-    });
+        localizacao = { lat: -23.5558717, lng: -46.6993749 };
 
-    infowindow = new google.maps.InfoWindow();
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: localizacao,
+            zoom: 15
+        });
+
+        infowindow = new google.maps.InfoWindow();
+
+    }
 }
 
 function callback(results, status) {
