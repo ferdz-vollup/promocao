@@ -570,6 +570,10 @@ div#premios {
         padding-top: 10px;
     }
 
+    .redes a:focus {
+        text-decoration: none;
+    }
+
 /* COMO PARTICIPAR */
 #como-participar {
     margin: 250px 0px 100px;
