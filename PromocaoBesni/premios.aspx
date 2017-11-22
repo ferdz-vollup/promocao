@@ -51,6 +51,18 @@
 				</span>
 			</div>
 			<img src="/assets/imagens/moto-bull.png" alt="Imagem moto bull">
+
+
+
+            <br><br><br><br>
+			<div class="col-md-12">
+			    <p class="singleParagraph">
+                    O participante contemplado poderá escolher entre o prêmio indicado ou valor equivalente em cartão presente, sem função saque. Em caso de dúvida o <a href="regulamento.aspx" title="Link para página Regulamento">regulamento</a>. Imagens meramente ilustrativas. CERTIFICADO DE AUTORIZAÇÃO SEAE Nº 04.000093/2017.
+			    </p>
+            </div>
+
+
+
 		</div>
 	</div>
 </section>
