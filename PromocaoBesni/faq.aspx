@@ -14,7 +14,7 @@
     <title>Promoção Besni | Perguntas frequentes</title>
     <meta name="description" content="Confira as perguntas frequentes, saiba tudo sobre a promoção e como participar."/>
     <!-- facebook -->
-    <metaproperty="og:locale" content="pt_BR" />
+    <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Promoção Besni | Perguntas frequentes" />
     <meta property="og:description" content="Confira as perguntas frequentes, saiba tudo sobre a promoção e como participar." />
