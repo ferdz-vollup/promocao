@@ -12,7 +12,19 @@
 <!--head-->
 <head>
     <besni:head runat="server" ID="head" />
-    <title>Promoção Besni</title>
+    <title>Promoção Besni | Cadastro Novo Cupom</title>
+    <meta name="description" content="Para cadastrar o seu cupom Besni, preencha os campos exibidos e faça o upload de uma foto do seu cupom sem cortar nenhuma informação."/>
+    <!-- facebook -->
+    <metaproperty="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Promoção Besni | Cadastro Novo Cupom" />
+    <meta property="og:description" content="Para cadastrar o seu cupom Besni, preencha os campos exibidos e faça o upload de uma foto do seu cupom sem cortar nenhuma informação." />
+    <meta property="og:url" content="http://www.promocaobesni.com.br/cadastrar-cupom.aspx" />
+    <meta property="og:site_name" content="Promoção Besni" />
+    <meta property="og:image" content="http://www.promocaobesni.com.br/assets/imagens/Besni_Share_2017.jpg" />
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="315"> <!-- PIXELS -->
+    <meta property="og:image:height" content="600"> <!-- PIXELS -->
 
     <style type="text/css">
         .container {
