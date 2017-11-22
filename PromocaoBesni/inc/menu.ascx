@@ -19,7 +19,8 @@
 				<li><a href="/login.aspx">cadastro</a></li>
 				<li><a href="/premios.aspx">prêmios</a></li>
 				<li><a href="/ganhadores.aspx">ganhadores</a></li>
-				<li><a href="/faq.aspx">FAQ</a></li>
+				<li><a href="/regulamento.aspx">regulamento</a></li>
+                <li><a href="/faq.aspx">FAQ</a></li>
 				<li><a href="/fale-conosco.aspx">fale conosco</a></li>
 				<li><a href="/onde-estamos.aspx">onde estamos</a></li>
 			  </ul>
