@@ -189,7 +189,7 @@ namespace PromocaoBesni.ajax
                 string conteudo = "<h1 style=\"margin:0 auto 50px auto; font-size:24px;font-family:'arial'; letter-spacing: 1.8; font-weight: 800; text-align:center; color:#a8272d; text-transform:uppercase;\">USUÁRIO CADASTRADO</h1>";
                 conteudo += "<center><p style=\"font-weight:700; font-size: 16px;\">Olá, "+ nome + "!</p></center>";
                 conteudo += "<center><p style=\"font-weight:700; font-size: 16px;\">Seu cadastro foi realizado com sucesso.</p></center>";
-                objUtils.EnviaEmail(email, "Usuário Cadastrado", conteudo, "", "", null, "queroser@misasi.com.br", null);
+                objUtils.EnviaEmail(email, "Usuário Cadastrado | Promoção Besni", conteudo, "", "", null, "contatopromo@lojasbesni.com.br", null);
 
                 //Redirecionando para a home do usuário
                 Response.Redirect("/cadastrar-cupom.aspx");
@@ -301,7 +301,7 @@ namespace PromocaoBesni.ajax
                 string conteudo = "<h1 style=\"margin:0 auto 50px auto; font-size:24px;font-family:'arial'; letter-spacing: 1.8; font-weight: 800; text-align:center; color:#a8272d; text-transform:uppercase;\">ESQUECI A SENHA</h1>";
                 conteudo += "<a href=\"http://www.promocaobesni.provisorio.ws/mudar-senha.aspx?CPF=" + cpf.ToString().Replace(".", "").Replace("-", "") + "  \" style=\"text-decoration:none; color:#000; padding:20px 50px; text-align:center; letter-spacing:1.5; border:1px solid black; text-transform:uppercase; font-size: 13px; font-family:'arial'; font-weight:800;\" title='Clique e tente de novo'>Clique aqui para gerar uma nova senha</a>";
 
-                objUtils.EnviaEmail(rsLogin["CAD_EMAIL"].ToString(), "Esqueci a Senha", conteudo, "", "", null, "queroser@misasi.com.br", null);
+                objUtils.EnviaEmail(rsLogin["CAD_EMAIL"].ToString(), "Esqueci a Senha | Promoção Besni", conteudo, "", "", null, "contatopromo@lojasbesni.com.br", null);
 
                 Response.Redirect("/login.aspx?erro=0");
                 Response.End();
@@ -330,7 +330,7 @@ namespace PromocaoBesni.ajax
                 conteudo += "<p><center>Olá, " + rsLogin["CAD_NOME"].ToString() + "!</center></p>";
                 conteudo += "<p><center>A sua senha foi alterada com sucesso!</center></p>";
 
-                objUtils.EnviaEmail(rsLogin["CAD_EMAIL"].ToString(), "Senha Alterada", conteudo, "", "", null, "queroser@misasi.com.br", null);
+                objUtils.EnviaEmail(rsLogin["CAD_EMAIL"].ToString(), "Senha Alterada  | Promoção Besni", conteudo, "", "", null, "contatopromo@lojasbesni.com.br", null);
 
                 Response.Redirect("/");
                 Response.End();
