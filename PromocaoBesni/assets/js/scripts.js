@@ -20,17 +20,17 @@ jQuery(document).ready(function ($) {
 
     $(window).resize(function () {
         if ($("#divInstagram").length > 0 && $(window).width() < 481) {
-          // 
+            // 
             timeRotate = setInterval(rotacao, 30);
             insta();
         } else {
             $("#divInstagram ul").removeAttr('style');
             setTimeout(function () {
-                
-                timeRotate =clearInterval(timeRotate);
+
+                timeRotate = clearInterval(timeRotate);
             }, 500);
 
-           // 
+            // 
         }
 
     });
@@ -72,12 +72,12 @@ jQuery(document).ready(function ($) {
     var SPMaskBehavior = function (val) {
         return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
     },
-    spOptions = {
-        onKeyPress: function (val, e, field, options) {
-            field.mask(SPMaskBehavior.apply({}, arguments), options);
-        }
-    };
-   // $('.telefone').mask(SPMaskBehavior, spOptions);
+        spOptions = {
+            onKeyPress: function (val, e, field, options) {
+                field.mask(SPMaskBehavior.apply({}, arguments), options);
+            }
+        };
+    // $('.telefone').mask(SPMaskBehavior, spOptions);
 
 
     $(function ($) {
@@ -85,9 +85,10 @@ jQuery(document).ready(function ($) {
         $('.rg').mask("**.***.***-*");
         $('.data-nasc').mask("99/99/9999");
         $('.cel').mask("(99) 99999-9999");
+        $('.telefone').mask("(99) 9999-9999");
         $('.cep').mask("99999-999");
         $('.cnpj').mask("99.999.999/9999-99");
-       // $('.valor-nota').mask("9.999,99", { reverse: true });
+        // $('.valor-nota').mask("9.999,99", { reverse: true });
         $('.telefone').unbind('focusout').focusout(function () {
             var valor = $(this).val().replace('_', '');
             var len = valor.length;
@@ -127,8 +128,38 @@ jQuery(document).ready(function ($) {
         var formulario = jQuery(this).parent().parent().parent();
         formulario[0].reset();
     });
-    
+
+    // Validação de valor mínimo do Cupom
+
+    jQuery("#cadastrarcupom").submit(function () {
+        var valCupom = jQuery("#valor_nota_02").val();
+        valCupom = valCupom.replace(".", "").replace(",", "");
+        var cupomFile = jQuery("input[name='input-file-preview']").val();
+        if (cupomFile == "") {
+            jQuery(".input-group.image-preview > input").addClass("error");
+        }
+        else {
+            jQuery(".input-group.image-preview > input").removeClass("error");
+        }
+        if (valCupom >= 20000) {
+            jQuery("#valor_nota_02").removeClass("error");
+            console.log("no err");
+        } else {
+            jQuery("#valor_nota_02").addClass("error");
+            console.log("err");
+        }
+        if (jQuery("#cadastrarcupom").find(".error").length == 0) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    })
+
+
     jQuery(".btn-enviar").click(function () {
+
+
         if ($("input[name='senha']").val() != $("input[name='senha2']").val()) {
             $("input[name='senha2']").addClass("error");
             console.log("Confirmação de senha não corresponde à digitada.");
@@ -141,7 +172,7 @@ jQuery(document).ready(function ($) {
             }, 1000);
             console.log("Confirmação de email não corresponde ao digitado.");
             return;
-        } 
+        }
 
 
         // Campos Obrigatórios
@@ -164,7 +195,7 @@ jQuery(document).ready(function ($) {
             }
         }*/
 
-        $(idForm+' .inputs:not(.no-obg)').each(function () {
+        $(idForm + ' .inputs:not(.no-obg)').each(function () {
             if ($(this).val() == "") {
                 $(this).addClass('error')
             } else {
@@ -214,14 +245,14 @@ jQuery(document).ready(function ($) {
             }
         });
         if ($(idForm + ' .inputs').hasClass('error')) {
-            
+
             $('html, body').animate({
                 scrollTop: $(idForm + ' .inputs.error:first').offset().top - 180
             }, 1000);
 
             return false
         } else {
-           
+
         }
         if (jQuery("#termos").length > 0) {
             if (jQuery("#termos").is(':checked')) {
@@ -231,34 +262,42 @@ jQuery(document).ready(function ($) {
                 jQuery("#termos").addClass("error");
             }
         }
-        
+
+
 
 
         if (jQuery(idForm).find(".error").length == 0) {
-            var eml = jQuery("input[type='email']").val();
-            console.log(eml);
-            var filtroregexemail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-            console.log(filtroregexemail.test(eml));
-            if (filtroregexemail.test(eml) == true) {
-                if (idForm == "#faleConoscoForm") {
-                    enviaFerdz(idForm);
-                    jQuery(idForm).submit();
-                }
-                else {
-                    console.log();
-                    //envia(idForm);
-                    jQuery(idForm).submit();
-                } 
-            } else {
-                console.log("erro email");
-                jQuery(eml).addClass("error");
-                console.log("err");
 
+            if (jQuery("input[type='email']").length > 0) {
+                var eml = jQuery("input[type='email']").val();
+                console.log(eml);
+                var filtroregexemail = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+                console.log(filtroregexemail.test(eml));
+                if (filtroregexemail.test(eml) == true) {
+                    if (idForm == "#faleConoscoForm") {
+                        enviaFerdz(idForm);
+                        jQuery(idForm).submit();
+                    }
+                    else {
+                        console.log();
+                        //envia(idForm);
+                        jQuery(idForm).submit();
+                    }
+                } else {
+                    console.log("erro email");
+                    jQuery(eml).addClass("error");
+                    console.log("err");
+
+                }
+            } else {
+                jQuery(idForm).submit();
             }
+
+
         }
     });
 
-    
+
 
     jQuery("input[type='email']").on("blur", function () {
         var eml = jQuery(this).val();
@@ -286,7 +325,7 @@ jQuery(document).ready(function ($) {
 
     // Exibir campos para cartão Besni
 
-    
+
     $(".card-hide").click(function () {
         $(".cardBesni input").val("");
         $(".cardBesni input").addClass("no-obg");
@@ -297,26 +336,11 @@ jQuery(document).ready(function ($) {
     });
 
 
-    // Validação de valor mínimo do Cupom
 
-    //jQuery("input[type='submit']").click(function () {
-    //    var valCupom = jQuery("#valor_nota").val();
-
-    //    alert(jQuery("#valor_nota").val());
-    //    return false;
-
-    //    if (valCupom >= 200.00) {
-    //        jQuery(this).removeClass("error");
-    //        console.log("no err");
-    //    } else {
-    //        jQuery(this).addClass("error");
-    //        console.log("err");
-    //    }
-    //});
 
     jQuery(".numero-cartao .inputs").keyup(function () {
         var digitados = jQuery(this).val().length;
-        jQuery(this).attr("maxlength", "4");       
+        jQuery(this).attr("maxlength", "4");
         var maxLenght = jQuery(this).attr("maxlength");
         if (digitados == maxLenght) {
             jQuery(this).addClass("esse");
@@ -330,10 +354,12 @@ jQuery(document).ready(function ($) {
         jQuery(".metodo-compras").fadeOut(100);
         jQuery("#formCadastro").addClass("aberto");
         if (jQuery(this).data("cartao") == "Sim") {
-            jQuery("#sim").attr("checked","checked");
+            jQuery("#sim").attr("checked", "checked");
             jQuery(".cartao").fadeIn(100);
+            jQuery(".numero-cartao input").removeClass("no-obg");
         } else {
             jQuery("#nao").attr("checked", "checked");
+            jQuery(".numero-cartao input").addClass("no-obg");
         }
     })
 })
@@ -357,10 +383,10 @@ function enviaFerdz(idForm) {
             success: function (data) {
                 if (data == "sucesso") {
                     console.log("sucesso total");
-                    jQuery(idForm+" .retorno-mensagem").html("Obrigado por entrar em contato! Em breve daremos um retorno");
+                    jQuery(idForm + " .retorno-mensagem").html("Obrigado por entrar em contato! Em breve daremos um retorno");
                 } else {
                     console.log("sucesso, porém erro");
-                    jQuery(idForm+" .retorno-mensagem").html("Ops... Erro ao tentar enviar, por favor, tente novamente!");
+                    jQuery(idForm + " .retorno-mensagem").html("Ops... Erro ao tentar enviar, por favor, tente novamente!");
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {
@@ -369,7 +395,7 @@ function enviaFerdz(idForm) {
             },
             beforeSend: function () {
                 jQuery(".retorno-mensagem").html("<span class='loader'></span>Enviando mensagem...");
-                jQuery(idForm+" button").attr("disabled", "disabled");
+                jQuery(idForm + " button").attr("disabled", "disabled");
             },
             complete: function () {
                 console.log("request completo");
