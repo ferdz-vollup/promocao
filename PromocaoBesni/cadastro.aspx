@@ -100,7 +100,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div style="width: 50px" class="labelForm">NOME</div>
-                            <input type="text" name="nome" class="inputs">
+                            <input type="text" name="nome" id="nome" runat="server" class="inputs">
                         </div>
                     </div>
                     <div class="row" style="margin-top: 10px;">
