@@ -10,10 +10,20 @@
 <!--head-->
 <head>
 
-
-
     <besni:head runat="server" ID="head" />
-    <title>Promoção Besni</title>
+    <title>Promoção Besni | Perguntas frequentes</title>
+    <meta name="description" content="Confira as perguntas frequentes, saiba tudo sobre a promoção e como participar."/>
+    <!-- facebook -->
+    <metaproperty="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Promoção Besni | Perguntas frequentes" />
+    <meta property="og:description" content="Confira as perguntas frequentes, saiba tudo sobre a promoção e como participar." />
+    <meta property="og:url" content="http://www.promocaobesni.com.br/faq.aspx" />
+    <meta property="og:site_name" content="Promoção Besni" />
+    <meta property="og:image" content="http://www.promocaobesni.com.br/assets/imagens/Besni_Share_2017.jpg" />
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="315"> <!-- PIXELS -->
+    <meta property="og:image:height" content="600"> <!-- PIXELS -->
 
 
         <style type="text/css">
