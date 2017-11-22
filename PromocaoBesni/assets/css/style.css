@@ -566,12 +566,13 @@ div#premios {
             text-decoration: none;
         }
 
-    /* COMO PARTICIPAR */
-    #como-participar {
+    /* COMO PARTICIPAR */ /* CADASTRO */
+    #cadastro, #como-participar {
         margin: 250px 0px 100px;
     }
 
-        #como-participar .espaco-colunas .col-xs-3 {
+        #como-participar .espaco-colunas .col-xs-3,
+        #cadastro .espaco-colunas .col-xs-3 {
             margin-top: 5px;
         }
 
@@ -879,11 +880,6 @@ div#premios {
             box-shadow: 0px 0px 10px gray;
             box-shadow: -1px 1px 5px 2px gray;
         }
-
-    #cadastro {
-        margin-top: 150px;
-        margin-bottom: 10%;
-    }
 
     /* RODAPE */
     #rodape {
