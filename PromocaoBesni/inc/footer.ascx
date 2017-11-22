@@ -13,7 +13,7 @@
 					<p>/lojasbesni</p>
 				</div>
 				<span>
-                    Participação válida para pessoas físicas, com CPF válido, no período de 26/11 a 31/12/2017. As compras efetuadas com cartão Besni receberão números da sorte em dobro. O participante poderá escolher entre o prêmio indicado ou valor equivalente em cartão presente, sem função saque. Consulte o regualmento em <a href="javascript:void(0);" title="Site Promoção Besni">www.promocaobesni.com.br</a>. Imagens ilustrativas. CERTIFICADO DE AUTORIZAÇÃO SEAE Nº 04.000093/2017.
+                    Participação válida para pessoas físicas, com CPF válido, no período de 26/11 a 31/12/2017. As compras efetuadas com cartão Besni receberão números da sorte em dobro. O participante poderá escolher entre o prêmio indicado ou valor equivalente em cartão presente, sem função saque. Consulte o regulamento em <a href="javascript:void(0);" title="Site Promoção Besni">www.promocaobesni.com.br</a>. Imagens ilustrativas. CERTIFICADO DE AUTORIZAÇÃO SEAE Nº 04.000093/2017.
 
 				</span>
 			</div>
