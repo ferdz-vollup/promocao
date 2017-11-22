@@ -76,7 +76,7 @@ namespace PromocaoBesni
                         conteudo += "<center><p style=\"font-weight:700; font-size: 16px;\">" + rsCupons["CUP_NUMERO_SORTE"] + "</p></center>";
                         email = rsCupons["CAD_EMAIL"].ToString();
                     }
-                    objUtils.EnviaEmail(email, "Novos Cupons", conteudo, "", "", null, "queroser@misasi.com.br", null);
+                    objUtils.EnviaEmail(email, "Novos Cupons", conteudo, "", "", null, "contatopromo@lojasbesni.com.br", null);
                 }
                
                 rsCupons.Dispose();
