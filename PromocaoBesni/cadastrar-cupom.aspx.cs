@@ -130,8 +130,14 @@ namespace PromocaoBesni
             if (rsSerie.HasRows)
             {
                 rsSerie.Read();
-                serie = rsSerie["SER_INICIO"].ToString();
-                numero = NumeroAleatorio().PadLeft(5, '0');
+
+                //Gerando a série
+                Random rdn = new Random();
+                int strNumeroaleatorio;
+                strNumeroaleatorio = rdn.Next(Convert.ToInt16(rsSerie["SER_INICIO"]), Convert.ToInt16(rsSerie["SER_FINAL"]));
+                serie = strNumeroaleatorio.ToString();
+
+                numero = NumeroAleatorio();
             }
 
                 //Salvar no BD
