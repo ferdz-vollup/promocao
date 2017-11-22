@@ -942,7 +942,7 @@ div#premios {
         padding: 0px;
         margin: 15px 0;
         cursor: pointer;
-        border: 0px solid #a8272d;
+        border:5px solid transparent;
         margin: 0px;
         padding: 10px;
     }
@@ -1039,7 +1039,6 @@ div#premios {
         padding: 0 10%;
     }
 
-
     #divInstagram ul {
         width: auto;
         display: flow-root;
@@ -1048,11 +1047,17 @@ div#premios {
         padding: 5px;
         1margin: 0;
     }
-
 }
 
-
 @media only screen and (min-width: 768px) {
+
+    #divInstagram {
+        padding: 0 5%;
+    }
+
+    #divInstagram ul li {
+        padding: 2.5px;
+    }
 
     .inputWrapper {
         width: 40%;
@@ -1103,6 +1108,12 @@ div#premios {
 }
 
 @media only screen and (min-width: 992px) {
+
+    #divInstagram {
+        padding: 0 10%;
+    }
+
+
     .novo-cupon input {
         width: 85%;
     }
