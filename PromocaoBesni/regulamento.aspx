@@ -16,7 +16,7 @@
     <title>Promoção Besni | Regulamento<title>
     <meta name="description" content="Antes de se cadastrar, confira o regulamento, saiba tudo sobre a promoção e como participar."/>
     <!-- facebook -->
-    <metaproperty="og:locale" content="pt_BR" />
+    <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Promoção Besni | Regulamento" />
     <meta property="og:description" content="Antes de se cadastrar, confira o regulamento, saiba tudo sobre a promoção e como participar." />
