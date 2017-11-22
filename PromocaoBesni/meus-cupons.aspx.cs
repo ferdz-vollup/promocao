@@ -60,12 +60,14 @@ namespace PromocaoBesni
                     if (rsCupons["CUP_NUMERO_SORTE"].ToString().Contains(palavra))
                     {
                         secCupons.InnerHtml += " <div class=\"cupon\" style=\"background:#97092a;\">";
+                        secCupons.InnerHtml += "    <h4 class=\"basenine\">NÚMERO DA SORTE ESPECIAL <br/> " + rsCupons["CUP_NUMERO_SORTE"] + "</h4>";
                     }
                     else
                     {
                         secCupons.InnerHtml += " <div class=\"cupon\" style=\"background:#c8962b;\">";
+                        secCupons.InnerHtml += "    <h4 class=\"basenine\">NÚMERO DA SORTE <br/>" + rsCupons["CUP_NUMERO_SORTE"] + "</h4>";
                     }
-                    secCupons.InnerHtml += "    <h4 class=\"basenine\">cód. " + rsCupons["CUP_NUMERO_SORTE"] + "</h4>";
+                    
                     secCupons.InnerHtml += " </div> ";
                 }
             }
