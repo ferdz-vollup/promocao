@@ -10,7 +10,19 @@
 <!--head-->
 <head>
     <besni:head runat="server" ID="head" />
-    <title>Promoção Besni</title>
+    <title>Promoção Besni | Conheça os Prêmios</title>
+    <meta name="description" content="Ao participar da promoção, você concorre a 1 Jeep Renegade Custom,modelo 2018 e a 30 motos Bull Motors KRC 50 LX, 2015/2015. Não fique de fora!"/>
+    <!-- facebook -->
+    <metaproperty="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Promoção Besni | Conheça os Prêmios" />
+    <meta property="og:description" content="Ao participar da promoção, você concorre a 1 Jeep Renegade Custom,modelo 2018 e a 30 motos Bull Motors KRC 50 LX, 2015/2015. Não fique de fora!" />
+    <meta property="og:url" content="http://www.promocaobesni.com.br/premios.aspx" />
+    <meta property="og:site_name" content="Promoção Besni" />
+    <meta property="og:image" content="http://www.promocaobesni.com.br/assets/imagens/Besni_Share_2017.jpg" />
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="315"> <!-- PIXELS -->
+    <meta property="og:image:height" content="600"> <!-- PIXELS -->
 </head>
 
 <body>
