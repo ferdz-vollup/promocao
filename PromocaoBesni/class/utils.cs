@@ -148,13 +148,13 @@ namespace Etnia.classe
         }
 
 
-        public  bool EnviaEmail(string destinatarios, string assunto, string mensagem, string ComCopia = "", string ComCopiaOculta = "", string[] anexos = null, string remetente = "queroser@misasi.com.br", string nome = "PETNATIVA")
+        public  bool EnviaEmail(string destinatarios, string assunto, string mensagem, string ComCopia = "", string ComCopiaOculta = "", string[] anexos = null, string remetente = "contatopromo@lojasbesni.com.br", string nome = "Promoção Besni")
         {
 
             //Cria objeto com dados do e-mail.
             MailMessage objEmail = new MailMessage();
             //Define o Campo From e ReplyTo do e-mail. 
-            objEmail.From = new System.Net.Mail.MailAddress("queroser@misasi.com.br", nome);
+            objEmail.From = new System.Net.Mail.MailAddress("no-reply@vollup.com", nome);
             objEmail.ReplyToList.Add(remetente);
             if (string.IsNullOrWhiteSpace(destinatarios) == false)
             {
@@ -279,7 +279,7 @@ namespace Etnia.classe
             objSmtp.EnableSsl = true;
 
 
-            objSmtp.Credentials = new System.Net.NetworkCredential("queroser@misasi.com.br", "321mudamos");
+            objSmtp.Credentials = new System.Net.NetworkCredential("no-reply@vollup.com", "@noreply123");
             try
             {
                 objSmtp.Send(objEmail);
