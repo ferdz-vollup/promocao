@@ -12,12 +12,12 @@
     <besni:head runat="server" ID="head" />
 
     <title>Promoção Besni | Cadastre-se</title>
-    <meta name="description" content="A cada R$200 em compras você ganha 1 número da sorte para participar dos sorteios semanais e 1 número para o sorteio final!"/>
+    <meta name="description" content="A cada R$200,00 em compras você ganha 1 número da sorte para participar dos sorteios semanais e 1 número para o sorteio final!"/>
     <!-- facebook -->
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Promoção Besni | Cadastre-se" />
-    <meta property="og:description" content="A cada R$200 em compras você ganha 1 número da sorte para participar dos sorteios semanais e 1 número para o sorteio final!" />
+    <meta property="og:description" content="A cada R$200,00 em compras você ganha 1 número da sorte para participar dos sorteios semanais e 1 número para o sorteio final!" />
     <meta property="og:url" content="http://www.promocaobesni.com.br/cadastro.aspx" />
     <meta property="og:site_name" content="Promoção Besni" />
     <meta property="og:image" content="http://www.promocaobesni.com.br/assets/imagens/Besni_Share_2017.jpg" />
@@ -85,7 +85,7 @@
                             <img src="assets/imagens/icone-compras-acima.png" width="77%" alt="">
                         </div>
                         <div class="col-md-9 col-xs-9">
-                            <span class="saiba-concorra">A cada R$200 em compras você ganha 1 número da sorte para participar para os sorteios semanais, e 1 número para o sorteio final!
+                            <span class="saiba-concorra">A cada R$200,00 em compras você ganha 1 número da sorte para participar para os sorteios semanais, e 1 número para o sorteio final!
                             </span>
                         </div>
                     </div>
