@@ -10,7 +10,19 @@
 <!--head-->
 <head>
     <besni:head runat="server" ID="head" />
-    <title>Promoção Besni</title>
+    <title>Promoção Besni | Ganhadores</title>
+    <meta name="description" content="Confira os ganhadores da promoção! Quem sabe você não é um dos sorteados? Realize compras Besni e aumente as suas chances."/>
+    <!-- facebook -->
+    <metaproperty="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Promoção Besni | Ganhadores" />
+    <meta property="og:description" content="Confira os ganhadores da promoção! Quem sabe você não é um dos sorteados? Realize compras Besni e aumente as suas chances." />
+    <meta property="og:url" content="http://www.promocaobesni.com.br/ganhadores.aspx" />
+    <meta property="og:site_name" content="Promoção Besni" />
+    <meta property="og:image" content="http://www.promocaobesni.com.br/assets/imagens/Besni_Share_2017.jpg" />
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="315"> <!-- PIXELS -->
+    <meta property="og:image:height" content="600"> <!-- PIXELS -->
 
     <style type="text/css">
 
