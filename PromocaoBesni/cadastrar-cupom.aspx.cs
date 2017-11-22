@@ -49,7 +49,6 @@ namespace PromocaoBesni
         {
             Random rdn = new Random();
             int strNumeroaleatorio;
-            strNumeroaleatorio = 91827;
             strNumeroaleatorio = rdn.Next(00000, 99999);
 
             return strNumeroaleatorio.ToString();
@@ -101,7 +100,7 @@ namespace PromocaoBesni
                     //string especial = "";
 
                     //Verificar se é Cliente Besni
-                    if (Session["Besni"].ToString().Length > 15)
+                    if (Session["Besni"].ToString().Length > 15 && Session["Besni"].ToString() != "")
                     {
                         total = total * 2;
                     }
@@ -166,7 +165,6 @@ namespace PromocaoBesni
                 //Gerando a série
                 Random rdn = new Random();
                 int strNumeroaleatorio;
-                strNumeroaleatorio = 05424;
                 strNumeroaleatorio = rdn.Next(Convert.ToInt16(rsSerie["SER_INICIO"]), Convert.ToInt16(rsSerie["SER_FINAL"]));
                 serie = strNumeroaleatorio.ToString();
 
