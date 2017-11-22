@@ -13,7 +13,7 @@
     <title>Promoção Besni | Ganhadores</title>
     <meta name="description" content="Confira os ganhadores da promoção! Quem sabe você não é um dos sorteados? Realize compras Besni e aumente as suas chances."/>
     <!-- facebook -->
-    <metaproperty="og:locale" content="pt_BR" />
+    <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Promoção Besni | Ganhadores" />
     <meta property="og:description" content="Confira os ganhadores da promoção! Quem sabe você não é um dos sorteados? Realize compras Besni e aumente as suas chances." />
