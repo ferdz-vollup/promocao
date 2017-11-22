@@ -11,19 +11,19 @@
 <head>
     <besni:head runat="server" ID="head" />
 
-    <title>Promoção Besni</title>
-
-    <meta name="description" content="A Vollup é uma agência com foco em mídias digitais que entrega soluções inovadoras onde criatividade se funde com tecnologia."/>
+    <title>Promoção Besni | Cadastre-se</title>
+    <meta name="description" content="A cada R$200 em compras você ganha 1 número da sorte para participar dos sorteios semanais e 1 número para o sorteio final!"/>
     <!-- facebook -->
-    <metaproperty="og:locale" content="pt_BR" />
+    <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Vollup Creative Agency" />
-
-    <meta property="og:description" content="A Vollup é uma agência com foco em mídias digitais que entrega soluções inovadoras onde criatividade se funde com tecnologia." />
-    <meta property="og:url" content="http://www.vollup.com/" />
-    <meta property="og:site_name" content="Vollup" />
-    <meta property="og:image" content="http://www.vollup.com/wp-content/uploads/2017/07/imagem-facebook.jpg" />
+    <meta property="og:title" content="Promoção Besni | Cadastre-se" />
+    <meta property="og:description" content="A cada R$200 em compras você ganha 1 número da sorte para participar dos sorteios semanais e 1 número para o sorteio final!" />
+    <meta property="og:url" content="http://www.promocaobesni.com.br/cadastro.aspx" />
+    <meta property="og:site_name" content="Promoção Besni" />
+    <meta property="og:image" content="http://www.promocaobesni.com.br/assets/imagens/Besni_Share_2017.jpg" />
     <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="315"> <!-- PIXELS -->
+    <meta property="og:image:height" content="600"> <!-- PIXELS -->
 
 
 
