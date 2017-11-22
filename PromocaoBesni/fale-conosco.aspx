@@ -50,7 +50,7 @@
 						<input type="text" placeholder="NOME" name="nome" id="nome" class="inputs">
 					</div>
 					<div class="col-md-4 col-sm-4">
-						<input type="text" id="telefone" name="telefone" class="inputs telefone">
+						<input type="text" placeholder="TELEFONE" id="telefone" name="telefone" class="inputs telefone">
 					</div>
 				</div>
 				<div class="row" style="margin-top: 10px;">
