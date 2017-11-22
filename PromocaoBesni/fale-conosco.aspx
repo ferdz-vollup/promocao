@@ -13,7 +13,7 @@
     <title>Promoção Besni | Fale Conosco</title>
     <meta name="description" content="A Besni quer ouvir você. Deixe sua mensagem para nós. Sua opinião é muito importante! Reclamações, sugestões ou opiniões são sempre bem-vindas."/>
     <!-- facebook -->
-    <metaproperty="og:locale" content="pt_BR" />
+    <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Promoção Besni | Fale Conosco" />
     <meta property="og:description" content="A Besni quer ouvir você. Deixe sua mensagem para nós. Sua opinião é muito importante! Reclamações, sugestões ou opiniões são sempre bem-vindas." />
