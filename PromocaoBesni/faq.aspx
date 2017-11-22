@@ -220,7 +220,7 @@
             <br><br><br><br>
 			<h3 class="basenine cinza">Esqueci/perdi minha senha, como faço para recuperar?</h3><br>
 			<span style="line-height: 30px;" >
-				Acesse <a href="www.promocaobesni.com.br/login.aspx" target="_blank" title="Site Promoção Besni">www.promocaobesni.com.br/login.aspx</a> e clique em “esqueci minha senha”. Preencha o número do seu CPF para receber a senha no seu email.
+				Acesse <a href="http://www.promocaobesni.com.br/login.aspx" target="_blank" title="Site Promoção Besni">www.promocaobesni.com.br/login.aspx</a> e clique em “esqueci minha senha”. Preencha o número do seu CPF para receber a senha no seu email.
 			</span>
             			
             <br><br><br><br>
