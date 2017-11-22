@@ -115,16 +115,19 @@ namespace PromocaoBesni
                         GerarCupom(cnpj, data, coo, valor, "E", imagem);
                     }
 
-                    Response.Write("ok|" + total);// MANDAR OK|TOTAL E PEGAR O TOTLA PARA SABER QUANTOS REGISTRO MOSTRAR NO NOVO-CUPOM
-                    Response.End();
+                    //Response.Write("ok|" + total);// MANDAR OK|TOTAL E PEGAR O TOTLA PARA SABER QUANTOS REGISTRO MOSTRAR NO NOVO-CUPOM
+                    //Response.End();
 
+                    Response.Redirect("/novo-cupom.aspx?total=" + total);
+                    Response.End();
+                    //window.location.href = "/novo-cupom.aspx?total=" + resultado[1];
                 }
             }
         }
 
         public void GerarCupom(string cnpj, string data, string coo, string valor, string especial, string imagem)
         {
-            rsSerie = objBD.ExecutaSQL("set dateformat dmy; select top 1 SER_INICIO,  SER_FINAL from serie where CONVERT(VARCHAR(8), SER_DH_INICIO, 5) > CONVERT(VARCHAR(8), getDate(), 5) and   cONVERT(VARCHAR(8), getDate(), 5) < CONVERT(VARCHAR(8), SER_DH_FINAL, 5)");
+            rsSerie = objBD.ExecutaSQL("set dateformat dmy; select top 1 SER_INICIO,  SER_FINAL from serie where SER_DH_INICIO > getDate() and   getDate() < SER_DH_FINAL");
 
             if (rsSerie == null)
             {
@@ -154,9 +157,9 @@ namespace PromocaoBesni
                     cupom = "E-" + cupom;
                 }
 
-                //objBD.ExecutaSQL("EXEC pGerarCupom '" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + cco + "','" + valor + "','" + serie + "'");
-                 Response.Write("EXEC pGerarCupom '" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + coo + "','" + valor + "','" + serie + "', '"+imagem+"'");
-                 Response.End();
+                objBD.ExecutaSQL("EXEC pGerarCupom '" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + coo + "','" + valor + "','" + serie + "', '" + imagem + "'");
+                // Response.Write("EXEC pGerarCupom '" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + coo + "','" + valor + "','" + serie + "', '"+imagem+"'");
+               //  Response.End();
 
             }
 
