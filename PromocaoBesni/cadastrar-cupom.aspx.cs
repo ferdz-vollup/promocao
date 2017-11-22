@@ -65,6 +65,7 @@ namespace PromocaoBesni
 
             int total = 0;
             HttpFileCollection hfc = Request.Files;
+
             for (int i = 0; i < hfc.Count; i++)
             {
                 HttpPostedFile hpf = hfc[i];
@@ -92,7 +93,7 @@ namespace PromocaoBesni
 
                     var prefixo = Session["cadID"] + "_";
 
-                    //SE FOR CLIENTE BESNI TOTAL DEVE SER VEZES 2
+                    //SE FOR CLIENTE BESNI TOTAL DEVE SER VEZES 2 
                     //GERAR O CUPOM ESPEICIAL
 
                     valor = valor.Remove(valor.Length - 3).Replace(".", "");
@@ -117,6 +118,36 @@ namespace PromocaoBesni
                     Response.Redirect("/novo-cupom.aspx?total=" + total);
                     Response.End();
                 }
+                else
+                {
+                    Response.Redirect("/cadastrar-cupom.aspx?erro=200");
+                    Response.End();
+                }
+
+                //GERAR CUPOM SEM FAZER UPLOAD DE IMAGEM
+                //else
+                //{
+                //    valor = valor.Remove(valor.Length - 3).Replace(".", "");
+                //    total = Convert.ToInt32(valor) / 200;
+                   
+                //    //Verificar se é Cliente Besni
+                //    if (Session["Besni"].ToString().Length > 15)
+                //    {
+                //        total = total * 2;
+                //    }
+
+                //    for (int aux = 1; aux <= total; aux++)
+                //    {
+                //        GerarCupom(cnpj, data, coo, valor, "", "");
+                //    }
+
+                //    for (int aux = 1; aux <= total; aux++)
+                //    {
+                //        GerarCupom(cnpj, data, coo, valor, "E", "");
+                //    }
+                //    Response.Redirect("/novo-cupom.aspx?total=" + total);
+                //    Response.End();
+                //}
             }
         }
 
@@ -151,7 +182,9 @@ namespace PromocaoBesni
                 }
 
                 objBD.ExecutaSQL("EXEC pGerarCupom '" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + coo + "','" + valor + "','" + serie + "', '" + imagem + "'");
-                
+
+            rsSerie.Dispose();
+            rsSerie.Close();
         }
     }
 }
