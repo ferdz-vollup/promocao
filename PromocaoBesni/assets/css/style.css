@@ -39,8 +39,7 @@ img {
 
 .navbar-default .navbar-nav > li > a.ativo {
     color: #a8272d;
-    font-family: 'baseninemedium';
-    font-weight: 600;
+    font-weight: 900;
     padding: 15px 0;
     font-size: 1.6rem;
 }
