@@ -11,7 +11,19 @@
 <!--head-->
 <head>
     <besni:head runat="server" ID="head" />
-    <title>Promoção Besni</title>
+    <title>Promoção Besni | Esqueci minha senha</title>
+    <meta name="description" content="Altere sua senha e e participe agora. Confira seu email e Não fique de fora!"/>
+    <!-- facebook -->
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Promoção Besni | Esqueci minha senha" />
+    <meta property="og:description" content="Altere sua senha e e participe agora. Confira seu email e Não fique de fora!" />
+    <meta property="og:url" content="http://www.promocaobesni.com.br/mudar-senha.aspx" />
+    <meta property="og:site_name" content="Promoção Besni" />
+    <meta property="og:image" content="http://www.promocaobesni.com.br/assets/imagens/Besni_Share_2017.jpg" />
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="315"> <!-- PIXELS -->
+    <meta property="og:image:height" content="600"> <!-- PIXELS -->
 </head>
 
 <body>
@@ -37,15 +49,15 @@
 			</h2>	
 		</div>
 		<div style="margin-top: 5%" class="text-center">
-			<h3 class="basenine cinza">Nam nec tellus a odio tincidunt auctor a ornare odio.</h3>
-			<div class="traco-vermelho meio"></div>
+			
 			<div class="row">
 				<div class="col-sm-8" style="margin: auto; float: none">
 					<span>
-						Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.
+						Você pode alterar sua senha caso a esqueça. A sua senha será utilizada para acessar a área restrita para que você confira os seus cupons ou cadastre outros. 
 					</span>
 				</div>
 			</div>
+            <div class="traco-vermelho meio"></div>
 			<div class="row" style="margin-top: 50px;">
 				<div class="col-md-5" style="margin: auto; float: none">
 					<form class="recuperaPass" action="/ajax/acoes.aspx">
@@ -62,7 +74,7 @@
 						        <input name="senha2" class="inputs" type="password">
                             </div>					        
 
-                                <input type="button" value="Enviar" class="novaSenhaClick btn-form btn-enviar" />
+                                <input type="submit" value="Enviar" class="novaSenhaClick btn-form btn-enviar" />
                                 
 					</form>
 				</div>
