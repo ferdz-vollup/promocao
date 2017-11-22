@@ -923,10 +923,7 @@ section#premios div.container div.row div.col-md-12 p.singleParagraph {
 
 #divInstagram {
     height: 180px;
-    margin: 30px 15px;
     overflow: hidden;
-    display: inline-block;
-    width: 100%;
 }
 
 #divInstagram ul {
@@ -941,7 +938,7 @@ section#premios div.container div.row div.col-md-12 p.singleParagraph {
         border-top: none;
         border-bottom: none;
         opacity: 1;
-        float: left;
+        float: none;
         padding: 0px;
         margin: 15px 0;
         cursor: pointer;
@@ -1035,11 +1032,8 @@ section#premios div.container div.row div.col-md-12 p.singleParagraph {
 
     #divInstagram {
         height: 320px;
-        margin: 30px 15px;
         overflow: hidden;
-        display: flow-root;
-        width: 100%;
-        padding: 0 10%;
+        text-align: center;
     }
 
     #divInstagram ul {
@@ -1053,10 +1047,6 @@ section#premios div.container div.row div.col-md-12 p.singleParagraph {
 }
 
 @media only screen and (min-width: 768px) {
-
-    #divInstagram {
-        padding: 0 5%;
-    }
 
     #divInstagram ul li {
         padding: 2.5px;
@@ -1112,11 +1102,6 @@ section#premios div.container div.row div.col-md-12 p.singleParagraph {
 
 @media only screen and (min-width: 992px) {
 
-    #divInstagram {
-        padding: 0 10%;
-    }
-
-
     .novo-cupon input {
         width: 85%;
     }
@@ -1126,18 +1111,10 @@ section#premios div.container div.row div.col-md-12 p.singleParagraph {
         margin-bottom: none;
     }
 }
-@media only screen and (min-width: 1230px) {
-    #divInstagram {
-        padding: 0 16%;
+
+    @media only screen and (min-width: 1800px) {
+
+        #cadastro {
+            margin-top: 350px;
+        }
     }
-}
-
-
-
-
-@media only screen and (min-width: 1800px) {
-
-    #cadastro {
-        margin-top: 350px;
-    }
-}
