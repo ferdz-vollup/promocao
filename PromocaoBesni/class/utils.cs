@@ -235,6 +235,8 @@ namespace Etnia.classe
             conteudoMensagem += "                   <td>";
             conteudoMensagem += "                       <a href=\"https://www.instagram.com/lojasbesni/\" target=\"_blank\" title=\"Visitar Besni Instagram\"><img src=\"http://vollup.servicos.ws/besni/emkts/images/rodape_03.jpg\" width=\"16\" height=\"99\" alt=\"Instagram Link\"></a></td>";
             conteudoMensagem += "                   <td>";
+            conteudoMensagem += "                       <a href=\"https://www.youtube.com/user/LojasBesni/\" target =\"_blank\" title=\"Visitar Besni Youtube\"><img src=\"http://vollup.servicos.ws/besni/emkts/images/rodape_03-b.jpg\" width=\"16\" height=\"99\" alt=\"Youtube\"></a></td>";
+            conteudoMensagem += "                   <td>";
             conteudoMensagem += "                       <img src=\"http://vollup.servicos.ws/besni/emkts/images/rodape_04.jpg\" width=\"196\" height=\"99\" alt=\"\"></td>";
             conteudoMensagem += "                   <td>";
             conteudoMensagem += "                       <a href=\"http://www.promocaobesni.com.br/?utm_source=autoresposta&utm_medium=email&utm_campaign=hotsite\" target=\"_blank\" title=\"Visitar Besni website\"><img src=\"http://vollup.servicos.ws/besni/emkts/images/rodape_05.jpg\" width=\"177\" height=\"99\" alt=\"Website Link\"></a></td>";
