@@ -125,7 +125,7 @@
 			<div style="margin: auto" class="traco-vermelho"></div>
 		</div>
 	</div>
-	<div id="galeria-instagram">
+	<div id="galeria-instagram" class="container">
 		<div class="container text-center">
 			<h2 class="basenine text-uppercase vermelho">
 				Compartilhe suas fotos de  produtos Besni com a <br>nossa hashtag e apareça em nossas redes sociais!
@@ -139,7 +139,7 @@
 
 	<div class="container">
 		<div class="text-center">
-			<div style="margin: auto; margin-bottom: 30px;" class="traco-vermelho"></div>
+			<div style="margin: 3rem auto 30px auto;" class="traco-vermelho"></div>
 			<h3 class="basenine">#FecheoAnoComBesni</h3>
 			<div class="redes">
                 <a href="https://www.facebook.com/LojasBesni/" title="Lojas Besni no facebook"  target="_blank">
