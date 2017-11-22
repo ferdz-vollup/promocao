@@ -51,7 +51,7 @@
         <div class="col-xs-10 col-sm-4" style="margin: auto; float: none; margin-bottom: 5px;">
             <a href="cadastrar-cupom.aspx" title="Cadastrar mais">
                 <button class="btn-form" style="width: 100%;">cadastrar mais</button>
-            </a>
+            </a> 
             <a href="cadastro-abertura.aspx" title="Início">
                 <button class="btn-form" style="width: 100%; margin-top: 10px;">início</button>
             </a>
