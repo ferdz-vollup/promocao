@@ -11,7 +11,16 @@ namespace PromocaoBesni.inc
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string urlCompleta = Request.Url.AbsoluteUri;
+            string paginaAtual = Request.CurrentExecutionFilePath;
+            paginaAtual = paginaAtual.Remove(0, paginaAtual.LastIndexOf("/") + 1);
 
+            switch (paginaAtual)
+            {
+                case "onde-estamos.aspx":
+                    onde.Attributes["class"] = "ativo";
+                    break;
+            }
         }
     }
 }

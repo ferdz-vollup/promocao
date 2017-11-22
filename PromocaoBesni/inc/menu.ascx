@@ -22,7 +22,7 @@
 				<li><a href="/regulamento.aspx">regulamento</a></li>
                 <li><a href="/faq.aspx">FAQ</a></li>
 				<li><a href="/fale-conosco.aspx">fale conosco</a></li>
-				<li><a href="/onde-estamos.aspx">onde estamos</a></li>
+				<li><a id="onde" runat="server" href="/onde-estamos.aspx">onde estamos</a></li>
 			  </ul>
 			</div>
 		  </div>
