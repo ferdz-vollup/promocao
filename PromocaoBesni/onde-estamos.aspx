@@ -13,7 +13,7 @@
     <title>Promoção Besni | Onde Estamos</title>
     <meta name="description" content="Encontre a Besni mais próxima da sua casa ou trabalho. Basta digitar o seu CEP. Temos diversas lojas pelo Estado de São Paulo."/>
     <!-- facebook -->
-    <metaproperty="og:locale" content="pt_BR" />
+    <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Promoção Besni | Onde Estamos" />
     <meta property="og:description" content="Encontre a Besni mais próxima da sua casa ou trabalho. Basta digitar o seu CEP. Temos diversas lojas pelo Estado de São Paulo." />
