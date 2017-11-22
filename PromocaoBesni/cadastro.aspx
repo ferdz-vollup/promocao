@@ -10,10 +10,26 @@
 <!--head-->
 <head>
     <besni:head runat="server" ID="head" />
+
     <title>Promoção Besni</title>
-     <style type="text/css">
-        
-     </style>
+
+    <meta name="description" content="A Vollup é uma agência com foco em mídias digitais que entrega soluções inovadoras onde criatividade se funde com tecnologia."/>
+    <!-- facebook -->
+    <metaproperty="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Vollup Creative Agency" />
+
+    <meta property="og:description" content="A Vollup é uma agência com foco em mídias digitais que entrega soluções inovadoras onde criatividade se funde com tecnologia." />
+    <meta property="og:url" content="http://www.vollup.com/" />
+    <meta property="og:site_name" content="Vollup" />
+    <meta property="og:image" content="http://www.vollup.com/wp-content/uploads/2017/07/imagem-facebook.jpg" />
+    <meta property="og:image:type" content="image/jpeg">
+
+
+
+
+
+    
 </head>
    
 
@@ -262,7 +278,7 @@
                         <div class="col-md-12">
                             <div>
                                 <label for="termos" class="checkboxLabel">
-                                    <input type="checkbox" id="termos" name="termos" class="inputs termos-obg" value="1"><span>Li e aceito todos as condições do regulamento da campanha.</span>
+                                    <input type="checkbox" id="termos" name="termos" class="inputs termos-obg" value="1"><span>Li e aceito todos as condições do <a href="regulamento.aspx" title="Link para o Regulamento">regulamento da campanha</a>.</span>
                                 </label>
                             </div>
                         </div>
