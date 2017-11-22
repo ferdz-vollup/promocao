@@ -15,7 +15,7 @@
     <title>Promoção Besni | Cadastro Novo Cupom</title>
     <meta name="description" content="Para cadastrar o seu cupom Besni, preencha os campos exibidos e faça o upload de uma foto do seu cupom sem cortar nenhuma informação."/>
     <!-- facebook -->
-    <metaproperty="og:locale" content="pt_BR" />
+    <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Promoção Besni | Cadastro Novo Cupom" />
     <meta property="og:description" content="Para cadastrar o seu cupom Besni, preencha os campos exibidos e faça o upload de uma foto do seu cupom sem cortar nenhuma informação." />
