@@ -206,7 +206,7 @@
 			<span style="line-height: 30px;" >
 				Sim. O participante deverá guardar as Notas Fiscais cadastradas na promoção, a fim de validar as informações cadastradas.  
 			</span>
-            			
+           			
             <br><br><br><br>
 			<h3 class="basenine cinza">Esqueci/perdi minha senha, como faço para recuperar?</h3><br>
 			<span style="line-height: 30px;" >
