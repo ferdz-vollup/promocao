@@ -1,4 +1,54 @@
-﻿jQuery(document).ready(function ($) {
+﻿var timeRotate;
+
+jQuery(document).ready(function ($) {
+
+    //INSTA
+    if ($('#divInstagram').length > 0 && $(window).width() < 481) {
+        timeRotate = setInterval(rotacao, 30);
+
+        /*$('#divInstagram').hover(
+            function () {
+                if ($(window).width() > 768) { clearInterval(timeRotate); }
+            },
+            function () {
+                if ($(window).width() > 768) { timeRotate = setInterval(rotacao, 30); }
+            }
+
+        );*/
+
+    }
+
+    $(window).resize(function () {
+        if ($("#divInstagram").length > 0 && $(window).width() < 481) {
+          // 
+            timeRotate = setInterval(rotacao, 30);
+            insta();
+        } else {
+            $("#divInstagram ul").removeAttr('style');
+            setTimeout(function () {
+                
+                timeRotate =clearInterval(timeRotate);
+            }, 500);
+
+           // 
+        }
+
+    });
+
+    window.onload = function () {
+        if ($("#divInstagram").length > 0 && $(window).width() < 481) {
+            //alert('cu');
+            //var timeRotate = setInterval(rotacao, 30);
+            insta();
+        } else {
+            $("#divInstagram ul").removeAttr('style');
+            setTimeout(function () {
+                clearInterval(timeRotate);
+            }, 500);
+
+            //alert('rerere')
+        }
+    }
 
     // Recuperação de Senha (COMEÇO)
 
@@ -249,20 +299,20 @@
 
     // Validação de valor mínimo do Cupom
 
-    jQuery("input[type='submit']").click(function () {
-        var valCupom = jQuery("#valor_nota").val();
+    //jQuery("input[type='submit']").click(function () {
+    //    var valCupom = jQuery("#valor_nota").val();
 
-        alert(jQuery("#valor_nota").val());
-        return false;
+    //    alert(jQuery("#valor_nota").val());
+    //    return false;
 
-        if (valCupom >= 200.00) {
-            jQuery(this).removeClass("error");
-            console.log("no err");
-        } else {
-            jQuery(this).addClass("error");
-            console.log("err");
-        }
-    });
+    //    if (valCupom >= 200.00) {
+    //        jQuery(this).removeClass("error");
+    //        console.log("no err");
+    //    } else {
+    //        jQuery(this).addClass("error");
+    //        console.log("err");
+    //    }
+    //});
 
     jQuery(".numero-cartao .inputs").keyup(function () {
         var digitados = jQuery(this).val().length;
@@ -436,4 +486,27 @@ function chama() {
             alert("Geocode was not successful for the following reason: " + status);
         }
     });
+}
+
+//INSTA
+function insta() {
+    var w = 180;
+    var wul = $('#divInstagram ul li').length;
+    $('#divInstagram ul').width(180 * wul);
+    var largura = $(window).width(),
+        ul = $('#divInstagram ul').width(),
+        distancia = ul - largura;
+    rotacao()
+}
+
+function rotacao() {
+    var w = 180;
+    var value = document.getElementById('instaFeed').style.marginLeft + 0;
+    var margin = parseInt(value) - 1;
+    if (margin == -180) {
+        margin = 0;
+        $('#instaFeed > li:first-child').appendTo('#instaFeed');
+    }
+    document.getElementById('instaFeed').style.marginLeft = margin + 'px';
+
 }
