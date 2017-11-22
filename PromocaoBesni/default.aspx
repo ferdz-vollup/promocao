@@ -148,6 +148,9 @@
                 <a href="https://www#divInstagramgram.com/lojasbesni/" title="Lojas Besni no instagram"  target="_blank">
 				    <img src="assets/imagens/icone-instagram.png" alt="ícone instagram">
                 </a>
+                <a href="https://www.youtube.com/user/LojasBesni/" title="Lojas Besni no youtube"  target="_blank">
+				    <img src="assets/imagens/icone-youtube.png" alt="ícone youtube">
+                </a>
 				<p>/lojasbesni</p>
 			</div>
 		</div>
@@ -173,30 +176,6 @@
     <besni:scripts runat="server" ID="scripts" />
 
     <script type="text/javascript">
-
-
-        
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </script>
 
 </body>
