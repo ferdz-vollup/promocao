@@ -157,7 +157,7 @@
             <br><br><br><br>
 			<h3 class="basenine cinza">Como cadastrar minhas notas?</h3><br>
 			<span style="line-height: 30px;" >
-				Os participantes que efetuarem a compra no valor acima de R$200,00, mediante a emissão de nota fiscal eletrônica, deverão inserir, nos campos “COO” e “ECF”, o número da nota fiscal. Já os participantes que adquirirem produtos mediante a emissão de cupom fiscal eletrônico – SAT, deverão informar no campo “COO” o número do extrato e no campo “ECF” o número do SAT. 
+				Os participantes que efetuarem a compra no valor acima de R$200,00 (duzentos reais), mediante a emissão de nota fiscal eletrônica, deverão inserir, nos campos “COO” e “ECF”, o número da nota fiscal. Já os participantes que adquirirem produtos mediante a emissão de cupom fiscal eletrônico – SAT, deverão informar no campo “COO” o número do extrato e no campo “ECF” o número do SAT. 
 			</span>
 			
             <br><br><br><br>
