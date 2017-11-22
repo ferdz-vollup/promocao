@@ -56,7 +56,6 @@ namespace PromocaoBesni
 
         protected void pub_Click(object sender, EventArgs e)
         {
-
             string arquivo = "NULL", nome = "", filename = "", extensao = "", valor = "" , cnpj = "" , data= "", coo = "", imagem = "";
             valor = Request["valor_nota_02"];
             cnpj = Request["cnpj"];
@@ -114,13 +113,8 @@ namespace PromocaoBesni
                     {
                         GerarCupom(cnpj, data, coo, valor, "E", imagem);
                     }
-
-                    //Response.Write("ok|" + total);// MANDAR OK|TOTAL E PEGAR O TOTLA PARA SABER QUANTOS REGISTRO MOSTRAR NO NOVO-CUPOM
-                    //Response.End();
-
                     Response.Redirect("/novo-cupom.aspx?total=" + total);
                     Response.End();
-                    //window.location.href = "/novo-cupom.aspx?total=" + resultado[1];
                 }
             }
         }
@@ -140,15 +134,6 @@ namespace PromocaoBesni
                 numero = NumeroAleatorio().PadLeft(5, '0');
             }
 
-            //Verificar se numero já foi cadastrado
-            if (1 == 2)
-            {
-                rsSerie.Dispose();
-                rsSerie.Close();
-                // GerarCupom();
-            }
-            else
-            {
                 //Salvar no BD
                 cupom = serie + "-" + numero;
 
@@ -158,11 +143,7 @@ namespace PromocaoBesni
                 }
 
                 objBD.ExecutaSQL("EXEC pGerarCupom '" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + coo + "','" + valor + "','" + serie + "', '" + imagem + "'");
-                // Response.Write("EXEC pGerarCupom '" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + coo + "','" + valor + "','" + serie + "', '"+imagem+"'");
-               //  Response.End();
-
-            }
-
+                
         }
     }
 }
