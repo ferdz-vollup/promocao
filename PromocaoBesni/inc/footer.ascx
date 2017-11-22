@@ -10,6 +10,9 @@
                     <a href="https://www.instagram.com/lojasbesni/" title="Lojas Besni no instagram" target="_blank">
 				        <img src="assets/imagens/icone-instagram.png" alt="ícone instagram">
                     </a>
+                    <a href="https://www.youtube.com/user/LojasBesni/" title="Lojas Besni no youtube" target="_blank">
+                        <img src="assets/imagens/icone-youtube.png" alt="ícone youtube">
+                    </a>
 					<p>/lojasbesni</p>
 				</div>
 				<span>
