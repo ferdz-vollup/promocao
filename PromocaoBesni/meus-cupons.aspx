@@ -13,7 +13,7 @@
     <title>Promoção Besni | Cupom Cadastrado</title>
     <meta name="description" content="Seu cupom foi cadastrado com sucesso! A seguir estão os seus números da sorte para você participar dos sorteios e ganhar prêmios incríveis!"/>
     <!-- facebook -->
-    <metaproperty="og:locale" content="pt_BR" />
+    <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Promoção Besni | Cupom Cadastrado" />
     <meta property="og:description" content="Seu cupom foi cadastrado com sucesso! A seguir estão os seus números da sorte para você participar dos sorteios e ganhar prêmios incríveis!" />
