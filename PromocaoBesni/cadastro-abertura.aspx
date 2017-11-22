@@ -9,9 +9,19 @@
 <html>
 <head>
     <besni:head runat="server" ID="head" />
-
-    <title>Cadastrado</title>
-
+    <title>Promoção Besni | O que deseja fazer?</title>
+    <meta name="description" content="Participe agora da promoção Besni cadastrando novos cupons, conferindo seus cupons ativos e visualizando os próximos sorteios."/>
+    <!-- facebook -->
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Promoção Besni | O que deseja fazer?" />
+    <meta property="og:description" content="Participe agora da promoção Besni cadastrando novos cupons, conferindo seus cupons ativos e visualizando os próximos sorteios." />
+    <meta property="og:url" content="http://www.promocaobesni.com.br/cadastro-abertura.aspx" />
+    <meta property="og:site_name" content="Promoção Besni" />
+    <meta property="og:image" content="http://www.promocaobesni.com.br/assets/imagens/Besni_Share_2017.jpg" />
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="315"> <!-- PIXELS -->
+    <meta property="og:image:height" content="600"> <!-- PIXELS -->
 </head>
 <body>
 
