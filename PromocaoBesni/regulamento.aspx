@@ -13,7 +13,7 @@
 
     <besni:head runat="server" ID="head" />
     
-    <title>Promoção Besni | Regulamento<title>
+    <title>Promoção Besni | Regulamento</title>
     <meta name="description" content="Antes de se cadastrar, confira o regulamento, saiba tudo sobre a promoção e como participar."/>
     <!-- facebook -->
     <meta property="og:locale" content="pt_BR" />
@@ -33,7 +33,8 @@
 
             }
             section#regulamento {
-                padding-top: 150px;
+                /*padding-top: 150px;*/
+                padding-top: 190px;
             }
 
             section#regulamento > .container h4.underline-azul {
