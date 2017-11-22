@@ -13,7 +13,7 @@
     <title>Promoção Besni | Conheça os Prêmios</title>
     <meta name="description" content="Ao participar da promoção, você concorre a 1 Jeep Renegade Custom,modelo 2018 e a 30 motos Bull Motors KRC 50 LX, 2015/2015. Não fique de fora!"/>
     <!-- facebook -->
-    <metaproperty="og:locale" content="pt_BR" />
+    <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Promoção Besni | Conheça os Prêmios" />
     <meta property="og:description" content="Ao participar da promoção, você concorre a 1 Jeep Renegade Custom,modelo 2018 e a 30 motos Bull Motors KRC 50 LX, 2015/2015. Não fique de fora!" />
