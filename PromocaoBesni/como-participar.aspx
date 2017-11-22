@@ -55,7 +55,7 @@
 					</div>
 					<div class="col-md-9 col-xs-9">
 						<span class="saiba-concorra">
-							Para participar da promoção, basta efetuar uma compra de R$200 ou mais a partir do dia 26/11/2017 em qualquer loja Besni e cadastrar o cupom fiscal aqui no site da promoção. Quanto mais compras você realizar, mais chances de ganhar! 
+							Para participar da promoção, basta efetuar uma compra de R$200,00 ou mais a partir do dia 26/11/2017 em qualquer loja Besni e cadastrar o cupom fiscal aqui no site da promoção. Quanto mais compras você realizar, mais chances de ganhar! 
 						</span>
 					</div>
 				</div>
