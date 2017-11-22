@@ -11,7 +11,20 @@
 <!--head-->
 <head>
     <besni:head runat="server" ID="head" />
-    <title>Promoção Besni</title>
+<title>Promoção Besni | Feche o ano com estilo</title>
+<meta name="description" content="Efetue uma compra de R$200,00 ou mais em qualquer loja Besni e cadastre o cupom fiscal aqui. Quanto mais compras você realizar, mais chances de ganhar!"/>
+<!-- facebook -->
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Promoção Besni | Feche o ano com estilo" />
+<meta property="og:description" content="Efetue uma compra de R$200,00 ou mais em qualquer loja Besni e cadastre o cupom fiscal aqui. Quanto mais compras você realizar, mais chances de ganhar!" />
+<meta property="og:url" content="http://www.promocaobesni.com.br/" />
+<meta property="og:site_name" content="Promoção Besni" />
+<meta property="og:image" content="http://www.promocaobesni.com.br/assets/imagens/Besni_Share_2017.jpg" />
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="315"> <!-- PIXELS -->
+<meta property="og:image:height" content="600"> <!-- PIXELS -->
+
 </head>
 
 <body>
