@@ -159,7 +159,7 @@
             <br><br><br><br>
 			<h3 class="basenine cinza">Não estou conseguindo cadastrar o cupom fiscal e/ou não está gerando número da sorte</h3><br>
 			<span style="line-height: 30px;" >
-				Verifique se o número do cupom fiscal está correto, se preencheu todos os campos dos dados pessoais obrigatórios e sua conexão de internet. Caso o problema persista, entre em contato através do FALE CONOSCO.  
+				Verifique se o número do cupom fiscal está correto, se preencheu todos os campos dos dados pessoais obrigatórios e sua conexão de internet. Caso o problema persista, entre em contato através do <a href="fale-conosco.aspx" title="Fale Conosco">FALE CONOSCO</a>.  
 			</span>
 			
             <br><br><br><br>
@@ -171,7 +171,7 @@
             <br><br><br><br>
 			<h3 class="basenine cinza">Quantos números da sorte posso receber?</h3><br>
 			<span style="line-height: 30px;" >
-				Cada cupom fiscal cadastrado, referente a compras de valor mínimo de R$200,00 (duzentos reais) dará ao participante o direito a 01 (um) número sa orte para concorrer na apuração correspondente à data do registro e 01 (um) número da sorte da série especial, para concorrer no sorteio final da promoção. No caso de compras registradas após o dia 22/12/2017, o participante receberá apenas o número da sorte referente ao ultimo sorteio.  
+				Cada cupom fiscal cadastrado, referente a compras de valor mínimo de R$200,00 (duzentos reais) dará ao participante o direito a 01 (um) número da sorte para concorrer na apuração correspondente à data do registro e 01 (um) número da sorte da série especial, para concorrer no sorteio final da promoção. No caso de compras registradas após o dia 22/12/2017, o participante receberá apenas o número da sorte referente ao último sorteio.  
 			</span><br /><br />
 			<span style="line-height: 30px;" >
 				Caso o pagamento da compra efetuada seja registrado com cartão de crédito Besni, serão atribuídos números da sorte em dobro ao participante.  
@@ -192,7 +192,7 @@
             <br><br><br><br>
 			<h3 class="basenine cinza">Como os ganhadores serão notificados?</h3><br>
 			<span style="line-height: 30px;" >
-				Os ganhadores contemplados, titulares do número de ordem de cada uma das séries, serão localizados por meio dos dados constantes no cadastro e serão comunicados sobre a sua contemplação no prazo de 07 (sete) dias úteis, contados da data de sua identificação. 
+				Os ganhadores contemplados, titulares do número de ordem de cada uma das séries, serão localizados por meio dos dados informados no cadastro e serão comunicados sobre a sua contemplação no prazo de 07 (sete) dias úteis, contados da data de sua identificação. 
 			</span>
 			
             <br><br><br><br>
@@ -206,7 +206,30 @@
 			<span style="line-height: 30px;" >
 				Sim. O participante deverá guardar as Notas Fiscais cadastradas na promoção, a fim de validar as informações cadastradas.  
 			</span>
-			
+            			
+            <br><br><br><br>
+			<h3 class="basenine cinza">Esqueci/perdi minha senha, como faço para recuperar?</h3><br>
+			<span style="line-height: 30px;" >
+				Acesse <a href="http://promocaobesni/login.aspx" target="_blank" title="Site Promoção Besni">http://promocaobesni/login.aspx</a> e clique em “esqueci minha senha”. Preencha o número do seu CPF para receber a senha no seu email.
+			</span>
+            			
+            <br><br><br><br>
+			<h3 class="basenine cinza">Posso editar ou atualizar o cadastro do cupom fiscal realizado no site da promoção?</h3><br>
+			<span style="line-height: 30px;" >
+				Não. Ao realizar o cadastro, você deve verificar cuidadosamente os dados e só clicar em “Enviar” quando tiver certeza que as informações estão preenchidas corretamente.  
+			</span>
+                        			
+            <br><br><br><br>
+			<h3 class="basenine cinza">Posso fazer o cadastro sem o cupom fiscal?</h3><br>
+			<span style="line-height: 30px;" >
+				Não. O cadastro do cupom fiscal é necessário para validar e confirmar a participação na promoção.  
+			</span>
+                        			
+            <br><br><br><br>
+			<h3 class="basenine cinza">Não tenho como enviar a foto do cupom fiscal, e agora?</h3><br>
+			<span style="line-height: 30px;" >
+				O envio da foto do cupom fiscal é necessário para garantir a autenticidade da sua participação. Para realizar o envio, tire uma foto do seu cupom fiscal, sem cortar nenhuma informação. A imagem precisa estar nos formatos .png, .jpeg ou .pdf, com o tamanho máximo de 3MB.
+			</span>
 
 		</div>
 	</div>
