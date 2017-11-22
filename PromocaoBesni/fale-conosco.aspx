@@ -38,7 +38,7 @@
 		<div id="formFaleConosco" style="margin-top: 70px">
 			<form action="javascript:void(0)" method="post" enctype="multipart/form-data"  novalidate id="faleConoscoForm" class="form">
 				
-                <input type="hidden" name="Destinatario" value="|fernando.santos@vollup.com">
+                <input type="hidden" name="Destinatario" value="|contatopromo@lojasbesni.com.br">
 				<input type="hidden" name="Obrigatorios" value="|nome|email|mensagem">
 				<input type="hidden" name="autoresposta" value="teste">
 				<input type="hidden" name="idioma" value="pt">
