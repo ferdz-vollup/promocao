@@ -1,8 +1,8 @@
-@media screen and (min-width: 700px) and (max-width: 768px) {
+﻿@media screen and (min-width: 700px) and (max-width: 768px) {
     .navbar-header {
         padding-bottom: 10px;
     }
- 
+
     .navbar-toggle {
         margin-bottom: 0px;
         margin-top: 5px !important;
@@ -187,13 +187,12 @@
     #banner {
         height: auto;
         position: inherit;
-
         margin-top: 0;
     }
 
-    #banner .banner {
-        height: 28%;
-    }
+        #banner .banner {
+            height: 28%;
+        }
 
 
 
@@ -203,28 +202,28 @@
         height: 16.5%;
     }
 
-    #banner-escrita-imagem #imagem-escrita img {
-        left: 15px;
-    }
+        #banner-escrita-imagem #imagem-escrita img {
+            left: 15px;
+        }
 
-    #banner-escrita-imagem #imagem-carro img {
-        right: 15px;
-        top: 55%;
-        height: 65%;
-    }
-    
+        #banner-escrita-imagem #imagem-carro img {
+            right: 15px;
+            top: 55%;
+            height: 65%;
+        }
+
     #banner-premios {
         height: 15%;
         margin-top: 92px;
     }
 
-    #banner-premios #imagem-carro img {
-        width: 90%;
-        top: 30%;
-        left: 50%;
-        margin-left: -45%;
-        position: absolute;
-    }
+        #banner-premios #imagem-carro img {
+            width: 90%;
+            top: 30%;
+            left: 50%;
+            margin-left: -45%;
+            position: absolute;
+        }
 
 
 
@@ -324,9 +323,11 @@
     #como-participar, #cadastro, #login, #ganhadores, #faq {
         margin: 25% 0px 100px;
     }
+
     #onde-estamos {
         margin-top: 15%;
     }
+
     .retorno-mensagem {
         margin-top: 86px;
     }
@@ -346,4 +347,7 @@
     .metodo-compras .col-sm-5 {
         margin-bottom: 20px;
     }
+}
+body
+{
 }
