@@ -162,7 +162,7 @@ namespace PromocaoBesni.ajax
         }
 
         public void mudarStatusFoto(string status, string id)
-        {
+        { 
             objBD.ExecutaSQL("exec puInstagram '" + status + "','" + id + "'");
         }
 
