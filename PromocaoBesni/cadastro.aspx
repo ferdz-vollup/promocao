@@ -122,17 +122,17 @@
                     <div class="row" style="margin-top: 10px;">
                         <div class="col-sm-6">
                             <div style="width: 50px" class="labelForm">CPF</div>
-                            <input type="text" onchange="validarCPF(this.value);" name="cpf" id="cpf" class="inputs cpf">
+                            <input type="text" onchange="validarCPF(this.value);" name="cpf" id="cpf" runat="server" class="inputs cpf">
                         </div>
                         <div class="col-sm-6">
                             <div class="labelFormTwo text-center">RG</div>
-                            <input type="text" name="rg" id="rg" class="inputs rg">
+                            <input type="text" name="rg" id="rg" runat="server" class="inputs rg">
                         </div>
                     </div>
                     <div class="row" style="margin-top: 10px;">
                         <div class="col-sm-6">
                             <div class="labelForm">Data de nascimento</div>
-                            <input type="text" name="dtnascimento" class="inputs data-nasc">
+                            <input type="text" name="dtnascimento" id="dtnascimento" runat="server" class="inputs data-nasc">
                         </div>
                         <div class="col-sm-6">
                             <div class="labelFormTwo text-center">Sexo</div>
@@ -149,23 +149,23 @@
                     <div class="row" style="margin-top: 10px;">
                         <div class="col-sm-6">
                             <div class="labelForm">Telefone</div>
-                            <input type="text" name="telefone" class="inputs telefone">
+                            <input type="text" name="telefone" id="telefone" runat="server" class="inputs telefone">
                         </div>
                         <div class="col-sm-6">
                             <div class="labelFormTwo text-center">Celular</div>
-                            <input type="text" name="celular" class="inputs cel">
+                            <input type="text" name="celular" id="celular" runat="server" class="inputs cel">
                         </div>
                     </div>
                     <div class="row" style="margin-top: 10px;">
                         <div class="col-sm-6">
                             <div class="labelForm">E-mail</div>
-                            <input type="email" name="email" class="inputs">
+                            <input type="email" id="email" runat="server" name="email" class="inputs">
                         </div>
                         <div class="col-sm-6">
                             <div class="labelFormTwo text-center">
                                 <span>Confirmar</span> E-mail
                             </div>
-                            <input type="email" name="email2" class="inputs">
+                            <input type="email" id="email2"  runat="server" name="email2" class="inputs">
                         </div>
                     </div>
 
@@ -194,16 +194,16 @@
                             <div class="labelFormTwo">número do cartão</div>
                             <div style="margin-left: -5px" class="numero-cartao">
                                 <div class="col-md-2 col-xs-3">
-                                    <input type="text" name="cartao1" class="inputs" maxlength="4">
+                                    <input type="text" name="cartao1" id="cartao1" runat="server" class="inputs" maxlength="4">
                                 </div>
                                 <div class="col-md-2 col-xs-3">
-                                    <input type="text" name="cartao2" class="inputs" maxlength="4">
+                                    <input type="text" name="cartao2" id="cartao2" runat="server" class="inputs" maxlength="4">
                                 </div>
                                 <div class="col-md-2 col-xs-3">
-                                    <input type="text" name="cartao3" class="inputs" maxlength="4">
+                                    <input type="text" name="cartao3" id="cartao3" runat="server" class="inputs" maxlength="4">
                                 </div>
                                 <div class="col-md-2 col-xs-3">
-                                    <input type="text" name="cartao4" class="inputs" maxlength="4">
+                                    <input type="text" name="cartao4" id="cartao4" runat="server" class="inputs" maxlength="4">
                                 </div>
                             </div>
                         </div>
@@ -278,7 +278,13 @@
                         <div class="col-md-12">
                             <div>
                                 <label for="termos" class="checkboxLabel">
+<<<<<<< .mine
+                                    <input type="checkbox" id="termos" name="termos" class="inputs termos-obg" value="1"><span>Li e aceito todos as condições do <a target="_blank" href="regulamento.aspx" title="Link para o Regulamento">regulamento da campanha</a>.</span>
+||||||| .r248
+                                    <input type="checkbox" id="termos" name="termos" class="inputs termos-obg" value="1"><span>Li e aceito todos as condições do <a href="regulamento.aspx" title="Link para o Regulamento">regulamento da campanha</a>.</span>
+=======
                                     <input type="checkbox" id="termos" name="termos" class="inputs termos-obg" value="1"><span>Li e aceito todos as condições do <a href="regulamento.aspx" target="_blank" title="Link para o Regulamento">regulamento da campanha</a>.</span>
+>>>>>>> .r280
                                 </label>
                             </div>
                         </div>
