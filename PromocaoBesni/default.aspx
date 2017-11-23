@@ -158,7 +158,7 @@
                 <a href="https://www.facebook.com/LojasBesni/" title="Lojas Besni no facebook"  target="_blank">
                     <img src="assets/imagens/icone-facebook.png" alt="ícone facebook">
                 </a>
-                <a href="https://www#divInstagramgram.com/lojasbesni/" title="Lojas Besni no instagram"  target="_blank">
+                <a href="https://www.instagram.com/lojasbesni/" title="Lojas Besni no instagram"  target="_blank">
 				    <img src="assets/imagens/icone-instagram.png" alt="ícone instagram">
                 </a>
                 <a href="https://www.youtube.com/user/LojasBesni/" title="Lojas Besni no youtube"  target="_blank">
