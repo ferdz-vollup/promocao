@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="404.aspx.cs" Inherits="PromocaoBesni.ganhadores" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="404.aspx.cs" Inherits="PromocaoBesni.onde_estamos" %>
 <%@ Register Src="~/inc/head.ascx" TagPrefix="besni" TagName="head" %>
 <%@ Register Src="~/inc/menu.ascx" TagPrefix="besni" TagName="menu" %>
 <%@ Register Src="~/inc/footer.ascx" TagPrefix="besni" TagName="footer" %>
@@ -24,23 +24,6 @@
     <meta property="og:image:width" content="315"> <!-- PIXELS -->
     <meta property="og:image:height" content="600"> <!-- PIXELS -->
 
-    <style type="text/css">
-
-        /* Reescrevendo rules de responsive.css:69*/
-
-        div.col-sm-8.col-md-5 > span > br {
-            display: none;
-        }
-                
-        @media screen and (min-width: 768px) {
-
-            div.col-sm-8.col-md-5 > span > br {
-                display: block;
-            }
-        }
-        
-    </style>
-
 </head>
 
 <body>
@@ -48,44 +31,40 @@
 <besni:menu runat="server" ID="menu" />
 
 <!--banner-->
-<section id="banner-premios">
+<section id="banner-escrita-imagem">
 	<div class="banner">
-		<div id="imagem-carro"><img src="/assets/imagens/imagem-carro.png" alt=""></div>
+		<div class="centraliza">
+			<div id="imagem-escrita"><img src="assets/imagens/escrita-banner.png" alt=""></div>
+			<div id="imagem-carro"><img src="assets/imagens/imagem-carro.png" alt=""></div>
+		</div>
 	</div>
 </section>
 
 <!--CONTAINER-->
-<section id="ganhadores">
+<section id="onde-estamos">
 	<div class="container">
 		<div class="text-center">
 			<h2 class="basenine text-uppercase vermelho">
 				Erro 404
-			</h2>
-			<div class="row" style="margin-top: 50px;">
-				<div class="col-sm-8 col-md-5" style="margin: auto;float: none">
-					<span style="line-height: 30px;">
-						Página não encontrada.
+			</h2>	
+		</div>
+		<div style="margin-top: 5%" class="text-center">
+			<h3 class="basenine cinza">Página não encontrada!</h3>
+			<div class="traco-vermelho meio"></div>
+			<div class="row">
+				<div class="col-sm-8" style="margin: auto; float: none">
+					<span>
+						<p>Oops! Talvez a página que você está procurando não exista.</p>
+                        <p>Clique no botão abaixo para voltar à <span style="font-style:italic;">'home'</span> e recomeçar o processo.</p>
 					</span>
 				</div>
 			</div>
-			<div class="traco-vermelho meio"></div>
-		</div>
-		<div class="row" style="margin-top: 40px;">
-			<div class="col-sm-10 col-md-8 sorteios" style="margin: auto;float: none">
-				<div class="row" id="divPai" runat="server">
-			
+			<div class="row" style="margin-top: 15px;">
+				<div class="col-md-5" style="margin: auto; padding: 5%; float: none">
+
+                    <a href="/" title="Voltar"><button class="btn-form">Voltar</button></a>
+
 				</div>
-			</div>
-		</div>
-		<div class="traco-vermelho meio" style="margin-top: 30px;"></div>
-		<div class="row text-center">
-			<div class="col-sm-8 col-md-5" style="margin: auto;float: none">
-				<span style="line-height: 30px;">
-					Oops! Talvez a página que você está procurando não exista."
-				</span>
-                <a href="/default.aspx" title="Voltar">
-				    <button style="margin-top: 40px" class="btn-form">voltar</button>
-                </a>
 			</div>
 		</div>
 	</div>

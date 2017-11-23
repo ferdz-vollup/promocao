@@ -10,7 +10,7 @@
 namespace PromocaoBesni {
     
     
-    public partial class ganhadores {
+    public partial class onde_estamos {
         
         /// <summary>
         /// Controle head.
@@ -29,15 +29,6 @@ namespace PromocaoBesni {
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
         protected global::PromocaoBesni.inc.menu menu;
-        
-        /// <summary>
-        /// Controle divPai.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divPai;
         
         /// <summary>
         /// Controle footer.
