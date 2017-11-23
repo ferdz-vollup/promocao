@@ -59,10 +59,12 @@
             border-radius: 0px;
             box-shadow: none;
             border: 1px solid black !important;
-            width: 77% !important;
+            /* width: 77% !important; */
+            width: 71% !important;
         }
         .input-group.image-preview {
-            width: 85%;
+            /*width: 85%;*/
+            width: 80%;
             display: inline-block;
         }
         .btn.btn-default.image-preview-input {
@@ -108,6 +110,25 @@
             height: auto !important;
             width: 100% !important;
         }
+
+        div.col-xs-12 cadastroButtons {
+            float: right;
+            width: 75%;
+            margin: 0 12px 0 0;
+
+        }
+
+        @media only screen and (min-width: 760px) {
+            div.col-xs-12 cadastroButtons {
+                margin: 0 100px 0 0;
+            }
+        }
+
+
+
+        
+
+
     </style>
 </head>
 
@@ -125,25 +146,33 @@
     </section>
 
     <!--CONTAINER-->
-    <section id="ganhadores">
+    <section id="cadastro">
         <div class="container">
             <div class="text-center">
                 <h2 class="basenine text-uppercase vermelho">cadastro</h2>
             </div>
             <div class="row" style="margin-top: 70px">
-                <div class="col-xs-12 col-sm-6">
+                <div class="col-xs-12">
                     <h3 class="basenine text-uppercase cinza" style="text-align: left;">cadastrar cupom</h3>
                     <div style="text-align: left" class="traco-vermelho"></div>
                     <br>
                     <span style="line-height: 30px">Olá, <strong><span runat="server" id="usuario"></span></strong>. Tenha em mãos o cupom fiscal da sua compra realizada em qualquer loja Besni para preencher os campos abaixo. Lembre-se que a compra precisa ser de, no mínimo, R$200. Não nos responsabilizamos por erros de digitação.</span>
-                
+                </div>
+            </div>
                 <!--
                 </div>
                 <div class="col-xs-12 col-sm-4">
                     -->
                 
                    <%-- <form id="cadastrar-cupom" enctype="multipart/form-data" method="post" action="javascript:GerarCupom($('#cnpj').val(),$('#date').val(),$('#coo').val(),$('#valor_nota_02').val());">--%>
+
+
+
+
+            <div class="row" style="margin-top: 70px">
+                <div class="col-xs-12 col-sm-6">
                     <form method="post" id="cadastrarcupom" enctype="multipart/form-data" runat="server">
+
                         <div class="novo-cupon">
                             <span>1</span>
                             <input type="text" placeholder="CNPJ" id="cnpj" name="cnpj" class="cnpj inputs">
@@ -161,6 +190,7 @@
                             <!--<label class="lblValorNota">R$</label>-->
                             <input type="text" placeholder="R$ xxx,xx" id="valor_nota_02" name="valor_nota_02" class="valor-nota inputs" onkeypress="return(MascaraMoeda(this,'.',',',event))">
                         </div>
+
                         <div class="novo-cupon">
                             <span>5</span>
                                 <%-- <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">  --%>
@@ -184,26 +214,39 @@
                                 </div>
                                 <!-- /input-group image-preview [TO HERE]-->
                                 <%--</div>--%>
+
                         </div>
 
-                        <div class="col-sm-3 col-md-4"></div>
-                        <div class="col-xs-12 col-sm-9 col-md-6 two-buttons-wrapping">
+                       <!--<div class="col-sm-3 col-md-4"></div>-->
+                        <div class="col-xs-12 cadastroButtons">
+                        <!--<div class="col-xs-12 col-sm-9 col-md-6 two-buttons-wrapping">-->
                              <%--<button type="submit" style="" class="btn-form btn-enviar" data-form="cadastrar-cupom">Enviar</button>--%>
-                             <asp:Button ID="pub" runat="server" Text="Enviar" CssClass="btn-form btn-enviar" data-form="cadastrarcupom"  OnClick="pub_Click" />
-                            <button style="" type="reset" class="btn-form btn-enviar">Limpar</button>
+                             <asp:Button style="float: right; margin: 0 2%;" ID="pub" runat="server" Text="Enviar" CssClass="btn-form btn-enviar" data-form="cadastrarcupom"  OnClick="pub_Click" />
+                            <button style="float: right; margin: 0 2%;" type="reset" class="btn-form btn-enviar">Limpar</button>
                         </div>
+ 
+
                     </form>
                 </div>
-                <div class="col-xs-12 col-sm-6 receipt-wrapping">
-                    <div class="col-sm-10" style="margin: auto; float: none">
-                        <br>
-                        <img src="/assets/imagens/cupom-fiscal-legenda.png" alt="exemplo cupom fiscal" />
-                        <p style="text-align: left; font-size: 12px; margin-top: 15px;">
-                            * Tire uma foto do seu cupom fiscal, sem cortar nenhuma informação. A imagem precisa estar nos formatos .png, .jpeg ou .pdf, com o tamanho máximo de 3MB. Confira o seu arquivo antes de clicar em ENVIAR.
-                        </p>
-                        <br>
+
+                <div class="col-xs-12 col-sm-6">
+
+                    <div class="receipt-wrapping" style="">
+
+                        <div style="margin: 5% auto; float: none">
+                            <br>
+                            <img src="/assets/imagens/cupom-fiscal-legenda.png" alt="exemplo cupom fiscal" />
+                            <p style="text-align: left; font-size: 12px; margin-top: 15px;">
+                                    * Tire uma foto do seu cupom fiscal, sem cortar nenhuma informação. A imagem precisa estar nos formatos .png, .jpeg ou .pdf, com o tamanho máximo de 3MB. Confira o seu arquivo antes de clicar em ENVIAR.
+                            </p>
+                            <br>
+                        </div>
                     </div>
+
                 </div>
+            </div>
+
+
             </div>
         </div>
     </section>

@@ -99,6 +99,7 @@ namespace PromocaoBesni
                     total = Convert.ToInt32(valor) / 200;
                     //string especial = "";
 
+
                     //Verificar se é Cliente Besni
                     if (Session["Besni"] != null)
 
