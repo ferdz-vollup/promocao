@@ -188,7 +188,7 @@
 			</span>
 
             <br><br><br><br>
-			<h3 class="basenine cinza">Como faço para consultar meu (s) número (s) da sorte?</h3><br>
+			<h3 class="basenine cinza">Como faço para consultar meu(s) número(s) da sorte?</h3><br>
 			<span style="line-height: 30px;" >
 				Para consultar os números da sorte, com os quais estará concorrendo aos prêmios, o participante deverá acessar o site da promoção <a href="http://www.promocaobesni.com.br" target="_blank">www.promocaobesni.com.br</a> com os dados de login e senha previamente cadastrados. 
 			</span>
