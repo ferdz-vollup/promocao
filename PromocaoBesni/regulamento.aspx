@@ -152,7 +152,7 @@
 	        <div class="container">
 		        <div class="text-center">
 
-			        <h4 class="basenine text-uppercase azul-claro underline-azul">regulamento</h4>	
+<!--			        <h4 class="basenine text-uppercase azul-claro underline-azul">regulamento</h4>	-->
 
 			        <h2 class="basenine text-uppercase vermelho">promoção "feche o ano com estilo"</h2><br>
 
