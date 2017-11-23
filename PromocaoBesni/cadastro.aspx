@@ -220,12 +220,12 @@
                     <div class="row" style="margin-top: 10px;">
                         <div class="col-md-8">
                             <div class="labelForm">CEP</div>
-                            <input id="cep" type="text" name="cep" class="inputs cep">
+                            <input id="cep" type="text" name="cep" class="inputs cep" onblur="pesquisacep(this.value)">
                         </div>
                     </div>
                     <div class="row" style="margin-top: 10px;">
                         <div class="col-sm-8">
-                            <div class="labelForm">Logradouro</div>
+                            <div class="labelForm">Endereço</div>
                             <input id="rua" type="text" name="logradouro" class="inputs">
                         </div>
                         <div class="col-sm-4">
@@ -249,7 +249,7 @@
                             <input id="cidade" type="text" name="cidade" class="inputs">
                         </div>
                         <div class="col-sm-6">
-                            <div class="labelFormTwo text-center">Estado</div>
+                            <div class="labelFormTwo text-center">UF</div>
                             <input id="uf" type="text" name="uf" class="inputs text-uppercase" maxlength="2">
                         </div>
                     </div>
