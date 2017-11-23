@@ -76,9 +76,9 @@
 			<h2 class="basenine text-uppercase vermelho">
 				perguntas frequentes
 			</h2><br>
-			<a href="regulamento.aspx" title="Ver regulamento da promoção"><h4 class="basenine text-uppercase azul-claro underline-azul">
+			<!--<a href="regulamento.aspx" title="Ver regulamento da promoção"><h4 class="basenine text-uppercase azul-claro underline-azul">
 				regulamento
-			</h4></a>	
+			</h4></a>-->	
 		</div>
 		<div style="margin-top: 10%">
 			
