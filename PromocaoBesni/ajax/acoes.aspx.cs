@@ -171,6 +171,9 @@ namespace PromocaoBesni.ajax
             rg = rg.Replace(".", "").Replace("-", "");
             string cartaoBesni = cartao1 + cartao2 + cartao3 + cartao4;
 
+            Response.Write("COLOCAR VALIDAÇÃO PARA VER SE CARTÃO é nullo E CADASTAR COMO NULL NO BANCO");
+            Response.End();
+
             rsCadastro = objBD.ExecutaSQL("EXEC piuCadastro 0, '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "','" + cartaoBesni + "','" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','" + objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "'");
             if (rsCadastro == null)
             {
