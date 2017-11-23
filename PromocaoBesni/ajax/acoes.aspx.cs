@@ -173,10 +173,16 @@ namespace PromocaoBesni.ajax
             rg = rg.Replace(".", "").Replace("-", "");
             string cartaoBesni = cartao1 + cartao2 + cartao3 + cartao4;
 
-            Response.Write("COLOCAR VALIDAÇÃO PARA VER SE CARTÃO é nullo E CADASTAR COMO NULL NO BANCO");
-            Response.End();
-
-            rsCadastro = objBD.ExecutaSQL("EXEC piuCadastro 0, '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "','" + cartaoBesni + "','" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','" + objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "'");
+            if (cartaoBesni != "")
+            {
+                cartaoBesni = "'" + cartaoBesni + "'";
+            }
+            else
+            {
+                cartaoBesni = "NULL";
+            }
+            
+            rsCadastro = objBD.ExecutaSQL("EXEC piuCadastro 0, '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "'," + cartaoBesni + ",'" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','" + objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "'");
             if (rsCadastro == null)
             {
                 throw new Exception();
@@ -187,7 +193,7 @@ namespace PromocaoBesni.ajax
                 //Salvando as Session do usuário
                 Session["cadNome"] = nome;
                 Session["cadID"] = rsCadastro["CAD_ID"].ToString();
-                Session["Besni"] = rsLogin["CAD_CARTAO_BESNI"].ToString();
+                Session["Besni"] = rsCadastro["CAD_CARTAO_BESNI"].ToString();
 
                 //Salvando no log
                 //Utils.Banco().RunSQL("EXEC psLog '" + rsCadastro["PET_ID"] + "',null,'Parabéns! Você ganhou a medalha INICIANTE por se cadastrar e efetuar o login no site.','1'");
