@@ -85,7 +85,7 @@ jQuery(document).ready(function ($) {
         $('.rg').mask("**.***.***-*");
         $('.data-nasc').mask("99/99/9999");
         $('.cel').mask("(99) 99999-9999");
-        $('.telefone').mask("(99) 9999-9999");
+        $('.telefone').mask("(99) 99999-9999");
         $('.cep').mask("99999-999");
         $('.cnpj').mask("99.999.999/9999-99");
         // $('.valor-nota').mask("9.999,99", { reverse: true });
