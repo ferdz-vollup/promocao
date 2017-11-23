@@ -20,6 +20,40 @@ namespace PromocaoBesni.inc
                 case "onde-estamos.aspx":
                     onde.Attributes["class"] = "ativo";
                     break;
+
+                case "fale-conosco.aspx":
+                    fale.Attributes["class"] = "ativo";
+                    break;
+
+                case "faq.aspx":
+                    faq.Attributes["class"] = "ativo";
+                    break;
+
+                case "regulamento.aspx":
+                    regula.Attributes["class"] = "ativo";
+                    break;
+
+                case "ganhadores.aspx":
+                    ganha.Attributes["class"] = "ativo";
+                    break;
+
+                case "premios.aspx":
+                    premio.Attributes["class"] = "ativo";
+                    break;
+
+                case "login.aspx":
+                case "cadastro-abertura.aspx":
+                case "cadastrar-cupom.aspx":
+                case "cadastro.aspx":
+                case "meus-cupons.aspx":
+
+                    log.Attributes["class"] = "ativo";
+                    break;
+
+                case "como-participar.aspx":
+                    como.Attributes["class"] = "ativo";
+                    break;
+
             }
         }
     }
