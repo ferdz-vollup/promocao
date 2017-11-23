@@ -156,7 +156,7 @@
                     <h3 class="basenine text-uppercase cinza" style="text-align: left;">cadastrar cupom</h3>
                     <div style="text-align: left" class="traco-vermelho"></div>
                     <br>
-                    <span style="line-height: 30px">Olá, <strong><span runat="server" id="usuario"></span></strong>. Tenha em mãos o cupom fiscal da sua compra realizada em qualquer loja Besni para preencher os campos abaixo. Lembre-se que a compra precisa ser de, no mínimo, R$200. Não nos responsabilizamos por erros de digitação.</span>
+                    <span style="line-height: 30px">Olá, <strong><span runat="server" id="usuario"></span></strong>. Tenha em mãos o cupom fiscal da sua compra realizada em qualquer loja Besni para preencher os campos abaixo. Lembre-se que a compra precisa ser de, no mínimo, R$200,00. Não nos responsabilizamos por erros de digitação.</span>
                 </div>
             </div>
                 <!--
