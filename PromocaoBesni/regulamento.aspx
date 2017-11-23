@@ -30,7 +30,6 @@
     <style type="text/css">
             table.regulamento {
                 border-spacing: 10px;
-
             }
             section#regulamento {
                 /*padding-top: 150px;*/
@@ -198,7 +197,7 @@
                     <tr>
                         <td class="rule-number"><strong></strong></td>
                         <td class="rule-sub-number"><strong>1.2.2</strong></td>
-                        <td class="rule-content">Cada cupom fiscal cadastrado, referente a compras de valor mínimo de R$ 200,00 (duzentos reais) dará ao participante o direito a 01 (um) número da sorte, para concorrer na apuração correspondente à data do registro e 01 (um) número da sorte da série especial, para concorrer no sorteio final da promoção. No caso de compras registradas após o dia 22/12/2017, o participante receberá apenas o número da sorte referente ao último sorteio.</td>
+                        <td class="rule-content">A cada R$ 200,00 (duzentos reais) em compras, registrados em um mesmo cupom fiscal, o participante terá direito a 01 (um) número da sorte, para concorrer na apuração correspondente à data do registro e 01 (um) número da sorte da série especial, para concorrer no sorteio final da promoção. No caso de compras registradas após o dia 22/12/2017, o participante receberá apenas o número da sorte referente ao último sorteio.</td>
                     </tr>
                     <tr></tr>
                     <tr>
@@ -210,7 +209,7 @@
                     <tr>
                         <td class="rule-number"><strong></strong></td>
                         <td class="rule-sub-number"><strong>1.2.4</strong></td>
-                        <td class="rule-content">Caso o pagamento da compra efetuada seja registrado com cartão de crédito Besni, serão atribuídos números da sorte em dobro ao participante. Assim, exemplificativamente, uma compra de R$ 500,00 (quinhentos reais), registrada no dia 30/11/17, garantirá ao participante 01 (um) número da sorte para concorrer aos prêmios do sorteio do dia 09/12/17 e 01 (um) número da sorte para concorrer aos prêmios do sorteio final da promoção. Caso esta compra tenha sido paga com cartão de crédito Besni, ao participante serão atribuídos 02 (dois) números da sorte para concorrer aos prêmios do sorteio do dia 09/12/17 e 02 (dois) números da sorte para concorrer aos prêmios do sorteio final da promoção.</td>
+                        <td class="rule-content">Caso o pagamento da compra efetuada seja registrado com cartão de crédito Besni, serão atribuídos números da sorte em dobro ao participante. Assim, exemplificativamente, uma compra de R$ 500,00  (quinhentos reais), registrada no dia 30/11/17, garantirá ao participante 02 (dois) números da sorte para concorrer aos prêmios do sorteio do dia 09/12/17 e 02 (dois) número da sorte para concorrer aos prêmios do sorteio final da promoção. Caso esta compra tenha sido paga com cartão de crédito Besni, ao participante serão atribuídos 04 (quatro) números da sorte para concorrer aos prêmios do sorteio do dia 09/12/17 e 04 (quatro) números da sorte para concorrer aos prêmios do sorteio final da promoção. Em ambas as hipóteses, o saldo de R$ 100,00 (cem) reais será desconsiderado para fins da promoção. </td>
                     </tr>
                     <tr></tr>
                     <tr>
@@ -234,7 +233,7 @@
                     <tr>
                         <td class="rule-number"><strong>1.4</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Conforme previsto no item 1.2.1, além do sorteio final (série especial), que acontecerá no dia 03/01/2018, os participantes concorrerão nos sorteios subsequentes ao registro das compras no hotsite, conforme estabelecido na </td>
+                        <td class="rule-content">Conforme previsto no item 1.2.1, além do sorteio final (série especial), que acontecerá no dia 03/01/2018, os participantes concorrerão nos sorteios subsequentes ao registro das compras no hotsite, conforme estabelecido na tabela a seguir:</td>
                     </tr>
                 </table>
             </div>
@@ -292,13 +291,13 @@
                     <tr>
                         <td class="rule-number"><strong>1.7</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Os números da sorte da série especial, bem como os de cada período serão enviados ao participante por meio de e-mail, no prazo de 24h (vinte e quatro horas), contados do registro da compra no hotsite da promoção, e poderão ser consultados no site da promoção, bastando informar o login (CPF) e a senha criada no momento do cadastramento (primeiro acesso) no site da promoção. </td>
+                        <td class="rule-content">Os números da sorte da série do sorteio final, bem como os de cada período serão enviados ao participante por meio de e-mail, no prazo de 24h (vinte e quatro horas), contados do registro da compra no hotsite da promoção, e poderão ser consultados no site da promoção, bastando informar o login (CPF) e a senha criada no momento do cadastramento (primeiro acesso) no site da promoção.</td>
                     </tr>
                     <tr></tr>
                     <tr>
                         <td class="rule-number"><strong>1.8</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Para o sorteio final, serão utilizadas 100 (cem) séries, todas emitidas na data de início desta promoção, numeradas de 00 a 99, compostas cada uma de 100.000 (cem mil) números, compreendidos de 00.000 a 99.999. </td>
+                        <td class="rule-content"> Para o sorteio final, serão utilizadas 100 (cem) séries, todas emitidas na data de início desta promoção, numeradas de 000 a 099, compostas cada uma de 100.000 (cem mil) números, compreendidos de 00.000 a 99.999.</td>
                     </tr>
                     <tr></tr>
                     <tr>
@@ -356,8 +355,8 @@
                     <tr>
                         <td class="rule-number"><strong>1.10</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">Todos os números da sorte serão compostos por 08 (sete) dígitos, sendo os 03 (três) primeiros algarismos correspondentes ao número de série e os 05 (cinco) subsequentes correspondentes ao número de ordem sorteável, que será confrontado com os resultados da extração da Loteria Federal, de acordo com regras previstas neste Regulamento.
-                        <br><br>Exemplo de número de sorte para concorrer aos prêmios dos sorteios periódicos:</td></tr>
+                        <td class="rule-content">Todos os números da sorte serão compostos por 08 (oito) dígitos, sendo os 03 (três) primeiros algarismos correspondentes ao número de série e os 05 (cinco) subsequentes correspondentes ao elemento sorteável, que será confrontado com os resultados da extração da Loteria Federal, de acordo com regras previstas neste Regulamento. 
+                        <br><br>Exemplo de número de sorte para concorrer aos prêmios dos sorteios periódicos e final:</td></tr>
                 </table>
             </div>
         </section>       
@@ -404,7 +403,7 @@
                     </tr>
                     <tr></tr>
                     <tr>
-                        <td class="rule-number"><strong>2</strong></td>
+                        <td class="rule-number"><strong>2.</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
                         <td class="rule-content"><strong>PREMIAÇÃO</strong></td>
                     </tr>
@@ -412,7 +411,7 @@
                     <tr>
                         <td class="rule-number"><strong>2.1</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
-                        <td class="rule-content">2.1	Serão distribuídos 31 (trinta e um) prêmios, totalizando R$ 241.000,00 (duzentos e quarenta e um mil reais).</td>
+                        <td class="rule-content">Serão distribuídos 31 (trinta e um) prêmios, totalizando R$ 241.000,00 (duzentos e quarenta e um mil reais).</td>
                     </tr>
                     <tr></tr>
                     <tr>
@@ -424,17 +423,17 @@
                     <tr>
                         <td class="rule-number"><strong></strong></td>
                         <td class="rule-sub-number"><strong>2.2.1</strong></td>
-                        <td class="rule-content"><strong>Sorteios Periódicos:</strong> 30 (trinta) prêmios, à escolha do ganhador, dentre as opções: 01 (uma) motocicleta, 0 km, da marca Bull Motors, Modelo KRC 50 LX, 2015/2015,gasolina, no valor de R$ 5.500,00 (cinco mil e quinhentos reais) <strong class="underline">ou</strong> 01 (um) cartão presente, emitido por instituição financeira ou administradora de cartão idônea, com autorização de funcionamento no Brasil, sem função saque, para ser usado em qualquer estabelecimento comercial credenciado à bandeira do emissor, com crédito de R$ 5.500,00 (cinco mil e quinhentos reais);</td>
+                        <td class="rule-content"><strong>Sorteios Periódicos:</strong> 30 (trinta) prêmios, à escolha do ganhador, dentre as opções: 01 (uma) motocicleta, 0 km, da marca Bull Motors, Modelo KRC 50 LX, 2015/2015, gasolina, no valor de R$ 5.500,00 (cinco mil e quinhentos reais) <strong style="text-decoration:underline;">ou</strong> 01 (um) cartão presente, emitido por instituição financeira ou administradora de cartão idônea, com autorização de funcionamento no Brasil, sem função saque, para ser usado em qualquer estabelecimento comercial credenciado à bandeira do emissor, com crédito de R$ 5.500,00 (cinco mil e quinhentos reais);</td>
                     </tr>
                     <tr></tr>
                     <tr>
                         <td class="rule-number"><strong></strong></td>
                         <td class="rule-sub-number"><strong>2.2.2</strong></td>
-                        <td class="rule-content"><strong>Sorteio Final (Série Especial):</strong> 01 (um) prêmio, à escolha do ganhador, dentre as opções: 01 (um) automóvel, 0 km, da marca Jeep, modelo Renegade Custom, modelo 2018, 05 (cinco) portas, flex, no valor de R$ 76.000,00 (setenta e seis mil reais) <strong class="underline">ou</strong> 01 (um) cartão presente, emitido por instituição financeira ou administradora de cartão idônea, com autorização de funcionamento no Brasil, sem função saque, para ser usado em qualquer estabelecimento comercial credenciado à bandeira do emissor, com crédito de R$ 76.000,00 (setenta e seis mil reais).</td>
+                        <td class="rule-content"><strong>Sorteio Final:</strong> 01 (um) prêmio, à escolha do ganhador, dentre as opções: 01 (um) automóvel, 0 km, da marca Jeep, modelo Renegade Custom, modelo 2018, 05 (cinco) portas, flex, no valor de R$ 76.000,00 (setenta e seis mil reais) <strong style="text-decoration:underline;">ou</strong> 01 (um) cartão presente, emitido por instituição financeira ou administradora de cartão idônea, com autorização de funcionamento no Brasil, sem função saque, para ser usado em qualquer estabelecimento comercial credenciado à bandeira do emissor, com crédito de R$ 76.000,00 (setenta e seis mil reais). </td>
                     </tr>
                     <tr></tr>
                     <tr>
-                        <td class="rule-number"><strong>3</strong></td>
+                        <td class="rule-number"><strong>3.</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
                         <td class="rule-content"><strong>DOS SORTEIOS</strong></td>
                     </tr>
@@ -553,7 +552,7 @@
                     </tr>
                     <tr></tr>
                     <tr>
-                        <td class="rule-number"><strong>4</strong></td>
+                        <td class="rule-number"><strong>4.</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
                         <td class="rule-content"><strong>DA DESCLASSIFICAÇÃO</strong></td>
                     </tr>
@@ -589,7 +588,7 @@
                     </tr>
                     <tr></tr>
                     <tr>
-                        <td class="rule-number"><strong>5</strong></td>
+                        <td class="rule-number"><strong>5.</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
                         <td class="rule-content"><strong>LOCAL DE COMPROVAÇÃO DE PROPRIEDADE E EXIBIÇÃO DOS PRÊMIOS</strong></td>
                     </tr>
@@ -607,7 +606,7 @@
                     </tr>
                     <tr></tr>
                     <tr>
-                        <td class="rule-number"><strong>6</strong></td>
+                        <td class="rule-number"><strong>6.</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
                         <td class="rule-content"><strong>LOCAL E PROCEDIMENTOS DE ENTREGA DOS PRÊMIOS</strong></td>
                     </tr>
@@ -667,7 +666,7 @@
                     </tr>
                     <tr></tr>
                     <tr>
-                        <td class="rule-number"><strong>7</strong></td>
+                        <td class="rule-number"><strong>7.</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
                         <td class="rule-content"><strong>DIVULGAÇÃO DA PROMOÇÃO</strong></td>
                     </tr>
@@ -679,7 +678,7 @@
                     </tr>
                     <tr></tr>
                     <tr>
-                        <td class="rule-number"><strong>8</strong></td>
+                        <td class="rule-number"><strong>8.</strong></td>
                         <td class="rule-sub-number"><strong></strong></td>
                         <td class="rule-content"><strong>DISPOSIÇÕES GERAIS</strong></td>
                     </tr>
