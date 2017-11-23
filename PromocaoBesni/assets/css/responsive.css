@@ -179,24 +179,52 @@
         margin-top: 92px;
     }
 
+
+
+    #banner {
+        height: auto;
+        position: inherit;
+    }
+
+    #banner .banner {
+        height: 28%;
+    }
+
     #banner {
         height: 38%;
         margin-top: 92px;
     }
 
+
+
     #banner-escrita-imagem {
         height: 16.5%;
     }
 
-        #banner-escrita-imagem #imagem-escrita img {
-            left: 15px;
-        }
+    #banner-escrita-imagem #imagem-escrita img {
+        left: 15px;
+    }
 
-        #banner-escrita-imagem #imagem-carro img {
-            right: 15px;
-            top: 55%;
-            height: 65%;
-        }
+    #banner-escrita-imagem #imagem-carro img {
+        right: 15px;
+        top: 55%;
+        height: 65%;
+    }
+    
+    #banner-premios {
+        height: 15%;
+        margin-top: 92px;
+    }
+
+    #banner-premios #imagem-carro img {
+        width: 90%;
+        top: 30%;
+        left: 50%;
+        margin-left: -45%;
+        position: absolute;
+    }
+
+
 
     h2 {
         font-size: 25px;
@@ -216,26 +244,7 @@
         height: 32px;
     }
 
-    #banner .banner {
-        height: 28%;
-    }
 
-    #banner {
-        height: auto;
-        position: inherit;
-    }
-
-    #banner-premios {
-        height: 15%;
-        margin-top: 92px;
-    }
-    #banner-premios #imagem-carro img {
-        width: 90%;
-        top: 30%;
-        left: 50%;
-        margin-left: -45%;
-        position: absolute;
-    }
 
     .btn-home-cadastre, .btn-confira-ganhadores {
         font-size: 15px;
