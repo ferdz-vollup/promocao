@@ -225,7 +225,6 @@
                             <button style="float: right; margin: 0 2%;" type="reset" class="btn-form btn-enviar">Limpar</button>
                         </div>
  
-
                     </form>
                 </div>
 
