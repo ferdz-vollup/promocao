@@ -56,7 +56,7 @@
 
                                         <div class="col-xs-6 col-sm-5">
 
-                                            <a href="javascript:void(0);" style="color: #231f20; text-decoration: underline;">editar dados pessoais</a>
+                                            <a runat="server" id="link" href="/cadastro.aspx"  style="color: #231f20; text-decoration: underline;">editar dados pessoais</a>
 
                                         </div>
 

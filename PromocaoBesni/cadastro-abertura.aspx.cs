@@ -15,8 +15,7 @@ namespace PromocaoBesni
     {
         bd objBD = new bd();
         utils objUtils = new utils();
-        private OleDbDataReader rsSerie;
-        string serie = "", numero = "", cupom = "";
+        string tipo = "Nao";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,6 +24,18 @@ namespace PromocaoBesni
             {
                 objUtils = new utils();
                 string acao = Request["acao"];
+
+                //Verificar se é Cliente Besni
+                if (Session["Besni"] != null)
+                {
+                    if (Session["Besni"].ToString().Length > 15)
+                    {
+                        tipo = "Sim";
+                    }
+                }
+
+
+                link.Attributes.Add("href","/cadastro.aspx?Editar="+tipo);
             }
             else
             {

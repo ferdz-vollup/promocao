@@ -104,8 +104,6 @@ namespace PromocaoBesni
                     {
                         if (Session["Besni"].ToString().Length > 15)
                         {
-                            Response.Write(Session["Besni"].ToString().Length);
-                            Response.End();
                             total = total * 2;
                         }
                     }
