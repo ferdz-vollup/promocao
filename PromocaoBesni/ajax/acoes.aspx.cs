@@ -181,6 +181,7 @@ namespace PromocaoBesni.ajax
                 //Salvando as Session do usuário
                 Session["cadNome"] = nome;
                 Session["cadID"] = rsCadastro["CAD_ID"].ToString();
+                Session["Besni"] = rsLogin["CAD_CARTAO_BESNI"].ToString();
 
                 //Salvando no log
                 //Utils.Banco().RunSQL("EXEC psLog '" + rsCadastro["PET_ID"] + "',null,'Parabéns! Você ganhou a medalha INICIANTE por se cadastrar e efetuar o login no site.','1'");
