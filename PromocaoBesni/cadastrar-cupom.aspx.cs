@@ -100,11 +100,16 @@ namespace PromocaoBesni
                     //string especial = "";
 
                     //Verificar se é Cliente Besni
-                    if (Session["Besni"].ToString().Length > 15 && Session["Besni"].ToString() != "")
+                    if (Session["Besni"] != null)
                     {
-                        total = total * 2;
+                        if (Session["Besni"].ToString().Length > 15)
+                        {
+                            Response.Write(Session["Besni"].ToString().Length);
+                            Response.End();
+                            total = total * 2;
+                        }
                     }
-
+                    
                     for (int aux = 1; aux <= total; aux++)
                     {
                         GerarCupom(cnpj, data, coo, valor, "", imagem);
