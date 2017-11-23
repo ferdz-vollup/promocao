@@ -67,16 +67,6 @@ nav.navbar.navbar-default {
     padding: 15px;
 }
 
-
-
-
-
-
-
-
-
-
-
 section#menu {
     position: fixed;
     z-index: 9;
@@ -310,7 +300,6 @@ input, textarea {
     background-position: 15px;
     background-repeat: no-repeat;
     background-size: 18px;
-    padding-left: 40px;
 }
 
 .btn-form {
@@ -897,10 +886,10 @@ section#premios div.container div.row div.col-md-12 p.singleParagraph {
     }
 
     .receipt-wrapping {
-        margin-bottom: 0;
+        width: 80%;
         padding: 0 20px;
+        margin: 0 auto;
     }
-
         .receipt-wrapping img {
             box-shadow: 0px 0px 10px gray;
             box-shadow: -1px 1px 5px 2px gray;
@@ -1125,7 +1114,6 @@ section#premios div.container div.row div.col-md-12 p.singleParagraph {
     }
 
     .receipt-wrapping {
-        margin-top: -100px;
         margin-bottom: none;
     }
 }
