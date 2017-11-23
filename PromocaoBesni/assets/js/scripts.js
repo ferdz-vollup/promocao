@@ -361,6 +361,18 @@ jQuery(document).ready(function ($) {
             jQuery("#nao").attr("checked", "checked");
             jQuery(".numero-cartao input").addClass("no-obg");
         }
+        if ($(window).width() < 600) {
+            setTimeout(function () {
+                $('html, body').animate({
+                    scrollTop: $("#formCadastro").offset().top - 100
+                }, 1000);
+                jQuery("input#nome").trigger("focus");
+                jQuery("input#nome").focus(function () {
+                    alert("fsdf");
+                });
+            }, 300);
+            
+        }
     })
 })
 
