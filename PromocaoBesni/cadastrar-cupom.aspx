@@ -156,7 +156,7 @@
                     <h3 class="basenine text-uppercase cinza" style="text-align: left;">cadastrar cupom</h3>
                     <div style="text-align: left" class="traco-vermelho"></div>
                     <br>
-                    <span style="line-height: 30px">Olá, <strong><span runat="server" id="usuario"></span></strong>. Tenha em mãos o cupom fiscal da sua compra realizada em qualquer loja Besni para preencher os campos abaixo. Lembre-se que a compra precisa ser de, no mínimo, R$200,00. Não nos responsabilizamos por erros de digitação.</span>
+                    <span style="line-height: 30px">Olá, <strong><span runat="server" id="usuario"></span></strong>. Tenha em mãos o cupom fiscal da sua compra realizada em qualquer loja Besni para preencher os campos abaixo. Caso tenha alguma dúvida no preenchimento, veja o cupom exemplo. Lembre-se que a compra precisa ser de, no mínimo, R$200,00. Não nos responsabilizamos por erros de digitação.</span>
                 </div>
             </div>
                 <!--
@@ -196,7 +196,7 @@
                                 <%-- <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">  --%>
                                 <!-- image-preview-filename input [CUT FROM HERE]-->
                                 <div class="input-group image-preview">
-                                    <input type="text" class="image-preview-filename" disabled="disabled">
+                                    <input type="text" placeholder="Carregue a imagem do seu cupom fiscal" class="image-preview-filename" disabled="disabled">
                                     <!-- don't give a name === doesn't send on POST/GET -->
                                     <span class="input-group-btn buttons-uploads">
                                         <!-- image-preview-clear button -->
@@ -233,6 +233,8 @@
                     <div class="receipt-wrapping" style="">
 
                         <div style="margin: 5% auto; float: none">
+
+                            <h3 class="basenine text-uppercase cinza" style="text-align: center;">Cupom Exemplo</h3>
                             <br>
                             <img src="/assets/imagens/cupom-fiscal-legenda.png" alt="exemplo cupom fiscal" />
                             <p style="text-align: left; font-size: 12px; margin-top: 15px;">
