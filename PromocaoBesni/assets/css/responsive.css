@@ -179,21 +179,23 @@
         margin-top: 92px;
     }
 
-
+    #banner {
+        height: 38%;
+        margin-top: 92px;
+    }
 
     #banner {
         height: auto;
         position: inherit;
+
+        margin-top: 0;
     }
 
     #banner .banner {
         height: 28%;
     }
 
-    #banner {
-        height: 38%;
-        margin-top: 92px;
-    }
+
 
 
 
