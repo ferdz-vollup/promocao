@@ -122,7 +122,8 @@ namespace PromocaoBesni.ajax
                 Session["cadNome"] = rsLogin["CAD_NOME"].ToString();
                 Session["cadID"] = rsLogin["CAD_ID"].ToString();
                 Session["Besni"] = rsLogin["CAD_CARTAO_BESNI"].ToString();
-
+                
+                
                 //Salvando no log
                 //Utils.Banco().RunSQL("EXEC psLog '" + rsLogin["PET_ID"] + "',null,'Login efetuado no Portal','0'");
 
