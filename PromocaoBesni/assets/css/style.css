@@ -37,12 +37,7 @@ img {
     border: 0px;
 }
 
-.navbar-default .navbar-nav > li > a.ativo {
-    color: #000;
-    font-weight: 900;
-    padding: 15px 0;
-    font-size: 14px;
-}
+
 
 a.navbar-brand {
     background-image: url(../imagens/logo-besni.png);
@@ -65,6 +60,11 @@ nav.navbar.navbar-default {
     color: #231f20;
     font-weight: 400;
     padding: 15px;
+}
+
+.navbar-default .navbar-nav > li > a.ativo {
+    text-shadow: 2px 2px 8px gray;
+    text-decoration: underline;
 }
 
 section#menu {
