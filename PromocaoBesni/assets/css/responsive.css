@@ -166,6 +166,26 @@
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 600px) {
     .centraliza {
         padding-right: 15px;
@@ -191,12 +211,9 @@
     }
 
         #banner .banner {
-            height: 28%;
+            /*height: 28%;*/
+            height: 31%;
         }
-
-
-
-
 
     #banner-escrita-imagem {
         height: 16.5%;
