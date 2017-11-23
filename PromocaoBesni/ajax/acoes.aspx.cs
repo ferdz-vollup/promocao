@@ -88,6 +88,8 @@ namespace PromocaoBesni.ajax
             //Verificar se é Cliente Besni
             if (Session["Besni"].ToString().Length > 15)
             {
+               Response.Write( Session["Besni"].ToString().Length);
+               Response.End();
                 total = total * 2;
             }
 
