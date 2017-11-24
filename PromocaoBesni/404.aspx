@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="404.aspx.cs" Inherits="PromocaoBesni.onde_estamos" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="404.aspx.cs" Inherits="PromocaoBesni._404" %>
+
 <%@ Register Src="~/inc/head.ascx" TagPrefix="besni" TagName="head" %>
 <%@ Register Src="~/inc/menu.ascx" TagPrefix="besni" TagName="menu" %>
 <%@ Register Src="~/inc/footer.ascx" TagPrefix="besni" TagName="footer" %>
