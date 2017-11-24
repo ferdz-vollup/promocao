@@ -348,7 +348,7 @@
                 if (ajax2.readyState == 4) {
                     if (ajax2.status == 200) {
                         if (ajax2.responseText == "bloqueado") {
-                            $('#msgErro').html('<p><strong>Atenção: </strong>Este CPF está bloqueado para essa promoção..</p>');
+                            $('#msgErro').html('<p><strong>Atenção: </strong>Este CPF está bloqueado para essa promoção.</p>');
                             $('#cpf').addClass("inputs cpf error");
                             $('#cpf').focus();
                             return false;
