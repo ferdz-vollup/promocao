@@ -68,7 +68,7 @@ nav.navbar.navbar-default {
 
 section#menu {
     position: fixed;
-    z-index: 9;
+    z-index: 99;
     width: 100%;
     background-color: white;
     top: 0;
