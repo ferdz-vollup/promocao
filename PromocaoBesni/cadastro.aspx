@@ -12,7 +12,7 @@
     <besni:head runat="server" ID="head" />
 
     <title>Promoção Besni | Cadastre-se</title>
-    <meta name="description" content="A cada R$200,00 em compras você ganha 1 número da sorte para participar dos sorteios semanais e 1 número para o sorteio final!"/>
+    <meta name="description" content="A cada R$200,00 em compras você ganha 1 número da sorte para participar dos sorteios semanais e 1 número para o sorteio final!" />
     <!-- facebook -->
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="website" />
@@ -22,16 +22,18 @@
     <meta property="og:site_name" content="Promoção Besni" />
     <meta property="og:image" content="http://www.promocaobesni.com.br/assets/imagens/Besni_Share_2017.jpg" />
     <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:image:width" content="315"> <!-- PIXELS -->
-    <meta property="og:image:height" content="600"> <!-- PIXELS -->
+    <meta property="og:image:width" content="315">
+    <!-- PIXELS -->
+    <meta property="og:image:height" content="600">
+    <!-- PIXELS -->
 
 
 
 
 
-    
+
 </head>
-   
+
 
 <body>
 
@@ -164,12 +166,12 @@
                             <div class="labelFormTwo text-center">
                                 <span>Confirmar</span> E-mail
                             </div>
-                            <input type="email" id="email2"  runat="server" name="email2" class="inputs">
+                            <input type="email" id="email2" runat="server" name="email2" class="inputs">
                         </div>
                     </div>
 
                     <div class="row" style="margin-top: 10px;">
-                        <div id="msgErro" class="msgErro" style="margin-left:3px">
+                        <div id="msgErro" class="msgErro" style="margin-left: 3px">
                             <p>&nbsp;</p>
                         </div>
                     </div>
@@ -249,7 +251,7 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="labelFormTwo text-center">UF</div>
-                            <input id="uf" type="text" name="uf" rUNAT="server" class="inputs text-uppercase" maxlength="2">
+                            <input id="uf" type="text" name="uf" runat="server" class="inputs text-uppercase" maxlength="2">
                         </div>
                     </div>
 
@@ -335,7 +337,7 @@
         });
 
 
-        
+
 
         function validarCPF(cpf) {
 
@@ -345,12 +347,17 @@
             ajax2.onreadystatechange = function () {
                 if (ajax2.readyState == 4) {
                     if (ajax2.status == 200) {
-                        //  var resultado = ajax2.responseText.split("|");
-                        //alert(ajax2.responseText);
+                        if (ajax2.responseText == "bloqueado") {
+                            $('#msgErro').html('<p><strong>Atenção: </strong>Este CPF está bloqueado para essa promoção..</p>');
+                            $('#cpf').addClass("inputs cpf error");
+                            $('#cpf').focus();
+                            return false;
+                        }
                         if (ajax2.responseText > 0) {
                             $('#msgErro').html('<p><strong>Atenção: </strong>Este CPF já está cadastrado em nossa base.</p>');
                             $('#cpf').addClass("inputs cpf error");
                             $('#cpf').focus();
+                            return false;
                         }
                         else {
                             $('#msgErro').html('<p>&nbsp;</p>');
