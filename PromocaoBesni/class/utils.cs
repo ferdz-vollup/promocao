@@ -248,12 +248,6 @@ namespace Etnia.classe
             conteudoMensagem += "        </table>";
             conteudoMensagem += "   </center>";
 
-            //conteudoMensagem += "    <tr>";
-            // conteudoMensagem += "    <br><tr>";
-            // conteudoMensagem += "        <td colspan=\"2\">";
-            // conteudoMensagem += "            <img style='width:600px' src='http://petnativa.provisorio.ws/images/rodape-email.jpg' />";
-            // conteudoMensagem += "        </td>";
-            // conteudoMensagem += "    </tr></table>";
             conteudoMensagem += "</table></center>";
 
             // coloca no corpo do email
@@ -276,12 +270,12 @@ namespace Etnia.classe
             //Cria objeto com os dados do SMTP
             System.Net.Mail.SmtpClient objSmtp = new System.Net.Mail.SmtpClient();
             //Alocamos o endereço do host para enviar os e-mails, localhost(recomendado) 
-            objSmtp.Host = "smtp.gmail.com";
-            objSmtp.Port = 587;
-            objSmtp.EnableSsl = true;
+            objSmtp.Host = "maserati.lojasbesni.com.br";
+            objSmtp.Port = 25;
+            objSmtp.EnableSsl = false;
 
 
-            objSmtp.Credentials = new System.Net.NetworkCredential("no-reply@vollup.com", "@noreply123");
+            objSmtp.Credentials = new System.Net.NetworkCredential("naoresponda@lojasbesni.com.br", "bsn@2015*");
             try
             {
                 objSmtp.Send(objEmail);
