@@ -37,16 +37,12 @@ jQuery(document).ready(function ($) {
 
     window.onload = function () {
         if ($("#divInstagram").length > 0 && $(window).width() < 481) {
-            //alert('cu');
-            //var timeRotate = setInterval(rotacao, 30);
             insta();
         } else {
             $("#divInstagram ul").removeAttr('style');
             setTimeout(function () {
                 clearInterval(timeRotate);
             }, 500);
-
-            //alert('rerere')
         }
     }
 
@@ -56,7 +52,6 @@ jQuery(document).ready(function ($) {
     //    var senha1 = $("input[name=senha]").val();
     //    var senha2 = $("input[name=senha2]").val();
     //    if (senha1 == senha2) {
-
     //        alert("Senha nova salva com sucesso!");
     //    } else {
     //        alert("Erro: você precisa confirmar a nova senha nos dois campos.");
@@ -156,9 +151,17 @@ jQuery(document).ready(function ($) {
         }
     })
 
+    jQuery(".novaSenhaClick").click(function () {
+
+        if ($("input[name='senha']").val() != $("input[name='senha2']").val()) {
+            $("input[name='senha2']").addClass("error");
+            console.log("Confirmação da nova senha não corresponde à digitada.");
+            return false;
+
+        }
+    });
 
     jQuery(".btn-enviar").click(function () {
-
 
         if ($("input[name='senha']").val() != $("input[name='senha2']").val()) {
             $("input[name='senha2']").addClass("error");
@@ -296,9 +299,7 @@ jQuery(document).ready(function ($) {
 
         }
     });
-
-
-
+        
     jQuery("input[type='email']").on("blur", function () {
         var eml = jQuery(this).val();
         console.log(eml);
@@ -368,7 +369,7 @@ jQuery(document).ready(function ($) {
                 }, 1000);
                 jQuery("input#nome").trigger("focus");
                 jQuery("input#nome").focus(function () {
-                    alert("fsdf");
+               
                 });
             }, 300);
             
@@ -378,6 +379,10 @@ jQuery(document).ready(function ($) {
 
 
 
+
+function validarCNPJ(cnpj) {
+    
+}
 
 
 
@@ -548,7 +553,6 @@ function rotacao() {
     document.getElementById('instaFeed').style.marginLeft = margin + 'px';
 
 }
-
 
 function addLink(e) {
     var nAgt = navigator.userAgent;
