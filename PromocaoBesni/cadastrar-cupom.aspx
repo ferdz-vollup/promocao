@@ -123,12 +123,6 @@
                 margin: 0 100px 0 0;
             }
         }
-
-
-
-        
-
-
     </style>
 </head>
 
@@ -152,25 +146,28 @@
                 <h2 class="basenine text-uppercase vermelho">cadastro</h2>
             </div>
             <div class="row" style="margin-top: 70px">
-                <div class="col-xs-12">
+                <div class="col-xs-12 col-sm-6" style="margin-bottom: 30px;">
                     <h3 class="basenine text-uppercase cinza" style="text-align: left;">cadastrar cupom</h3>
                     <div style="text-align: left" class="traco-vermelho"></div>
                     <br>
-                    <span style="line-height: 30px">Olá, <strong><span runat="server" id="usuario"></span></strong>. Tenha em mãos o cupom fiscal da sua compra realizada em qualquer loja Besni para preencher os campos abaixo. Caso tenha alguma dúvida no preenchimento, veja o cupom exemplo. Lembre-se que a compra precisa ser de, no mínimo, R$200,00. Não nos responsabilizamos por erros de digitação.</span>
+                    <span style="line-height: 30px;">Olá, <strong><span runat="server" id="usuario"></span></strong>. Tenha em mãos o cupom fiscal da sua compra realizada em qualquer loja Besni para preencher os campos abaixo. Caso tenha alguma dúvida no preenchimento, veja o cupom exemplo. Lembre-se que a compra precisa ser de, no mínimo, R$200,00. Não nos responsabilizamos por erros de digitação.</span>
                 </div>
-            </div>
-                <!--
+
+                <div class="col-xs-12 col-sm-6" style="float: right;">
+                    <div class="receipt-wrapping" >
+                        <div style="margin: 0 auto; float: none">
+                            <h3 class="basenine text-uppercase cinza" style="text-align: center;">Cupom Exemplo</h3>
+                            <br>
+                            <img src="/assets/imagens/cupom-fiscal-legenda.png" alt="exemplo cupom fiscal" />
+                            <p style="text-align: left; font-size: 12px; margin-top: 15px;">
+                                    * Tire uma foto do seu cupom fiscal, sem cortar nenhuma informação. A imagem precisa estar nos formatos .png, .jpeg ou .pdf, com o tamanho máximo de 3MB. Confira o seu arquivo antes de clicar em ENVIAR.
+                            </p>
+                            <br>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xs-12 col-sm-4">
-                    -->
-                
-                   <%-- <form id="cadastrar-cupom" enctype="multipart/form-data" method="post" action="javascript:GerarCupom($('#cnpj').val(),$('#date').val(),$('#coo').val(),$('#valor_nota_02').val());">--%>
 
-
-
-
-            <div class="row" style="margin-top: 70px">
-                <div class="col-xs-12 col-sm-6">
+                <div class="col-xs-12 col-sm-6" style="float:left;">
                     <form method="post" id="cadastrarcupom" enctype="multipart/form-data" runat="server">
 
                         <div class="novo-cupon">
@@ -187,40 +184,32 @@
                         </div>
                         <div class="novo-cupon">
                             <span>4</span>
-                            <!--<label class="lblValorNota">R$</label>-->
                             <input type="text" placeholder="R$ xxx,xx" id="valor_nota_02" name="valor_nota_02" class="valor-nota inputs" onkeypress="return(MascaraMoeda(this,'.',',',event))">
                         </div>
 
                         <div class="novo-cupon">
                             <span>5</span>
-                                <%-- <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">  --%>
-                                <!-- image-preview-filename input [CUT FROM HERE]-->
+
                                 <div class="input-group image-preview">
                                     <input type="text" placeholder="Carregue a imagem do seu cupom fiscal" class="image-preview-filename" disabled="disabled">
-                                    <!-- don't give a name === doesn't send on POST/GET -->
+
                                     <span class="input-group-btn buttons-uploads">
-                                        <!-- image-preview-clear button -->
+
                                         <button type="button" class="btn btn-default image-preview-clear" style="display: none;">
                                             <span class="glyphicon glyphicon-remove"></span>
                    
                                         </button>
-                                        <!-- image-preview-input -->
+
                                         <div class="btn btn-default image-preview-input">
                                             <span class="glyphicon glyphicon-folder-open"></span>
                                             <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview" />
-                                            <!-- rename it -->
+
                                         </div>
                                     </span>
                                 </div>
-                                <!-- /input-group image-preview [TO HERE]-->
-                                <%--</div>--%>
-
                         </div>
 
-                       <!--<div class="col-sm-3 col-md-4"></div>-->
                         <div class="col-xs-12 cadastroButtons">
-                        <!--<div class="col-xs-12 col-sm-9 col-md-6 two-buttons-wrapping">-->
-                             <%--<button type="submit" style="" class="btn-form btn-enviar" data-form="cadastrar-cupom">Enviar</button>--%>
                              <asp:Button style="float: right; margin: 0 2%;" ID="pub" runat="server" Text="Enviar" CssClass="btn-form btn-enviar" data-form="cadastrarcupom"  OnClick="pub_Click" />
                             <button style="float: right; margin: 0 2%;" type="reset" class="btn-form btn-enviar">Limpar</button>
                         </div>
@@ -228,23 +217,8 @@
                     </form>
                 </div>
 
-                <div class="col-xs-12 col-sm-6">
 
-                    <div class="receipt-wrapping" style="">
 
-                        <div style="margin: 5% auto; float: none">
-
-                            <h3 class="basenine text-uppercase cinza" style="text-align: center;">Cupom Exemplo</h3>
-                            <br>
-                            <img src="/assets/imagens/cupom-fiscal-legenda.png" alt="exemplo cupom fiscal" />
-                            <p style="text-align: left; font-size: 12px; margin-top: 15px;">
-                                    * Tire uma foto do seu cupom fiscal, sem cortar nenhuma informação. A imagem precisa estar nos formatos .png, .jpeg ou .pdf, com o tamanho máximo de 3MB. Confira o seu arquivo antes de clicar em ENVIAR.
-                            </p>
-                            <br>
-                        </div>
-                    </div>
-
-                </div>
             </div>
 
 
