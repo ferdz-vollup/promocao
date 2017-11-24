@@ -102,7 +102,6 @@ namespace PromocaoBesni
 
                     //Verificar se é Cliente Besni
                     if (Session["Besni"] != null)
-
                     {
                         if (Session["Besni"].ToString().Length > 15)
                         {
@@ -127,6 +126,31 @@ namespace PromocaoBesni
                     Response.Redirect("/cadastrar-cupom.aspx?erro=200");
                     Response.End();
                 }
+
+                //GERAR CUPOM SEM FAZER UPLOAD DE IMAGEM
+                //else
+                //{
+                //    valor = valor.Remove(valor.Length - 3).Replace(".", "");
+                //    total = Convert.ToInt32(valor) / 200;
+                   
+                //    //Verificar se é Cliente Besni
+                //    if (Session["Besni"].ToString().Length > 15)
+                //    {
+                //        total = total * 2;
+                //    }
+
+                //    for (int aux = 1; aux <= total; aux++)
+                //    {
+                //        GerarCupom(cnpj, data, coo, valor, "", "");
+                //    }
+
+                //    for (int aux = 1; aux <= total; aux++)
+                //    {
+                //        GerarCupom(cnpj, data, coo, valor, "E", "");
+                //    }
+                //    Response.Redirect("/novo-cupom.aspx?total=" + total);
+                //    Response.End();
+                //}
             }
         }
 
