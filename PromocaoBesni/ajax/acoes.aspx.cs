@@ -21,7 +21,7 @@ namespace PromocaoBesni.ajax
         bd objBD = new bd();
         utils objUtils = new utils();
         private OleDbDataReader rsCadastro, rsSexo, rsLogin, rsSerie, rs;
-        string retorno = "", serie = "", numero = "", cupom = "";
+        string retorno = "", serie = "", numero = "", cupom = "", CAD_ID = "0";
         int total = 0;
         //  Thread Atualizador;
 
@@ -35,7 +35,7 @@ namespace PromocaoBesni.ajax
             switch (acao)
             {
                 case "novoCadastro":
-                    GerarNovoUsuario(Request["nome"].ToString(), Request["cpf"].ToString(), Request["rg"].ToString(), Request["dtnascimento"].ToString(), Request["sexo"].ToString(), Request["telefone"].ToString(), Request["celular"].ToString(), Request["email"].ToString(), Request["cartao1"].ToString(), Request["cartao2"].ToString(), Request["cartao3"].ToString(), Request["cartao4"].ToString(), Request["cep"].ToString(), Request["logradouro"].ToString(), Request["numero"].ToString(), Request["complemento"].ToString(), Request["bairro"].ToString(), Request["cidade"].ToString(), Request["uf"].ToString(), Request["senha"], Request["termos"], Request["novidades"]);
+                       GerarNovoUsuario(Request["nome"].ToString(), Request["cpf"].ToString(), Request["rg"].ToString(), Request["dtnascimento"].ToString(), Request["sexo"].ToString(), Request["telefone"].ToString(), Request["celular"].ToString(), Request["email"].ToString(), Request["cartao1"].ToString(), Request["cartao2"].ToString(), Request["cartao3"].ToString(), Request["cartao4"].ToString(), Request["cep"].ToString(), Request["logradouro"].ToString(), Request["numero"].ToString(), Request["complemento"].ToString(), Request["bairro"].ToString(), Request["cidade"].ToString(), Request["uf"].ToString(), Request["senha"], Request["termos"], Request["novidades"]);
                     break;
                 case "FazerLogin":
                     FazerLogin(Request["cpf"].ToString().Replace(".", "").Replace("-", ""), objUtils.getMD5Hash(Request["senha"].ToString()));
@@ -173,6 +173,16 @@ namespace PromocaoBesni.ajax
             rg = rg.Replace(".", "").Replace("-", "");
             string cartaoBesni = cartao1 + cartao2 + cartao3 + cartao4;
 
+            //Verificar se ainda está logado
+            if (Session["cadID"] != null)
+            {
+                CAD_ID = Session["cadID"].ToString();
+            }
+            else
+            {
+                CAD_ID = "0";
+            }
+
             if (cartaoBesni != "")
             {
                 cartaoBesni = "'" + cartaoBesni + "'";
@@ -181,8 +191,8 @@ namespace PromocaoBesni.ajax
             {
                 cartaoBesni = "NULL";
             }
-            
-            rsCadastro = objBD.ExecutaSQL("EXEC piuCadastro 0, '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "'," + cartaoBesni + ",'" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','" + objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "'");
+
+            rsCadastro = objBD.ExecutaSQL("EXEC piuCadastro " + CAD_ID + ", '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "'," + cartaoBesni + ",'" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','" + objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "'");
             if (rsCadastro == null)
             {
                 throw new Exception();

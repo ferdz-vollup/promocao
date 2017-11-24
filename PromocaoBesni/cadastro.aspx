@@ -226,7 +226,7 @@
                     <div class="row" style="margin-top: 10px;">
                         <div class="col-sm-8">
                             <div class="labelForm">Endereço</div>
-                            <input id="rua" type="text" runat="server" name="logradouro" class="inputs">
+                            <input id="logradouro" type="text" runat="server" name="logradouro" class="inputs">
                         </div>
                         <div class="col-sm-4">
                             <div class="labelForm text-center" style="margin-right: 10px;">Número</div>
@@ -357,7 +357,7 @@
 
         function limpa_formulário_cep() {
             //Limpa valores do formulário de cep.
-            document.getElementById('rua').value = ("");
+            document.getElementById('logradouro').value = ("");
             document.getElementById('bairro').value = ("");
             document.getElementById('cidade').value = ("");
             document.getElementById('uf').value = ("");
@@ -366,7 +366,7 @@
         function fillByZipcode(conteudo) {
             if (!("erro" in conteudo)) {
                 //Atualiza os campos com os valores.
-                document.getElementById('rua').value = (conteudo.logradouro);
+                document.getElementById('logradouro').value = (conteudo.logradouro);
                 document.getElementById('bairro').value = (conteudo.bairro);
                 document.getElementById('cidade').value = (conteudo.localidade);
                 document.getElementById('uf').value = (conteudo.uf);
@@ -393,7 +393,7 @@
                 if (validacep.test(cep)) {
 
                     //Preenche os campos com "..." enquanto consulta webservice.
-                    document.getElementById('rua').value = "...";
+                    document.getElementById('logradouro').value = "...";
                     document.getElementById('bairro').value = "...";
                     document.getElementById('cidade').value = "...";
                     document.getElementById('uf').value = "...";

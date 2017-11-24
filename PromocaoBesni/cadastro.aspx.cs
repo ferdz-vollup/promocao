@@ -40,15 +40,15 @@ namespace PromocaoBesni
                 rsCadastro.Read();
 
                 nome.Attributes.Add("value", rsCadastro["CAD_NOME"].ToString());
-                nome.Attributes.Add("disabled", "disabled");
+                nome.Attributes.Add("readonly", "readonly");
 
                 cpf.Attributes.Add("value", rsCadastro["CAD_CPF"].ToString());
-                cpf.Attributes.Add("disabled", "disabled");
+                cpf.Attributes.Add("readonly", "readonly");
 
                 rg.Attributes.Add("value", rsCadastro["CAD_RG"].ToString());
                 
                 dtnascimento.Attributes.Add("value", rsCadastro["CAD_DATA_NASCIMENTO"].ToString());
-                dtnascimento.Attributes.Add("disabled", "disabled");
+                dtnascimento.Attributes.Add("readonly", "readonly");
 
                 if(rsCadastro["CAD_SEXO"].ToString()== "M")
                 {
@@ -66,17 +66,17 @@ namespace PromocaoBesni
                 email.Attributes.Add("value", rsCadastro["CAD_EMAIL"].ToString());
                 email2.Attributes.Add("value", rsCadastro["CAD_EMAIL"].ToString());
 
-                email.Attributes.Add("disabled", "disabled");
-                email2.Attributes.Add("disabled", "disabled");
+                email.Attributes.Add("readonly", "readonly");
+                email2.Attributes.Add("readonly", "readonly");
 
                 cartao1.Attributes.Add("value", rsCadastro["CAD_CARTAO_BESNI"].ToString().Substring(0,4));
                 cartao2.Attributes.Add("value", rsCadastro["CAD_CARTAO_BESNI"].ToString().Substring(4,4));
                 cartao3.Attributes.Add("value", rsCadastro["CAD_CARTAO_BESNI"].ToString().Substring(8,4));
                 cartao4.Attributes.Add("value", rsCadastro["CAD_CARTAO_BESNI"].ToString().Substring(12,4));
 
-                cep.Attributes.Add("value", rsCadastro["CAD_CEP"].ToString());
+                //cep.Attributes.Add("value", rsCadastro["CAD_CEP"].ToString());
 
-                rua.Attributes.Add("value", rsCadastro["CAD_LOGRADOURO"].ToString());
+                logradouro.Attributes.Add("value", rsCadastro["CAD_LOGRADOURO"].ToString());
 
                 numero.Attributes.Add("value", rsCadastro["CAD_NUMERO"].ToString());
 
