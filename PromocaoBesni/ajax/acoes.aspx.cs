@@ -355,7 +355,7 @@ namespace PromocaoBesni.ajax
 
                 objUtils.EnviaEmail(rsLogin["CAD_EMAIL"].ToString(), "Senha Alterada  | Promoção Besni", conteudo, "", "", null, "contatopromo@lojasbesni.com.br", null);
 
-                Response.Redirect("/");
+                Response.Redirect("/mudar-senha.aspx?retorno=sucesso");
                 Response.End();
             }
             rsLogin.Dispose();
@@ -364,7 +364,8 @@ namespace PromocaoBesni.ajax
 
         public void validarCPF(string cpf)
         {
-            rs = objBD.ExecutaSQL("select count(*) as total from cadastro where cad_cpf = '"+ cpf + "' ");
+
+            rs = objBD.ExecutaSQL("select C_CPF from cpfs_bloqueados where C_CPF = '" + cpf + "' ");
             if (rs == null)
             {
                 throw new Exception();
@@ -372,11 +373,27 @@ namespace PromocaoBesni.ajax
             if (rs.HasRows)
             {
                 rs.Read();
-                Response.Write(rs["total"]);
+                Response.Write("bloqueado");
                 Response.End();
             }
-            rs.Dispose();
-            rs.Close();
+            else
+            {
+                rs = objBD.ExecutaSQL("select count(*) as total from cadastro where cad_cpf = '" + cpf + "' ");
+                if (rs == null)
+                {
+                    throw new Exception();
+                }
+                if (rs.HasRows)
+                {
+                    rs.Read();
+                    Response.Write(rs["total"]);
+                    Response.End();
+                }
+                rs.Dispose();
+                rs.Close();
+            }
+            //rs.Dispose();
+            //rs.Close();
         }
     }
 }
