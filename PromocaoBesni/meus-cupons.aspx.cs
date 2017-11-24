@@ -44,7 +44,7 @@ namespace PromocaoBesni
             //Response.Write("select CUP_NUMERO_SORTE from cupom where CAD_ID = " + Session["cadID"].ToString() + " ");
             //Response.End();
 
-            rsCupons = objBD.ExecutaSQL("select CUP_NUMERO_SORTE from cupom where CAD_ID = " + Session["cadID"].ToString() + " order by CUP_NUMERO_SORTE desc ");
+            rsCupons = objBD.ExecutaSQL("select CUP_NUMERO_SORTE, CONVERT(VARCHAR(10),CUP_DH_CADASTRO,103) AS CUP_DH_CADASTRO from cupom where CAD_ID = " + Session["cadID"].ToString() + " order by CUP_NUMERO_SORTE desc ");
 
             if (rsCupons == null)
             {
@@ -67,8 +67,8 @@ namespace PromocaoBesni
                         secCupons.InnerHtml += " <div class=\"cupon\" style=\"background:#c8962b;\">";
                         secCupons.InnerHtml += "    <h4 class=\"basenine\">NÚMERO DA SORTE <br/>" + rsCupons["CUP_NUMERO_SORTE"] + "</h4>";
                     }
-                    
-                    secCupons.InnerHtml += " </div> ";
+                    secCupons.InnerHtml += "<p style=\"text-align:center; color: #fff;\">Gerado em: " + rsCupons["CUP_DH_CADASTRO"] + "</p>";
+                        secCupons.InnerHtml += " </div> ";
                 }
             }
         }
