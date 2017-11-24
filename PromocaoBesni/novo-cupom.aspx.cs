@@ -86,7 +86,16 @@ namespace PromocaoBesni
                 {
                     while (rsCupons.Read())
                     {
-                        conteudo += "<center><p style=\"font-weight:700; font-size: 16px;\">" + rsCupons["CUP_NUMERO_SORTE"] + "</p></center>";
+                        conteudo += "<center><p style=\"font-weight:700; font-size: 16px;\">";
+                        if (rsCupons["CUP_NUMERO_SORTE"].ToString().Contains(palavra)) { 
+                            conteudo += "NÚMERO DA SORTE ESPECIAL<br/> ";
+                        }
+                        else
+                        {
+                            conteudo += "NÚMERO DA SORTE <br/>";
+                        }
+                        conteudo += " " + rsCupons["CUP_NUMERO_SORTE"] + " ";
+                        conteudo += "</p></center>";
                         email = rsCupons["CAD_EMAIL"].ToString();
                     }
                     objUtils.EnviaEmail(email, "Novos Números da Sorte | Promoção Besni", conteudo, "", "", null, "contatopromo@lojasbesni.com.br", null);
