@@ -87,9 +87,9 @@
           //  alert(erro[1]);
 
             if (url.indexOf("erroLogin") > 1) {
-                alert("Ops... Tem um erro com usuário e/ou senha.");
+                alert("Ops... Usuário ou senha inválidos.");
                 $('html, body').animate({
-                    scrollTop: $('#loginForm').offset().top
+                    scrollTop: $('#loginForm').offset().top-100
                 }, 1000);
                 return false;
             };
@@ -119,7 +119,6 @@
                 }, 1000);
                 return false;
             };
-
         });
 
         function esqueciSenha(valor) {
@@ -137,9 +136,6 @@
                 $('#senha').show();
                 $('#linkSenha').attr('rel', '1');
                 $('#msgErro').html('&nbsp;');
-
-                /* Test by Paulo */
-               // alert("Um email foi enviado para você redefinir sua senha!");
             }
         }
     </script>
