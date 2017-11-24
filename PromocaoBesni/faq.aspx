@@ -23,7 +23,7 @@
     <meta property="og:image" content="http://www.promocaobesni.com.br/assets/imagens/Besni_Share_2017.jpg" />
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="315"> <!-- PIXELS -->
-    <meta property="og:image:height" content="600"> <!-- PIXELS -->
+    <meta property="og:image:height" content="600"> <!--4 PIXELS -->
 
 
         <style type="text/css">
@@ -75,7 +75,7 @@
 		<div class="text-left">
 			<h2 class="basenine text-uppercase vermelho">
 				perguntas frequentes
-			</h2><br>
+			</h2>
 			<!--<a href="regulamento.aspx" title="Ver regulamento da promoção"><h4 class="basenine text-uppercase azul-claro underline-azul">
 				regulamento
 			</h4></a>-->	
