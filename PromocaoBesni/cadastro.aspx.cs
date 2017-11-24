@@ -50,6 +50,15 @@ namespace PromocaoBesni
                 dtnascimento.Attributes.Add("value", rsCadastro["CAD_DATA_NASCIMENTO"].ToString());
                 dtnascimento.Attributes.Add("disabled", "disabled");
 
+                if(rsCadastro["CAD_SEXO"].ToString()== "M")
+                {
+                    masc.Attributes.Add("checked", "checked");
+                }
+                else
+                {
+                    fem.Attributes.Add("checked", "checked");
+                }
+                
                 telefone.Attributes.Add("value", rsCadastro["CAD_TELEFONE"].ToString());
 
                 celular.Attributes.Add("value", rsCadastro["CAD_CELULAR"].ToString());
@@ -67,6 +76,17 @@ namespace PromocaoBesni
 
                 cep.Attributes.Add("value", rsCadastro["CAD_CEP"].ToString());
 
+                rua.Attributes.Add("value", rsCadastro["CAD_LOGRADOURO"].ToString());
+
+                numero.Attributes.Add("value", rsCadastro["CAD_NUMERO"].ToString());
+
+                complemento.Attributes.Add("value", rsCadastro["CAD_COMPLEMENTO"].ToString());
+
+                bairro.Attributes.Add("value", rsCadastro["CAD_BAIRRO"].ToString());
+
+                cidade.Attributes.Add("value", rsCadastro["CAD_CIDADE"].ToString());
+
+                uf.Attributes.Add("value", rsCadastro["CAD_ESTADO"].ToString());
             }
         }
     }

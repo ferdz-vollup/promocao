@@ -138,10 +138,10 @@
                             <div class="labelFormTwo text-center">Sexo</div>
                             <div class="text-uppercase">
                                 <label for="masc" class="labelRadio">
-                                    <input type="radio" id="masc" name="sexo" class="inputs" value="M"><span>Masculino</span>
+                                    <input type="radio" id="masc" runat="server" name="sexo" class="inputs" value="M"><span>Masculino</span>
                                 </label>
                                 <label for="fem" class="labelRadio">
-                                    <input type="radio" id="fem" name="sexo" class="inputs" value="F"><span>Feminino</span>
+                                    <input type="radio" id="fem" runat="server" name="sexo" class="inputs" value="F"><span>Feminino</span>
                                 </label>
                             </div>
                         </div>
@@ -149,7 +149,7 @@
                     <div class="row" style="margin-top: 10px;">
                         <div class="col-sm-6">
                             <div class="labelForm">Telefone</div>
-                            <input type="text" name="telefone" id="telefone" runat="server" class="inputs telefone">
+                            <input type="text" name="telefone" id="telefone" runat="server" class="inputs telefone no-obg">
                         </div>
                         <div class="col-sm-6">
                             <div class="labelFormTwo text-center">Celular</div>
@@ -159,7 +159,7 @@
                     <div class="row" style="margin-top: 10px;">
                         <div class="col-sm-6">
                             <div class="labelForm">E-mail</div>
-                            <input type="email" id="email" runat="server" name="email" class="inputs">
+                            <input type="email" id="email" runat="server" name="email" class="inputs" style="background-image: none;">
                         </div>
                         <div class="col-sm-6">
                             <div class="labelFormTwo text-center">
@@ -220,37 +220,37 @@
                     <div class="row" style="margin-top: 10px;">
                         <div class="col-md-8">
                             <div class="labelForm">CEP</div>
-                            <input id="cep" type="text" name="cep" class="inputs cep" onblur="pesquisacep(this.value)">
+                            <input id="cep" type="text" name="cep" runat="server" class="inputs cep" onblur="pesquisacep(this.value)">
                         </div>
                     </div>
                     <div class="row" style="margin-top: 10px;">
                         <div class="col-sm-8">
                             <div class="labelForm">Endereço</div>
-                            <input id="rua" type="text" name="logradouro" class="inputs">
+                            <input id="rua" type="text" runat="server" name="logradouro" class="inputs">
                         </div>
                         <div class="col-sm-4">
                             <div class="labelForm text-center" style="margin-right: 10px;">Número</div>
-                            <input type="text" name="numero" class="inputs">
+                            <input type="text" id="numero" runat="server" name="numero" class="inputs">
                         </div>
                     </div>
                     <div class="row" style="margin-top: 10px;">
                         <div class="col-sm-6">
                             <div class="labelForm">Complemento</div>
-                            <input type="text" name="complemento" class="inputs no-obg">
+                            <input type="text" name="complemento" id="complemento" runat="server" class="inputs no-obg">
                         </div>
                         <div class="col-sm-6">
                             <div class="labelFormTwo text-center">Bairro</div>
-                            <input id="bairro" type="text" name="bairro" class="inputs">
+                            <input id="bairro" type="text" name="bairro" runat="server" class="inputs">
                         </div>
                     </div>
                     <div class="row" style="margin-top: 10px;">
                         <div class="col-sm-6">
                             <div class="labelForm">Cidade</div>
-                            <input id="cidade" type="text" name="cidade" class="inputs">
+                            <input id="cidade" type="text" name="cidade" runat="server" class="inputs">
                         </div>
                         <div class="col-sm-6">
                             <div class="labelFormTwo text-center">UF</div>
-                            <input id="uf" type="text" name="uf" class="inputs text-uppercase" maxlength="2">
+                            <input id="uf" type="text" name="uf" rUNAT="server" class="inputs text-uppercase" maxlength="2">
                         </div>
                     </div>
 
@@ -278,13 +278,7 @@
                         <div class="col-md-12">
                             <div>
                                 <label for="termos" class="checkboxLabel">
-<<<<<<< .mine
-                                    <input type="checkbox" id="termos" name="termos" class="inputs termos-obg" value="1"><span>Li e aceito todos as condições do <a target="_blank" href="regulamento.aspx" title="Link para o Regulamento">regulamento da campanha</a>.</span>
-||||||| .r248
-                                    <input type="checkbox" id="termos" name="termos" class="inputs termos-obg" value="1"><span>Li e aceito todos as condições do <a href="regulamento.aspx" title="Link para o Regulamento">regulamento da campanha</a>.</span>
-=======
                                     <input type="checkbox" id="termos" name="termos" class="inputs termos-obg" value="1"><span>Li e aceito todos as condições do <a href="regulamento.aspx" target="_blank" title="Link para o Regulamento">regulamento da campanha</a>.</span>
->>>>>>> .r280
                                 </label>
                             </div>
                         </div>
