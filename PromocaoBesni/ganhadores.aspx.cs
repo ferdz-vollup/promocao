@@ -16,6 +16,7 @@ namespace PromocaoBesni
         bd objBD = new bd();
         utils objUtils = new utils();
         private OleDbDataReader rsConcurso;
+        string classe = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -38,24 +39,31 @@ namespace PromocaoBesni
             {
                 while(rsConcurso.Read())
                 {
-                    divPai.InnerHtml += " <div class=\"col-sm-3 text uppercase text-center passou\">";
+                    if (DateTime.Now.Date > Convert.ToDateTime(rsConcurso["CON_DATA"]))
+                    {
+                        classe = "passou";
+                    }
+
+                    divPai.InnerHtml += " <div class=\"col-sm-3 text uppercase text-center "+ classe + " \">";
                     divPai.InnerHtml += "     <div class=\"botao\">";
                     divPai.InnerHtml += "         <span>Sorteio</span>";
                     divPai.InnerHtml += "         <span>" + rsConcurso["CON_DATA"] + "</span>";
-                    divPai.InnerHtml += "         <span class=\"premio\">10 motos</span>";
+                    divPai.InnerHtml += "         <span class=\"premio\">" + rsConcurso["CON_PREMIO"] +"</span>";
                     divPai.InnerHtml += "     </div>";
                     divPai.InnerHtml += "     <div class=\"mostra-codigos\">";
                     divPai.InnerHtml += "         <div style=\"height: 30px;\"></div>";
 
-                    //ganhadores 
-                    divPai.InnerHtml += "<span class=\"codigos\">";
-                    divPai.InnerHtml += "Nome Sobrenome";
-                    divPai.InnerHtml += "cód. 02689 - 9";
-                    divPai.InnerHtml += "</span>";
-                    //ganhadores 
+                    //ganhadores
+                    //divPai.InnerHtml += "<span class=\"codigos\">";
+                    //divPai.InnerHtml += "Nome Sobrenome";
+                    //divPai.InnerHtml += "cód. 02689 - 9";
+                    //divPai.InnerHtml += "</span>";
+                    //ganhadores
 
                     divPai.InnerHtml += "     </div>";
                     divPai.InnerHtml += " </div>";
+
+                    classe = "";
                 }
 
                
