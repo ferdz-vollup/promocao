@@ -320,13 +320,22 @@
 
             if (url.indexOf("Sim") > 1) {
                 jQuery(".metodo-compras button[data-cartao='Sim']").click();
+                if ($(window).width() < 600) {
+                    scrollTop: $("#formCadastro").offset().top;
+                }
             }
 
             if (url.indexOf("Nao") > 1) {
                 jQuery(".metodo-compras button[data-cartao='Nao']").click();
+                if ($(window).width() < 600) {
+                    scrollTop: $("#formCadastro").offset().top;
+                }
             }
 
         });
+
+
+        
 
         function validarCPF(cpf) {
 
