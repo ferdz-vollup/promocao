@@ -2,7 +2,8 @@
     /* INSTAGRAM */
     var token = '2015137874.54da896.6ed77364a00e45358f7dd0e70b3d98a8'
     $.ajax({
-        url: 'https://api.instagram.com/v1/tags/besni/media/recent?access_token=' + token,
+       // url: 'https://api.instagram.com/v1/tags/besni/media/recent?access_token=' + token,
+        url: 'https://api.instagram.com/v1/users/228889451/media/recent?access_token=' + token,
         dataType: 'jsonp',
         type: 'GET',
         data: {
@@ -11,7 +12,6 @@
         success: function (data) {
             console.log(data);
             for (x in data.data) {
-               // alert(data.pagination.next_url);
                 addInstagram(data.data[x].link, data.data[x].id, data.data[x].images.standard_resolution.url, data.data[x].images.thumbnail.url, data.data[x].likes.count, data.data[x].link, data.pagination.next_url);
             }
         },
