@@ -23,6 +23,7 @@ namespace PromocaoBesni
             if (Session["cadID"] != null)
             {
                 objUtils = new utils();
+                h2.InnerHtml = "alterar cadastro";
                 PopularCadastro();
             }
         }

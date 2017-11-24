@@ -51,8 +51,7 @@
     <section id="ganhadores">
         <div class="container">
             <div class="text-center">
-                <h2 class="basenine text-uppercase vermelho">cadastro
-                </h2>
+                <h2 id="h2" runat="server" class="basenine text-uppercase vermelho">cadastro</h2>
             </div>
 
             <div class="row metodo-compras">
