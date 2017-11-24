@@ -825,7 +825,8 @@ section#premios div.container div.row div.col-md-12 p.singleParagraph {
     }
 
         .cupon h4 {
-            display: table-cell;
+            /*display: table-cell;*/
+            display: block;
             vertical-align: middle;
             color: #fff;
             text-align: center;
@@ -1025,6 +1026,10 @@ section#premios div.container div.row div.col-md-12 p.singleParagraph {
 
 #galeria .mascara .right:hover, #galeria .mascara .left:hover {
     background: rgba(0,0,0,0.6)
+}
+
+.cadastroButtons {
+    margin: 15% 0;
 }
 
 @media only screen and (min-width: 325px) {
