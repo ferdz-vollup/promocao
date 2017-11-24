@@ -49,12 +49,25 @@ namespace PromocaoBesni
             }
             if (rsCupons.HasRows)
             {
+                string palavra = "E";
+
                 string conteudo = "<h1 style=\"margin:0 auto 50px auto; font-size:24px;font-family:'arial'; letter-spacing: 1.8; font-weight: 800; text-align:center; color:#a8272d; text-transform:uppercase;\">NOVOS CUPONS</h1>";
 
                 while (rsCupons.Read())
                 {
                     divRetorno.InnerHtml += "<div class=\"cupon\" style=\"background: transparent; \">"; 
                     divRetorno.InnerHtml += " <h4 class=\"basenine cinza\" style=\"color:#231f20\"> ";
+
+                    if (rsCupons["CUP_NUMERO_SORTE"].ToString().Contains(palavra))
+                    {
+                        divRetorno.InnerHtml += "NÚMERO DA SORTE ESPECIAL <br/>";
+                    }
+
+                    else
+                    {
+                        divRetorno.InnerHtml += "NÚMERO DA SORTE <br/>";
+                    }
+
                     divRetorno.InnerHtml += "    "+ rsCupons["CUP_NUMERO_SORTE"] + " ";
                     divRetorno.InnerHtml += " </h4> ";
                     divRetorno.InnerHtml += "</div>";
