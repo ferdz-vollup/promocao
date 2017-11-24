@@ -154,7 +154,7 @@ namespace Etnia.classe
             //Cria objeto com dados do e-mail.
             MailMessage objEmail = new MailMessage();
             //Define o Campo From e ReplyTo do e-mail. 
-            objEmail.From = new System.Net.Mail.MailAddress("no-reply@vollup.com", nome);
+            objEmail.From = new System.Net.Mail.MailAddress("naoresponda@lojasbesni.com.br", nome);
             objEmail.ReplyToList.Add(remetente);
             if (string.IsNullOrWhiteSpace(destinatarios) == false)
             {
