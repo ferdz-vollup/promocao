@@ -171,9 +171,9 @@
 	<div id="besni-proxima">
 		<div class="container text-center">
 			<span>tem uma <br>Besni perto de você!<br></span>
-            <a href="/onde-estamos.aspx" title="Clique aqui e veja aonde estamos">
+            <a href="/onde-estamos.aspx" title="Clique aqui e veja onde estamos">
 			    <button class="btn-onde-estamos">
-				    clique aqui e veja aonde estamos
+				    clique aqui e veja onde estamos
 			    </button>
             </a>
 		</div>

@@ -40,6 +40,24 @@ namespace PromocaoBesni {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl h2;
         
         /// <summary>
+        /// Controle CAD_FACEBOK_ID.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden CAD_FACEBOK_ID;
+        
+        /// <summary>
+        /// Controle CAD_FACEBOK_IMAGEM.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden CAD_FACEBOK_IMAGEM;
+        
+        /// <summary>
         /// Controle nome.
         /// </summary>
         /// <remarks>

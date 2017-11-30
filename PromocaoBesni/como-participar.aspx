@@ -69,7 +69,7 @@
 					</div>
 					<div class="col-md-9 col-xs-9">
 						<span class="saiba-concorra">
-							Após efetuar a compra, faça seu cadastro aqui no site, incluindo dados pessoais e informações do seu cupom fiscal. Caso você tenha feito as compras com o Cartão Besni, deverá informar ainda o número do cartão usado para o pagamento – ele dobra as suas chances de ganhar!  
+							Após efetuar a compra, faça seu cadastro aqui no site, incluindo dados pessoais e informações do seu cupom fiscal. Não se esqueça da foto do cupom fiscal, ela é importante para a confirmação do seu prêmio se você for sorteado. Caso você tenha feito as compras com o Cartão Besni, deverá informar ainda o número do cartão usado para o pagamento – ele dobra as suas chances de ganhar!  
 						</span>
 					</div>
 				</div>

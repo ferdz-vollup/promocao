@@ -24,7 +24,7 @@ namespace PromocaoBesni
         utils objUtils = new utils();
         private OleDbDataReader rsSerie;
         string serie = "", numero = "", cupom = "";
-
+       
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -56,7 +56,7 @@ namespace PromocaoBesni
 
         protected void pub_Click(object sender, EventArgs e)
         {
-            string arquivo = "NULL", nome = "", filename = "", extensao = "", valor = "" , cnpj = "" , data= "", coo = "", imagem = "";
+            string arquivo = "NULL", nome = "", filename = "", extensao = "", valor = "", cnpj = "", data = "", coo = "", imagem = "";
             valor = Request["valor_nota_02"];
             cnpj = Request["cnpj"];
             data = Request["date"]; ;
@@ -108,7 +108,7 @@ namespace PromocaoBesni
                             total = total * 2;
                         }
                     }
-                    
+
                     for (int aux = 1; aux <= total; aux++)
                     {
                         GerarCupom(cnpj, data, coo, valor, "", imagem);
@@ -175,15 +175,21 @@ namespace PromocaoBesni
                 numero = NumeroAleatorio();
             }
 
-                //Salvar no BD
+            //Salvar no BD
+            //DateTime dataAtual = DateTime.Now.Date;
+           // DateTime outraData = Convert.ToDateTime("01/01/2015");
+
+           // if (dataAtual < outraData)
+          //  {
                 cupom = serie + "-" + numero;
+          //  }
 
-                if (especial == "E")
-                {
-                    cupom = "E-" + cupom;
-                }
+            if (especial == "E")
+            {
+                cupom = "E-" + cupom;
+            }
 
-                objBD.ExecutaSQL("EXEC pGerarCupom '" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + coo + "','" + valor + "','" + serie + "', '" + imagem + "'");
+            objBD.ExecutaSQL("EXEC pGerarCupom '" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + coo + "','" + valor + "','" + serie + "', '" + imagem + "'");
 
             rsSerie.Dispose();
             rsSerie.Close();

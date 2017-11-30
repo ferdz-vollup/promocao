@@ -26,6 +26,11 @@ namespace PromocaoBesni
                 h2.InnerHtml = "alterar cadastro";
                 PopularCadastro();
             }
+            //Verificar se está vindo do Facebook
+            if (Session["faceId"] != null)
+            {
+                PopularCadastroFacebook();
+            }
         }
 
         private void PopularCadastro()
@@ -89,6 +94,26 @@ namespace PromocaoBesni
 
                 uf.Attributes.Add("value", rsCadastro["CAD_ESTADO"].ToString());
             }
+        }
+
+        private void PopularCadastroFacebook()
+        {
+            nome.Attributes.Add("value", Session["cadNome"].ToString());
+            email.Attributes.Add("value", Session["Email"].ToString());
+            email2.Attributes.Add("value", Session["Email"].ToString());
+
+            if (Session["Gender"].ToString() == "male")
+            {
+                masc.Attributes.Add("checked", "checked");
+            }
+            else
+            {
+                fem.Attributes.Add("checked", "checked");
+            }
+
+            CAD_FACEBOK_ID.Attributes.Add("value", Session["faceId"].ToString());
+            CAD_FACEBOK_IMAGEM.Attributes.Add("value", Session["PictureUrl"].ToString());
+
         }
     }
 }

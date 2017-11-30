@@ -104,15 +104,10 @@
                     </div>
                 </div>
 
-                <%--<form action="javascript:void(0)" method="post" novalidate enctype="multipart/form-data" id="cadastroForm" class="form">--%>
                 <form action="/ajax/acoes.aspx" method="post" class="form" id="formCadastrar">
-                    <input type="hidden" name="acao" value="novoCadastro" />
-                    <%--<input type="hidden" name="Destinatario" value="|vitor.emanuel@vollup.com">
-				<input type="hidden" name="Obrigatorios" value="nome|email|mensagem">
-				<input type="hidden" name="autoresposta" value="teste">
-				<input type="hidden" name="idioma" value="pt">
-				<input type="hidden" name="metodo" value="ajax">
-				<input type="hidden" name="Assunto" id="assunto" value="Contato Fale Conosco - Promoção Besni">--%>
+                    <input type="hidden" name="acao" id="acao" value="novoCadastro" >
+                    <input type="hidden" name="CAD_FACEBOK_ID" id="CAD_FACEBOK_ID" runat="server" >
+                    <input type="hidden" name="CAD_FACEBOK_IMAGEM" id="CAD_FACEBOK_IMAGEM" runat="server" >
 
                     <div class="row">
                         <div class="col-md-12">

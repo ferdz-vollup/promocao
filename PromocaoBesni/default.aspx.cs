@@ -39,7 +39,7 @@ namespace PromocaoBesni
             {
                 rsSorteio.Read();
 
-                proximoSorteio.InnerHtml = "fique ligado! <br>o próximo sorteio é no dia <br>" + rsSorteio["dia"] + " de " + objUtils.MesExtenso(Convert.ToInt16(rsSorteio["mes"]))+ " <br>";
+                proximoSorteio.InnerHtml = "fique ligado! <br>o próximo sorteio será no dia <br>" + rsSorteio["dia"] + " de " + objUtils.MesExtenso(Convert.ToInt16(rsSorteio["mes"]))+ " <br>";
             }
 
             rsSorteio.Dispose();
