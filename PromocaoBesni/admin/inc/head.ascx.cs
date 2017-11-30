@@ -11,7 +11,19 @@ namespace PromocaoBesni.admin.inc
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Verificar se ainda está logado
+            if (Session["ADM_ID"] != null)
+            {
+                //objUtils = new utils();
+                //string acao = Request["acao"];
 
+                //trazerCupons(Convert.ToInt16(Request["total"]));
+            }
+            else
+            {
+                //DESLOGADO
+                Response.Redirect("/admin/login.aspx");
+            }
         }
     }
 }

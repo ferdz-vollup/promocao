@@ -1366,7 +1366,8 @@ button, input, select, textarea {
 }
 
 a {
-    color: #82bdbd;
+    /*color: #82bdbd;*/
+    color: #555;
     text-decoration: none;
 }
 
@@ -1480,7 +1481,7 @@ hr {
 
 .h1, h1 {
     font-size: 36px;
-    color: #d57a7a;
+    color: #ed1b2f;
 }
 
 .h2, h2 {

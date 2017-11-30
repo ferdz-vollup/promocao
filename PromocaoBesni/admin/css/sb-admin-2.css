@@ -4,8 +4,8 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 body {
-    background-color: #ec3a3a;
-    background: url('/admin/images/bg-login.jpg') center;
+    background-color: #fff;
+    /*background: url('/admin/images/bg-login.jpg') center;*/
     background-position: center;
 }
 #bodyInterna{
@@ -261,9 +261,9 @@ table.dataTable thead .sorting:after {
   border-color: #c90f0f;
 }
 .panel-red > .panel-heading {
-  border-color: #d57a7a;
+  border-color: #ed1b2f;
   color: white;
-  background-color: #d57a7a;
+  background-color: #ed1b2f;
 }
 .panel-red > a {
   color: #d9534f;
@@ -437,4 +437,9 @@ table.dataTable thead .sorting:after {
     border-right-width: 14px;
     border-left-width: 0;
   }
+}
+
+.btn-success {
+    background-color: #ed1b2f !important;
+    border-color: #ed1b2f !important;
 }

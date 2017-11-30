@@ -4,6 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Promoção Besni">
 <meta name="author" content="Vollup">
+<link rel="shortcut icon" href="http://www.besni.com.br/images/favicon.png?d=1508877631" />
+<link rel="apple-touch-icon" href="http://www.besni.com.br//images/apple-touch-icon.png" />
 <title>Promoção Besni - Área Administrativa</title>
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">

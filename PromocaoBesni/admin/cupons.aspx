@@ -44,7 +44,9 @@
                                             <th>Data</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="cuponsCadastrados" runat="server"></tbody>
+                                    <tbody id="cuponsCadastrados" runat="server">
+                                        
+                                    </tbody>
                                 </table>
                             </div>
                         </div>

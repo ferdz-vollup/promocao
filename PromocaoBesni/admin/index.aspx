@@ -81,7 +81,7 @@
                                     <i class="fa fa-credit-card-alt fa-2x"></i>
                                 </div>
                                 <div class="col-xs-12 text-right">
-                                    <div class="huge">124</div>
+                                    <div class="huge">R$ 0,00</div>
                                     <div>Vendidos na promoção</div>
                                 </div>
                             </div>
@@ -104,7 +104,7 @@
                                 </div>
                                 <div class="col-xs-12 text-right">
                                     <div class="huge" id="contagemInstagram" runat="server"></div>
-                                    <div>Fotos do instagram</div>
+                                    <div>Fotos do Instagram</div>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +122,7 @@
             <div class="row">
                 <!-- DIV ÚLTIMOS RESULTADOS -->
                 <div class="col-lg-6">
-                    <div class="panel panel-default">
+                    <div class="panel panel-default" style="min-height:430px">
                         <div class="panel-heading">
                             <i class="fa fa-university fa-fw"></i> Último sorteio
                         </div>
@@ -167,7 +167,7 @@
                 <!-- /.col-lg-4 -->
 
                 <div class="col-lg-6">
-                    <div class="panel panel-default">
+                    <div class="panel panel-default"  style="min-height:430px">
                         <div class="panel-heading">
                             <i class="fa fa-bar-chart-o fa-fw"></i> Cadastros
                             <%--<div class="pull-right">
