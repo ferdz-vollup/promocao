@@ -35,7 +35,7 @@ namespace PromocaoBesni.ajax
             switch (acao)
             {
                 case "novoCadastro":
-                       GerarNovoUsuario(Request["nome"].ToString(), Request["cpf"].ToString(), Request["rg"].ToString(), Request["dtnascimento"].ToString(), Request["sexo"].ToString(), Request["telefone"].ToString(), Request["celular"].ToString(), Request["email"].ToString(), Request["cartao1"].ToString(), Request["cartao2"].ToString(), Request["cartao3"].ToString(), Request["cartao4"].ToString(), Request["cep"].ToString(), Request["logradouro"].ToString(), Request["numero"].ToString(), Request["complemento"].ToString(), Request["bairro"].ToString(), Request["cidade"].ToString(), Request["uf"].ToString(), Request["senha"], Request["termos"], Request["novidades"]);
+                       GerarNovoUsuario(Request["nome"].ToString(), Request["cpf"].ToString(), Request["rg"].ToString(), Request["dtnascimento"].ToString(), Request["sexo"].ToString(), Request["telefone"].ToString(), Request["celular"].ToString(), Request["email"].ToString(), Request["cartao1"].ToString(), Request["cartao2"].ToString(), Request["cartao3"].ToString(), Request["cartao4"].ToString(), Request["cep"].ToString(), Request["logradouro"].ToString(), Request["numero"].ToString(), Request["complemento"].ToString(), Request["bairro"].ToString(), Request["cidade"].ToString(), Request["uf"].ToString(), Request["senha"], Request["termos"], Request["novidades"], Request["CAD_FACEBOK_ID"], Request["CAD_FACEBOK_IMAGEM"]);
                     break;
                 case "FazerLogin":
                     FazerLogin(Request["cpf"].ToString().Replace(".", "").Replace("-", ""), objUtils.getMD5Hash(Request["senha"].ToString()));
@@ -166,7 +166,7 @@ namespace PromocaoBesni.ajax
             objBD.ExecutaSQL("exec puInstagram '" + status + "','" + id + "'");
         }
 
-        public void GerarNovoUsuario(string nome, string cpf, string rg, string dtnascimento, string sexo, string telefone, string celular, string email, string cartao1, string cartao2, string cartao3, string cartao4, string cep, string logradouro, string numero, string complemento, string bairro, string cidade, string uf, string senha, string termos, string novidades)
+        public void GerarNovoUsuario(string nome, string cpf, string rg, string dtnascimento, string sexo, string telefone, string celular, string email, string cartao1, string cartao2, string cartao3, string cartao4, string cep, string logradouro, string numero, string complemento, string bairro, string cidade, string uf, string senha, string termos, string novidades, string CAD_FACEBOK_ID, string CAD_FACEBOK_IMAGEM)
         {
             //Ajustes nos campos
             cpf = cpf.Replace(".", "").Replace("-", "");
@@ -192,7 +192,28 @@ namespace PromocaoBesni.ajax
                 cartaoBesni = "NULL";
             }
 
-            rsCadastro = objBD.ExecutaSQL("EXEC piuCadastro " + CAD_ID + ", '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "'," + cartaoBesni + ",'" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','" + objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "'");
+            if (CAD_FACEBOK_ID != "")
+            {
+                CAD_FACEBOK_ID = "'" + CAD_FACEBOK_ID + "'";
+            }
+            else
+            {
+                CAD_FACEBOK_ID = "NULL";
+            }
+
+            if (CAD_FACEBOK_IMAGEM != "")
+            {
+                CAD_FACEBOK_IMAGEM = "'" + CAD_FACEBOK_IMAGEM + "'";
+            }
+            else
+            {
+                CAD_FACEBOK_IMAGEM = "NULL";
+            }
+
+            //Response.Write("EXEC piuCadastro " + CAD_ID + ", '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "'," + cartaoBesni + ",'" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','" + objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "'," + CAD_FACEBOK_ID + "," + CAD_FACEBOK_IMAGEM + " ");
+            //Response.End();
+
+            rsCadastro = objBD.ExecutaSQL("EXEC piuCadastro " + CAD_ID + ", '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "'," + cartaoBesni + ",'" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','" + objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "',"+ CAD_FACEBOK_ID + ","+ CAD_FACEBOK_IMAGEM + " ");
             if (rsCadastro == null)
             {
                 throw new Exception();
