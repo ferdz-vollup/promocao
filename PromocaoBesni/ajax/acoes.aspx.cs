@@ -20,8 +20,8 @@ namespace PromocaoBesni.ajax
 
         bd objBD = new bd();
         utils objUtils = new utils();
-        private OleDbDataReader rsCadastro, rsSexo, rsLogin, rsSerie, rs;
-        string retorno = "", serie = "", numero = "", cupom = "", CAD_ID = "0";
+        private OleDbDataReader rsCadastro, rsSexo, rsLogin, rsSerie, rs, rsCadastros;
+        string retorno = "", serie = "", numero = "", cupom = "", CAD_ID = "0", sql = "where cad_id in (select cad_id from cupom)";
         int total = 0;
         //  Thread Atualizador;
 
@@ -35,10 +35,13 @@ namespace PromocaoBesni.ajax
             switch (acao)
             {
                 case "novoCadastro":
-                       GerarNovoUsuario(Request["nome"].ToString(), Request["cpf"].ToString(), Request["rg"].ToString(), Request["dtnascimento"].ToString(), Request["sexo"].ToString(), Request["telefone"].ToString(), Request["celular"].ToString(), Request["email"].ToString(), Request["cartao1"].ToString(), Request["cartao2"].ToString(), Request["cartao3"].ToString(), Request["cartao4"].ToString(), Request["cep"].ToString(), Request["logradouro"].ToString(), Request["numero"].ToString(), Request["complemento"].ToString(), Request["bairro"].ToString(), Request["cidade"].ToString(), Request["uf"].ToString(), Request["senha"], Request["termos"], Request["novidades"], Request["CAD_FACEBOK_ID"], Request["CAD_FACEBOK_IMAGEM"]);
+                    GerarNovoUsuario(Request["nome"].ToString(), Request["cpf"].ToString(), Request["rg"].ToString(), Request["dtnascimento"].ToString(), Request["sexo"].ToString(), Request["telefone"].ToString(), Request["celular"].ToString(), Request["email"].ToString(), Request["cartao1"].ToString(), Request["cartao2"].ToString(), Request["cartao3"].ToString(), Request["cartao4"].ToString(), Request["cep"].ToString(), Request["logradouro"].ToString(), Request["numero"].ToString(), Request["complemento"].ToString(), Request["bairro"].ToString(), Request["cidade"].ToString(), Request["uf"].ToString(), Request["senha"], Request["termos"], Request["novidades"], Request["CAD_FACEBOK_ID"], Request["CAD_FACEBOK_IMAGEM"]);
                     break;
                 case "FazerLogin":
                     FazerLogin(Request["cpf"].ToString().Replace(".", "").Replace("-", ""), objUtils.getMD5Hash(Request["senha"].ToString()));
+                    break;
+                case "loginAdministrador":
+                    loginAdministrador(Request["email"].ToString(), Request["password"].ToString());
                     break;
                 case "logout":
                     logout();
@@ -67,6 +70,10 @@ namespace PromocaoBesni.ajax
                 case "validarCPF":
                     validarCPF(Request["cpf"].ToString().Replace(".", "").Replace("-", ""));
                     break;
+                /* ADMIN*/
+                case "filtrarUsuario":
+                    filtrarUsuario(Request["id"]);
+                    break;
                 default:
                     break;
             }
@@ -88,8 +95,8 @@ namespace PromocaoBesni.ajax
             //Verificar se é Cliente Besni
             if (Session["Besni"].ToString().Length > 15)
             {
-               Response.Write( Session["Besni"].ToString().Length);
-               Response.End();
+                Response.Write(Session["Besni"].ToString().Length);
+                Response.End();
                 total = total * 2;
             }
 
@@ -103,7 +110,7 @@ namespace PromocaoBesni.ajax
                 GerarCupom(cnpj, data, cco, valor, "E");
             }
 
-            Response.Write("ok|"+ total);// MANDAR OK|TOTAL E PEGAR O TOTLA PARA SABER QUANTOS REGISTRO MOSTRAR NO NOVO-CUPOM
+            Response.Write("ok|" + total);// MANDAR OK|TOTAL E PEGAR O TOTLA PARA SABER QUANTOS REGISTRO MOSTRAR NO NOVO-CUPOM
             Response.End();
         }
 
@@ -124,8 +131,8 @@ namespace PromocaoBesni.ajax
                 Session["cadNome"] = rsLogin["CAD_NOME"].ToString();
                 Session["cadID"] = rsLogin["CAD_ID"].ToString();
                 Session["Besni"] = rsLogin["CAD_CARTAO_BESNI"].ToString();
-                
-                
+
+
                 //Salvando no log
                 //Utils.Banco().RunSQL("EXEC psLog '" + rsLogin["PET_ID"] + "',null,'Login efetuado no Portal','0'");
 
@@ -144,12 +151,44 @@ namespace PromocaoBesni.ajax
             rsLogin.Close();
         }
 
+        public void loginAdministrador(string email, string senha)
+        {
+            //Verificar se o usuário existe (comparando usuário e senha)
+            rsLogin = objBD.ExecutaSQL("select ADM_ID from administradores where ADM_EMAIL = '" + email + "' AND ADM_SENHA = '" + senha + "' AND ADM_ATIVO = 1");
+
+            if (rsLogin == null)
+            {
+                throw new Exception();
+            }
+            if (rsLogin.HasRows)
+            {
+                rsLogin.Read();
+
+                //Salvando as Session do usuário
+                Session["ADM_ID"] = rsLogin["ADM_ID"].ToString();
+                //Session["cadID"] = rsLogin["CAD_ID"].ToString();
+                //Session["Besni"] = rsLogin["CAD_CARTAO_BESNI"].ToString();
+
+                Response.Redirect("/admin/index.aspx");
+                Response.End();
+
+                Response.End();
+            }
+            else
+            {
+                Response.Redirect("/admin/login.aspx?msg=erroLogin");
+            }
+
+            rsLogin.Dispose();
+            rsLogin.Close();
+        }
+
         public void logout()
         {
             if (Session["cadID"] != null)
             {
                 //Salvando no log
-               //  objBD.ExecutaSQL("EXEC psLog '" + Session["petID"].ToString() + "',null,'Você se deslogou do Portal','0'");
+                //  objBD.ExecutaSQL("EXEC psLog '" + Session["petID"].ToString() + "',null,'Você se deslogou do Portal','0'");
 
                 Session.Abandon();
                 Response.Redirect("/");
@@ -162,7 +201,7 @@ namespace PromocaoBesni.ajax
         }
 
         public void mudarStatusFoto(string status, string id)
-        { 
+        {
             objBD.ExecutaSQL("exec puInstagram '" + status + "','" + id + "'");
         }
 
@@ -213,7 +252,7 @@ namespace PromocaoBesni.ajax
             //Response.Write("EXEC piuCadastro " + CAD_ID + ", '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "'," + cartaoBesni + ",'" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','" + objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "'," + CAD_FACEBOK_ID + "," + CAD_FACEBOK_IMAGEM + " ");
             //Response.End();
 
-            rsCadastro = objBD.ExecutaSQL("EXEC piuCadastro " + CAD_ID + ", '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "'," + cartaoBesni + ",'" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','" + objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "',"+ CAD_FACEBOK_ID + ","+ CAD_FACEBOK_IMAGEM + " ");
+            rsCadastro = objBD.ExecutaSQL("EXEC piuCadastro " + CAD_ID + ", '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "'," + cartaoBesni + ",'" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','" + objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "'," + CAD_FACEBOK_ID + "," + CAD_FACEBOK_IMAGEM + " ");
             if (rsCadastro == null)
             {
                 throw new Exception();
@@ -231,7 +270,7 @@ namespace PromocaoBesni.ajax
 
                 //Enviar e-mail
                 string conteudo = "<h1 style=\"margin:0 auto 50px auto; font-size:24px;font-family:'arial'; letter-spacing: 1.8; font-weight: 800; text-align:center; color:#a8272d; text-transform:uppercase;\">USUÁRIO CADASTRADO</h1>";
-                conteudo += "<center><p style=\"font-weight:700; font-size: 16px;\">Olá, "+ nome + "!</p></center>";
+                conteudo += "<center><p style=\"font-weight:700; font-size: 16px;\">Olá, " + nome + "!</p></center>";
                 conteudo += "<center><p style=\"font-weight:700; font-size: 16px;\">Seu cadastro foi realizado com sucesso.</p></center>";
                 objUtils.EnviaEmail(email, "Usuário Cadastrado | Promoção Besni", conteudo, "", "", null, "contatopromo@lojasbesni.com.br", null);
 
@@ -284,7 +323,7 @@ namespace PromocaoBesni.ajax
             }
 
             Response.End();
-                rsSerie = objBD.ExecutaSQL("set dateformat dmy; select top 1 SER_INICIO,  SER_FINAL from serie where CONVERT(VARCHAR(8), SER_DH_INICIO, 5) > CONVERT(VARCHAR(8), getDate(), 5) and   cONVERT(VARCHAR(8), getDate(), 5) < CONVERT(VARCHAR(8), SER_DH_FINAL, 5)");
+            rsSerie = objBD.ExecutaSQL("set dateformat dmy; select top 1 SER_INICIO,  SER_FINAL from serie where CONVERT(VARCHAR(8), SER_DH_INICIO, 5) > CONVERT(VARCHAR(8), getDate(), 5) and   cONVERT(VARCHAR(8), getDate(), 5) < CONVERT(VARCHAR(8), SER_DH_FINAL, 5)");
 
             if (rsSerie == null)
             {
@@ -361,7 +400,7 @@ namespace PromocaoBesni.ajax
 
         public void MudarSenha(string senha, string cpf)
         {
-            rsLogin = objBD.ExecutaSQL("EXEC puSenhaPorCPF '" + objUtils.getMD5Hash(senha) + "','"+cpf+"'");
+            rsLogin = objBD.ExecutaSQL("EXEC puSenhaPorCPF '" + objUtils.getMD5Hash(senha) + "','" + cpf + "'");
             if (rsLogin == null)
             {
                 throw new Exception();
@@ -415,6 +454,54 @@ namespace PromocaoBesni.ajax
             }
             //rs.Dispose();
             //rs.Close();
+        }
+
+        /*admin*/
+        public void filtrarUsuario(string id)
+        {
+            try
+            {
+                string query = "select * from cadastro ";
+
+                if (id == "0")
+                {
+                    sql = " where cad_id not in (select cad_id from cupom) ";
+                }
+                if(id == "null")
+                {
+                    sql = "";
+                }
+                query = query + sql;
+
+                rsCadastros = objBD.ExecutaSQL(query);
+
+                if (rsCadastros == null)
+                {
+                    throw new Exception();
+                }
+                if (rsCadastros.HasRows)
+                {
+                    while (rsCadastros.Read())
+                    {
+                        retorno += "<tr>";
+                        retorno += "  <td>" + rsCadastros["CAD_ID"] + "</td>";
+                        retorno += "  <td>" + rsCadastros["CAD_NOME"] + "</td>";
+                        retorno += "  <td>" + rsCadastros["CAD_SEXO"] + "</td>";
+                        retorno += "  <td>" + rsCadastros["CAD_EMAIL"] + "</td>";
+                        retorno += "  <td><a href='javascript:void(0)' onClick='verUser(" + rsCadastros["CAD_ID"] + ")' data-toggle='modal' data-target='#dadosUsuario'><i class='fa fa-pencil-square-o' aria-hidden='true'></i></a></td>";
+                        retorno += "</tr>";
+                    }
+
+                    Response.Write(retorno);
+                    Response.End();
+                }
+                rsCadastros.Dispose();
+                rsCadastros.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
