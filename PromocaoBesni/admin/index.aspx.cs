@@ -29,6 +29,8 @@ namespace PromocaoBesni.admin
 
         public void PegarResultado()
         {
+           //VERIFICAR NO BD O NÚMERO DO CONCURSO COM A COLUNA VAZIA E SE A DATA DELE É MAIOR DO QUE HOJE
+
             Besni_Caixa.Caixa response = AJAX.GET<Besni_Caixa.Caixa>("http://confiraloterias.com.br/api0/json.php?loteria=federal&token=0oTe7mbgFQcO71l&concurso=05235");
 
             try
