@@ -17,7 +17,7 @@ namespace PromocaoBesni.admin
     {
         private bd objBD;
         private utils objUtils;
-        private OleDbDataReader rsCadastros, rsUser;
+        private OleDbDataReader rsCadastros, rsUser, rsTotal;
         string resposta = "";
 
         protected void Page_Load(object sender, EventArgs e)
@@ -102,13 +102,14 @@ namespace PromocaoBesni.admin
                     while (rsCadastros.Read())
                     {
                         usuariosCadastrados.InnerHtml += "<tr>";
-                        usuariosCadastrados.InnerHtml += "<td>"+ rsCadastros["CAD_ID"] + "</td>";
-                        usuariosCadastrados.InnerHtml += "<td>" + rsCadastros["CAD_NOME"] + "</td>";
-                        usuariosCadastrados.InnerHtml += "<td>" + rsCadastros["CAD_SEXO"] + "</td>";
-                        usuariosCadastrados.InnerHtml += "<td>" + rsCadastros["CAD_EMAIL"] + "</td>";
-                        usuariosCadastrados.InnerHtml += "<td><a href='javascript:void(0)' onClick='verUser("+ rsCadastros["CAD_ID"] +")' data-toggle='modal' data-target='#dadosUsuario'><i class='fa fa-pencil-square-o' aria-hidden='true'></i></a></td>";
+                        usuariosCadastrados.InnerHtml += "  <td>"+ rsCadastros["CAD_ID"] + "</td>";
+                        usuariosCadastrados.InnerHtml += "  <td>" + rsCadastros["CAD_NOME"] + "</td>";
+                        usuariosCadastrados.InnerHtml += "  <td>" + rsCadastros["CAD_SEXO"] + "</td>";
+                        usuariosCadastrados.InnerHtml += "  <td>" + rsCadastros["CAD_EMAIL"] + "</td>";
+                        usuariosCadastrados.InnerHtml += "  <td><a href='javascript:void(0)' onClick='verUser("+ rsCadastros["CAD_ID"] +")' data-toggle='modal' data-target='#dadosUsuario'><i class='fa fa-pencil-square-o' aria-hidden='true'></i></a></td>";
                         usuariosCadastrados.InnerHtml += "</tr>";
                     }
+                    carregarTotal();
                 }
                 rsCadastros.Dispose();
                 rsCadastros.Close();
@@ -117,6 +118,76 @@ namespace PromocaoBesni.admin
             {
                 throw;
             }
+        }
+
+        public void carregarTotal()
+        {
+            rsTotal = objBD.ExecutaSQL("select count(*) as total from cadastro");
+
+            if (rsTotal == null)
+            {
+                throw new Exception();
+            }
+            if (rsTotal.HasRows)
+            {
+                rsTotal.Read();
+
+                totalizador.InnerHtml = "Total de <strong>" + rsTotal["total"].ToString() +  "</strong> usuários cadastrados";
+            }
+        }
+
+        public void ActionResult TesteTableHTML()
+        {
+            HttpContext.Response.Clear();
+            HttpContext.Response.AddHeader("content-disposition", string.Format("attachment;filename=Teste_{0}.xls", DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss")));
+
+            HttpContext.Response.ContentType = "application/ms-excel";
+            HttpContext.Response.ContentEncoding = System.Text.Encoding.Default;
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append("<style type=\"text/css\">\r\n");
+            sb.Append(".tabHead\r\n");
+            sb.Append("{\r\n");
+            sb.Append("   background-color: #cccccc;\r\n");
+            sb.Append("   border: solid 1px black;\r\n");
+            sb.Append("}\r\n");
+            sb.Append(".tabRow\r\n");
+            sb.Append("{\r\n");
+            sb.Append("   border: solid 1px black;\r\n");
+            sb.Append("}\r\n");
+            sb.Append("</style>\r\n\r\n");
+
+
+            //Header
+            sb.AppendFormat("<table>\r\n");
+            sb.AppendFormat("<thead>\r\n");
+            sb.AppendFormat("<tr>\r\n");
+            sb.AppendFormat("\t<td class=\"tabHead\">Nome</td>\r\n");
+            sb.AppendFormat("\t<td class=\"tabHead\">Telefone</td>\r\n");
+            sb.AppendFormat("</tr>\r\n");
+            sb.AppendFormat("</thead>\r\n");
+            sb.AppendFormat("<tbody>\r\n");
+
+            //Row
+            sb.AppendFormat("<tr>\r\n");
+            sb.AppendFormat("\t<td class=\"tabRow\">Eduardo</td>\r\n");
+            sb.AppendFormat("\t<td class=\"tabRow\">11111</td>\r\n");
+            sb.AppendFormat("</tr>\r\n");
+
+            sb.AppendFormat("<tr>\r\n");
+            sb.AppendFormat("\t<td class=\"tabRow\">Coutinho</td>\r\n");
+            sb.AppendFormat("\t<td class=\"tabRow\">22222</td>\r\n");
+            sb.AppendFormat("</tr>\r\n");
+
+            //Footer
+            sb.AppendFormat("</tbody>\r\n");
+            sb.AppendFormat("</table>\r\n");
+
+            HttpContext.Response.Cache.SetCacheability(HttpCacheability.NoCache);
+            HttpContext.Response.Write(sb.ToString());
+            HttpContext.Response.End();
+
+          //  return null;
         }
     }
 }

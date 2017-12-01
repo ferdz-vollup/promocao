@@ -49,6 +49,9 @@ namespace PromocaoBesni.admin
                         cuponsCadastrados.InnerHtml += "</tr>";
                     }
                 }
+
+                rs.Dispose();
+                rs.Close();
             }
             catch (Exception)
             {

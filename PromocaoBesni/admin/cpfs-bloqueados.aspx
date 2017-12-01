@@ -23,7 +23,7 @@
         <div id="page-wrapper">
             <div class="row displayFlex">
                 <div class="col-lg-11">
-                    <h1 class="page-header">Cpfs bloqueados</h1>
+                    <h1 class="page-header">CPFs bloqueados</h1>
                 </div>
                 <div class="col-lg-1">
                     <a href="javascript:void(0)" data-toggle="modal" data-target="#insertCpf">

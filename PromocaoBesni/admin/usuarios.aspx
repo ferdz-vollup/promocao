@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="usuarios.aspx.cs" Inherits="PromocaoBesni.admin.usuarios" %>
+
 <%@ Register Src="~/admin/inc/head.ascx" TagPrefix="besni" TagName="head" %>
 <%@ Register Src="~/admin/inc/menu-topo.ascx" TagPrefix="besni" TagName="menuTopo" %>
 <%@ Register Src="~/admin/inc/menu.ascx" TagPrefix="besni" TagName="menu" %>
@@ -9,6 +10,13 @@
 
 <head>
     <besni:head runat="server" ID="head" />
+    <style>
+        .input-fitro {
+            display: inline-block;
+            width: auto;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 
 <body id="bodyInterna">
@@ -26,16 +34,24 @@
                     <h1 class="page-header">Usuários</h1>
                 </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default" id="todosUsuarios">
                         <div class="panel-heading">
-                            <i class="fa fa-user fa-fw"></i> Usuários cadastrados
+                            <i class="fa fa-user fa-fw"></i>Usuários cadastrados
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover"  >
+                                <label>
+                                    Filtrar:
+                                    <select onchange="filtrarUsuario(this.value);" name="filtro" id="fitro" aria-controls="dataTables-example" class="form-control input-sm input-fitro">
+                                        <option value="null"></option>
+                                        <option value="1">Com produtos</option>
+                                        <option value="0">Sem produtos</option>
+                                    </select>
+                                </label>
+                                <table class="table table-striped table-bordered table-hover">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -47,6 +63,7 @@
                                     </thead>
                                     <tbody id="usuariosCadastrados" runat="server"></tbody>
                                 </table>
+                                <span id="totalizador" runat="server"></span>
                             </div>
                         </div>
                     </div>
@@ -64,7 +81,7 @@
                     <h4 class="modal-title">Usuário</h4>
                 </div>
                 <div class="modal-body">
-                    <table class="table table-striped table-bordered table-hover"  >
+                    <table  class="table table-striped table-bordered table-hover">
                         <thead>
                             <tr>
                                 <th>Nome</th>
@@ -88,6 +105,7 @@
                         </thead>
                         <tbody id="userCadastrado"></tbody>
                     </table>
+                    
                 </div>
             </div>
         </div>
@@ -95,6 +113,7 @@
 
     <script>
         function verUser(id) {
+            alert("aqui")
             ajax2 = ajaxInit();
             ajax2.open("GET", "/admin/usuarios.aspx?acao=verUser&id=" + id, true);
             ajax2.setRequestHeader("Content-Type", "charset=iso-8859-1");
@@ -107,6 +126,21 @@
             }
             ajax2.send(null);
         }
+
+        function filtrarUsuario(id) {
+            ajax2 = ajaxInit();
+            ajax2.open("GET", "/ajax/acoes.aspx?acao=filtrarUsuario&id=" + id, true);
+            ajax2.setRequestHeader("Content-Type", "charset=iso-8859-1");
+            ajax2.onreadystatechange = function () {
+                if (ajax2.readyState == 4) {
+                    if (ajax2.status == 200) {
+                        jQuery("#usuariosCadastrados").html(ajax2.responseText);
+                    }
+                }
+            }
+            ajax2.send(null);
+        }
+
     </script>
 
     <!--footer-->
