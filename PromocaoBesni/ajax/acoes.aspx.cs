@@ -249,8 +249,8 @@ namespace PromocaoBesni.ajax
                 CAD_FACEBOK_IMAGEM = "NULL";
             }
 
-            //Response.Write("EXEC piuCadastro " + CAD_ID + ", '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "'," + cartaoBesni + ",'" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','" + objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "'," + CAD_FACEBOK_ID + "," + CAD_FACEBOK_IMAGEM + " ");
-            //Response.End();
+            Response.Write("EXEC piuCadastro " + CAD_ID + ", '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "'," + cartaoBesni + ",'" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','" + objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "'," + CAD_FACEBOK_ID + "," + CAD_FACEBOK_IMAGEM + " ");
+            Response.End();
 
             rsCadastro = objBD.ExecutaSQL("EXEC piuCadastro " + CAD_ID + ", '" + nome + "','" + cpf + "','" + rg + "','" + dtnascimento + "','" + sexo + "','" + telefone + "','" + celular + "','" + email + "'," + cartaoBesni + ",'" + cep + "','" + logradouro + "','" + numero + "','" + complemento + "','" + bairro + "','" + cidade + "','" + uf + "','" + objUtils.getMD5Hash(senha) + "','" + termos + "','" + novidades + "'," + CAD_FACEBOK_ID + "," + CAD_FACEBOK_IMAGEM + " ");
             if (rsCadastro == null)
@@ -353,9 +353,9 @@ namespace PromocaoBesni.ajax
                     cupom = "E-" + cupom;
                 }
 
-                objBD.ExecutaSQL("EXEC pGerarCupom '" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + cco + "','" + valor + "','" + serie + "'");
-                // Response.Write("insert into cupom values('" + Session["cadID"].ToString() + "','" + cupom + "','"+ cnpj + "','"+data+"','"+cco+"','"+valor+"',getDate(),'"+ serie + "')");
-                // Response.End();
+               // objBD.ExecutaSQL("EXEC pGerarCupom '" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + cco + "','" + valor + "','" + serie + "'");
+                 Response.Write("insert into cupom values('" + Session["cadID"].ToString() + "','" + cupom + "','"+ cnpj + "','"+data+"','"+cco+"','"+valor+"',getDate(),'"+ serie + "')");
+                 Response.End();
 
             }
 
