@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using Etnia.classe;
 using System.Data.SqlClient;
 using System.Data.OleDb;
+using System.Globalization;
 
 namespace PromocaoBesni
 {
@@ -15,7 +16,9 @@ namespace PromocaoBesni
 
         bd objBD = new bd();
         utils objUtils = new utils();
-        private OleDbDataReader rsCupons;
+        private OleDbDataReader rsCupons, rs;
+        int aux= 0;
+        string especial = "", fundo = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,8 +30,8 @@ namespace PromocaoBesni
             {
                 objUtils = new utils();
                 string acao = Request["acao"];
+                usuario.InnerHtml += Session["cadNome"].ToString();
 
-               
                 trazerCupons();
             }
             else
@@ -40,11 +43,7 @@ namespace PromocaoBesni
 
         public void trazerCupons()
         {
-
-            //Response.Write("select CUP_NUMERO_SORTE from cupom where CAD_ID = " + Session["cadID"].ToString() + " ");
-            //Response.End();
-
-            rsCupons = objBD.ExecutaSQL("select CUP_NUMERO_SORTE, CONVERT(VARCHAR(10),CUP_DH_CADASTRO,103) AS CUP_DH_CADASTRO from cupom where CAD_ID = " + Session["cadID"].ToString() + " order by CUP_NUMERO_SORTE desc ");
+            rsCupons = objBD.ExecutaSQL("select C.CUP_DATA, C.CUP_VALOR, C.CUP_NUMERO_SORTE from cupom C where C.cad_id = " + Session["cadID"].ToString() + " AND C.CUP_NUMERO_SORTE NOT LIKE '%E-%'");
 
             if (rsCupons == null)
             {
@@ -52,25 +51,62 @@ namespace PromocaoBesni
             }
             if (rsCupons.HasRows)
             {
-                string palavra = "E";
-
+                secCupons.InnerHtml += "<div class=\"table-responsive\">";
+                secCupons.InnerHtml += "    <table class=\"table table-condensed text-center\">";
+                secCupons.InnerHtml += "        <thead style=\"background:#97092a;color:#fff\">";
+                secCupons.InnerHtml += "            <tr class=\"text-uppercase basenine\">";
+                secCupons.InnerHtml += "                <th style=\"vertical-align:middle; text-align:center\">data</th>";
+                secCupons.InnerHtml += "                <th style=\"vertical-align:middle; text-align:center\">valor</th>";
+                secCupons.InnerHtml += "                <th style=\"vertical-align:middle; text-align:center\">número da<br>sorte</th>";
+                secCupons.InnerHtml += "                <th style=\"vertical-align:middle; text-align:center\">número da<br>sorte especial</th>";
+                secCupons.InnerHtml += "            </tr>";
+                secCupons.InnerHtml += "        </thead>";
+                secCupons.InnerHtml += "        <tbody>";
+               
                 while (rsCupons.Read())
                 {
+                    if (aux == 0)
+                    {
+                        //CRIAR ARAY PARA NUMEROS ESPECIAIS
+                        rs = objBD.ExecutaSQL("select CUP_NUMERO_SORTE from cupom C where C.cad_id = " + Session["cadID"].ToString() + " AND C.CUP_NUMERO_SORTE LIKE '%E-%'");
+                        if (rs == null)
+                        {
+                            throw new Exception();
+                        }
+                        if (rs.HasRows)
+                        {
+                            while (rs.Read())
+                            {
+                                especial += rs["CUP_NUMERO_SORTE"].ToString() + "|";
+                            }
+                        }
+                        rs.Dispose();
+                        rs.Close();
+                    }
+                    
+                    string[] words = especial.Split('|');
 
-                    if (rsCupons["CUP_NUMERO_SORTE"].ToString().Contains(palavra))
+                    if (aux % 2 == 0)
                     {
-                        secCupons.InnerHtml += " <div class=\"cupon\" style=\"background:#97092a;\">";
-                        secCupons.InnerHtml += "    <h4 class=\"basenine\">NÚMERO DA SORTE ESPECIAL <br/> " + rsCupons["CUP_NUMERO_SORTE"] + "</h4>";
+                        fundo = "style=\"background-color:#e9e9e9;\"";
                     }
-                    else
-                    {
-                        secCupons.InnerHtml += " <div class=\"cupon\" style=\"background:#c8962b;\">";
-                        secCupons.InnerHtml += "    <h4 class=\"basenine\">NÚMERO DA SORTE <br/>" + rsCupons["CUP_NUMERO_SORTE"] + "</h4>";
-                    }
-                    secCupons.InnerHtml += "<p style=\"text-align:center; color: #fff;\">Gerado em: " + rsCupons["CUP_DH_CADASTRO"] + "</p>";
-                        secCupons.InnerHtml += " </div> ";
+                    
+                    secCupons.InnerHtml += "        <tr "+fundo+">";
+                    secCupons.InnerHtml += "            <td>" + rsCupons["CUP_DATA"].ToString() + "</td>";
+                    secCupons.InnerHtml += "            <td>" + string.Format(CultureInfo.GetCultureInfo("pt-BR"), "R$  {0:0.0,0}", rsCupons["CUP_VALOR"]) + "</td>";
+                    secCupons.InnerHtml += "            <td>" + rsCupons["CUP_NUMERO_SORTE"].ToString() + "</td>";
+                    secCupons.InnerHtml += "            <td>"+ words[aux] + "</td>";
+                    secCupons.InnerHtml += "        </tr>";
+                    fundo = "";
+                    aux++;
                 }
+                
+                secCupons.InnerHtml += "        </tbody>";
+                secCupons.InnerHtml += "    </table>";
+                secCupons.InnerHtml += "</div>";
             }
+            rsCupons.Dispose();
+            rsCupons.Close();
         }
     }
 }
