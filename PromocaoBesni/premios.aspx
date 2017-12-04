@@ -45,24 +45,26 @@
 			</h2>	
 		</div>
 		<div class="row" style="margin-top: 10%;text-align: right">
-			<div class="col-md-6" style="text-align: left">
+			<div class="col-md-2"></div>
+			<div class="col-md-4 col-sm-5" style="text-align: left">
 				<h3 class="basenine text-uppercase cinza">1 jeep renegade okm</h3>
 				<div class="traco-vermelho"></div>
 				<span style="line-height: 30px;">
-					Jepp Renegade Custom, modelo 2018, 05 (cinco) portas, flex, no valor de R$76.000,00 (setenta e seis mil reais). 
+					Jeep Renegade Custom, modelo 2018, 05 (cinco) portas, flex, no valor de R$76.000,00 (setenta e seis mil reais). 
 				</span>
 			</div>
-			<img src="/assets/imagens/jeep.png" alt="Imagem jeep">
+			<img src="/assets/imagens/jeep.png" alt="Imagem jeep" class="col-md-4">
 		</div>
 		<div class="row" style="margin-top: 10%;text-align: right">
-			<div class="col-md-6" style="text-align: left">
+			<div class="col-md-2"></div>
+			<div class="col-md-4 col-sm-5" style="text-align: left">
 				<h3 class="basenine text-uppercase cinza">30 motos bull krc 50c lx</h3>
 				<div class="traco-vermelho"></div>
 				<span style="line-height: 30px;">
 					Motocicleta 0km da marca Bull Motors, Modelo KRC 50 LX, 2015/2015, gasolina, no valor de R$5.500,00 (cinco mil e quinhentos reais). 
 				</span>
 			</div>
-			<img src="/assets/imagens/moto-bull.png" alt="Imagem moto bull">
+			<img src="/assets/imagens/moto-bull.png" alt="Imagem moto bull" class="col-md-4">
 
 
 
