@@ -298,9 +298,8 @@
             width: 60%;
         }
 
-    #fique-ligado, #besni-proxima {
-        margin: 50px 0px
-    }
+    #fique-ligado {margin:50px 0px}
+    #besni-proxima {margin-top:50px}
 
         #fique-ligado span, #besni-proxima span {
             font-size: 25px;

@@ -136,58 +136,58 @@ namespace PromocaoBesni.admin
             }
         }
 
-        public void ActionResult TesteTableHTML()
-        {
-            HttpContext.Response.Clear();
-            HttpContext.Response.AddHeader("content-disposition", string.Format("attachment;filename=Teste_{0}.xls", DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss")));
+        //public void ActionResult TesteTableHTML()
+        //{
+        //    HttpContext.Response.Clear();
+        //    HttpContext.Response.AddHeader("content-disposition", string.Format("attachment;filename=Teste_{0}.xls", DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss")));
 
-            HttpContext.Response.ContentType = "application/ms-excel";
-            HttpContext.Response.ContentEncoding = System.Text.Encoding.Default;
+        //    HttpContext.Response.ContentType = "application/ms-excel";
+        //    HttpContext.Response.ContentEncoding = System.Text.Encoding.Default;
 
-            StringBuilder sb = new StringBuilder();
-            sb.Append("<style type=\"text/css\">\r\n");
-            sb.Append(".tabHead\r\n");
-            sb.Append("{\r\n");
-            sb.Append("   background-color: #cccccc;\r\n");
-            sb.Append("   border: solid 1px black;\r\n");
-            sb.Append("}\r\n");
-            sb.Append(".tabRow\r\n");
-            sb.Append("{\r\n");
-            sb.Append("   border: solid 1px black;\r\n");
-            sb.Append("}\r\n");
-            sb.Append("</style>\r\n\r\n");
+        //    StringBuilder sb = new StringBuilder();
+        //    sb.Append("<style type=\"text/css\">\r\n");
+        //    sb.Append(".tabHead\r\n");
+        //    sb.Append("{\r\n");
+        //    sb.Append("   background-color: #cccccc;\r\n");
+        //    sb.Append("   border: solid 1px black;\r\n");
+        //    sb.Append("}\r\n");
+        //    sb.Append(".tabRow\r\n");
+        //    sb.Append("{\r\n");
+        //    sb.Append("   border: solid 1px black;\r\n");
+        //    sb.Append("}\r\n");
+        //    sb.Append("</style>\r\n\r\n");
 
 
-            //Header
-            sb.AppendFormat("<table>\r\n");
-            sb.AppendFormat("<thead>\r\n");
-            sb.AppendFormat("<tr>\r\n");
-            sb.AppendFormat("\t<td class=\"tabHead\">Nome</td>\r\n");
-            sb.AppendFormat("\t<td class=\"tabHead\">Telefone</td>\r\n");
-            sb.AppendFormat("</tr>\r\n");
-            sb.AppendFormat("</thead>\r\n");
-            sb.AppendFormat("<tbody>\r\n");
+        //    //Header
+        //    sb.AppendFormat("<table>\r\n");
+        //    sb.AppendFormat("<thead>\r\n");
+        //    sb.AppendFormat("<tr>\r\n");
+        //    sb.AppendFormat("\t<td class=\"tabHead\">Nome</td>\r\n");
+        //    sb.AppendFormat("\t<td class=\"tabHead\">Telefone</td>\r\n");
+        //    sb.AppendFormat("</tr>\r\n");
+        //    sb.AppendFormat("</thead>\r\n");
+        //    sb.AppendFormat("<tbody>\r\n");
 
-            //Row
-            sb.AppendFormat("<tr>\r\n");
-            sb.AppendFormat("\t<td class=\"tabRow\">Eduardo</td>\r\n");
-            sb.AppendFormat("\t<td class=\"tabRow\">11111</td>\r\n");
-            sb.AppendFormat("</tr>\r\n");
+        //    //Row
+        //    sb.AppendFormat("<tr>\r\n");
+        //    sb.AppendFormat("\t<td class=\"tabRow\">Eduardo</td>\r\n");
+        //    sb.AppendFormat("\t<td class=\"tabRow\">11111</td>\r\n");
+        //    sb.AppendFormat("</tr>\r\n");
 
-            sb.AppendFormat("<tr>\r\n");
-            sb.AppendFormat("\t<td class=\"tabRow\">Coutinho</td>\r\n");
-            sb.AppendFormat("\t<td class=\"tabRow\">22222</td>\r\n");
-            sb.AppendFormat("</tr>\r\n");
+        //    sb.AppendFormat("<tr>\r\n");
+        //    sb.AppendFormat("\t<td class=\"tabRow\">Coutinho</td>\r\n");
+        //    sb.AppendFormat("\t<td class=\"tabRow\">22222</td>\r\n");
+        //    sb.AppendFormat("</tr>\r\n");
 
-            //Footer
-            sb.AppendFormat("</tbody>\r\n");
-            sb.AppendFormat("</table>\r\n");
+        //    //Footer
+        //    sb.AppendFormat("</tbody>\r\n");
+        //    sb.AppendFormat("</table>\r\n");
 
-            HttpContext.Response.Cache.SetCacheability(HttpCacheability.NoCache);
-            HttpContext.Response.Write(sb.ToString());
-            HttpContext.Response.End();
+        //    HttpContext.Response.Cache.SetCacheability(HttpCacheability.NoCache);
+        //    HttpContext.Response.Write(sb.ToString());
+        //    HttpContext.Response.End();
 
-          //  return null;
-        }
+        //  //  return null;
+        //}
     }
 }

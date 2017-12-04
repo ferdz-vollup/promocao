@@ -92,7 +92,7 @@ section#menu {
         background-image: url(../imagens/banner-promocao.jpg);
         position: absolute;
         background-size: cover;
-        background-position: center center
+        background-position: top center
     }
 
     #banner #imagem-carro img {
