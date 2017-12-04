@@ -46,7 +46,6 @@ namespace PromocaoBesni.inc
                 case "cadastrar-cupom.aspx":
                 case "cadastro.aspx":
                 case "meus-cupons.aspx":
-
                     log.Attributes["class"] = "ativo";
                     break;
 
