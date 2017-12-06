@@ -65,7 +65,7 @@
 <!--banner-->
 <section id="banner-premios">
 	<div class="banner">
-		<div id="imagem-carro"><img src="/assets/imagens/imagem-carro.png" alt=""></div>
+		<div id="imagem-carro"><img src="/assets/imagens/imagem-carro.png" alt="imagem carro"></div>
 	</div>
 </section>
 
@@ -97,22 +97,22 @@
                 </tr>
                 <tr>
                     <td>1º</td>
-                    <td>Das 0h de 26/11 às 23h59min do dia 08/12/17</td>
-                    <td>09/12/17</td>
+                    <td>Das 0h de 26/11 às 23h59min do dia 08/12/2017</td>
+                    <td>09/12/2017</td>
                 </tr>
                 <tr>
                     <td>2º</td>
-                    <td>Das 0h de 09/12/17 às 23h59min do dia 15/12/17</td>
-                    <td>16/12/17</td>
+                    <td>Das 0h de 09/12/2017 às 23h59min do dia 15/12/2017</td>
+                    <td>16/12/2017</td>
                 </tr>
                 <tr>
                     <td>3º</td>
-                    <td>Das 0h de 16/12/17 às 23h59min do dia 22/12/17</td>
-                    <td>23/12/17</td>
+                    <td>Das 0h de 16/12/2017 às 23h59min do dia 22/12/2017</td>
+                    <td>23/12/2017</td>
                 </tr>
                 <tr>
                     <td>Sorteio final</td>
-                    <td>Das 0h de 26/11 às 23h59min de 31/12/17</td>
+                    <td>Das 0h de 26/11 às 23h59min de 31/12/2017</td>
                     <td>03/01/2018</td>
                 </tr>
             </table>
@@ -130,7 +130,7 @@
 			<br><br><br><br>
 			<h3 class="basenine cinza">Qual a premiação da promoção?</h3><br>
 			<span style="line-height: 30px;" >
-				Sorteios Periódicos: 30 (trinta) prêmios, à escolha do ganhador, dentre as opções: 01 (uma) motocicleta, 0 km, da marca Bull Motors, Modelo KRC 50 LX, 2015/2015,gasolina, no valor de R$ 5.500,00 (cinco mil e quinhentos reais) ou 01 (um) cartão presente, emitido por instituição financeira ou administradora de cartão idônea, com autorização de funcionamento no Brasil, sem função saque, para ser usado em qualquer estabelecimento comercial credenciado à bandeira do emissor, com crédito de R$ 5.500,00 (cinco mil e quinhentos reais). 
+				Sorteios Periódicos: 30 (trinta) prêmios, à escolha do ganhador, dentre as opções: 01 (uma) motocicleta, 0 km, da marca Bull Motors, Modelo KRC 50 LX, 2015/2015, gasolina, no valor de R$ 5.500,00 (cinco mil e quinhentos reais) ou 01 (um) cartão presente, emitido por instituição financeira ou administradora de cartão idônea, com autorização de funcionamento no Brasil, sem função saque, para ser usado em qualquer estabelecimento comercial credenciado à bandeira do emissor, com crédito de R$ 5.500,00 (cinco mil e quinhentos reais). 
 			</span><br /><br />
             <span style="line-height: 30px;" >
                 Sorteio Final (Série Especial): 01 (um) prêmio, à escolha do ganhador, dentre as opções: 01 (um) automóvel, 0 km, da marca Jeep, modelo Renegade Custom, modelo 2018, 05 (cinco) portas, flex, no valor de R$ 76.000,00 (setenta e seis mil reais) ou 01 (um) cartão presente, emitido por instituição financeira ou administradora de cartão idônea, com autorização de funcionamento no Brasil, sem função saque, para ser usado em qualquer estabelecimento comercial credenciado à bandeira do emissor, com crédito de R$ 76.000,00 (setenta e seis mil reais).
@@ -138,7 +138,7 @@
 			<br><br><br><br>
 			<h3 class="basenine cinza">Como posso participar?</h3><br>
 			<span style="line-height: 30px;" >
-				Para participar, basta efetuar compras de, no mínimo, R$200,00 (duzentos reais) em qualquer loja Besni durante o período de participação da promoção e efetuar seu cadastro no hotsite da promoção no endereço <a href="http://www.promocaobesni.com.br" target="_blank">www.promocaobesni.com.br</a>.  
+				Para participar, basta efetuar compras de, no mínimo, R$200,00 (duzentos reais) em qualquer loja Besni durante o período de participação da promoção e efetuar seu cadastro no hotsite da promoção no endereço <a href="http://www.promocaobesni.com.br" title="Promoção Besni">www.promocaobesni.com.br</a>.  
 			</span>
 			
             <br><br><br><br>
@@ -190,7 +190,7 @@
             <br><br><br><br>
 			<h3 class="basenine cinza">Como faço para consultar meu(s) número(s) da sorte?</h3><br>
 			<span style="line-height: 30px;" >
-				Para consultar os números da sorte, com os quais estará concorrendo aos prêmios, o participante deverá acessar o site da promoção <a href="http://www.promocaobesni.com.br" target="_blank">www.promocaobesni.com.br</a> com os dados de login e senha previamente cadastrados. 
+				Para consultar os números da sorte, com os quais estará concorrendo aos prêmios, o participante deverá acessar o site da promoção <a href="http://www.promocaobesni.com.br" title="Promoção Besni">www.promocaobesni.com.br</a> com os dados de login e senha previamente cadastrados. 
 			</span>
 			
             <br><br><br><br>
@@ -220,7 +220,7 @@
             <br><br><br><br>
 			<h3 class="basenine cinza">Esqueci/perdi minha senha, como faço para recuperar?</h3><br>
 			<span style="line-height: 30px;" >
-				Acesse <a href="http://www.promocaobesni.com.br/login.aspx" target="_blank" title="Site Promoção Besni">www.promocaobesni.com.br/login.aspx</a>  e clique em “esqueci minha senha”. Preencha o número do seu CPF e clique no botão "Enviar". Após isto, você receberá um email para redefinir sua senha.
+				Acesse <a href="http://www.promocaobesni.com.br/login.aspx" title="Promoção Besni">www.promocaobesni.com.br/login.aspx</a>  e clique em “esqueci minha senha”. Preencha o número do seu CPF e clique no botão "Enviar". Após isto, você receberá um email para redefinir sua senha.
 			</span>
             			
             <br><br><br><br>

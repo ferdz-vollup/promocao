@@ -26,6 +26,7 @@
     <!-- PIXELS -->
     <meta property="og:image:height" content="600">
     <!-- PIXELS -->
+    <style>#secCupons{margin-top:10px}@media(max-width:450px){#secCupons{font-size:10px}}</style>
 </head>
 
 <body>
@@ -36,7 +37,7 @@
     <section id="banner-premios">
         <div class="banner">
             <div id="imagem-carro">
-                <img src="/assets/imagens/imagem-carro.png" alt=""></div>
+                <img src="/assets/imagens/imagem-carro.png" alt="imagem carro"></div>
         </div>
     </section>
 
@@ -52,7 +53,7 @@
                     </h3>
                     <div class="traco-vermelho meio"></div>
 
-                    <span style="line-height: 30px;">Olá <strong><span runat="server" id="usuario"></span></strong>!<br />Veja abaixo seu histórico de cupons cadastrado na promoção. Feche o Ano com Estilo.</span>
+                    <span style="line-height: 30px;">Olá, <strong><span runat="server" id="usuario"></span></strong>!<br /> Veja abaixo seu histórico de cupons cadastrado na promoção. Feche o Ano com Estilo.</span>
                     <!-- lista de cupons -->
                     <section id="secCupons" runat="server"></section>
 

@@ -24,7 +24,7 @@
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="315"> <!-- PIXELS -->
 <meta property="og:image:height" content="600"> <!-- PIXELS -->
-
+<meta name="robots" content="index, follow">
 </head>
 
 <body>
@@ -34,7 +34,7 @@
 <!--banner-->
 <section id="banner">
 	<div class="banner">
-		<div id="imagem-carro"><img src="/assets/imagens/imagem-carro.png" alt=""></div>
+		<div id="imagem-carro"><img src="/assets/imagens/imagem-carro.png" alt="imagem carro"></div>
 	</div>
 </section>
 
@@ -69,7 +69,7 @@
 				<h3 class="basenine text-uppercase cinza">concorra a prêmios</h3>
 				<div class="traco-vermelho"></div>
 				<span class="saiba-concorra">
-					Serão sorteadas 10 motos 0km a cada sorteio periódico, totalizando 30 prêmios, e 01 Jeep Renegade Custom 0km no sorteio final da promoção.
+					Serão sorteadas 10 motos 0km a cada sorteio periódico, totalizando 30 prêmios, e 01 Jeep Renegade Custom 0km no sorteio final da promoção.<br><br>
 				</span>
 				<br><br>
                 <a href="/premios.aspx" title="Saiba mais">
@@ -103,7 +103,7 @@
 				</h3>
 				<div class="traco-vermelho"></div>
 				<span class="saiba-concorra">
-					Jepp Renegade Custom, modelo 2018, 05 (cinco) portas, flex, no valor de R$76.000,00 (setenta e seis mil reais). 
+					Jeep Renegade Custom, modelo 2018, 05 (cinco) portas, flex, no valor de R$76.000,00 (setenta e seis mil reais).<br><br>
 				</span>
 				<br><br>
                 <a href="/premios.aspx" title="Saiba mais">
@@ -112,7 +112,7 @@
 				    </em>
 				</a>
 			</div>
-			<img src="assets/imagens/jeep.png" alt="">
+			<img src="assets/imagens/jeep.png" alt="jeep">
 		</div>
 		<div class="col-md-6">
 			<div>
@@ -130,7 +130,7 @@
 				    </em>
                 </a>
 			</div>
-			<img src="assets/imagens/moto-bull.png" alt="">
+			<img src="assets/imagens/moto-bull.png" alt="moto bull">
 		</div>
 	</div>
 	<div class="container">
@@ -155,13 +155,13 @@
 			<div style="margin: 3rem auto 30px auto;" class="traco-vermelho"></div>
 			<h3 class="basenine">#FecheoAnoComBesni</h3>
 			<div class="redes">
-                <a href="https://www.facebook.com/LojasBesni/" title="Lojas Besni no facebook"  target="_blank">
+                <a href="https://www.facebook.com/LojasBesni/" title="Lojas Besni no Facebook"  target="_blank">
                     <img src="assets/imagens/icone-facebook.png" alt="ícone facebook">
                 </a>
-                <a href="https://www.instagram.com/lojasbesni/" title="Lojas Besni no instagram"  target="_blank">
+                <a href="https://www.instagram.com/lojasbesni/" title="Lojas Besni no Instagram"  target="_blank">
 				    <img src="assets/imagens/icone-instagram.png" alt="ícone instagram">
                 </a>
-                <a href="https://www.youtube.com/user/LojasBesni/" title="Lojas Besni no youtube"  target="_blank">
+                <a href="https://www.youtube.com/user/LojasBesni/" title="Lojas Besni no YouTube"  target="_blank">
 				    <img src="assets/imagens/icone-youtube.png" alt="ícone youtube">
                 </a>
 				<p>/lojasbesni</p>

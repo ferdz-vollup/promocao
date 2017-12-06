@@ -12,6 +12,7 @@
     <besni:head runat="server" ID="head" />
     <title>Promoção Besni | Fale Conosco</title>
     <meta name="description" content="A Besni quer ouvir você. Deixe sua mensagem para nós. Sua opinião é muito importante! Reclamações, sugestões ou opiniões são sempre bem-vindas."/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />   
     <!-- facebook -->
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:type" content="website" />
@@ -22,8 +23,7 @@
     <meta property="og:image" content="http://www.promocaobesni.com.br/assets/imagens/Besni_Share_2017.jpg" />
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="315"> <!-- PIXELS -->
-    <meta property="og:image:height" content="600"> <!-- PIXELS -->
-
+    <meta property="og:image:height" content="600"> <!-- PIXELS --> 
 </head>
 
 <body>
@@ -34,8 +34,8 @@
 <section id="banner-escrita-imagem">
 	<div class="banner">
 		<div class="centraliza">
-			<div id="imagem-escrita"><img src="assets/imagens/escrita-banner.png" alt=""></div>
-			<div id="imagem-carro"><img src="assets/imagens/imagem-carro.png" alt=""></div>
+			<div id="imagem-escrita"><img src="assets/imagens/escrita-banner.png" alt="Feche o ano com estilo"></div>
+			<div id="imagem-carro"><img src="assets/imagens/imagem-carro.png" alt="imagem carro"></div>
 		</div>
 	</div>
 </section>
@@ -81,9 +81,9 @@
 				</div>
 				<div class="row" style="margin-top: 10px;">
 					<div class="col-md-12 text-right">
-                        <div class="retorno-mensagem"></div>
 						<button type="button" class="btn-form btn-limpar" style="margin-right: 10px;">Limpar</button>
-						<button type="submit" class="btn-form btn-contato" data-form="formFaleConosco">Enviar</button>
+                        <button type="submit" class="btn-form btn-contato" data-form="formFaleConosco">Enviar</button>
+                        <div class="retorno-mensagem"></div>
 					</div>
 				</div>
 			</form>

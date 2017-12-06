@@ -33,6 +33,16 @@ namespace PromocaoBesni
             {
                 objUtils = new utils();
                 string acao = Request["acao"];
+
+                switch (acao)
+                {
+                    case "cadastrarCupom":
+                        Click();
+                        break;
+                    default:
+                        break;
+                }
+                
             }
             else
             {
@@ -126,31 +136,81 @@ namespace PromocaoBesni
                     Response.Redirect("/cadastrar-cupom.aspx?erro=200");
                     Response.End();
                 }
+            }
+        }
 
-                //GERAR CUPOM SEM FAZER UPLOAD DE IMAGEM
-                //else
-                //{
-                //    valor = valor.Remove(valor.Length - 3).Replace(".", "");
-                //    total = Convert.ToInt32(valor) / 200;
-                   
-                //    //Verificar se é Cliente Besni
-                //    if (Session["Besni"].ToString().Length > 15)
-                //    {
-                //        total = total * 2;
-                //    }
+        public void Click()
+        {
+            string arquivo = "NULL", nome = "", filename = "", extensao = "", valor = "", cnpj = "", data = "", coo = "", imagem = "";
+            valor = Request["valor_nota_02"];
+            cnpj = Request["cnpj"];
+            data = Request["date"]; ;
+            coo = Request["coo"];
 
-                //    for (int aux = 1; aux <= total; aux++)
-                //    {
-                //        GerarCupom(cnpj, data, coo, valor, "", "");
-                //    }
+            int total = 0;
+            HttpFileCollection hfc = Request.Files;
 
-                //    for (int aux = 1; aux <= total; aux++)
-                //    {
-                //        GerarCupom(cnpj, data, coo, valor, "E", "");
-                //    }
-                //    Response.Redirect("/novo-cupom.aspx?total=" + total);
-                //    Response.End();
-                //}
+            for (int i = 0; i < hfc.Count; i++)
+            {
+                HttpPostedFile hpf = hfc[i];
+                if (hpf.ContentLength > 0)
+                {
+                    //Pega o nome do arquivo
+                    nome = System.IO.Path.GetFileName(hpf.FileName);
+
+                    //Pega a extensão do arquivo
+                    extensao = Path.GetExtension(hpf.FileName);
+
+                    //Gera nome novo do Arquivo numericamente
+                    filename = DateTime.Now.ToString().Replace("/", "").Replace(":", "").Replace(" ", "");
+
+                    imagem = filename + extensao;
+
+                    //cria a pasta se a mesma nao existir
+                    if (Directory.Exists(Server.MapPath("~/upload/cupons/usuarios/")) == false)
+                    {
+                        Directory.CreateDirectory(Server.MapPath("~/upload/cupons/usuarios/"));
+                    }
+
+                    //Caminho a onde será salvo
+                    hpf.SaveAs(Server.MapPath("~/upload/cupons/usuarios/") + filename + extensao);
+
+                    var prefixo = Session["cadID"] + "_";
+
+                    //SE FOR CLIENTE BESNI TOTAL DEVE SER VEZES 2 
+                    //GERAR O CUPOM ESPEICIAL
+
+                    valor = valor.Remove(valor.Length - 3).Replace(".", "");
+                    total = Convert.ToInt32(valor) / 200;
+                    //string especial = "";
+
+
+                    //Verificar se é Cliente Besni
+                    if (Session["Besni"] != null)
+                    {
+                        if (Session["Besni"].ToString().Length > 15)
+                        {
+                            total = total * 2;
+                        }
+                    }
+
+                    for (int aux = 1; aux <= total; aux++)
+                    {
+                        GerarCupom(cnpj, data, coo, valor, "", imagem);
+                    }
+
+                    for (int aux = 1; aux <= total; aux++)
+                    {
+                        GerarCupom(cnpj, data, coo, valor, "E", imagem);
+                    }
+                    Response.Redirect("/novo-cupom.aspx?total=" + total);
+                    Response.End();
+                }
+                else
+                {
+                    Response.Redirect("/cadastrar-cupom.aspx?erro=200");
+                    Response.End();
+                }
             }
         }
 
@@ -188,7 +248,7 @@ namespace PromocaoBesni
             {
                 cupom = "E-" + cupom;
             }
-
+            
             objBD.ExecutaSQL("EXEC pGerarCupom '" + Session["cadID"].ToString() + "','" + cupom + "','" + cnpj + "','" + data + "','" + coo + "','" + valor + "','" + serie + "', '" + imagem + "'");
 
             rsSerie.Dispose();

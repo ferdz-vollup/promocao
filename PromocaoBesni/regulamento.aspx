@@ -126,9 +126,10 @@
                 }
             }
 
-
-
-
+            @media (max-width:450px) {
+                div.tabela table {font-size:10px}
+                section#regulamento {padding-top:100px}
+            }
     </style>
     
 </head>   
@@ -197,7 +198,8 @@
                     <tr>
                         <td class="rule-number"><strong></strong></td>
                         <td class="rule-sub-number"><strong>1.2.2</strong></td>
-                        <td class="rule-content">A cada R$ 200,00 (duzentos reais) em compras, registrados em um mesmo cupom fiscal, o participante terá direito a 01 (um) número da sorte, para concorrer na apuração correspondente à data do registro e 01 (um) número da sorte da série especial, para concorrer no sorteio final da promoção. No caso de compras registradas após o dia 22/12/2017, o participante receberá apenas o número da sorte referente ao último sorteio.</td>
+                        <td class="rule-content">A cada R$ 200,00 (duzentos reais) em compras, registrados em um mesmo cupom fiscal, o participante terá direito a 01 (um) número da sorte, para concorrer na apuração correspondente à data do registro e 01 (um) número da sorte da série especial, para concorrer no sorteio final da promoção. No caso de compras registradas após o dia 22/12/2017, o participante receberá apenas o número da sorte referente ao último sorteio.</td>
+
                     </tr>
                     <tr></tr>
                     <tr>
@@ -312,36 +314,36 @@
         </section>       
         <section id="regulamento" style="padding-top: 10px;">
             <div class="container">      
-                    <div class="tabela">
-                     <table style="margin: 0 auto;">
+                <div class="tabela">
+                    <table style="margin: 0 auto;">
                         <tr>
-                            <th colspan="2" style="width: 300px;">Período de Participação</th>
+                            <th colspan="2" style="width: 350px;">Período de Participação</th>
                             <th style="width: 80px;">Séries Participantes</th>
                             <th>Sorteio</th>
                         </tr>
                         <tr>
                             <td>Geral (sorteio final)</td>
-                            <td>de 26/11 a 31/12/17</td>
+                            <td>de 26/11 a 31/12/2017</td>
                             <td>000 a 099</td>
                             <td>03/01/2018</td>
                         </tr>
                         <tr>
                             <td>1º</td>
-                            <td>de 26/11 a 08/12/17</td>
+                            <td>de 26/11 a 08/12/2017</td>
                             <td>100 a 109</td>
-                            <td>09/12/17</td>
+                            <td>09/12/2017</td>
                         </tr>
                         <tr>
                             <td>2º</td>
-                            <td>de 09/12/17 a 15/12/17</td>
+                            <td>de 09/12/2017 a 15/12/2017</td>
                             <td>110 a 119</td>
-                            <td>16/12/17</td>
+                            <td>16/12/2017</td>
                         </tr>
                         <tr>
                             <td>3º</td>
-                            <td>de 16/12/17 a 22/12/17</td>
+                            <td>de 16/12/2017 a 22/12/2017</td>
                             <td>120 a 129</td>
-                            <td>23/12/17</td>
+                            <td>23/12/2017</td>
                         </tr>
 
                     </table>
@@ -366,10 +368,10 @@
                     <div class="tabela">
                      <table style="margin: 0 auto;">
                         <tr>
-                            <th colspan="6" style="width: 300px;">Número da Sorte</th>
+                            <th colspan="6" style="width: 275px;border-bottom: 2px #231f20 solid">Número da Sorte</th>
                         </tr>     
                         <tr>
-                            <th colspan="1" style="width: 300px;">Número da série</th>
+                            <th colspan="1" style="width: 175px;">Número da série</th>
                             <th colspan="5" style="width: 80px;">Número de ordem</th>
                         </tr>
                         <tr>

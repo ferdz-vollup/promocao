@@ -168,7 +168,8 @@
                 </div>
 
                 <div class="col-xs-12 col-sm-6" style="float:left;">
-                    <form method="post" id="cadastrarcupom" enctype="multipart/form-data" runat="server">
+                    <form method="post" id="cadastrarcupom" action="cadastrar-cupom.aspx" enctype="multipart/form-data" runat="server">
+                        <input type="hidden" id="acao" name="acao" value="cadastrarCupom" />
 
                         <div class="novo-cupon">
                             <span>1</span>
@@ -216,8 +217,6 @@
  
                     </form>
                 </div>
-
-
 
             </div>
 
