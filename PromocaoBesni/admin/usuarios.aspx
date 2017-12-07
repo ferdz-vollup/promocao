@@ -113,7 +113,6 @@
 
     <script>
         function verUser(id) {
-            alert("aqui")
             ajax2 = ajaxInit();
             ajax2.open("GET", "/admin/usuarios.aspx?acao=verUser&id=" + id, true);
             ajax2.setRequestHeader("Content-Type", "charset=iso-8859-1");

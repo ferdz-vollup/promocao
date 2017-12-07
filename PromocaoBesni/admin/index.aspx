@@ -159,6 +159,7 @@
                             </div>
                             <!-- /.list-group -->
                             <a href="ganhadores.aspx" class="btn btn-default btn-block">Veja os ganhadores</a>
+                            <a title="Fazer Download" href="/ajax/acoes.aspx?acao=donwloadGanhadores"><img src="../assets/imagens/ico-excel.png" alt="Fazer Download" style="margin-top: 25px;text-align: right;" width="50px"></a>
                         </div>
                         <!-- /.panel-body -->
                     </div>

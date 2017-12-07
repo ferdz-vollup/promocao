@@ -40,6 +40,24 @@ namespace PromocaoBesni.admin {
         protected global::PromocaoBesni.admin.inc.menu menu;
         
         /// <summary>
+        /// Controle idAguardando.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idAguardando;
+        
+        /// <summary>
+        /// Controle idAprovado.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idAprovado;
+        
+        /// <summary>
         /// Controle footer.
         /// </summary>
         /// <remarks>

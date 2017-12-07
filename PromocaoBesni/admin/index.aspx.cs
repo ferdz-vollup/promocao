@@ -16,106 +16,80 @@ namespace PromocaoBesni.admin
     {
         bd objBD = new bd();
         utils objUtils = new utils();
-        private OleDbDataReader rsConcurso, rsResultado, rsContagem, rsPremiacao, rsData;
-        string numeroSorte = "", numeroSerie= "";
+        private OleDbDataReader rsConcurso, rsResultado, rsContagem, rsPremiacao;
+        string numeroSorte = "", numeroSerie = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
             objUtils = new utils();
             objBD = new bd();
 
-            PegarResultado();
+           // PegarResultado();
             Contagem();
+            ExbirResultado();
         }
 
         public void PegarResultado()
         {
-<<<<<<< .mine
-            //Verifica há concurso para ser capturado, baseado na data atual
-            rsData = objBD.ExecutaSQL("set dateformat dmy; select top 1 CON_NUMERO from concurso where CON_CIDADE = '' AND CON_DATA<GETdATE()");
-||||||| .r312
-            Besni_Caixa.Caixa response = AJAX.GET<Besni_Caixa.Caixa>("http://confiraloterias.com.br/api0/json.php?loteria=federal&token=0oTe7mbgFQcO71l&concurso=05235");
-=======
-           //VERIFICAR NO BD O NÚMERO DO CONCURSO COM A COLUNA VAZIA E SE A DATA DELE É MAIOR DO QUE HOJE
+            //VERIFICAR NO BD O NÚMERO DO CONCURSO COM A COLUNA VAZIA E SE A DATA DELE É MAIOR DO QUE HOJE
 
-            Besni_Caixa.Caixa response = AJAX.GET<Besni_Caixa.Caixa>("http://confiraloterias.com.br/api0/json.php?loteria=federal&token=0oTe7mbgFQcO71l&concurso=05235");
->>>>>>> .r321
+            Besni_Caixa.Caixa response = AJAX.GET<Besni_Caixa.Caixa>("http://confiraloterias.com.br/api0/json.php?loteria=federal&token=fwjSAAWIwhyYh3V&concurso=05237");
 
-            if (rsData == null)
+            try
             {
-                throw new Exception();
-            }
-            if (rsData.HasRows)
-            {
-                rsData.Read();
+                DateTime dataSorteio = Convert.ToDateTime(response.concurso.data);
+                String diaSemana = dataSorteio.DayOfWeek.ToString();
 
-                //Response.Write("http://confiraloterias.com.br/api0/json.php?loteria=federal&token=fwjSAAWIwhyYh3V&concurso=" + rsData["CON_NUMERO"] + "");
-                //Response.End();
-
-                Besni_Caixa.Caixa response = AJAX.GET<Besni_Caixa.Caixa>("http://confiraloterias.com.br/api0/json.php?loteria=federal&token=fwjSAAWIwhyYh3V&concurso=" + rsData["CON_NUMERO"] + "");
-
-                try
+                //Verificar se sorteio é de Sábado (Saturday)
+                if (diaSemana == "Saturday" || 1 == 1)
                 {
-                    DateTime dataSorteio = Convert.ToDateTime(response.concurso.data);
-                    String diaSemana = dataSorteio.DayOfWeek.ToString();
+                    //Gerando a série
+                    numeroSerie = numeroSerie += response.concurso.premiacao.premio_1.bilhete[3];
+                    numeroSerie = numeroSerie += response.concurso.premiacao.premio_2.bilhete[3];
+                    numeroSerie = numeroSerie += response.concurso.premiacao.premio_3.bilhete[3];
 
-                    //Verificar se sorteio é de Sábado (Saturday)
-                    if (diaSemana == "Saturday" || 1 == 1)
+                    //Gerando número da sorte Besni
+                    numeroSorte = numeroSorte += response.concurso.premiacao.premio_1.bilhete[4];
+                    numeroSorte = numeroSorte += response.concurso.premiacao.premio_2.bilhete[4];
+                    numeroSorte = numeroSorte += response.concurso.premiacao.premio_3.bilhete[4];
+                    numeroSorte = numeroSorte += response.concurso.premiacao.premio_4.bilhete[4];
+                    numeroSorte = numeroSorte += response.concurso.premiacao.premio_5.bilhete[4];
+
+                    numeroSorte = numeroSerie + "-" + numeroSorte;
+
+                    //Salva os dados do Concurso
+                    rsConcurso = objBD.ExecutaSQL("Exec piuConcurso '" + response.concurso.numero + "', '" + response.concurso.data + "', '" + response.concurso.cidade + "',  '" + response.concurso.local + "',NULL,'" + response.concurso.premiacao.premio_1.bilhete + "', '" + response.concurso.premiacao.premio_2.bilhete + "', '" + response.concurso.premiacao.premio_3.bilhete + "', '" + response.concurso.premiacao.premio_4.bilhete + "', '" + response.concurso.premiacao.premio_5.bilhete + "', '" + numeroSorte + "'");
+
+                    if (rsConcurso == null)
                     {
-                        //Gerando a série
-                        numeroSerie = numeroSerie += response.concurso.premiacao.premio_1.bilhete[3];
-                        numeroSerie = numeroSerie += response.concurso.premiacao.premio_2.bilhete[3];
-                        numeroSerie = numeroSerie += response.concurso.premiacao.premio_3.bilhete[3];
+                        throw new Exception();
+                    }
+                    if (rsConcurso.HasRows)
+                    {
+                        rsConcurso.Read();
 
-                        //Gerando número da sorte Besni
-                        numeroSorte = numeroSorte += response.concurso.premiacao.premio_1.bilhete[4];
-                        numeroSorte = numeroSorte += response.concurso.premiacao.premio_2.bilhete[4];
-                        numeroSorte = numeroSorte += response.concurso.premiacao.premio_3.bilhete[4];
-                        numeroSorte = numeroSorte += response.concurso.premiacao.premio_4.bilhete[4];
-                        numeroSorte = numeroSorte += response.concurso.premiacao.premio_5.bilhete[4];
 
-                        numeroSorte = numeroSerie + "-" + numeroSorte;
-
-                        //Response.Write("Exec piuConcurso '" + response.concurso.numero + "', '" + response.concurso.data + "', '" + response.concurso.cidade + "',  '" + response.concurso.local + "',NULL,'" + response.concurso.premiacao.premio_1.bilhete + "', '" + response.concurso.premiacao.premio_2.bilhete + "', '" + response.concurso.premiacao.premio_3.bilhete + "', '" + response.concurso.premiacao.premio_4.bilhete + "', '" + response.concurso.premiacao.premio_5.bilhete + "', '" + numeroSorte + "'");
-                        //Response.End();
-
-                        //Salva os dados do Concurso
-                        rsConcurso = objBD.ExecutaSQL("Exec piuConcurso '" + response.concurso.numero + "', '" + response.concurso.data + "', '" + response.concurso.cidade + "',  '" + response.concurso.local + "',NULL,'" + response.concurso.premiacao.premio_1.bilhete + "', '" + response.concurso.premiacao.premio_2.bilhete + "', '" + response.concurso.premiacao.premio_3.bilhete + "', '" + response.concurso.premiacao.premio_4.bilhete + "', '" + response.concurso.premiacao.premio_5.bilhete + "', '" + numeroSorte + "'");
-
-                        if (rsConcurso == null)
+                        if (Convert.ToInt16(rsConcurso["CON_ID"]) > 0)
                         {
-                            throw new Exception();
-                        }
-                        if (rsConcurso.HasRows)
-                        {
-                            rsConcurso.Read();
-
-                            //Response.Write("Exec piPremiacao '" + rsConcurso["CON_ID"] + "','" + response.concurso.premiacao.premio_1.bilhete + "', '" + response.concurso.premiacao.premio_2.bilhete + "', '" + response.concurso.premiacao.premio_3.bilhete + "', '" + response.concurso.premiacao.premio_4.bilhete + "', '" + response.concurso.premiacao.premio_5.bilhete + "', '" + numeroSorte + "'");
-                            //Response.End();
-
-
                             //Salva a premiacao
-                            rsPremiacao = objBD.ExecutaSQL("Exec piPremiacao '" + rsConcurso["CON_ID"] + "','" + response.concurso.premiacao.premio_1.bilhete + "', '" + response.concurso.premiacao.premio_2.bilhete + "', '" + response.concurso.premiacao.premio_3.bilhete + "', '" + response.concurso.premiacao.premio_4.bilhete + "', '" + response.concurso.premiacao.premio_5.bilhete + "', '" + numeroSorte + "'");
+                            rsPremiacao = objBD.ExecutaSQL("Exec piPremiacao 0,'" + rsConcurso["CON_ID"] + "','" + response.concurso.premiacao.premio_1.bilhete + "', '" + response.concurso.premiacao.premio_2.bilhete + "', '" + response.concurso.premiacao.premio_3.bilhete + "', '" + response.concurso.premiacao.premio_4.bilhete + "', '" + response.concurso.premiacao.premio_5.bilhete + "', '" + numeroSorte + "'");
 
                             //DISPARAR E-MAIL PARA AS AGÊNCIAS
-
                         }
-                        rsConcurso.Close();
-                        rsConcurso.Dispose();
+
                     }
-
-                    ExbirResultado();
-
+                    rsConcurso.Close();
+                    rsConcurso.Dispose();
                 }
-                catch (Exception)
-                {
 
-                    throw;
-                }
+                ExbirResultado();
 
             }
-            rsData.Close();
-            rsData.Dispose();
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public void ExbirResultado()
@@ -131,7 +105,7 @@ namespace PromocaoBesni.admin
             {
                 rsResultado.Read();
 
-                linha1.InnerHtml = "Concuros: " + rsResultado["CON_NUMERO"] + " | " + rsResultado["CON_DATA"] + " ";
+                linha1.InnerHtml = "Concursos: " + rsResultado["CON_NUMERO"] + " | " + rsResultado["CON_DATA"] + " ";
                 premio1.InnerHtml = "<em>" + rsResultado["PRE_BILHETE_1"] + "</em>";
                 premio2.InnerHtml = "<em>" + rsResultado["PRE_BILHETE_2"] + "</em>";
                 premio3.InnerHtml = "<em>" + rsResultado["PRE_BILHETE_3"] + "</em>";
@@ -154,7 +128,7 @@ namespace PromocaoBesni.admin
             if (rsContagem.HasRows)
             {
                 rsContagem.Read();
-                contagemCadastros.InnerHtml = ""+ rsContagem["total_usuarios"];
+                contagemCadastros.InnerHtml = "" + rsContagem["total_usuarios"];
                 contagemInstagram.InnerHtml = "" + rsContagem["total_instagram"];
                 contagemCupons.InnerHtml = "" + rsContagem["total_cupons"];
             }

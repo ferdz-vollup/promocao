@@ -16,7 +16,7 @@
                 <a href="cpfs-bloqueados.aspx"><i class="fa fa-wrench fa-fw"></i> CPFs Bloqueados</a>
             </li>
             <li>
-                <a href="ganhadores.aspx"><i class="fa fa-sitemap fa-fw"></i> Ganhadores</a>
+                <a href="ganhadores.aspx"><i class="fa fa-trophy fa-fw"></i> Ganhadores</a>
             </li>
             <li>
                 <a href="instagram.aspx"><i class="fa fa-picture-o fa-fw"></i> Instagram</a>
