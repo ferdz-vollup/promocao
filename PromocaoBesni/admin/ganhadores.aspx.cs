@@ -35,6 +35,7 @@ namespace PromocaoBesni.admin
                     break;
                 default:
                     carregaUsuarios();
+                    carregaAprovados();
                     break;
             }
         }
@@ -74,11 +75,45 @@ namespace PromocaoBesni.admin
             rs.Dispose();
             rs.Close();
         }
+        
+        public void carregaAprovados()
+        {
+            rs = objBD.ExecutaSQL("select G.GAN_ID, C.CAD_NOME, C.CAD_CPF, p.CUP_NUMERO_SORTE, P.CUP_IMAGEM from ganhadores G INNER JOIN cadastro c on(c.CAD_ID = g.CAD_ID) INNER JOIN cupom p on (p.CUP_ID = g.CUP_ID) where G.GAN_ATIVO = 2");
+
+            if (rs == null)
+            {
+                throw new Exception();
+            }
+            if (rs.HasRows)
+            {
+                while (rs.Read())
+                {
+                    if (aux % 2 == 0)
+
+                    {
+                        classe = "style=\"background-color:#f5f5f5\"";
+                    }
+
+                    idAprovado.InnerHtml += "<tr " + classe + ">";
+                    idAprovado.InnerHtml += " <td>" + rs["CAD_NOME"] + "</td>";
+                    idAprovado.InnerHtml += " <td>" + rs["CAD_CPF"] + "</td>";
+                    idAprovado.InnerHtml += " <td>" + rs["CUP_NUMERO_SORTE"] + "</td>";
+                    idAprovado.InnerHtml += " <td><a href=\"http://promocaobesni.com.br/upload/cupons/usuarios/" + rs["CUP_IMAGEM"] + "\" target=\"_blank\"><i class=\"fa fa-search fa-fw\"></i></a></td>";
+                    idAprovado.InnerHtml += "</tr>";
+
+                    aux++;
+                    classe = "";
+                }
+                
+            }
+            rs.Dispose();
+            rs.Close();
+        }
 
         public void aprovar(string id, string value)
         {
 
-            rs = objBD.ExecutaSQL("update ganhadores set GAN_ATIVO = '" + value + "' WHERE GAN_ID = '" + id + "'");
+            objBD.ExecutaSQL("update ganhadores set GAN_ATIVO = '" + value + "' WHERE GAN_ID = '" + id + "'");
 
             rs = objBD.ExecutaSQL("select G.GAN_ID, C.CAD_NOME, C.CAD_CPF, p.CUP_NUMERO_SORTE, P.CUP_IMAGEM from ganhadores G INNER JOIN cadastro c on(c.CAD_ID = g.CAD_ID) INNER JOIN cupom p on (p.CUP_ID = g.CUP_ID) where G.GAN_ATIVO = 2");
 
