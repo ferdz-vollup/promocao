@@ -28,6 +28,7 @@
 	.loja h4 {margin-bottom:12px}
 	.loja-item {margin:8px 0}
 	.loja-item img {margin-right:4px}
+	@media (min-width:992px){.margem{width:7%}.bloco1{width:43%;padding:0}}
 	</style>
 </head>
 
@@ -63,8 +64,8 @@
 				</div>
 			</div>
 			<div class="row" style="margin:35px 0 50px">
-				<div class="col-md-1"></div>
-				<div class="col-md-5">
+				<div class="col-md-1 margem"></div>
+				<div class="col-md-5 bloco1">
 					<div class="loja">
 						<h4 class="vermelho basenine">M'BOI MIRIM</h4>
 						<div class="loja-item">
@@ -84,7 +85,7 @@
 						<h4 class="vermelho basenine">CENTRO</h4>
 						<div class="loja-item">
 							<img src="assets/imagens/icone-endereco.png">
-							Rua Rua Vinte e Quatro de Maio, 185/189 • São Paulo - SP
+							Rua Vinte e Quatro de Maio, 185/189 • São Paulo - SP
 						</div>
 						<div class="loja-item">
 							<img src="assets/imagens/icone-celular.png">
@@ -107,7 +108,7 @@
 						</div>
 						<div class="loja-item">
 							<img src="assets/imagens/icone-tempo.png">
-							seg. a sáb. - 9h/21h • dom. e feriados - 10h /18h
+							seg. a sáb. - 9h/21h • dom. e feriados - 10h/18h
 						</div>
 					</div>
 					<div class="loja">
@@ -336,7 +337,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-5">
+				<div class="col-md-6">
 					<div class="loja">
 						<h4 class="vermelho basenine">SHOPPING CANTAREIRA</h4>
 						<div class="loja-item">
@@ -379,7 +380,7 @@
 						</div>
 						<div class="loja-item">
 							<img src="assets/imagens/icone-tempo.png">
-							dom. e feriados - 10h/22h
+							seg. a dom. e feriados - 10h/22h
 						</div>
 					</div>
 					<div class="loja">

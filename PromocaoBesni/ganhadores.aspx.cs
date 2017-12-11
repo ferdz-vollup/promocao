@@ -15,7 +15,7 @@ namespace PromocaoBesni
     {
         bd objBD = new bd();
         utils objUtils = new utils();
-        private OleDbDataReader rsConcurso;
+        private OleDbDataReader rsConcurso, rs;
         string classe = "";
 
         protected void Page_Load(object sender, EventArgs e)
@@ -28,7 +28,7 @@ namespace PromocaoBesni
 
         public void popularGanhadores()
         {
-            rsConcurso = objBD.ExecutaSQL("select CON_ID, CON_DATA, CON_PREMIO from concurso");
+            rsConcurso = objBD.ExecutaSQL("select C.CON_ID, C.CON_DATA, C.CON_PREMIO from concurso C");
 
             if (rsConcurso == null)
             {
@@ -53,12 +53,23 @@ namespace PromocaoBesni
                     divPai.InnerHtml += "     <div class=\"mostra-codigos\">";
                     divPai.InnerHtml += "         <div style=\"height: 30px;\"></div>";
 
+
                     //ganhadores
-                    //divPai.InnerHtml += "<span class=\"codigos\">";
-                    //divPai.InnerHtml += "Nome Sobrenome";
-                    //divPai.InnerHtml += "cód. 02689 - 9";
-                    //divPai.InnerHtml += "</span>";
-                    //ganhadores
+
+                    //
+                    rs = objBD.ExecutaSQL("EXEC psGanhadoresSite "+ rsConcurso["CON_ID"] + " ");
+                    if (rs == null)
+                    {
+                        throw new Exception();
+                    }
+
+                    if (rs.HasRows)
+                    {
+                        while (rs.Read())
+                        {
+                            divPai.InnerHtml += "<span class=\"codigos\">" + rs["CAD_NOME"] + "<br/>cód. " + rs["CUP_NUMERO_SORTE"] + " </span>";
+                        }
+                    }
 
                     divPai.InnerHtml += "     </div>";
                     divPai.InnerHtml += " </div>";
