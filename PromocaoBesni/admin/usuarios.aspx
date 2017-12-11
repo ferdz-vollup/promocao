@@ -16,6 +16,8 @@
             width: auto;
             vertical-align: middle;
         }
+        .vermelho {color:#a8272d}
+        .labelUser {display:inline-block}
     </style>
 </head>
 
@@ -81,6 +83,105 @@
                     <h4 class="modal-title">Usuário</h4>
                 </div>
                 <div class="modal-body">
+                    <div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4 class="text-uppercase vermelho">Dados pessoais</h4>
+                                <br>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <strong class="labelUser">Nome: </strong>
+                                    <div class="labelUser">Eliane Pereira da Silva</div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top:10px">
+                                <div class="col-sm-6">
+                                    <strong class="labelUser">CPF: </strong>
+                                    <div class="labelUser">315.370.138-58</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <strong class="labelUser">RG: </strong>
+                                    <div class="labelUser">35.193.099-1</div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top:10px">
+                                <div class="col-sm-6">
+                                    <strong class="labelUser">Data de nascimento: </strong>
+                                    <div class="labelUser">16/04/1985</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <strong class="labelUser">Sexo: </strong>
+                                    <div class="labelUser">F</div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top:10px">
+                                <div class="col-sm-6">
+                                    <strong class="labelUser">Telefone: </strong>
+                                    <div class="labelUser">(99) 9999-9999</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <strong class="labelUser text-center">Celular: </strong>
+                                    <div class="labelUser">(11) 94874-1123</div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top:10px">
+                                <div class="col-sm-12">
+                                    <strong class="labelUser">E-mail: </strong>
+                                    <div class="labelUser">eli280710@gmail.com</div>
+                                </div>
+                            </div>
+        
+                            <div class="row not-flex " style="margin-top:20px">
+                                <div class="col-md-12">
+                                    <strong class="labelUser">Cartão Besni: </strong>
+                                    <div class="labelUser">0190 5502 3862 0185</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row" style="margin-top:15px">
+                                <div class="col-md-12">
+                                    <h4 class="text-uppercase vermelho">Endereço</h4>
+                                    <br>
+                                </div>
+                            </div>
+        
+                            <div class="row" style="margin-top:10px">
+                                <div class="col-md-8">
+                                    <strong class="labelUser">CEP: </strong>
+                                    <div class="labelUser">08473-220</div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top:10px">
+                                <div class="col-sm-12">
+                                    <strong class="labelUser">Endereço: </strong>
+                                    <div class="labelUser">Rua Gildo Lopes, 02</div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top:10px">
+                                <div class="col-sm-6">
+                                    <strong class="labelUser">Complemento: </strong>
+                                    <div class="labelUser">Não tem</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <strong class="labelUser text-center">Bairro: </strong>
+                                    <div class="labelUser">Cohab Sitio Conceição</div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top:10px">
+                                <div class="col-sm-6">
+                                    <strong class="labelUser">Cidade: </strong>
+                                    <div class="labelUser">São Paulo</div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <strong class="labelUser text-center">UF: </strong>
+                                    <div class="labelUser">SP</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <table  class="table table-striped table-bordered table-hover">
                         <thead>
                             <tr>
@@ -120,6 +221,7 @@
                 if (ajax2.readyState == 4) {
                     if (ajax2.status == 200) {
                         jQuery("#userCadastrado").html(ajax2.responseText);
+                        console.log(ajax2.responseText)
                     }
                 }
             }

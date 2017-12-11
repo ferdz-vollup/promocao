@@ -24,7 +24,12 @@ namespace PromocaoBesni.admin
             objUtils = new utils();
             objBD = new bd();
 
-           // PegarResultado();
+           
+            if (DateTime.Today.DayOfWeek.ToString() == "Sunday")
+            {
+                PegarResultado();
+            }
+            
             Contagem();
             ExbirResultado();
         }
@@ -32,11 +37,14 @@ namespace PromocaoBesni.admin
         public void PegarResultado()
         {
             //VERIFICAR NO BD O NÚMERO DO CONCURSO COM A COLUNA VAZIA E SE A DATA DELE É MAIOR DO QUE HOJE
-
-            Besni_Caixa.Caixa response = AJAX.GET<Besni_Caixa.Caixa>("http://confiraloterias.com.br/api0/json.php?loteria=federal&token=fwjSAAWIwhyYh3V&concurso=05237");
+            Besni_Caixa.Caixa response = AJAX.GET<Besni_Caixa.Caixa>("http://confiraloterias.com.br/api0/json.php?loteria=federal&token=fwjSAAWIwhyYh3V&concurso=05239");
 
             try
             {
+
+                Response.Write(response.concurso);
+                Response.End();
+
                 DateTime dataSorteio = Convert.ToDateTime(response.concurso.data);
                 String diaSemana = dataSorteio.DayOfWeek.ToString();
 
@@ -87,7 +95,7 @@ namespace PromocaoBesni.admin
             }
             catch (Exception)
             {
-
+                
                 throw;
             }
         }

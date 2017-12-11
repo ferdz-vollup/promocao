@@ -58,6 +58,15 @@ namespace PromocaoBesni.admin {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl idAprovado;
         
         /// <summary>
+        /// Controle idPublicado.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl idPublicado;
+        
+        /// <summary>
         /// Controle footer.
         /// </summary>
         /// <remarks>

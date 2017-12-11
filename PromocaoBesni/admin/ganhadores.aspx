@@ -34,14 +34,14 @@
                         <div class="panel-heading">
                             <i class="fa fa-trophy fa-fw"></i>Aguardando aprovação
                         </div>
-                        <div class="panel-body">
-                            <table width="100%" border="0">
+                        <div class="panel-body" style="height:410px;overflow-y:scroll">
+                            <table width="100%" border="0" style="font-size:12px">
                                 <tr>
                                     <th>Nome</th>
-                                    <th>CPF</th>
-                                    <th>Número da Sorte</th>
-                                    <th>Cupom Fiscal</th>
-                                    <th>Status</th>
+                                    <th style="text-align:center">CPF</th>
+                                    <th style="text-align:center">Número da Sorte</th>
+                                    <th style="text-align:center">Cupom Fiscal</th>
+                                    <th style="text-align:center">Status</th>
                                 </tr>
                                 <tbody id="idAguardando" runat="server">
                                     
@@ -56,21 +56,42 @@
                         <div class="panel-heading">
                             <i class="fa fa-trophy fa-fw"></i>Aprovados
                         </div>
-                        <div class="panel-body">
-                            <table width="100%" border="0">
+                        <div class="panel-body" style="min-height:410px">
+                            <table width="100%" border="0" style="font-size:12px">
                                 <tr>
                                     <th>Nome</th>
-                                    <th>CPF</th>
-                                    <th>Número da Sorte</th>
-                                    <th>Cupom Fiscal</th>
+                                    <th style="text-align:center">CPF</th>
+                                    <th style="text-align:center">Número da Sorte</th>
+                                    <th style="text-align:center">Cupom Fiscal</th>
                                 </tr>
                                 <tbody id="idAprovado" runat="server">
+                           
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-trophy fa-fw"></i>Publicado no Site
+                        </div>
+                        <div class="panel-body" style="max-height:410px;overflow-y:scroll">
+                            <table width="100%" border="0" style="font-size:12px">
+                                <tr>
+                                    <th>Nome</th>
+                                    <th style="text-align:center">Contato</th>
+                                    <th style="text-align:center">Concurso</th>
+                                </tr>
+                                <tbody id="idPublicado" runat="server">
                                     
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
+
             </div>
 
         </div>
@@ -88,30 +109,41 @@
                 if (ajax2.readyState == 4) {
                     if (ajax2.status == 200) {
 
-                       // alert(ajax2.responseText);
-                        //if (ajax2.responseText == "bloqueado") {
-                        //    $('#msgErro').html('<p><strong>Atenção: </strong>Este CPF está bloqueado para essa promoção.</p>');
-                        //    $('#cpf').addClass("inputs cpf error");
-                        //    $('#cpf').focus();
-                        //    return false;
-                        //}
-                        //if (ajax2.responseText > 0) {
-                        //    $('#msgErro').html('<p><strong>Atenção: </strong>Este CPF já está cadastrado em nossa base.</p>');
-                        //    $('#cpf').addClass("inputs cpf error");
-                        //    $('#cpf').focus();
-                        //    return false;
-                        //}
-                        //else {
-                        //    $('#idAprovado').html(ajax2.responseText);
-                        //    $('#cpf').removeClass("error");
-                        //    $('#rg').focus();
-                        //}
+                        //alert(ajax2.responseText);
+                        if (ajax2.responseText == "LIMITE") {
+
+                            alert("Já foram aprovados os 10 ganhadores.");
+
+                            window.location.href = "ganhadores.aspx";
+
+
+                            //$("input[type='radio']").each(function () {
+                            //    $(this).attr("disabled", "disabled");
+                            //});
+                            return false;
+                        }
+                        
                         $('#idAprovado').html(ajax2.responseText);
                     }
                 }
             }
             ajax2.send(null);
         }
+
+        function puclicar(CON_ID) {
+            ajax2 = ajaxInit();
+            ajax2.open("GET", "ganhadores.aspx?acao=publicar&CON_ID=" + CON_ID, true);
+            ajax2.setRequestHeader("Content-Type", "charset=iso-8859-1");
+            ajax2.onreadystatechange = function () {
+                if (ajax2.readyState == 4) {
+                    if (ajax2.status == 200) {
+                        window.location.href = "ganhadores.aspx";
+                    }
+                }
+            }
+            ajax2.send(null);
+        }
+
     </script>
 </body>
 
